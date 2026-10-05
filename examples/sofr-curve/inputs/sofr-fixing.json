@@ -1,0 +1,11 @@
+{
+  "as_of": "2026-09-18",
+  "last_known_fixing_date": "2026-09-17",
+  "sofr_percent": 3.85,
+  "volume_billions": 2992,
+  "realised_after_as_of": {
+    "2026-09-18": 3.85,
+    "2026-09-21": 3.85
+  },
+  "source": "Federal Reserve Bank of New York, SOFR (markets.newyorkfed.org API), snapshot data/nyfed_sofr_2026-09-01_2026-09-22.json"
+}

@@ -1,0 +1,11 @@
+name: Offline repository checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - run: python3 scripts/check_repository.py
+      - run: python3 -m unittest discover -s tests -v

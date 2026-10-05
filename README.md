@@ -1,7 +1,75 @@
 # Open Quant
 
-Open contracts for quantitative model documentation, built with OpenProse.
+**Open contracts for quantitative model documentation, built with OpenProse.**
 
-Contract authoring is expressing intent by composing requirements. Open Quant supplies reusable documentation requirements; an organization supplies its house conventions and model evidence.
+Contract authoring is expressing intent by composing requirements. Open Quant provides reusable requirements for documenting a model, supporting its claims and assessing the resulting documentation. You supply the model evidence and your organization's house requirements.
 
-The initial library and SOFR curve example are being prepared through a reviewed pull request. No live-workflow qualification, broad model coverage or industry-standard status is claimed by this initial repository.
+The first example documents one decision in a public USD SOFR curve model: choosing an interpolation method. It produces a short decision note, not a complete model document. The reusable [full-document contract](contracts/documentation.md) is a separate scope.
+
+This is a methodology demonstration, not a complete regulatory submission. Institutional facts are supplied by the deploying institution. Documentation assessment does not establish model soundness or institutional approval. Open Quant is an initial library, not an established industry standard.
+
+OpenProse is not affiliated with the New York Fed. The New York Fed does not sanction, endorse, or recommend any products or services offered by OpenProse. [Data source notices](provenance/README.md#external-sources) apply to the historical SOFR inputs.
+
+## Start with the example
+
+The initially checked preparation route is macOS ARM64 with Claude Code 2.1.243; other platforms are not qualified here.
+
+Install the [Prose CLI](https://github.com/openprose/prose-cli) and a supported, authenticated agent harness. The reference commands below select Claude explicitly; they use your configured Claude account and can incur model usage. Do not put credentials in this repository.
+
+```sh
+npm install -g @openprose/prose-cli@0.15.0-rc.2 --ignore-scripts
+git clone https://github.com/openprose/open-quant.git
+cd open-quant
+prose --harness claude --model haiku --native-profile claude-workspace-tools --permission-mode acceptEdits --dry-run run examples/sofr-curve/program.md
+```
+
+The dry run checks runtime preparation without calling a model. It does not establish authentication, contract fulfillment or successful end-to-end execution. Resolve any reported harness/version/platform issue first; see [runtime setup and qualification](docs/running.md).
+
+Then run the example:
+
+```sh
+prose --harness claude --model haiku --native-profile claude-workspace-tools --permission-mode acceptEdits run examples/sofr-curve/program.md
+```
+
+The program requests a fresh directory under `results/sofr-curve/` containing `note.md` and `result.md`; the executor should report the actual path. Inspect both. Existing results are preserved. No numerical packages, paper downloads or private repositories are needed for this documentation task.
+
+**Qualification:** this initial version has offline repository and evidence checks. The complete model-backed example and workshop timing are not yet qualified. The commands are the intended public CLI route, not a claim that every supported harness or account has executed this example successfully. [Current evidence and limits](docs/qualification.md) separate what was checked from what remains.
+
+## Understand and change it
+
+Read [the program](examples/sofr-curve/program.md). It binds [the model brief](examples/sofr-curve/inputs/brief.md), [computed evidence](examples/sofr-curve/inputs/results.json) and [house requirements](examples/sofr-curve/house/requirements.md) to the reusable [model-decision contract](contracts/model-decision.md). That contract composes claim-evidence and institutional-fact requirements.
+
+Edit the house requirements and run again. For example, require the comparison to appear in a table with a separate limitation column. The library contracts and model inputs can remain unchanged. Changing those requirements creates a new agreement; assess the new result against that agreement.
+
+To assess a result, substitute the actual directory reported by your run:
+
+```sh
+prose --harness claude --model haiku --native-profile claude-workspace-tools --permission-mode acceptEdits run examples/sofr-curve/assess.md results/sofr-curve/YOUR-RUN-DIRECTORY
+```
+
+The assessment contract asks for findings tied to the exact subject, requirements and evidence. It permits a completed assessment to identify unmet or unresolved subject requirements. This is a separate invocation, not proof of an independent institutional review.
+
+## Library
+
+| Contract | Required result |
+|---|---|
+| [Model decision](contracts/model-decision.md) | A bounded account of a supplied modeling choice, alternatives, evidence and limitations. |
+| [Model documentation](contracts/documentation.md) | A full document and supporting reports under supplied base and house requirements. |
+| [Claim evidence](contracts/claim-evidence.md) | Support for the particular claim, preserving method, quantity, units, scope and source identity. |
+| [Institutional facts](contracts/institutional-facts.md) | Visible missing institutional facts and limits on readiness claims. |
+| [Documentation assessment](contracts/assessment.md) | Findings against selected requirements, with evidence gaps and assessment coverage visible. |
+
+Use these contracts with your own inputs and house requirements. Private model material can remain in your own repository; this example performs no upload to Open Quant. The selected agent/provider's data handling still applies. A private-model workflow has not been qualified here.
+
+## Inspect without a model
+
+[The authored reference note](examples/sofr-curve/sample-results/note.md) illustrates the requested output. It is not a recorded successful agent run. [The model source](examples/sofr-curve/model/README.md) and [source provenance](provenance/README.md) explain the retained calculations and optional reproduction.
+
+With Python 3.10 or newer:
+
+```sh
+python3 scripts/check_repository.py
+python3 -m unittest discover -s tests -v
+```
+
+These checks verify links, imported identities and specified numerical correspondences. They do not assess arbitrary prose, certify the financial model or establish that contract composition outperforms a baseline. [Contributing](CONTRIBUTING.md) explains how to add a contract or model example. Owned code and documentation are [MIT licensed](LICENSE); external sources retain their own terms.
