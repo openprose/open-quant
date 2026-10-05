@@ -1,5 +1,7 @@
 # Document a quantitative model
 
+**For agents.** Requirements and bindings for execution under the caller's selected OpenProse kernel.
+
 ## Inputs
 
 The caller supplies the model brief, permitted source register and evidence, base documentation requirements, house requirements, selected institutional facts and output scope. Read those selections and adopted definitions. Missing inputs or incompatible requirements must be reported.

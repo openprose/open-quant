@@ -1,5 +1,7 @@
 # Document the SOFR interpolation decision
 
+**For agents.** Requirements and bindings for execution under the caller's selected OpenProse kernel.
+
 Run this program under the OpenProse kernel supplied by the caller's runtime. Resolve file links relative to their containing file. The repository root is two directories above this file.
 
 Adopt [Document a model decision](../../contracts/model-decision.md). Bind its model brief to [brief.md](inputs/brief.md), evidence to [results.json](inputs/results.json) and [the evidence guide](inputs/evidence.md), house requirements to [requirements.md](house/requirements.md), and selected institutional facts to [institutional-facts.md](inputs/institutional-facts.md). Read the adopted contract and its nested definitions. Use the brief as the source of the developer's choice and rationale; numerical claims must point to the results field that supports them.

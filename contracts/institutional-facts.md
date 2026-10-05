@@ -1,5 +1,7 @@
 # Preserve institutional facts and gaps
 
+**For agents.** Requirements and bindings for execution under the caller's selected OpenProse kernel.
+
 The caller identifies the institutional facts required by the selected documentation task and supplies any evidence for them.
 
 State supplied facts with their supporting source. Mark each required but unavailable institutional fact explicitly as unresolved using the caller's slot convention. Do not invent a reviewer, approval, model owner, implementation decision or production policy. Missing evidence of approval does not prove that no approval occurred.

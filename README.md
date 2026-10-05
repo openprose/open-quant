@@ -37,7 +37,7 @@ The program requests a fresh directory under `results/sofr-curve/` containing `n
 
 ## Understand and change it
 
-Read [the program](examples/sofr-curve/program.md). It binds [the model brief](examples/sofr-curve/inputs/brief.md), [computed evidence](examples/sofr-curve/inputs/results.json) and [house requirements](examples/sofr-curve/house/requirements.md) to the reusable [model-decision contract](contracts/model-decision.md). That contract composes claim-evidence and institutional-fact requirements.
+Read [the program (for agents)](examples/sofr-curve/program.md). It binds [the model brief](examples/sofr-curve/inputs/brief.md), [computed evidence](examples/sofr-curve/inputs/results.json) and [house requirements](examples/sofr-curve/house/requirements.md) to the reusable [model-decision contract](contracts/model-decision.md). That contract composes claim-evidence and institutional-fact requirements.
 
 Edit the house requirements and run again. For example, require the comparison to appear in a table with a separate limitation column. The library contracts and model inputs can remain unchanged. Changing those requirements creates a new agreement; assess the new result against that agreement.
 
@@ -53,11 +53,11 @@ The assessment contract asks for findings tied to the exact subject, requirement
 
 | Contract | Required result |
 |---|---|
-| [Model decision](contracts/model-decision.md) | A bounded account of a supplied modeling choice, alternatives, evidence and limitations. |
-| [Model documentation](contracts/documentation.md) | A full document and supporting reports under supplied base and house requirements. |
-| [Claim evidence](contracts/claim-evidence.md) | Support for the particular claim, preserving method, quantity, units, scope and source identity. |
-| [Institutional facts](contracts/institutional-facts.md) | Visible missing institutional facts and limits on readiness claims. |
-| [Documentation assessment](contracts/assessment.md) | Findings against selected requirements, with evidence gaps and assessment coverage visible. |
+| [Model decision — for agents](contracts/model-decision.md) | A bounded account of a supplied modeling choice, alternatives, evidence and limitations. |
+| [Model documentation — for agents](contracts/documentation.md) | A full document and supporting reports under supplied base and house requirements. |
+| [Claim evidence — for agents](contracts/claim-evidence.md) | Support for the particular claim, preserving method, quantity, units, scope and source identity. |
+| [Institutional facts — for agents](contracts/institutional-facts.md) | Visible missing institutional facts and limits on readiness claims. |
+| [Documentation assessment — for agents](contracts/assessment.md) | Findings against selected requirements, with evidence gaps and assessment coverage visible. |
 
 Use these contracts with your own inputs and house requirements. Private model material can remain in your own repository; this example performs no upload to Open Quant. The selected agent/provider's data handling still applies. A private-model workflow has not been qualified here.
 

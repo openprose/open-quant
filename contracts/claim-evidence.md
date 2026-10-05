@@ -1,5 +1,7 @@
 # Support documentation claims
 
+**For agents.** Requirements and bindings for execution under the caller's selected OpenProse kernel.
+
 ## Inputs
 
 The caller supplies the document scope, permitted evidence and any required evidence relationship or revision policy. Apply this contract to the caller's specified document or report; do not assume every file in the environment is a permitted source.

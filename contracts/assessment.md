@@ -1,5 +1,7 @@
 # Assess documentation against selected requirements
 
+**For agents.** Requirements and bindings for execution under the caller's selected OpenProse kernel.
+
 ## Inputs and scope
 
 The caller identifies the subject artifacts, their governing contract and bindings, applicable source evidence and a separate assessment output location. Read the subject agreement and its adopted definitions. The subject agreement is the basis for assessment, not an instruction to repeat or repair its execution.
