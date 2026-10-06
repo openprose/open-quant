@@ -11,6 +11,7 @@ The operating contracts turn supplied model records and house policy into review
 | Identify input-quality and lineage gaps | [Model data](../contracts/model-data.md) | Source/input snapshots, transformations and quality criteria. |
 | Explain the evidence for a calibration | [Calibration review](../contracts/calibration-review.md) | Targets, fitted values, conventions, diagnostics and tolerance. |
 | Reproduce selected quantitative results | [Model reproduction](../contracts/model-reproduction.md) | Exact source/input selection, environment, reference outputs, comparison policy and execution limits. |
+| Review optimization results | [Optimization review](../contracts/optimization-review.md) | Exact problem and variable identities, candidate, constraints, native diagnostics and acceptance criteria. |
 | Review implementation against its documented method | [Implementation review](../contracts/implementation-review.md) | Method conventions, exact implementation, required tests, observations and acceptance criteria. |
 | Review dependence inputs and adjustments | [Dependence review](../contracts/dependence-review.md) | Variables and order, dependence inputs, estimation populations, joint diagnostics, intended use and adjustment criteria. |
 | Review simulation precision and assumptions | [Simulation review](../contracts/simulation-review.md) | Target quantity, sampling design, uncertainty method, observations and precision criteria. |
@@ -64,7 +65,7 @@ The components support preparing evidence for these activities. They do not esta
 
 ## Dependence review
 
-[Dependence review](../contracts/dependence-review.md) has [authored distinguishing cases](../tests/cases/dependence-review.md) and a [worked data composition](../examples/dependence-review/README.md). Together with cash-flow review, the catalog has eighteen operating domains and fourteen worked operating reports; it does not establish agent qualification. Compose it with model data for lineage questions, implementation review for method conformance, or simulation review for how dependence enters simulated results.
+[Dependence review](../contracts/dependence-review.md) has [authored distinguishing cases](../tests/cases/dependence-review.md) and a [worked data composition](../examples/dependence-review/README.md). The current catalog has nineteen operating domains and fourteen worked operating reports; these describe authored coverage, not agent qualification. Compose it with model data for lineage questions, implementation review for method conformance, or simulation review for how dependence enters simulated results.
 
 [R's correlation documentation](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cor.html), Details, explains why pairwise-complete estimates can be non-PSD. [Nick Higham's correlation-matrix overview](https://nhigham.com/2020/04/14/what-is-a-correlation-matrix/) explains joint admissibility and constrained adjustment problems. These primary sources support the component's mathematical distinctions, not institutional acceptance rules. The illustrative thresholds remain caller policy; mathematical validity alone does not establish economic suitability.
 
@@ -75,3 +76,10 @@ The components support preparing evidence for these activities. They do not esta
 ## Produce evidence before reviewing it
 
 The [bounded SOFR reproduction program](../examples/sofr-reproduction/README.md) applies model-reproduction requirements to one explicitly authorized calculation. It is separate from the fourteen prepared-evidence report compositions above. A normal exit, complete evidence, numerical agreement and fulfillment of the reproduction/reporting program are distinct findings. Dependency setup and agent execution remain separately qualified; reproduction does not establish economic suitability or institutional acceptance.
+
+
+## Optimization review
+
+[Optimization review](../contracts/optimization-review.md) has [authored distinguishing cases](../tests/cases/optimization-review.md) for original constraint satisfaction, objective binding, numerical scaling, local/global conclusions and revised candidate artifacts. It composes existing reporting and numerical-evidence requirements. Pair it with model data for input lineage, dependence review for covariance diagnostics or implementation review for the numerical method. Reviewing a candidate does not authorize implementing it.
+
+[The SLSQP reference](https://docs.scipy.org/doc/scipy/reference/optimize.minimize-slsqp.html) documents stopping tolerance and returned multipliers; [OptimizeResult](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.OptimizeResult.html) describes native termination fields. These interface documents do not certify satisfaction of a caller's original problem or provide institution-specific approval rules. The specialist component remains a candidate without a worked report or agent qualification.

@@ -117,3 +117,10 @@ The reference is authored and no agent has executed or assessed the report. Fixe
 The [sensitivity/implementation report](../examples/sensitivity-review/README.md) accounts for all three synthetic calls, six forward bumps and two price representations. A public-source reproduction matches every observation, reference and control in the prespecified study. Complete, missing-unrounded and contradictory packets separate derivative findings from price precision and supplied uncertainty bounds.
 
 The reference report is authored and remains agent-unqualified. Fixed controls cover arithmetic, input/metric identities, missing observations, equality at the illustrative tolerance and twelve adverse mutations. They do not establish an optimal step, spot sensitivity, hedge or arbitrary report fulfillment. All 25 definitions, earlier examples and the 28-file package remain unchanged.
+
+
+## Optimization-review component
+
+The [optimization-review contract](../contracts/optimization-review.md) adds authored cases distinguishing native termination, original problem identity, feasibility, objective accuracy and actual candidate revisions. It composes existing reporting/numerical requirements; preceding definitions and examples are unchanged. Its private development study retains seven fixed synthetic solver results and one rounded export, with independent two-variable convex references. Those calculations motivate the distinctions; they do not qualify agent execution of the contract.
+
+This candidate contains 27 definitions across nineteen operating domains. Optimization review has no worked report or agent assessment yet. Its component-package bytes and source checks require their own checkpoint; earlier package results retain their original scope.
