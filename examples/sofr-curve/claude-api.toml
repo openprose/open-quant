@@ -1,0 +1,10 @@
+# Optional local runner configuration. Contains no credentials.
+# Copy to .prose/cli.toml in your clone after reviewing these choices.
+harness = "claude"
+auth_profile = "anthropic-api-key"
+model = "claude-sonnet-5-5"
+native_profile = "claude-workspace-tools"
+permission_mode = "acceptEdits"
+native_allow_tools = ["Bash(shasum *)", "Bash(sha256sum *)", "Bash(wc *)"]
+output_contract = "native"
+timeout = "300s"

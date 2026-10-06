@@ -2,6 +2,8 @@
 
 Start with the result you want. Supply its evidence, reader, house requirements and permitted output location. Adopt only the contracts that apply.
 
+For a small runnable composition, [add a comparison table to the SOFR decision note](../examples/sofr-curve/COMPOSE.md). The added contract changes the requested presentation while preserving the original evidence and documentation requirements. The guide identifies its candidate status and runtime selection.
+
 | Result | Contract — for agents | Reusable requirements it adopts |
 |---|---|---|
 | Explain what a model does and how it works | [Model description](../contracts/model-description.md) | Claim evidence, institutional facts |
