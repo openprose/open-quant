@@ -11,6 +11,7 @@ The operating contracts turn supplied model records and house policy into review
 | Identify input-quality and lineage gaps | [Model data](../contracts/model-data.md) | Source/input snapshots, transformations and quality criteria. |
 | Explain the evidence for a calibration | [Calibration review](../contracts/calibration-review.md) | Targets, fitted values, conventions, diagnostics and tolerance. |
 | Reproduce selected quantitative results | [Model reproduction](../contracts/model-reproduction.md) | Exact source/input selection, environment, reference outputs, comparison policy and execution limits. |
+| Review credit-loss calculations | [Credit-loss review](../contracts/credit-loss-review.md) | Default probabilities, exposure/severity assumptions, loss timing, calculation evidence and criteria. |
 | Review optimization results | [Optimization review](../contracts/optimization-review.md) | Exact problem and variable identities, candidate, constraints, native diagnostics and acceptance criteria. |
 | Review implementation against its documented method | [Implementation review](../contracts/implementation-review.md) | Method conventions, exact implementation, required tests, observations and acceptance criteria. |
 | Review dependence inputs and adjustments | [Dependence review](../contracts/dependence-review.md) | Variables and order, dependence inputs, estimation populations, joint diagnostics, intended use and adjustment criteria. |
@@ -67,7 +68,7 @@ The components support preparing evidence for these activities. They do not esta
 
 ## Dependence review
 
-[Dependence review](../contracts/dependence-review.md) has [authored distinguishing cases](../tests/cases/dependence-review.md) and a [worked data composition](../examples/dependence-review/README.md). The current catalog has nineteen operating domains and sixteen worked operating reports; these describe authored coverage, not agent qualification. Compose it with model data for lineage questions, implementation review for method conformance, or simulation review for how dependence enters simulated results.
+[Dependence review](../contracts/dependence-review.md) has [authored distinguishing cases](../tests/cases/dependence-review.md) and a [worked data composition](../examples/dependence-review/README.md). The current catalog has twenty operating domains and sixteen worked operating reports; these describe authored coverage, not agent qualification. Compose it with model data for lineage questions, implementation review for method conformance, or simulation review for how dependence enters simulated results.
 
 [R's correlation documentation](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cor.html), Details, explains why pairwise-complete estimates can be non-PSD. [Nick Higham's correlation-matrix overview](https://nhigham.com/2020/04/14/what-is-a-correlation-matrix/) explains joint admissibility and constrained adjustment problems. These primary sources support the component's mathematical distinctions, not institutional acceptance rules. The illustrative thresholds remain caller policy; mathematical validity alone does not establish economic suitability.
 
@@ -90,3 +91,10 @@ The [bounded SOFR reproduction program](../examples/sofr-reproduction/README.md)
 ## Historical input review
 
 The [historical-availability composition](../examples/availability-review/README.md) uses existing model-data and outcomes-analysis requirements. It preserves observation date, publication, local availability, revision order and metric population as caller bindings. Complete, missing-history and contradictory packets distinguish an observed selected record from evidence that it was eligible at a past decision cutoff. No additional definition or runtime capability is required; agent execution remains unqualified.
+
+
+## Credit-loss review
+
+[Credit-loss review](../contracts/credit-loss-review.md) adds explicit probability conditioning, horizon, exposure/severity and loss-timing requirements, with [authored distinguishing cases](../tests/cases/credit-loss-review.md). Compose it with model description for a method explanation, model data for lineage, implementation review for formula conformance, or outcomes analysis for empirical evaluation. A numerical loss calculation alone does not establish borrower performance or an accounting reserve.
+
+QuantLib's [default-probability interface](https://github.com/lballabio/QuantLib/blob/v1.43/ql/termstructures/defaulttermstructure.hpp) and [flat-hazard implementation](https://github.com/lballabio/QuantLib/blob/v1.43/ql/termstructures/credit/flathazardrate.hpp) illustrate the distinction between survival, cumulative default probability and hazard. Those definitions do not select a probability basis, institutional loss method or acceptance policy. The component currently has no worked credit-loss report or agent qualification.

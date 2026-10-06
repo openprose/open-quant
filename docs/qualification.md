@@ -138,3 +138,10 @@ The authored complete-case reference accounts for all eight candidates. Fixed ch
 The [model-data/outcomes report](../examples/availability-review/README.md) reviews six selectors over thirteen synthetic records and ten requested decision cutoffs. Public source dd53d67 reproduces all sixty selections, diagnostic reasons, metrics and seventy-two controls in the prespecified study. Later corrected values deliberately equal the synthetic outcomes; perfect error is a planted illustration, not a forecast result.
 
 The complete, missing-history and contradictory packets preserve observed selections and numeric errors while separating independent timing support. Withheld availability does not prove late data or non-execution. The authored complete-case reference accounts for all sixty selections; fixed checks cover timestamp/identity relationships, denominators, exact boundaries and twelve adverse mutations. These checks do not run a query, assess prose or verify a production feed. Existing definitions, earlier examples and component-package bytes are unchanged; the reporting program remains agent-unqualified.
+
+
+## Credit-loss component
+
+[Credit-loss review](../contracts/credit-loss-review.md) adds authored requirements and ten distinguishing cases for probability conditioning, exposure/severity, loss timing and evidence gaps. It composes existing reporting and numerical requirements. All previous definitions and examples remain unchanged. The component checkpoint has 28 definitions across twenty operating domains; existing worked reports retain their prior qualification limits.
+
+No agent has executed or assessed this new component, and no worked credit-loss report is supplied yet. The requirements do not implement a regulatory or accounting standard, estimate loss-model reliability or authorize a financial action. Source checks and package preparation establish only their stated mechanical properties.

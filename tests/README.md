@@ -51,3 +51,6 @@ The reproduction-helper tests launch tiny standard-library Python fixtures, not 
 
 
 `python3 scripts/check_availability.py` checks three fixed historical-input packets. It separates recorded selections from supported, breached, unavailable, ambiguous or unresolved timing findings; reconstructs all numeric denominators; and rejects twelve selected corruptions. A missing timestamp preserves numeric observations without proving late availability. It executes no query or model and does not assess arbitrary prose or a production data pipeline.
+
+
+[Credit-loss interpretation cases](cases/credit-loss-review.md) distinguish cumulative, interval and conditional default probabilities, hazard rates, exposure/severity conditioning, recovery, timing and missing contributions. They are authored expectations, not executed assessments. Existing source/package checks cover file integrity and reference closure; they do not validate these prose requirements.
