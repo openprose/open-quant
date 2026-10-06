@@ -6,6 +6,8 @@ Explain the inverse relationship, input units and uncertainty assumption. Give t
 
 Compare the coordinate-dependent condition numbers and the physical-rate uncertainty after mapping back. Distinguish this uncertainty from floating-point calculation error. Explain common versus opposing input shifts, and whether uniqueness or a small repricing residual establishes stable parameters. Evaluate variance admissibility separately from native termination and fit; do not silently clip a negative rate.
 
+Keep marginal parameter bounds distinct from jointly supported parameter pairs. Values individually supported by different input configurations or native cases do not by themselves establish a supported common model state. Explain this distinction with a candidate pair under the supplied relationship; identify derivation separately from a native observation of that pair.
+
 Review supplied native parameters and repricing using absolute parameter tolerance 1e-10 variance/year and residual tolerance 1e-12 total variance. Compare condition numbers within relative 1e-12 in their stated norm and coordinates. These are synthetic checking criteria. Binary64 inputs approximate the brief's exact decimal/rational design; preserve that distinction rather than infer exact real-arithmetic observations from displayed zeros.
 
 Address every supplied producer claim. State supported, adverse and unresolved findings without inventing missing runs, acceptance thresholds, statistical confidence or institutional facts. An accurate account of unavailable observations may fulfill this reporting obligation; it does not establish that an unavailable native calculation was performed or passed.

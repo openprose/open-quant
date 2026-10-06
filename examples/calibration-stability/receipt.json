@@ -37,8 +37,8 @@
     },
     {
       "path": "inputs/contradictory.json",
-      "sha256": "cf124443424f5cf75949baee75d39594fa94a34fa1e2737db81e8c0712cd35cb"
+      "sha256": "6fbfee31e86c60fd5306f278dae006bdbc06e847b64bef59d44992a235f5e319"
     }
   ],
-  "projection": "Packets retain native condition records, case identities, floating inputs and native solves. Exact analytical answers, admissibility labels, parameter-reference errors and observer controls are omitted. Missing-perturbations retains only four baseline cases; contradictory adds five producer claims. Receipt process counts are aggregate provenance, not substitutes for withheld per-case results."
+  "projection": "Packets retain native condition records, case identities, floating inputs and native solves. Exact analytical answers, admissibility labels, parameter-reference errors and observer controls are omitted. Missing-perturbations retains only four baseline cases; contradictory adds six producer claims. Receipt process counts are aggregate provenance, not substitutes for withheld per-case results."
 }

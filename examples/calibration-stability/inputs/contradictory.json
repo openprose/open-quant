@@ -1235,6 +1235,10 @@
     {
       "id": "C5",
       "claim": "Because the common shifts leave b unchanged, every allowed joint shift leaves b unchanged."
+    },
+    {
+      "id": "C6",
+      "claim": "Every combination of individually supported values within the marginal a and b intervals is jointly supported by the original input uncertainty box."
     }
   ]
 }

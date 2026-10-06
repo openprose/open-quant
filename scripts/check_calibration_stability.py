@@ -104,7 +104,7 @@ def main():
     missing["native_cases"] = [row for row in missing["native_cases"] if row["name"] == "baseline"]
     assert json.loads((folder / "inputs/missing-perturbations.json").read_text()) == missing, "missing projection"
     contradictory = json.loads((folder / "inputs/contradictory.json").read_text())
-    assert [x["id"] for x in contradictory["producer_claims"]] == ["C1","C2","C3","C4","C5"]
+    assert [x["id"] for x in contradictory["producer_claims"]] == ["C1","C2","C3","C4","C5","C6"]
     contradictory["case"] = "complete"
     contradictory["producer_claims"] = []
     assert contradictory == complete, "contradictory records"
@@ -116,6 +116,27 @@ def main():
         raw = f"[{float(low):g}, {float(high):g}]"
         admissible = f"[{float(max(Q(0),low)):g}, {float(high):g}]"
         assert f"| {eps} | {physical} | 4 | {raw} | {admissible} |" in report, "authored interval row"
+    # Separate exact marginal support from the original joint input constraints.
+    joint_corners=[]
+    mixed_pairs=[]
+    native={row["id"]:row for row in complete["native_cases"]}
+    for den in (1,12,365,3650):
+        eps=Q(1,den);eta=Q(1,25000);a0=Q(1,25);b0=Q(9,100)
+        a_bounds=(a0-eta,a0+eta)
+        b_bounds=(max(Q(0),b0-2*eta/eps),b0+2*eta/eps)
+        for ai,a in enumerate(a_bounds):
+            for bi,b in enumerate(b_bounds):
+                inside=abs(a-a0)<=eta and abs(a+eps*b-(a0+eps*b0))<=eta and a>=0 and b>=0
+                assert inside==(ai!=bi), "joint corner"
+                joint_corners.append(inside)
+        a=native[f"{eps}/common-up"]["solves"][0]["physical_parameters"][0]
+        b=native[f"{eps}/steepen"]["solves"][0]["physical_parameters"][1]
+        excess=Q.from_float(a)+eps*Q.from_float(b)-(a0+eps*b0+eta)
+        assert excess>0 and abs(excess-2*eta)<=Q(1,10**12), "mixed native values"
+        mixed_pairs.append(float(excess))
+    assert len(joint_corners)==16 and sum(joint_corners)==8
+    for value in ("0.04004", "0.382", "0.0401446575342466", "0.0400646575342466", "0.00008"):
+        assert value in report, "authored joint illustration"
     mutations = []
     def reject(label, mutate):
         changed = copy.deepcopy(data)
@@ -140,7 +161,9 @@ def main():
     reject("erase-rounding-error",lambda x:x["cases"][0]["input_representation_error"][0].__setitem__("fraction","0"))
     result={"source_sha256":hashlib.sha256(source.read_bytes()).hexdigest(),
             "checker_sha256":hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-            "arithmetic_checks":count,"projection_checks":3,"authored_table_rows":4,"mutations":mutations,"native_calls":0,"provider_calls":0}
+            "arithmetic_checks":count,"projection_checks":3,"authored_table_rows":4,"mutations":mutations,
+            "joint_corners":len(joint_corners),"jointly_feasible_corners":sum(joint_corners),
+            "mixed_native_pair_excesses":mixed_pairs,"native_calls":0,"provider_calls":0}
     print(json.dumps(result,indent=2))
 
 

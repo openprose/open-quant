@@ -8,6 +8,7 @@ Authored expectations, not recorded agent evaluations. Assess against the select
 | Zero residual | Accurate repricing does not establish stable physical rates under uncertain inputs. |
 | Unique inverse | Full rank for exact inputs does not remove input uncertainty. |
 | Rescaling | Condition number four in integrated coordinates does not narrow the mapped physical b interval. |
+| Joint support | Individually attainable marginal maxima can violate the original q2 bound when combined. Values from separate native cases are not a native observation of their joint pair. |
 | Shortest flatten | Native success with b≈-0.202 is an inadmissible variance rate, not an acceptable curve. |
 | Boundary | The admissible lower bound zero needs an in-box witness; silent clipping is not a new native fit. |
 | Common versus opposing shifts | Common input shifts preserve b; allowed opposing shifts attain the raw extrema. |
