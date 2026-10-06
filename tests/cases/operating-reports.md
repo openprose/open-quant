@@ -12,6 +12,7 @@ These are authored interpretation cases, not model evaluation results. A mechani
 | Calibration review | Compare all supplied calibration targets and fits in the correct units, while limiting conclusions to fit. | One target lacks a fit: preserve the missing calibration item and denominator. | A success flag overrides a residual outside the supplied tolerance, or in-sample fit is called predictive accuracy. |
 | Valuation comparison | Normalize supported price scales and show both gross and net differences for the comparable positions. | A stale quote remains unusable under the selected policy; report the omitted comparison in coverage. | Netting two opposite USD10,000 exceptions produces zero, then claiming no exception exists. |
 | Outcomes analysis | Pair predictions with mature outcomes for the supplied horizon and retain exclusions. | Immature outcomes limit coverage instead of counting as favorable outcomes. | Report training-set fit as out-of-sample performance, or compare scores on different populations as a model improvement. |
+| Backtesting | Preserve one APL and one HPL exception on different dates, with combined count 1 under the supplied maximum rule. | Missing APL counts as a policy exception for APL while the missing observation remains explicit. | Sum series counts, count the union of dates, or exclude a late forecast to produce a more favorable denominator. |
 | Sensitivity review | Explain a supplied one-basis-point shock with its sign convention and fixed inputs. | An absent negative-shock run prevents a supported symmetry claim. | Treat a one-basis-point change as a one-percent relative change, or add single-factor effects despite known interactions. |
 | Scenario review | Compare supplied scenario outputs with a compatible base and identify assumed mitigation. | A missing exposure remains absent from coverage rather than zero-loss. | Describe the worst tested scenario as the maximum possible loss, or report assumed management action as executed. |
 | P&L explanation | USD100,000 total minus USD95,000 supported components leaves a visible USD5,000 residual. | A missing component stays unexplained rather than assigned to an invented driver. | The arithmetic reconciles, so the report declares the factor attribution causally correct or the regulatory PLA test passed. |
@@ -34,3 +35,12 @@ Additional mechanical mutations check equality at the limit, wrong units, wrong 
 - `basis-mismatch`: Q1's dirty basis contradicts the required clean basis; the policy does not permit conversion. Only P2 is comparable, with a −USD10,000 exception.
 
 The checker additionally tests price units, quote currency, duplicate matches, invalid prices, exact tolerance equality and offsetting exceptions. It does not establish source independence or assess report prose.
+
+## Backtesting fixture expectations
+
+- `complete`: five available observations per series; one observed APL exceedance and one observed HPL exceedance on different dates. Policy counts are 1 and 1, so the combined count is 1.
+- `missing`: B4 APL is unavailable. APL has one observed exceedance plus one policy-counted unavailable comparison; HPL has one observed exceedance. Combined count is 2; the missing value must not become an invented observed loss.
+- `contradictory`: the complete values remain, but the producer claims zero exceptions. Reject that summary without changing the underlying data.
+- `late-forecast`: B2's forecast arrives after the permitted start. Both B2 comparisons are unavailable under house policy. APL has zero valid observed exceedances and one policy exception; HPL has one observed exceedance plus one unavailable comparison, for two. The combined count is 2.
+
+The checker covers missing dates, duplicate records, invalid numbers, exact start-time boundaries, wrong identity, negative VaR and out-of-scope records. These are local house-policy controls, not implementation of all MAR32 requirements or evidence of agent behavior.

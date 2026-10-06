@@ -6,6 +6,7 @@
     "README.md",
     "contracts/README.md",
     "contracts/assessment.md",
+    "contracts/backtesting.md",
     "contracts/calibration-review.md",
     "contracts/claim-evidence.md",
     "contracts/documentation.md",
@@ -31,6 +32,15 @@
     "docs/public-foundations.md",
     "docs/qualification.md",
     "docs/running.md",
+    "examples/backtesting-review/README.md",
+    "examples/backtesting-review/inputs/cases/complete.json",
+    "examples/backtesting-review/inputs/cases/contradictory.json",
+    "examples/backtesting-review/inputs/cases/late-forecast.json",
+    "examples/backtesting-review/inputs/cases/missing.json",
+    "examples/backtesting-review/inputs/policy.md",
+    "examples/backtesting-review/inputs/population.md",
+    "examples/backtesting-review/program.md",
+    "examples/backtesting-review/sample-results/report.md",
     "examples/monitoring-review/README.md",
     "examples/monitoring-review/inputs/packet.json",
     "examples/monitoring-review/inputs/policy.md",
@@ -64,6 +74,7 @@
     "prose-package.json",
     "provenance/README.md",
     "provenance/import.json",
+    "scripts/check_backtesting.mjs",
     "scripts/check_monitoring.mjs",
     "scripts/check_repository.py",
     "scripts/check_valuation.mjs",
@@ -102,7 +113,9 @@
     "scenario-review": "contracts/scenario-review.md",
     "pnl-explanation": "contracts/pnl-explanation.md",
     "vendor-model-review": "contracts/vendor-model-review.md",
-    "valuation-review": "examples/valuation-review/program.md"
+    "valuation-review": "examples/valuation-review/program.md",
+    "backtesting": "contracts/backtesting.md",
+    "backtesting-review": "examples/backtesting-review/program.md"
   },
   "dependencies": {}
 }

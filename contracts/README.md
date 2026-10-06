@@ -8,4 +8,4 @@ The [SOFR example](../examples/sofr-curve/program.md) is one binding of the deci
 
 [Choosing and composing contracts](../docs/composition.md) shows the reusable parts and their caller bindings.
 
-[Operating-work components](../docs/operating-work.md) cover model inventory, change impact, monitoring, limitations and remediation, model data, calibration evidence, valuation comparison, outcomes analysis, sensitivities, scenarios, P&L explanation and vendor-model evidence. They compose shared [reporting requirements](operating-report.md). The [monitoring example](../examples/monitoring-review/README.md) illustrates adverse findings without confusing them with report failure.
+[Operating-work components](../docs/operating-work.md) cover model inventory, change impact, monitoring, limitations and remediation, model data, calibration evidence, valuation comparison, outcomes analysis, backtesting, sensitivities, scenarios, P&L explanation and vendor-model evidence. They compose shared [reporting requirements](operating-report.md). The [monitoring example](../examples/monitoring-review/README.md) illustrates adverse findings without confusing them with report failure.

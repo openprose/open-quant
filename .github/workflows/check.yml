@@ -11,3 +11,4 @@ jobs:
       - run: python3 -m unittest discover -s tests -v
       - run: node scripts/check_monitoring.mjs
       - run: node scripts/check_valuation.mjs
+      - run: node scripts/check_backtesting.mjs

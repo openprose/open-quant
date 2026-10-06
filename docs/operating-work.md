@@ -12,6 +12,7 @@ The operating contracts turn supplied model records and house policy into review
 | Explain the evidence for a calibration | [Calibration review](../contracts/calibration-review.md) | Targets, fitted values, conventions, diagnostics and tolerance. |
 | Explain differences between valuations | [Valuation comparison](../contracts/valuation-comparison.md) | Positions, prices, source provenance, conventions and tolerance. |
 | Compare predictions with observed outcomes | [Outcomes analysis](../contracts/outcomes-analysis.md) | Dated predictions/outcomes, pairing rules, metrics and evaluation scope. |
+| Account for risk-model backtest exceptions | [Backtesting](../contracts/backtesting.md) | Forecasts, outcome series, timing, sign conventions and exception policy. |
 | Explain response to input changes | [Sensitivity review](../contracts/sensitivity-review.md) | Base and perturbed results, shock definitions and normalization. |
 | Interpret a scenario set | [Scenario review](../contracts/scenario-review.md) | Scenarios, base case, portfolio, horizons and assumed actions. |
 | Reconcile an explained P&L movement | [P&L explanation](../contracts/pnl-explanation.md) | A defined total, explanatory components, exclusions and tolerance. |
@@ -22,6 +23,8 @@ For example, a periodic model review can compose monitoring with limitations and
 The [monitoring example](../examples/monitoring-review/README.md) provides a small, synthetic composition. It contains authored cases and mechanically checked reference arithmetic, not a recorded model execution. The existing [SOFR decision example](../examples/sofr-curve/program.md) is unchanged.
 
 The [valuation example](../examples/valuation-review/README.md) composes valuation comparison with model data. It distinguishes position-level exceptions from offsetting totals and usable quotes from missing, stale or incompatible evidence. It is also synthetic and not model-executed.
+
+The [backtesting example](../examples/backtesting-review/README.md) preserves observed exceedances separately from policy exceptions caused by unavailable data. Its separate case files also allow an experiment to stage one selected case without the alternatives. Five illustrative days do not establish an annual regulatory backtest.
 
 ## Public foundations and scope
 

@@ -9,3 +9,5 @@ The separate [model-description cases](cases/model-description.md) and [numerica
 [Operating-report cases](cases/operating-reports.md) cover inventory, change, monitoring, remediation, data and calibration reporting. `node scripts/check_monitoring.mjs` checks the synthetic monitoring packet against explicit house thresholds, row identity, coverage and status contradictions. Its mutation controls are not a general contract evaluator; the authored sample report is not parsed or certified by this script.
 
 `node scripts/check_valuation.mjs` checks synthetic price-scale conversions, comparable-subset totals, exact tolerance boundaries, missing/stale/incompatible quotes and offsetting exceptions. It does not reproduce a valuation model or certify source independence.
+
+`node scripts/check_backtesting.mjs` distinguishes observed exceedances from policy treatment of missing/invalid comparisons, preserves separate outcome-series counts and tests timing, identity and coverage controls. Its five-day cases are synthetic; no annual regulatory classification is computed.

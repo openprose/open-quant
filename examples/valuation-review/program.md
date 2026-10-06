@@ -1,6 +1,6 @@
 # Report on supplied valuation comparisons
 
-**For agents.** Execute under the caller's selected OpenProse kernel.
+**For agents.** Execute under the caller's selected OpenProse kernel. The working root is the repository or extracted-package root, two directories above this program; output paths below are relative to that root.
 
 Produce one exception report by composing [valuation comparison](../../contracts/valuation-comparison.md) and [model data](../../contracts/model-data.md), including their adopted definitions. The caller supplies exactly one case: `complete`, `missing`, `stale` or `basis-mismatch`. If absent or unknown, request the case instead of choosing it.
 

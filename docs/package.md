@@ -1,6 +1,6 @@
 # Package candidate
 
-Open Quant has a directory-package manifest, [prose-package.json](../prose-package.json), with explicitly selected files and exports. It includes the contracts, SOFR, monitoring and valuation examples, source notices and offline checks. The kernel is supplied separately by the caller's runtime; the package does not bundle a kernel or an executor.
+Open Quant has a directory-package manifest, [prose-package.json](../prose-package.json), with explicitly selected files and exports. It includes the contracts, SOFR, monitoring, valuation and backtesting examples, source notices and offline checks. The kernel is supplied separately by the caller's runtime; the package does not bundle a kernel or an executor.
 
 The operating-work expansion changes the selected bytes and therefore requires a new candidate digest and package round trip before publication. The retained earlier preparation evidence applies to the preceding SOFR-only package selection, not these expanded bytes.
 

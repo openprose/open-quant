@@ -6,7 +6,7 @@ The offline checker verifies imported file identities, relative Markdown links, 
 
 The development task records fresh-checkout and CLI preparation observations separately. A public first-run claim still requires the selected released executable, admitted/authenticated harness, observed kernel, actual model execution, inspected note and complete assessment. No comparison establishes superiority over equally informative plain instructions or another format.
 
-Known deliberate limits: one model example; finite authored evidence cases; individual run timings without a success-rate estimate; no independent financial review; no full-document acceptance; no institution-specific approval; no universal semantic validator. The brief preserves limitations in the supplied model comparison.
+Known deliberate limits: one model example with retained CLI execution; additional synthetic operating examples without model execution; finite authored evidence cases; individual run timings without a success-rate estimate; no independent financial review; no full-document acceptance; no institution-specific approval; no universal semantic validator. The SOFR brief preserves limitations in the supplied model comparison.
 
 ## October 5, 2026 preparation check
 
@@ -26,4 +26,15 @@ The missing-evidence executor disclosed absent locality measurements but claimed
 
 The separate contradiction case was prepared but not executed; the last two invocations tested the observed evaluator issue and baseline regression. No additional model calls remain in this campaign. The full-document and new component cases remain authored illustrations.
 
-The directory package passes an offline round trip through CLI source functions with a synthetic receipt. A credential-free public registry listing returned HTTP503 during this campaign. No package was published or successfully fetched from production. Fresh attendee installation and the one-hour rehearsal remain outstanding.
+The preceding 47-file SOFR package passed an offline round trip through CLI source functions with a synthetic receipt. That result does not qualify subsequent expanded package bytes. A credential-free public registry listing returned HTTP503 during this campaign. No package was published or successfully fetched from production. Fresh attendee installation and the one-hour rehearsal remain outstanding.
+
+## Operating-work expansion
+
+| Example | Available evidence | What remains untested |
+|---|---|---|
+| SOFR decision note | Two CLI executions and four assessments in the bounded development campaign above. | Attendee route, broad reliability and full-document acceptance. |
+| Monitoring and remediation | Authored report, three synthetic cases, explicit arithmetic and mutation checks. | Model execution and assessment of the composed report. |
+| Valuation and model data | Authored report, four synthetic cases, price-scale and exception controls. | Model execution, source independence and actual valuation operations. |
+| Backtesting review | Authored report, four synthetic cases, observed-versus-policy exception counts and timing controls. | Model execution, statistical adequacy and any complete regulatory test. |
+
+The shared library definitions are candidates for reuse, not individually certified capabilities. Mechanical checks do not establish that an executor follows them or that an evaluator detects every violation. A complete report can properly find adverse results; its fulfillment depends on the selected reporting requirements. Package checks, source review, financial acceptance and model-backed trials remain separate forms of evidence.
