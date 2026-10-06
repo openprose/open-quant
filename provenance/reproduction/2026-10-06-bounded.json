@@ -1,0 +1,54 @@
+{
+  "kind": "observed-bounded-numerical-reproduction",
+  "source_commit": "f07b03751412e4ff98b7c4d2c19c65eed7aad48f",
+  "started_at": "2026-10-06T05:20:22.689142+00:00",
+  "command_scope": "Selected Python executes scripts/reproduce_sofr.py --output <new-directory-outside-checkout> --timeout-seconds 120; absolute research paths are omitted here and retained privately.",
+  "calculation_wall_seconds": 2.6188709999551065,
+  "timeout_seconds": 120.0,
+  "launch_attempts": 1,
+  "retries": 0,
+  "settled": true,
+  "return_code": 0,
+  "timed_out": false,
+  "interrupted": false,
+  "versions": {
+    "python": "3.12.14",
+    "QuantLib": "1.43",
+    "scipy": "1.18.1",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2"
+  },
+  "helper_sha256": "bb57ca6fd0694e3d3847f85ddc03ed168d4bf23e0fc237a17938e2d76d8d4217",
+  "selected_source_sha256": {
+    "model/bootstrap.py": "d897203d1b145f81b60248df422ef79411362a212098e0408a05fb757f3e56b2",
+    "model/hagan_west.py": "f4433cbd42322ea27c95463ad48cdd128f3c16f49b2b39ff5fab2bd1790f36e5",
+    "inputs/quotes.csv": "df36b297eebf0a20600bdbdab60d615ff30713435aaa297afc521106eafae81d",
+    "inputs/sofr-fixing.json": "0f554854fdbd9944a1caf795d4bc24e8cf5297dec04f5b30c2188214edd8570e",
+    "inputs/results.json": "1b42c6b824fae587d31b9d4c17de8867690e4e1f4eda6b3c31ce82ef96730494"
+  },
+  "source_hashes_match_before_after": true,
+  "staged_hashes_match_before_after": true,
+  "result_sha256": "1b42c6b824fae587d31b9d4c17de8867690e4e1f4eda6b3c31ce82ef96730494",
+  "comparison": {
+    "versions": {
+      "python": "3.12.14",
+      "QuantLib": "1.43",
+      "scipy": "1.18.1",
+      "numpy": "2.5.3",
+      "matplotlib": "3.11.2"
+    },
+    "relative_tolerance": 1e-10,
+    "absolute_tolerance": 1e-12,
+    "status": "compared",
+    "differences": [],
+    "matches": true,
+    "reason": null
+  },
+  "provider_calls": 0,
+  "agent_program_executed": false,
+  "limits": [
+    "Existing derived quotes and fixing only; no new acquisition or raw quote derivation.",
+    "Matching source hashes are before/after observations, not an exhaustive action trace.",
+    "Calculation and comparison do not establish agent reporting conformance, financial suitability or institutional acceptance."
+  ]
+}
