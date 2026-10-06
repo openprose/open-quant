@@ -2,6 +2,7 @@
 import copy
 import json
 import math
+import re
 from datetime import date
 from pathlib import Path
 
@@ -93,6 +94,38 @@ def review(packet):
             'unmatched_observations':unmatched_observations,'issues':issues,'changes':changes}
 
 
+def reference_errors(text, packet):
+    """Bind selected cells and issue scopes in this authored reference only."""
+    errors=[]
+    rows={}
+    for line in text.splitlines():
+        if re.match(r'^\| E[0-9]+:',line):
+            cells=[cell.strip() for cell in line.split('|')[1:-1]]
+            identifier=cells[0].split(':')[0]
+            if identifier in rows:errors.append('duplicate reference row '+identifier)
+            rows[identifier]=cells
+    expected=packet['expected_observations']
+    if set(rows)!={row['id'] for row in expected}:errors.append('reference observation population')
+    for row in expected:
+        cells=rows.get(row['id'],[])
+        if len(cells)!=5:
+            errors.append('reference cell population '+row['id']);continue
+        if cells[0]!=f"{row['id']}: {row['deployment']} {row['use']}":errors.append('reference scope '+row['id'])
+        if f"`{row['metric']}`" not in cells[1]:errors.append('reference metric '+row['id'])
+        if cells[3]!=f"≤ {row['upper_limit']:g} {row['unit']}":errors.append('reference limit '+row['id'])
+        matches=[obs for obs in packet['observations'] if scope(obs)==scope(row) and obs['period']==row['period']]
+        if len(matches)==1:
+            obs=matches[0]
+            if cells[2]!=f"{obs['id']}: {obs['value']:g} {obs['unit']}, {obs['date']}":errors.append('reference value/date '+row['id'])
+        elif cells[2]!='No matching observation':errors.append('reference evidence gap '+row['id'])
+    for issue in packet['issues']:
+        paragraphs=[part for part in text.split('\n\n') if part.startswith(issue['id']+' concerns ')]
+        if len(paragraphs)!=1 or any(value not in paragraphs[0] for value in [
+            issue['deployment'],issue['model']+' '+issue['revision'],issue['use']+' use',
+            '`'+issue['metric']+'`',issue['owner']]):errors.append('reference issue scope '+issue['id'])
+    return errors
+
+
 def main():
     packets={case:json.loads((ROOT/'examples/periodic-review/inputs'/f'{case}.json').read_text()) for case in ['complete','missing-baseline','contradictory']}
     results={case:review(p) for case,p in packets.items()}
@@ -138,8 +171,23 @@ def main():
     try:review(bad)
     except AssertionError:checks.append('duplicate record identity rejected')
     else:raise AssertionError('Duplicate identity accepted')
-    print(json.dumps({'scope':'Authored synthetic rule mappings only; no model execution, institutional decision or report evaluation.',
-                      'cases':results,'controls':checks},indent=2))
+    reference=(ROOT/'examples/periodic-review/sample-results/report.md').read_text()
+    assert not reference_errors(reference,packets['complete']),reference_errors(reference,packets['complete'])
+    reference_mutations={
+        'omit metric':reference.replace('`repricing_error`','`unknown`'),
+        'substitute probability for error':reference.replace('`max_calibration_error`','`default_probability`'),
+        'change threshold boundary':reference.replace('≤ 1 bp','< 1 bp'),
+        'change missing-observation limit':reference.replace('≤ 5 USD million','≤ 4 USD million'),
+        'change observation date':reference.replace('O3: 0.03 probability, 2026-09-30','O3: 0.03 probability, 2026-08-31'),
+        'change observation value':reference.replace('O1: 0.8 bp','O1: 0.9 bp'),
+        'omit issue metric':reference.replace('I1 concerns the stress reference difference (`stress_reference_difference`)','I1 concerns the stress reference difference'),
+        'change issue revision':reference.replace('D3, CREDIT-PD r2, origination use','D3, CREDIT-PD r1, origination use'),
+    }
+    for name,changed in reference_mutations.items():
+        assert changed!=reference and reference_errors(changed,packets['complete']),name
+    print(json.dumps({'scope':'Fixed synthetic rule mappings and selected authored-reference bindings; no model execution, institutional decision or general prose evaluation.',
+                      'cases':results,'controls':checks,'reference_rows':3,'reference_issue_scopes':2,
+                      'reference_mutations_rejected':list(reference_mutations)},indent=2))
 
 
 if __name__=='__main__':main()

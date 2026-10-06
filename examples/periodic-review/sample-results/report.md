@@ -17,17 +17,19 @@ Evidence: `inputs/complete.json`, deployments D1–D4, register R1–R4 and life
 
 ## Monitoring and issues
 
-| Expected observation | Evidence | Finding |
-|---|---|---|
-| E1: D1 pricing | O1, 0.8 bp | Within the 1.0 bp upper limit. |
-| E2: D2 stress | No matching observation | Unresolved. O2 concerns pricing use, despite its D2/model/revision labels. |
-| E3: D3 origination | O3, 0.03 probability | Breaches the 0.02 upper limit. |
+| Expected observation | Metric | Evidence | Inclusive upper limit | Finding |
+|---|---|---|---|---|
+| E1: D1 pricing | Repricing error (`repricing_error`) | O1: 0.8 bp, 2026-09-30 | ≤ 1 bp | Within limit. |
+| E2: D2 stress | Stress reference difference (`stress_reference_difference`) | No matching observation | ≤ 5 USD million | Unresolved; O2 concerns pricing use. |
+| E3: D3 origination | Maximum calibration error (`max_calibration_error`) | O3: 0.03 probability, 2026-09-30 | ≤ 0.02 probability | Breach. |
+
+Equality with an upper limit passes. O3's 0.03 is an error in probability units (three percentage points), not a predicted default probability. The available O1/O3 dates fall within September and precede review.
 
 Coverage retains all three expected observations: one within limit, one breach and one unresolved. O2 remains unmatched; its value of USD4 million and favorable producer label do not satisfy E2. The overall monitoring finding is **breach** because E3 is known adverse; E2's gap remains visible. Registry conflicts do not erase independently supplied monitoring evidence for E3.
 
-I1 concerns D2 stress, owned by Market Risk and due September 30. Its producer labels it closed and records action completion September 29. O2 and accepting review V1 both concern pricing use, so neither establishes closure for the stress issue. I1 remains unsupported as closed and is overdue. Their existence, favorable value and later dates do not fix the scope mismatch.
+I1 concerns the stress reference difference (`stress_reference_difference`) for D2, RATE-CURVE r3, stress use, owned by Market Risk and due September 30. Its producer labels it closed and records action completion September 29. O2 and accepting review V1 both concern pricing use, so neither establishes closure for the stress issue. I1 remains unsupported as closed and is overdue. Their existence, favorable value and later dates do not fix the scope mismatch.
 
-I2 concerns D3 origination, owned by Credit Analytics, due October 10. Closure evidence is absent and the issue is open; it is not yet overdue. Market Risk needs to supply evidence or a disposition for E2/I1, and Credit Analytics for the E3 breach. These follow-ups are proposed responses, not recorded actions.
+I2 concerns maximum calibration error (`max_calibration_error`) for D3, CREDIT-PD r2, origination use, owned by Credit Analytics, due October 10. Its recorded action is to investigate the calibration residual; no action-completion date or closure evidence is supplied. The issue is open and not yet overdue. Market Risk needs to supply evidence or a disposition for E2/I1, and Credit Analytics for the E3 breach. These follow-ups are proposed responses, not recorded actions.
 
 Evidence: `inputs/complete.json`, E1–E3, O1–O3, I1–I2 and V1; `inputs/policy.md`, Monitoring and Issues and closure. The three-way count preserves the expected population.
 
