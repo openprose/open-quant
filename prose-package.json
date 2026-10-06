@@ -85,6 +85,13 @@
     "examples/valuation-review/inputs/policy.md",
     "examples/valuation-review/program.md",
     "examples/valuation-review/sample-results/report.md",
+    "examples/vendor-inventory-review/README.md",
+    "examples/vendor-inventory-review/inputs/complete.json",
+    "examples/vendor-inventory-review/inputs/contradictory.json",
+    "examples/vendor-inventory-review/inputs/missing.json",
+    "examples/vendor-inventory-review/inputs/policy.md",
+    "examples/vendor-inventory-review/program.md",
+    "examples/vendor-inventory-review/sample-results/report.md",
     "prose-package.json",
     "provenance/README.md",
     "provenance/import.json",
@@ -95,6 +102,7 @@
     "scripts/check_repository.py",
     "scripts/check_sofr_change.mjs",
     "scripts/check_valuation.mjs",
+    "scripts/check_vendor_inventory.mjs",
     "scripts/reproduce_sofr.py",
     "tests/README.md",
     "tests/cases/model-description.md",
@@ -136,7 +144,8 @@
     "backtesting-review": "examples/backtesting-review/program.md",
     "sofr-change-review": "examples/sofr-change-review/program.md",
     "report-assessment": "examples/assess-report.md",
-    "sofr-calibration-review": "examples/calibration-review/program.md"
+    "sofr-calibration-review": "examples/calibration-review/program.md",
+    "vendor-inventory-review": "examples/vendor-inventory-review/program.md"
   },
   "dependencies": {}
 }

@@ -30,6 +30,8 @@ The [SOFR change review](../examples/sofr-change-review/README.md) reuses the ex
 
 The [calibration review](../examples/calibration-review/README.md) uses freshly reproduced per-instrument SOFR evidence. It distinguishes selected and excluded instruments, missing item-level support, rounded displays and conflicting source records. The report itself remains unexecuted by an agent.
 
+The [vendor/inventory example](../examples/vendor-inventory-review/README.md) preserves deployment identity across shared model names, versions and local configurations. It separates register accuracy, vendor assertions and the evidence for narrow local checks. These synthetic records are authored; the report has not been run by an agent.
+
 ## Public foundations and scope
 
 Checked October 6, 2026. These are Open Quant's reusable reporting requirements, not regulator-issued templates. House thresholds, schedules, identifiers, materiality and approval rules remain caller inputs.

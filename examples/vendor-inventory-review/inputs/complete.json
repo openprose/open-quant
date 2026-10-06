@@ -1,0 +1,209 @@
+{
+  "asOf": "2026-10-01",
+  "scope": "Synthetic Demo Institution production deployments",
+  "deployments": [
+    {
+      "id": "D1",
+      "model": "M-CURVE",
+      "displayName": "Curve service",
+      "product": "CurveBox",
+      "version": "2.4",
+      "configuration": "base",
+      "use": "collateral-discounting",
+      "environment": "production",
+      "owner": "Rates Analytics"
+    },
+    {
+      "id": "D2",
+      "model": "M-CURVE",
+      "displayName": "Curve service",
+      "product": "CurveBox",
+      "version": "2.5",
+      "configuration": "local-overlay",
+      "use": "collateral-discounting",
+      "environment": "production",
+      "owner": "Rates Analytics"
+    },
+    {
+      "id": "D3",
+      "model": "M-CREDIT",
+      "displayName": "Credit service",
+      "product": "CreditBox",
+      "version": "1.0",
+      "configuration": "standard",
+      "use": "loan-pricing",
+      "environment": "production",
+      "owner": "Credit Analytics"
+    },
+    {
+      "id": "D4",
+      "model": "M-CURVE",
+      "displayName": "Curve service",
+      "product": "CurveBox",
+      "version": "2.5",
+      "configuration": "experimental",
+      "use": "research",
+      "environment": "sandbox",
+      "owner": "Research"
+    }
+  ],
+  "register": [
+    {
+      "record": "R1",
+      "deployment": "D1",
+      "model": "M-CURVE",
+      "product": "CurveBox",
+      "version": "2.4",
+      "configuration": "base",
+      "use": "collateral-discounting",
+      "owner": "Rates Analytics",
+      "state": "active"
+    },
+    {
+      "record": "R2",
+      "deployment": "D2",
+      "model": "M-CURVE",
+      "product": "CurveBox",
+      "use": "collateral-discounting",
+      "owner": "Rates Analytics",
+      "version": "2.4",
+      "configuration": "base",
+      "state": "active"
+    },
+    {
+      "record": "R3",
+      "deployment": "D5",
+      "model": "M-LEGACY",
+      "product": "LegacyBox",
+      "version": "1.0",
+      "configuration": "standard",
+      "use": "pricing",
+      "owner": "Legacy Analytics",
+      "state": "active"
+    }
+  ],
+  "retirements": [
+    {
+      "id": "X1",
+      "deployment": "D5",
+      "effectiveDate": "2026-09-20",
+      "recordedState": "retired"
+    }
+  ],
+  "vendorDocuments": [
+    {
+      "id": "V1",
+      "product": "CurveBox",
+      "version": "2.4",
+      "claim": "Vendor testing supports the standard product.",
+      "limitations": "No institution-specific configuration or use is assessed."
+    },
+    {
+      "id": "V2",
+      "product": "CurveBox",
+      "version": "2.5",
+      "claim": "Interpolation implementation changed; vendor regression checks passed.",
+      "limitations": "Local overlays and institution uses are outside this statement."
+    },
+    {
+      "id": "V3",
+      "product": "CreditBox",
+      "version": "1.0",
+      "claim": "Vendor benchmarks support pricing accuracy.",
+      "limitations": "Implementation internals and benchmark records are not disclosed."
+    }
+  ],
+  "localTests": [
+    {
+      "id": "T1",
+      "deployment": "D1",
+      "product": "CurveBox",
+      "version": "2.4",
+      "configuration": "base",
+      "use": "collateral-discounting",
+      "date": "2026-09-25",
+      "comparison": "reference-price-difference-bp",
+      "expectedCases": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "observations": [
+        {
+          "case": "C1",
+          "differenceBp": 0.1
+        },
+        {
+          "case": "C2",
+          "differenceBp": 0.2
+        },
+        {
+          "case": "C3",
+          "differenceBp": 0.4
+        }
+      ],
+      "producerFinding": "within limit"
+    },
+    {
+      "id": "T2",
+      "deployment": "D2",
+      "product": "CurveBox",
+      "version": "2.4",
+      "configuration": "base",
+      "use": "collateral-discounting",
+      "date": "2026-09-25",
+      "comparison": "reference-price-difference-bp",
+      "expectedCases": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "observations": [
+        {
+          "case": "C1",
+          "differenceBp": 0.1
+        },
+        {
+          "case": "C2",
+          "differenceBp": 0.2
+        },
+        {
+          "case": "C3",
+          "differenceBp": 0.3
+        }
+      ],
+      "producerFinding": "within limit"
+    },
+    {
+      "id": "T3",
+      "deployment": "D3",
+      "product": "CreditBox",
+      "version": "1.0",
+      "configuration": "standard",
+      "use": "loan-pricing",
+      "date": "2026-09-25",
+      "comparison": "reference-price-difference-bp",
+      "expectedCases": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "observations": [
+        {
+          "case": "C1",
+          "differenceBp": 0.2
+        },
+        {
+          "case": "C2",
+          "differenceBp": 0.3
+        },
+        {
+          "case": "C3",
+          "differenceBp": 0.8
+        }
+      ],
+      "producerFinding": "within limit"
+    }
+  ],
+  "producerSummary": "All production deployments are registered and locally validated."
+}

@@ -1,6 +1,6 @@
 # Distinguishing cases for operating reports
 
-These are authored interpretation cases, not model evaluation results. A mechanical checker covers only the monitoring fixture's explicit data relationships. Review the actual report against every adopted requirement, including source support, coverage, effects and its fulfillment claim.
+These are authored interpretation cases, not model evaluation results. The fixture scripts check explicitly bound data relationships; none is a general report evaluator. Review the actual report against every adopted requirement, including source support, coverage, effects and its fulfillment claim.
 
 | Contract | Supported reporting | Missing evidence | Contradictory or misleading reporting |
 |---|---|---|---|
@@ -50,3 +50,11 @@ The checker covers missing dates, duplicate records, invalid numbers, exact star
 The historical evidence remains fixed. In `shape`, proposed method B meets both selected numerical criteria and method A fails the daily-move criterion. Adding `house/locality.md` in `shape-and-locality` makes B fail the additional criterion; A still fails the daily-move criterion. Neither meets the combined set. These findings concern the method criteria; an accurate report can fulfill either reporting invocation.
 
 The checker also removes locality data in memory: that makes the additional criterion unresolved, not satisfied by disclosure. A known breached shape criterion still dominates the overall numerical finding. Equality passes under the authored limits. Substituting the five-business-day measure for the daily one changes the result and is an incorrect evidence binding.
+
+## Vendor inventory expectations
+
+- `complete`: D1 has a matching register record and a supported narrow local check. D2 has conflicting version/configuration fields and no exact local test for its deployed configuration. D3 is unregistered and has a local threshold breach. D4 is excluded as sandbox. R3 remains unmatched and conflicts with the supplied retirement event for D5.
+- `missing`: T1 is unavailable, so D1's local check becomes unresolved while its register match remains supported. D2 is still unresolved and D3 still adverse; the population is still three production deployments.
+- `contradictory`: a second D1 record creates an ambiguous register match. Do not choose R1 merely because it agrees with deployment evidence. T1 still supports D1's narrow local check; the inventory conflict does not erase independent source support for that finding.
+
+Every case must reject the producer's blanket statement that the population is registered and locally validated. Generic vendor testing and an earlier local version are not substitutes for the exact current implementation and use. The checker also exercises evidence-age boundaries, future/invalid dates, missing observations alongside a known breach, duplicate cases/tests, incorrect configuration, unexpected cases and duplicate deployment identities. These remain authored fixture controls, not assessments by a decision model.
