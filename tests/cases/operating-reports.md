@@ -74,3 +74,17 @@ The checker covers equality, duplicate rows/scenarios, wrong input types, incomp
 - `late-forecast`: B3 exists but was issued after both its target window and observed outcome. Its correct value does not qualify it as predictive evidence. Eligibility and common-population metrics match missing, with a different recorded cause.
 
 Every case must disclose unavailable training/selection history. Chronologically eligible predictions do not alone establish a pristine holdout. Controls cover exact timing boundaries, missing/duplicate observations, unmatched identities, invalid dates, wrong currency, nonnumeric values, empty metric populations and duplicate cohort identities. These authored cases do not establish model accuracy or evaluator reliability.
+
+## Implementation review
+
+These are authored interpretation cases for [implementation review](../../contracts/implementation-review.md), not outputs of agent execution or financial approval.
+
+**Supported, bounded agreement.** A supplied packet identifies a pricing implementation, its annual-volatility and expiry conventions, numerical-reference method, ten required cases, observed prices and tolerances. All required comparisons are supported within their tolerances. A report identifies the tested scope, maps the conventions, accounts for each case and limits its conclusion to that evidence. This can fulfill the review without asserting universal correctness, adequate coverage for every use or deployment approval.
+
+**A passing identity is insufficient.** A packet reports that a Black pricing adapter satisfies put–call parity, but off-one-year tests disagree with the required prices because annual volatility was passed where total standard deviation was required. Calling the implementation correct because parity passes is not supported. Report the convention mismatch and price failures separately from the passing identity. These expectations concern this stated packet; no observed defect in QuantLib is implied.
+
+**Missing execution or coverage.** A packet contains test code for several expiries but observed results only for a one-year, at-the-money, zero-rate case. That result does not establish execution of the remaining tests. An accurate review can identify the gap; claiming the full implementation test scope passed cannot be supported by the code alone.
+
+**Disputed observer result.** A numerical cross-check initially disagrees with an implementation's analytical integral. Retained refinement changes the numerical measurement while the subject source and inputs stay fixed, bringing the values into agreement. A report must account for that evidence before declaring a subject defect or proposing a repair. The refined check supports its observed scope, not a blanket conclusion that the observer or implementation is always correct.
+
+**Shared convention error.** Two implementations agree after receiving inputs from the same adapter, but the adapter maps the documented quantities incorrectly. Their price agreement does not establish the required convention. Distinguish comparison independence from separate function or provider names, and identify the unsupported mapping.

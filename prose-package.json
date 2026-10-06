@@ -10,6 +10,7 @@
     "contracts/calibration-review.md",
     "contracts/claim-evidence.md",
     "contracts/documentation.md",
+    "contracts/implementation-review.md",
     "contracts/institutional-facts.md",
     "contracts/limitations-and-remediation.md",
     "contracts/model-change.md",
@@ -163,7 +164,8 @@
     "sofr-calibration-review": "examples/calibration-review/program.md",
     "vendor-inventory-review": "examples/vendor-inventory-review/program.md",
     "risk-report": "examples/risk-report/program.md",
-    "outcomes-review": "examples/outcomes-review/program.md"
+    "outcomes-review": "examples/outcomes-review/program.md",
+    "implementation-review": "contracts/implementation-review.md"
   },
   "dependencies": {}
 }

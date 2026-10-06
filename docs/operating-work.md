@@ -10,6 +10,7 @@ The operating contracts turn supplied model records and house policy into review
 | Determine what remains open | [Limitations and remediation](../contracts/limitations-and-remediation.md) | Issues, actions, use restrictions and closure criteria. |
 | Identify input-quality and lineage gaps | [Model data](../contracts/model-data.md) | Source/input snapshots, transformations and quality criteria. |
 | Explain the evidence for a calibration | [Calibration review](../contracts/calibration-review.md) | Targets, fitted values, conventions, diagnostics and tolerance. |
+| Review implementation against its documented method | [Implementation review](../contracts/implementation-review.md) | Method conventions, exact implementation, required tests, observations and acceptance criteria. |
 | Explain differences between valuations | [Valuation comparison](../contracts/valuation-comparison.md) | Positions, prices, source provenance, conventions and tolerance. |
 | Compare predictions with observed outcomes | [Outcomes analysis](../contracts/outcomes-analysis.md) | Dated predictions/outcomes, pairing rules, metrics and evaluation scope. |
 | Account for risk-model backtest exceptions | [Backtesting](../contracts/backtesting.md) | Forecasts, outcome series, timing, sign conventions and exception policy. |
@@ -36,6 +37,8 @@ These operating reports have authored references and deterministic fixture check
 | [Outcomes](../examples/outcomes-review/README.md) | Outcomes analysis, model data | A comparison can reverse when both models use the same observations. |
 
 The SOFR examples use retained historical calculations; calibration also has a fresh numerical reproduction receipt. Other inputs are synthetic. Case selection, house policy and permissions are explicit in each program. Use [the common assessment entry point](../examples/assess-report.md) for an actual operating report, with its original program and selected case or mode.
+
+Implementation review currently has [authored distinguishing cases](../tests/cases/operating-reports.md#implementation-review), not a separate runnable example or agent qualification. It covers an additional question: whether supplied tests support agreement with the documented method. Calibration fit, mathematical consistency and reference agreement remain separate findings.
 
 ## Public foundations and scope
 

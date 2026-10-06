@@ -2,7 +2,7 @@
 
 Open Quant has a directory-package manifest, [prose-package.json](../prose-package.json), with explicitly selected files and exports. It includes the contracts, the worked examples in the [operating catalog](operating-work.md), the original SOFR decision note, source notices and offline checks. The kernel is supplied separately by the caller's runtime; the package does not bundle a kernel or an executor.
 
-Every change to selected bytes requires a new candidate digest and package check. Offline round trips have been retained for specific SOFR-only and expanded selections; they qualify those exact bytes, not subsequent additions. The active selection now includes 127 files, close to the currently inspected CLI package limit of 128. Further growth requires reviewing distribution boundaries and unnecessary files rather than assuming this package can grow without limit.
+Every change to selected bytes requires a new candidate digest and package check. Offline round trips have been retained for specific SOFR-only and expanded selections; they qualify those exact bytes, not subsequent additions. The active selection now includes 128 files, at the currently inspected CLI package limit. Further growth requires reviewing distribution boundaries and unnecessary files rather than assuming this package can grow without limit.
 
 The proposed candidate identity is `openprose/open-quant@0.1.0-rc.1`. It is prepared for review, **not published**. Do not expect a registry fetch to succeed until a publisher has released this exact version and retained its receipt.
 
