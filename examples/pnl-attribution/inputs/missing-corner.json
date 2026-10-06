@@ -1,0 +1,433 @@
+{
+  "subject": "PNL-ATTRIBUTION-2026-10-06",
+  "case": "missing-corner",
+  "source_sha256": "eae69c964d016663aa8940e56a8d4add71aee96d8d5a139ae1b0c9f57f531bd1",
+  "scope": {
+    "currency": "USD",
+    "fixed_position": true,
+    "trades_cashflows_fees": false,
+    "market_observations": false,
+    "forward_independently_supplied": true,
+    "arithmetic_tolerance_usd": 1e-06,
+    "regulatory_attribution_test": false
+  },
+  "inputs": {
+    "factors": [
+      "forward",
+      "volatility",
+      "maturity"
+    ],
+    "endpoints": {
+      "forward": [
+        100,
+        110
+      ],
+      "volatility": [
+        0.2,
+        0.3
+      ],
+      "maturity": [
+        1,
+        0.75
+      ]
+    },
+    "strike": 100,
+    "rate": 0.03,
+    "quantity": 10000,
+    "displacement": 0
+  },
+  "corners": [
+    {
+      "id": "000",
+      "factors": {
+        "forward": 100,
+        "volatility": 0.2,
+        "maturity": 1
+      },
+      "stddev": 0.2,
+      "discount": 0.9704455335485082,
+      "reference_position_usd": 77301.49359277918,
+      "native_success": true,
+      "native_error": null,
+      "native_unit_usd": 7.730149359277914,
+      "native_position_usd": 77301.49359277914,
+      "represented_position_usd": "3865074679638957/50000000000"
+    },
+    {
+      "id": "001",
+      "factors": {
+        "forward": 100,
+        "volatility": 0.2,
+        "maturity": 0.75
+      },
+      "stddev": 0.17320508075688773,
+      "discount": 0.9777512371933363,
+      "reference_position_usd": 67477.10950825454,
+      "native_success": true,
+      "native_error": null,
+      "native_unit_usd": 6.747710950825452,
+      "native_position_usd": 67477.10950825452,
+      "represented_position_usd": "1686927737706363/25000000000"
+    },
+    {
+      "id": "010",
+      "factors": {
+        "forward": 100,
+        "volatility": 0.3,
+        "maturity": 1
+      },
+      "stddev": 0.3,
+      "discount": 0.9704455335485082,
+      "reference_position_usd": 115711.4465623416,
+      "native_success": true,
+      "native_error": null,
+      "native_unit_usd": 11.57114465623416,
+      "native_position_usd": 115711.4465623416,
+      "represented_position_usd": "144639308202927/1250000000"
+    },
+    {
+      "id": "011",
+      "factors": {
+        "forward": 100,
+        "volatility": 0.3,
+        "maturity": 0.75
+      },
+      "stddev": 0.25980762113533157,
+      "discount": 0.9777512371933363,
+      "reference_position_usd": 101057.89471251197,
+      "native_success": true,
+      "native_error": null,
+      "native_unit_usd": 10.10578947125121,
+      "native_position_usd": 101057.8947125121,
+      "represented_position_usd": "1010578947125121/10000000000"
+    },
+    {
+      "id": "100",
+      "factors": {
+        "forward": 110,
+        "volatility": 0.2,
+        "maturity": 1
+      },
+      "stddev": 0.2,
+      "discount": 0.9704455335485082,
+      "reference_position_usd": 138696.1818351763,
+      "native_success": true,
+      "native_error": null,
+      "native_unit_usd": 13.86961818351764,
+      "native_position_usd": 138696.1818351764,
+      "represented_position_usd": "346740454587941/2500000000"
+    },
+    {
+      "id": "101",
+      "factors": {
+        "forward": 110,
+        "volatility": 0.2,
+        "maturity": 0.75
+      },
+      "stddev": 0.17320508075688773,
+      "discount": 0.9777512371933363,
+      "reference_position_usd": 130166.73002179082,
+      "native_success": true,
+      "native_error": null,
+      "native_unit_usd": 13.016673002179093,
+      "native_position_usd": 130166.73002179094,
+      "represented_position_usd": "6508336501089547/50000000000"
+    },
+    {
+      "id": "110",
+      "factors": {
+        "forward": 110,
+        "volatility": 0.3,
+        "maturity": 1
+      },
+      "stddev": 0.3,
+      "discount": 0.9704455335485082,
+      "reference_position_usd": null,
+      "native_success": true,
+      "native_error": null,
+      "native_unit_usd": null,
+      "native_position_usd": null,
+      "represented_position_usd": null
+    },
+    {
+      "id": "111",
+      "factors": {
+        "forward": 110,
+        "volatility": 0.3,
+        "maturity": 0.75
+      },
+      "stddev": 0.25980762113533157,
+      "discount": 0.9777512371933363,
+      "reference_position_usd": 162013.18353393217,
+      "native_success": true,
+      "native_error": null,
+      "native_unit_usd": 16.20131835339322,
+      "native_position_usd": 162013.1835339322,
+      "represented_position_usd": "810065917669661/5000000000"
+    }
+  ],
+  "reported_attribution": {
+    "total_usd": "4235584497057653/50000000000",
+    "sequential_paths": [
+      {
+        "order": [
+          "forward",
+          "volatility",
+          "maturity"
+        ],
+        "steps": [
+          {
+            "factor": "forward",
+            "from": "000",
+            "to": "100",
+            "contribution_usd": "3069734412119863/50000000000"
+          },
+          {
+            "factor": "volatility",
+            "from": "100",
+            "to": "110",
+            "contribution_usd": "466905741681169/12500000000"
+          },
+          {
+            "factor": "maturity",
+            "from": "110",
+            "to": "111",
+            "contribution_usd": "-350886440893443/25000000000"
+          }
+        ],
+        "sum_usd": "4235584497057653/50000000000"
+      },
+      {
+        "order": [
+          "forward",
+          "maturity",
+          "volatility"
+        ],
+        "steps": [
+          {
+            "factor": "forward",
+            "from": "000",
+            "to": "100",
+            "contribution_usd": "3069734412119863/50000000000"
+          },
+          {
+            "factor": "maturity",
+            "from": "100",
+            "to": "101",
+            "contribution_usd": "-426472590669273/50000000000"
+          },
+          {
+            "factor": "volatility",
+            "from": "101",
+            "to": "111",
+            "contribution_usd": "1592322675607063/50000000000"
+          }
+        ],
+        "sum_usd": "4235584497057653/50000000000"
+      },
+      {
+        "order": [
+          "volatility",
+          "forward",
+          "maturity"
+        ],
+        "steps": [
+          {
+            "factor": "volatility",
+            "from": "000",
+            "to": "010",
+            "contribution_usd": "1920497648478123/50000000000"
+          },
+          {
+            "factor": "forward",
+            "from": "010",
+            "to": "110",
+            "contribution_usd": "188553733147901/3125000000"
+          },
+          {
+            "factor": "maturity",
+            "from": "110",
+            "to": "111",
+            "contribution_usd": "-350886440893443/25000000000"
+          }
+        ],
+        "sum_usd": "4235584497057653/50000000000"
+      },
+      {
+        "order": [
+          "volatility",
+          "maturity",
+          "forward"
+        ],
+        "steps": [
+          {
+            "factor": "volatility",
+            "from": "000",
+            "to": "010",
+            "contribution_usd": "1920497648478123/50000000000"
+          },
+          {
+            "factor": "maturity",
+            "from": "010",
+            "to": "011",
+            "contribution_usd": "-29307103699659/2000000000"
+          },
+          {
+            "factor": "forward",
+            "from": "011",
+            "to": "111",
+            "contribution_usd": "609552888214201/10000000000"
+          }
+        ],
+        "sum_usd": "4235584497057653/50000000000"
+      },
+      {
+        "order": [
+          "maturity",
+          "forward",
+          "volatility"
+        ],
+        "steps": [
+          {
+            "factor": "maturity",
+            "from": "000",
+            "to": "001",
+            "contribution_usd": "-491219204226231/50000000000"
+          },
+          {
+            "factor": "forward",
+            "from": "001",
+            "to": "101",
+            "contribution_usd": "3134481025676821/50000000000"
+          },
+          {
+            "factor": "volatility",
+            "from": "101",
+            "to": "111",
+            "contribution_usd": "1592322675607063/50000000000"
+          }
+        ],
+        "sum_usd": "4235584497057653/50000000000"
+      },
+      {
+        "order": [
+          "maturity",
+          "volatility",
+          "forward"
+        ],
+        "steps": [
+          {
+            "factor": "maturity",
+            "from": "000",
+            "to": "001",
+            "contribution_usd": "-491219204226231/50000000000"
+          },
+          {
+            "factor": "volatility",
+            "from": "001",
+            "to": "011",
+            "contribution_usd": "1679039260212879/50000000000"
+          },
+          {
+            "factor": "forward",
+            "from": "011",
+            "to": "111",
+            "contribution_usd": "609552888214201/10000000000"
+          }
+        ],
+        "sum_usd": "4235584497057653/50000000000"
+      }
+    ],
+    "standalone_usd": {
+      "forward": "3069734412119863/50000000000",
+      "volatility": "1920497648478123/50000000000",
+      "maturity": "-491219204226231/50000000000"
+    },
+    "standalone_sum_usd": "899802571274351/10000000000",
+    "interaction_residual_usd": "-131714179657051/25000000000",
+    "subset_interactions_usd": {
+      "100": "3069734412119863/50000000000",
+      "010": "1920497648478123/50000000000",
+      "001": "-491219204226231/50000000000",
+      "110": "-52874681753447/50000000000",
+      "101": "32373306778479/25000000000",
+      "011": "-60364597066311/12500000000",
+      "111": "-33841902852369/50000000000"
+    },
+    "average_over_orders_usd": {
+      "forward": "6128779487474991/100000000000",
+      "volatility": "3524100958369309/100000000000",
+      "maturity": "-590855725864497/50000000000"
+    },
+    "equal_interaction_allocation_usd": {
+      "forward": "6128779487474991/100000000000",
+      "volatility": "3524100958369309/100000000000",
+      "maturity": "-590855725864497/50000000000"
+    },
+    "factor_order_ranges_usd": {
+      "forward": {
+        "min": "188553733147901/3125000000",
+        "max": "3134481025676821/50000000000"
+      },
+      "volatility": {
+        "min": "1592322675607063/50000000000",
+        "max": "1920497648478123/50000000000"
+      },
+      "maturity": {
+        "min": "-29307103699659/2000000000",
+        "max": "-426472590669273/50000000000"
+      }
+    },
+    "grouped_paths": [
+      {
+        "order": [
+          "forward_volatility",
+          "maturity"
+        ],
+        "steps": [
+          {
+            "factor": "forward_volatility",
+            "from": "000",
+            "to": "110",
+            "contribution_usd": "4937357378844539/50000000000"
+          },
+          {
+            "factor": "maturity",
+            "from": "110",
+            "to": "111",
+            "contribution_usd": "-350886440893443/25000000000"
+          }
+        ],
+        "sum_usd": "4235584497057653/50000000000"
+      },
+      {
+        "order": [
+          "maturity",
+          "forward_volatility"
+        ],
+        "steps": [
+          {
+            "factor": "maturity",
+            "from": "000",
+            "to": "001",
+            "contribution_usd": "-491219204226231/50000000000"
+          },
+          {
+            "factor": "forward_volatility",
+            "from": "001",
+            "to": "111",
+            "contribution_usd": "1181700925320971/12500000000"
+          }
+        ],
+        "sum_usd": "4235584497057653/50000000000"
+      }
+    ],
+    "group_average_usd": {
+      "forward_volatility": "9664161080128423/100000000000",
+      "maturity": "-1192992086013117/100000000000"
+    },
+    "partition_difference_maturity_usd": "-11280634284123/100000000000",
+    "partition_difference_forward_volatility_usd": "11280634284123/100000000000"
+  },
+  "producer_claims": []
+}

@@ -183,3 +183,9 @@ Complete, missing-eligibility and contradictory packets retain actual calculatio
 The [option fit and consistency report](../examples/option-consistency/README.md) composes existing calibration and implementation requirements. Public source `30aa95e` reproduces every numerical observation and all 111 controls from the fixed study. New timestamp/duration and explicitly rebound source/plan identities are retained separately. No definition or package-content change is needed.
 
 Complete, missing-underlying and contradictory packets retain all ten native inversions, twelve strategies and 36 costs. One missing selected instrument identity limits joint-payoff applicability without erasing mathematical calculations under the original assumptions. The authored reference is not an observed agent result. Eighteen adverse mutations test fixed evidence, not general language interpretation, actual market arbitrage or savings.
+
+## P&L attribution composition
+
+The [attribution report](../examples/pnl-attribution/README.md) composes existing P&L explanation and sensitivity review. Public source `2bbe2ae` reproduces all eight native values, six paths, interactions, grouped results and 31 controls; new timestamp/duration and explicitly rebound source/plan identities are recorded separately. No definition or package-content change is needed.
+
+Complete, missing-corner and contradictory packets retain reported attribution. Missing corner 110 leaves total and four paths supported while two paths and the selected mean allocation lack complete input support. Twenty adverse mutations check fixed evidence, including wrong allocations that preserve the total. The reference is authored; agent interpretation, causal identification, regulatory attribution and operating savings remain unqualified.

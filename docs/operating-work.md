@@ -42,6 +42,7 @@ These operating reports have authored references and deterministic fixture check
 | [SOFR calibration](../examples/calibration-review/README.md) | Calibration review, model data | Rounded displays, missing instruments and conflicting records limit a fit conclusion. |
 | [Vendor inventory](../examples/vendor-inventory-review/README.md) | Model inventory, vendor review | Register accuracy and local-test support are separate findings for an exact deployment. |
 | [Risk report](../examples/risk-report/README.md) | P&L explanation, scenario review, sensitivity review | Residuals, joint effects and assumed actions remain distinct. |
+| [P&L attribution](../examples/pnl-attribution/README.md) | P&L explanation, sensitivity review | Reconciled bridges can allocate factors differently; a known total does not verify missing intermediate valuations. |
 | [Outcomes](../examples/outcomes-review/README.md) | Outcomes analysis, model data | A comparison can reverse when both models use the same observations. |
 | [Historical availability](../examples/availability-review/README.md) | Model data, outcomes analysis | Equal errors do not establish available historical inputs; recorded selections and independently supported timing remain distinct. |
 | [Implementation](../examples/implementation-review/README.md) | Implementation review, model description | Passing parity or one baseline does not establish correct price conventions. |
@@ -125,3 +126,7 @@ The [worked exposure composition](../examples/exposure-review/README.md) retains
 ## Option quote consistency
 
 The [option reporting composition](../examples/option-consistency/README.md) reuses calibration, implementation and numerical-evidence requirements. It preserves ten quote inversions, twelve strategy payoffs and 36 spread-dependent costs. A close fit can coexist with a joint-price violation; a negative portfolio cost can coexist with a possible terminal loss. The missing-underlying packet preserves calculations while limiting their applicability to selected instruments. No new definition is required, and agent execution remains unqualified.
+
+## P&L attribution
+
+The [full-revaluation attribution report](../examples/pnl-attribution/README.md) reuses P&L explanation, sensitivity and numerical-evidence requirements. Eight native valuations support six sequential paths, a selected symmetric three-factor allocation and a two-group comparison. Complete, missing-corner and contradictory packets distinguish arithmetic closure from source support and the selected attribution method. It complements the earlier approximation-based risk report without adding a definition. Agent execution remains unqualified.
