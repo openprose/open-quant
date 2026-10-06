@@ -144,4 +144,11 @@ The complete, missing-history and contradictory packets preserve observed select
 
 [Credit-loss review](../contracts/credit-loss-review.md) adds authored requirements and ten distinguishing cases for probability conditioning, exposure/severity, loss timing and evidence gaps. It composes existing reporting and numerical requirements. All previous definitions and examples remain unchanged. The component checkpoint has 28 definitions across twenty operating domains; existing worked reports retain their prior qualification limits.
 
-No agent has executed or assessed this new component, and no worked credit-loss report is supplied yet. The requirements do not implement a regulatory or accounting standard, estimate loss-model reliability or authorize a financial action. Source checks and package preparation establish only their stated mechanical properties.
+At component checkpoint a2e62da, no agent had executed or assessed this new component and no worked credit-loss report was supplied. The requirements do not implement a regulatory or accounting standard, estimate loss-model reliability or authorize a financial action. Source checks and package preparation establish only their stated mechanical properties.
+
+
+## Worked credit-loss composition
+
+The [credit-loss/implementation report](../examples/credit-loss-review/README.md) retains all six observed constructions and four intervals. Public source d717a0d reproduces the preceding study's source identity, scope, inputs, probabilities, amounts and 58 controls exactly. Only observation timestamp and duration are excluded from that comparison. Complete, missing-severity and contradictory packets distinguish actual parameters from selected requirements; withholding an intended loss fraction leaves calculation observations intact.
+
+The 725-word complete-case reference is authored. Fixed controls inspect all four bindings per interval, observed arithmetic, source identities, exact tolerance boundaries and fourteen adverse mutations. They do not run QuantLib, assess arbitrary prose or establish accounting acceptance. All definitions, preceding examples and component-package bytes remain unchanged. Agent execution and assessment of this report remain unperformed.

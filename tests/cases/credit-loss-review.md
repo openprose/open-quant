@@ -15,4 +15,4 @@ These authored cases describe [credit-loss review](../../contracts/credit-loss-r
 | A market-implied curve is relabeled as an observed borrower default estimate without evidence. | Preserve the original probability basis. Numerical agreement cannot establish the new interpretation. |
 | Some exposure or loss-severity records are absent, while the report gives a zero loss for them and a complete portfolio total. | Identify unresolved contributions and coverage. Missing evidence is not a zero observation or evidence of complete aggregation. |
 
-The component reviews supplied evidence. Reproduction, model estimation and financial actions require their own caller scope. No worked credit-loss report or agent execution is qualified at this component checkpoint.
+The component reviews supplied evidence. Reproduction, model estimation and financial actions require their own caller scope. The [worked composition](../../examples/credit-loss-review/README.md) now supplies observed synthetic calculations and three reporting packets. The reference is authored; agent execution remains unqualified.

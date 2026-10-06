@@ -1,0 +1,360 @@
+{
+  "subject": "CREDIT-LOSS-2026-10-06",
+  "case": "complete",
+  "source_sha256": "bf1f380b5833d3787d051511fb41ca5328dc56e290e31c0f2ce02d2acab7390c",
+  "selected_method": {
+    "scope": {
+      "reference_date": "2026-01-01",
+      "day_count": "Actual/365 Fixed",
+      "time_coordinates": "exact year fractions, not calendar anniversaries",
+      "hazard_per_year": 0.12,
+      "discount_rate_per_year": 0.03,
+      "probability_basis": "stipulated synthetic distribution",
+      "default_event": "absorbing, no cure or competing events",
+      "loss_timing": "interval end",
+      "currency": "USD",
+      "exposure_and_severity": "deterministic conditional on interval default",
+      "probability_tolerance": 1e-12,
+      "amount_tolerance_usd": 1e-07
+    },
+    "intervals": [
+      {
+        "id": "I1",
+        "start_years": 0.0,
+        "end_years": 1.0,
+        "exposure_usd": 1000000.0,
+        "loss_fraction": 0.45
+      },
+      {
+        "id": "I2",
+        "start_years": 1.0,
+        "end_years": 2.0,
+        "exposure_usd": 800000.0,
+        "loss_fraction": 0.45
+      },
+      {
+        "id": "I3",
+        "start_years": 2.0,
+        "end_years": 3.0,
+        "exposure_usd": 600000.0,
+        "loss_fraction": 0.5
+      },
+      {
+        "id": "I4",
+        "start_years": 3.0,
+        "end_years": 5.0,
+        "exposure_usd": 400000.0,
+        "loss_fraction": 0.5
+      }
+    ]
+  },
+  "observed_probabilities": {
+    "nodes": [
+      {
+        "time_years": 0.0,
+        "survival": 1.0,
+        "cumulative_default": 0.0,
+        "native_hazard_per_year": 0.12
+      },
+      {
+        "time_years": 1.0,
+        "survival": 0.8869204367171575,
+        "cumulative_default": 0.11307956328284252,
+        "native_hazard_per_year": 0.12
+      },
+      {
+        "time_years": 2.0,
+        "survival": 0.7866278610665535,
+        "cumulative_default": 0.21337213893344653,
+        "native_hazard_per_year": 0.12
+      },
+      {
+        "time_years": 3.0,
+        "survival": 0.697676326071031,
+        "cumulative_default": 0.302323673928969,
+        "native_hazard_per_year": 0.12
+      },
+      {
+        "time_years": 5.0,
+        "survival": 0.5488116360940264,
+        "cumulative_default": 0.4511883639059736,
+        "native_hazard_per_year": 0.12
+      }
+    ],
+    "intervals": [
+      {
+        "id": "I1",
+        "unconditional_default": 0.11307956328284252,
+        "conditional_default": 0.11307956328284252,
+        "discount_factor": 0.9704455335485082
+      },
+      {
+        "id": "I2",
+        "unconditional_default": 0.10029257565060401,
+        "conditional_default": 0.11307956328284238,
+        "discount_factor": 0.9417645335842487
+      },
+      {
+        "id": "I3",
+        "unconditional_default": 0.08895153499552244,
+        "conditional_default": 0.11307956328284259,
+        "discount_factor": 0.9139311852712282
+      },
+      {
+        "id": "I4",
+        "unconditional_default": 0.14886468997700464,
+        "conditional_default": 0.21337213893344661,
+        "discount_factor": 0.8607079764250578
+      }
+    ]
+  },
+  "observed_constructions": [
+    {
+      "id": "interval_mass",
+      "rows": [
+        {
+          "interval_id": "I1",
+          "probability_weight": 0.11307956328284252,
+          "exposure_usd": 1000000.0,
+          "loss_fraction_used": 0.45,
+          "discount_factor_used": 0.9704455335485082,
+          "expected_loss_usd": 49381.90070555268
+        },
+        {
+          "interval_id": "I2",
+          "probability_weight": 0.10029257565060401,
+          "exposure_usd": 800000.0,
+          "loss_fraction_used": 0.45,
+          "discount_factor_used": 0.9417645335842487,
+          "expected_loss_usd": 34002.71666263947
+        },
+        {
+          "interval_id": "I3",
+          "probability_weight": 0.08895153499552244,
+          "exposure_usd": 600000.0,
+          "loss_fraction_used": 0.5,
+          "discount_factor_used": 0.9139311852712282,
+          "expected_loss_usd": 24388.674543045887
+        },
+        {
+          "interval_id": "I4",
+          "probability_weight": 0.14886468997700464,
+          "exposure_usd": 400000.0,
+          "loss_fraction_used": 0.5,
+          "discount_factor_used": 0.8607079764250578,
+          "expected_loss_usd": 25625.80521425025
+        }
+      ],
+      "total_expected_loss_usd": 133399.09712548828,
+      "weight_sum": 0.4511883639059736,
+      "all_weights_in_unit_interval": true,
+      "difference_from_interval_mass_construction_usd": 0.0
+    },
+    {
+      "id": "cumulative_as_interval",
+      "rows": [
+        {
+          "interval_id": "I1",
+          "probability_weight": 0.11307956328284252,
+          "exposure_usd": 1000000.0,
+          "loss_fraction_used": 0.45,
+          "discount_factor_used": 0.9704455335485082,
+          "expected_loss_usd": 49381.90070555268
+        },
+        {
+          "interval_id": "I2",
+          "probability_weight": 0.21337213893344653,
+          "exposure_usd": 800000.0,
+          "loss_fraction_used": 0.45,
+          "discount_factor_used": 0.9417645335842487,
+          "expected_loss_usd": 72340.6726449111
+        },
+        {
+          "interval_id": "I3",
+          "probability_weight": 0.302323673928969,
+          "exposure_usd": 600000.0,
+          "loss_fraction_used": 0.5,
+          "discount_factor_used": 0.9139311852712282,
+          "expected_loss_usd": 82890.91009483648
+        },
+        {
+          "interval_id": "I4",
+          "probability_weight": 0.4511883639059736,
+          "exposure_usd": 400000.0,
+          "loss_fraction_used": 0.5,
+          "discount_factor_used": 0.8607079764250578,
+          "expected_loss_usd": 77668.28473680862
+        }
+      ],
+      "total_expected_loss_usd": 282281.7681821089,
+      "weight_sum": 1.0799637400512316,
+      "all_weights_in_unit_interval": true,
+      "difference_from_interval_mass_construction_usd": 148882.6710566206
+    },
+    {
+      "id": "conditional_as_unconditional",
+      "rows": [
+        {
+          "interval_id": "I1",
+          "probability_weight": 0.11307956328284252,
+          "exposure_usd": 1000000.0,
+          "loss_fraction_used": 0.45,
+          "discount_factor_used": 0.9704455335485082,
+          "expected_loss_usd": 49381.90070555268
+        },
+        {
+          "interval_id": "I2",
+          "probability_weight": 0.11307956328284238,
+          "exposure_usd": 800000.0,
+          "loss_fraction_used": 0.45,
+          "discount_factor_used": 0.9417645335842487,
+          "expected_loss_usd": 38337.955982271575
+        },
+        {
+          "interval_id": "I3",
+          "probability_weight": 0.11307956328284259,
+          "exposure_usd": 600000.0,
+          "loss_fraction_used": 0.5,
+          "discount_factor_used": 0.9139311852712282,
+          "expected_loss_usd": 31004.081790312357
+        },
+        {
+          "interval_id": "I4",
+          "probability_weight": 0.21337213893344661,
+          "exposure_usd": 400000.0,
+          "loss_fraction_used": 0.5,
+          "discount_factor_used": 0.8607079764250578,
+          "expected_loss_usd": 36730.22038537863
+        }
+      ],
+      "total_expected_loss_usd": 155454.15886351524,
+      "weight_sum": 0.5526108287819741,
+      "all_weights_in_unit_interval": true,
+      "difference_from_interval_mass_construction_usd": 22055.06173802697
+    },
+    {
+      "id": "hazard_times_interval",
+      "rows": [
+        {
+          "interval_id": "I1",
+          "probability_weight": 0.12,
+          "exposure_usd": 1000000.0,
+          "loss_fraction_used": 0.45,
+          "discount_factor_used": 0.9704455335485082,
+          "expected_loss_usd": 52404.05881161944
+        },
+        {
+          "interval_id": "I2",
+          "probability_weight": 0.12,
+          "exposure_usd": 800000.0,
+          "loss_fraction_used": 0.45,
+          "discount_factor_used": 0.9417645335842487,
+          "expected_loss_usd": 40684.22785083955
+        },
+        {
+          "interval_id": "I3",
+          "probability_weight": 0.12,
+          "exposure_usd": 600000.0,
+          "loss_fraction_used": 0.5,
+          "discount_factor_used": 0.9139311852712282,
+          "expected_loss_usd": 32901.522669764214
+        },
+        {
+          "interval_id": "I4",
+          "probability_weight": 0.24,
+          "exposure_usd": 400000.0,
+          "loss_fraction_used": 0.5,
+          "discount_factor_used": 0.8607079764250578,
+          "expected_loss_usd": 41313.982868402774
+        }
+      ],
+      "total_expected_loss_usd": 167303.792200626,
+      "weight_sum": 0.6,
+      "all_weights_in_unit_interval": true,
+      "difference_from_interval_mass_construction_usd": 33904.695075137715
+    },
+    {
+      "id": "recovery_as_loss",
+      "rows": [
+        {
+          "interval_id": "I1",
+          "probability_weight": 0.11307956328284252,
+          "exposure_usd": 1000000.0,
+          "loss_fraction_used": 0.55,
+          "discount_factor_used": 0.9704455335485082,
+          "expected_loss_usd": 60355.65641789772
+        },
+        {
+          "interval_id": "I2",
+          "probability_weight": 0.10029257565060401,
+          "exposure_usd": 800000.0,
+          "loss_fraction_used": 0.55,
+          "discount_factor_used": 0.9417645335842487,
+          "expected_loss_usd": 41558.8759210038
+        },
+        {
+          "interval_id": "I3",
+          "probability_weight": 0.08895153499552244,
+          "exposure_usd": 600000.0,
+          "loss_fraction_used": 0.5,
+          "discount_factor_used": 0.9139311852712282,
+          "expected_loss_usd": 24388.674543045887
+        },
+        {
+          "interval_id": "I4",
+          "probability_weight": 0.14886468997700464,
+          "exposure_usd": 400000.0,
+          "loss_fraction_used": 0.5,
+          "discount_factor_used": 0.8607079764250578,
+          "expected_loss_usd": 25625.80521425025
+        }
+      ],
+      "total_expected_loss_usd": 151929.01209619766,
+      "weight_sum": 0.4511883639059736,
+      "all_weights_in_unit_interval": true,
+      "difference_from_interval_mass_construction_usd": 18529.91497070939
+    },
+    {
+      "id": "undiscounted",
+      "rows": [
+        {
+          "interval_id": "I1",
+          "probability_weight": 0.11307956328284252,
+          "exposure_usd": 1000000.0,
+          "loss_fraction_used": 0.45,
+          "discount_factor_used": 1.0,
+          "expected_loss_usd": 50885.803477279136
+        },
+        {
+          "interval_id": "I2",
+          "probability_weight": 0.10029257565060401,
+          "exposure_usd": 800000.0,
+          "loss_fraction_used": 0.45,
+          "discount_factor_used": 1.0,
+          "expected_loss_usd": 36105.327234217446
+        },
+        {
+          "interval_id": "I3",
+          "probability_weight": 0.08895153499552244,
+          "exposure_usd": 600000.0,
+          "loss_fraction_used": 0.5,
+          "discount_factor_used": 1.0,
+          "expected_loss_usd": 26685.460498656732
+        },
+        {
+          "interval_id": "I4",
+          "probability_weight": 0.14886468997700464,
+          "exposure_usd": 400000.0,
+          "loss_fraction_used": 0.5,
+          "discount_factor_used": 1.0,
+          "expected_loss_usd": 29772.937995400927
+        }
+      ],
+      "total_expected_loss_usd": 143449.52920555425,
+      "weight_sum": 0.4511883639059736,
+      "all_weights_in_unit_interval": true,
+      "difference_from_interval_mass_construction_usd": 10050.432080065977
+    }
+  ],
+  "producer_claims": []
+}

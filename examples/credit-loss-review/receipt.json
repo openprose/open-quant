@@ -1,0 +1,50 @@
+{
+  "kind": "observed-synthetic-calculation-with-authored-reporting-projections",
+  "source_commit": "d717a0df57b568638e7f0cb8357cfb41ef5db9d4",
+  "source_file": "examples/credit-loss-review/model/measure.py",
+  "source_sha256": "bf1f380b5833d3787d051511fb41ca5328dc56e290e31c0f2ce02d2acab7390c",
+  "environment": {
+    "python": "3.12.14",
+    "quantlib": "1.43"
+  },
+  "observation_sha256": "27a57cddefc520b714ce18b746874debe8585ad29d0ed16f09618487ef895f3c",
+  "execution": {
+    "return_code": 0,
+    "timed_out": false,
+    "wall_seconds": 0.04875112499576062,
+    "attempts": 1,
+    "retries": 0,
+    "provider_calls": 0
+  },
+  "numerical_reproduction": {
+    "matched_all_prespecified_observations": true,
+    "excluded_fields": [
+      "recorded_at",
+      "calculation_seconds"
+    ]
+  },
+  "packets": {
+    "complete": {
+      "path": "inputs/complete.json",
+      "sha256": "810a88259b3e961ff58269d8a97ee846465cdeabdd55590df9c6b486707fa687"
+    },
+    "missing-severity": {
+      "path": "inputs/missing-severity.json",
+      "sha256": "580146a1ece1cf7246dd1ec9fe6c470064735834a7d62814dd6cfa9d12d99e68"
+    },
+    "contradictory": {
+      "path": "inputs/contradictory.json",
+      "sha256": "3bf880e6b454db35b9cd7906a1299fc55fda9d5c9291e82c893f5e9efbd424f0"
+    }
+  },
+  "authored_changes": {
+    "complete": "Separate selected method bindings, observed probabilities and all actual construction records; omit independent reference/control answers. Rename the difference field to identify its observed comparison construction.",
+    "missing-severity": "Withhold only the selected I1 loss fraction; keep all observed calculations, amounts and parameters unchanged. Observed choices do not establish the missing intended requirement.",
+    "contradictory": "Keep all numerical records and add six producer assertions."
+  },
+  "limits": [
+    "Synthetic stipulated probability distribution; no empirical calibration, accounting standard or financial operation.",
+    "Reporting cases, policy and reference are authored, not agent results.",
+    "Mechanical controls do not certify arbitrary report fulfillment."
+  ]
+}

@@ -54,3 +54,6 @@ The reproduction-helper tests launch tiny standard-library Python fixtures, not 
 
 
 [Credit-loss interpretation cases](cases/credit-loss-review.md) distinguish cumulative, interval and conditional default probabilities, hazard rates, exposure/severity conditioning, recovery, timing and missing contributions. They are authored expectations, not executed assessments. Existing source/package checks cover file integrity and reference closure; they do not validate these prose requirements.
+
+
+`python3 scripts/check_credit_loss.py` checks three fixed credit-loss packets with six constructions, four intervals and four selected bindings per interval. It preserves observed values when an intended severity is withheld, rejects fourteen selected corruptions and checks exact tolerance boundaries. The checker performs arithmetic without QuantLib or a provider; it does not assess arbitrary prose, infer missing requirements, validate borrower forecasts or establish accounting acceptance.
