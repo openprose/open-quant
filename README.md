@@ -1,6 +1,6 @@
 # Open Quant
 
-**Open contracts for quantitative model documentation, built with OpenProse.**
+**Open contracts for quantitative model documentation and operating work, built with OpenProse.**
 
 Contract authoring is expressing intent by composing requirements. Open Quant provides reusable requirements for documenting a model, supporting its claims and assessing the resulting documentation. You supply the model evidence and your organization's house requirements.
 
@@ -53,6 +53,8 @@ The assessment contract asks for findings tied to the exact subject, requirement
 
 ## Library
 
+[Operating-work contracts](docs/operating-work.md) add model inventory, change review, monitoring, remediation, data and calibration reporting. Start with the small [synthetic monitoring example](examples/monitoring-review/README.md) to see how two contracts compose into one report. These new components have authored cases and offline checks; they have not received model-backed execution qualification.
+
 | Contract | Required result |
 |---|---|
 | [Model description — for agents](contracts/model-description.md) | Purpose, scope, inputs, outputs, method, assumptions and limitations from supplied evidence. |
@@ -77,5 +79,7 @@ With Python 3.10 or newer:
 python3 scripts/check_repository.py
 python3 -m unittest discover -s tests -v
 ```
+
+For the additional synthetic monitoring controls, run `node scripts/check_monitoring.mjs` with Node.js 18 or newer.
 
 These checks verify links, imported identities and specified numerical correspondences. They do not assess arbitrary prose, certify the financial model or establish that contract composition outperforms a baseline. [Contributing](CONTRIBUTING.md) explains how to add a contract or model example. Owned code and documentation are [MIT licensed](LICENSE); external sources retain their own terms.
