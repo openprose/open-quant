@@ -12,6 +12,8 @@ Identify the exact subject, selected requirements and evidence assessed. Check e
 
 Distinguish a known violation from unavailable evidence. Check that evidence concerns the correct claim, result and revision. Report contradictions and limitations. A successful process exit, matching hash, citation or plausible document is insufficient by itself.
 
+Distinguish a requirement to disclose a gap from a requirement to supply supported content. Fulfilling the first does not fulfill the second. A locator to absent evidence is not support; a proposed remedy must address the missing substance, not only its citation. Check the subject's fulfillment claim against your findings rather than accepting its self-assessment.
+
 State the coverage of the assessment. If the caller requires a complete assessment, inspect all selected requirements and report unfinished checks explicitly. A single supported violation may justify a negative overall finding while the assessment itself remains incomplete.
 
 Return findings, subject and input identities, coverage, the overall conclusion under any caller-supplied aggregation policy, and remaining work. Keep the assessment's own completion separate from whether the subject meets its requirements. If aggregation is unspecified, report the individual findings rather than inventing an acceptance policy.
