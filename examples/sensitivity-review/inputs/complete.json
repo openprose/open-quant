@@ -1,0 +1,1041 @@
+{
+  "subject": "SENSITIVITY-2026-10-06",
+  "case": "complete",
+  "source_sha256": "f4ccd290e09a9d422b313d725f07c71dcc4c6a1f663906d1cc52c76773324905",
+  "scope": {
+    "position": "one receiving unit of synthetic European call",
+    "changed_factor": "forward",
+    "held_fixed": [
+      "strike",
+      "volatility",
+      "maturity",
+      "discount"
+    ],
+    "recalibration": false,
+    "price_unit": "USD PV",
+    "delta_unit": "USD PV per USD forward",
+    "gamma_unit": "USD PV per squared USD forward",
+    "rounding": "Python round(price, 2)",
+    "rounding_epsilon_usd": 0.005,
+    "bumps_usd_forward": [
+      1e-06,
+      0.0001,
+      0.01,
+      0.1,
+      1.0,
+      5.0
+    ],
+    "illustrative_absolute_derivative_tolerance": 0.0001
+  },
+  "records": [
+    {
+      "id": "ATM",
+      "inputs": {
+        "forward_usd": 100.0,
+        "strike_usd": 100.0,
+        "annual_volatility": 0.3,
+        "maturity_years": 2.0,
+        "continuous_rate": 0.05,
+        "discount": 0.9048374180359595,
+        "stddev": 0.4242640687119285
+      },
+      "base": {
+        "forward": 100.0,
+        "quantlib_price_usd": 15.200904102677848,
+        "reference_price_usd": 15.200904102677832,
+        "rounded_price_usd": 15.2,
+        "rounding_error_usd": -0.0009041026778486838
+      },
+      "reference": {
+        "value": 15.200904102677832,
+        "delta": 0.5284232295313689,
+        "gamma": 0.008319030934538413
+      },
+      "quantlib_analytic": {
+        "delta": 0.5284232295313691,
+        "gamma": 0.008319030934538413
+      },
+      "perturbations": [
+        {
+          "h_usd_forward": 1e-06,
+          "minus": {
+            "forward": 99.999999,
+            "quantlib_price_usd": 15.200903574254623,
+            "reference_price_usd": 15.200903574254612,
+            "rounded_price_usd": 15.2,
+            "rounding_error_usd": -0.000903574254623507
+          },
+          "plus": {
+            "forward": 100.000001,
+            "quantlib_price_usd": 15.200904631101078,
+            "reference_price_usd": 15.200904631101062,
+            "rounded_price_usd": 15.2,
+            "rounding_error_usd": -0.0009046311010791896
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.5284232278413015,
+              "gamma": 0.005329070518200751,
+              "delta_error": -1.6900674193465193e-09,
+              "gamma_error": -0.002989960416337662,
+              "delta_within_illustrative_tolerance": true,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 5.284232305058367e-07,
+              "down_premium_change_usd": -5.284232251767662e-07
+            },
+            "cent_rounded": {
+              "delta": 0.0,
+              "gamma": 0.0,
+              "delta_error": -0.5284232295313689,
+              "gamma_error": -0.008319030934538413,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.0,
+              "down_premium_change_usd": 0.0
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": -0.5284232278413015,
+              "bound": 5000.0,
+              "floating_allowance": 0.0005
+            },
+            "gamma": {
+              "rounding_difference": -0.005329070518200751,
+              "bound": 20000000000.0,
+              "floating_allowance": 2000.0
+            }
+          }
+        },
+        {
+          "h_usd_forward": 0.0001,
+          "minus": {
+            "forward": 99.9999,
+            "quantlib_price_usd": 15.200851260396485,
+            "reference_price_usd": 15.200851260396478,
+            "rounded_price_usd": 15.2,
+            "rounding_error_usd": -0.0008512603964856424
+          },
+          "plus": {
+            "forward": 100.0001,
+            "quantlib_price_usd": 15.200956945042396,
+            "reference_price_usd": 15.200956945042385,
+            "rounded_price_usd": 15.2,
+            "rounding_error_usd": -0.0009569450423967396
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.5284232295554858,
+              "gamma": 0.008318501443227433,
+              "delta_error": 2.4116930674722425e-11,
+              "gamma_error": -5.294913109805954e-07,
+              "delta_within_illustrative_tolerance": true,
+              "gamma_within_illustrative_tolerance": true,
+              "up_premium_change_usd": 5.28423645480558e-05,
+              "down_premium_change_usd": -5.2842281363041366e-05
+            },
+            "cent_rounded": {
+              "delta": 0.0,
+              "gamma": 0.0,
+              "delta_error": -0.5284232295313689,
+              "gamma_error": -0.008319030934538413,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.0,
+              "down_premium_change_usd": 0.0
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": -0.5284232295554858,
+              "bound": 50.0,
+              "floating_allowance": 4.9999999999999996e-06
+            },
+            "gamma": {
+              "rounding_difference": -0.008318501443227433,
+              "bound": 2000000.0,
+              "floating_allowance": 0.19999999999999998
+            }
+          }
+        },
+        {
+          "h_usd_forward": 0.01,
+          "minus": {
+            "forward": 99.99,
+            "quantlib_price_usd": 15.195620286354874,
+            "reference_price_usd": 15.19562028635487,
+            "rounded_price_usd": 15.2,
+            "rounding_error_usd": 0.004379713645125349
+          },
+          "plus": {
+            "forward": 100.01,
+            "quantlib_price_usd": 15.206188750903905,
+            "reference_price_usd": 15.206188750903898,
+            "rounded_price_usd": 15.21,
+            "rounding_error_usd": 0.003811249096095537
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.5284232274515688,
+              "gamma": 0.008319030833092711,
+              "delta_error": -2.0798001099109342e-09,
+              "gamma_error": -1.0144570253278751e-10,
+              "delta_within_illustrative_tolerance": true,
+              "gamma_within_illustrative_tolerance": true,
+              "up_premium_change_usd": 0.005284648226057342,
+              "down_premium_change_usd": -0.005283816322974033
+            },
+            "cent_rounded": {
+              "delta": 0.5000000000000782,
+              "gamma": 100.00000000001563,
+              "delta_error": -0.028423229531290728,
+              "gamma_error": 99.99168096908109,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.010000000000001563,
+              "down_premium_change_usd": 0.0
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": -0.028423227451490618,
+              "bound": 0.5,
+              "floating_allowance": 1e-07
+            },
+            "gamma": {
+              "rounding_difference": 99.99168096918254,
+              "bound": 200.0,
+              "floating_allowance": 1.9999999999999998e-05
+            }
+          }
+        },
+        {
+          "h_usd_forward": 0.1,
+          "minus": {
+            "forward": 99.9,
+            "quantlib_price_usd": 15.148103395670683,
+            "reference_price_usd": 15.148103395670686,
+            "rounded_price_usd": 15.15,
+            "rounding_error_usd": 0.0018966043293175971
+          },
+          "plus": {
+            "forward": 100.1,
+            "quantlib_price_usd": 15.253787999981828,
+            "reference_price_usd": 15.253787999981824,
+            "rounded_price_usd": 15.25,
+            "rounding_error_usd": -0.003787999981827994
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.5284230215557262,
+              "gamma": 0.00831902968148057,
+              "delta_error": -2.0797564270758073e-07,
+              "gamma_error": -1.2530578432506934e-09,
+              "delta_within_illustrative_tolerance": true,
+              "gamma_within_illustrative_tolerance": true,
+              "up_premium_change_usd": 0.05288389730398002,
+              "down_premium_change_usd": -0.052800707007165215
+            },
+            "cent_rounded": {
+              "delta": 0.4999999999999982,
+              "gamma": 1.7763568394002502e-13,
+              "delta_error": -0.028423229531370664,
+              "gamma_error": -0.008319030934360778,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.05000000000000071,
+              "down_premium_change_usd": -0.049999999999998934
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": -0.028423021555727956,
+              "bound": 0.049999999999999996,
+              "floating_allowance": 1e-07
+            },
+            "gamma": {
+              "rounding_difference": -0.008319029681302935,
+              "bound": 1.9999999999999996,
+              "floating_allowance": 1.9999999999999994e-07
+            }
+          }
+        },
+        {
+          "h_usd_forward": 1.0,
+          "minus": {
+            "forward": 99.0,
+            "quantlib_price_usd": 14.676661121611557,
+            "reference_price_usd": 14.676661121611554,
+            "rounded_price_usd": 14.68,
+            "rounding_error_usd": 0.003338878388442268
+          },
+          "plus": {
+            "forward": 101.0,
+            "quantlib_price_usd": 15.73346598947699,
+            "reference_price_usd": 15.73346598947699,
+            "rounded_price_usd": 15.73,
+            "rounding_error_usd": -0.003465989476989506
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.5284024339327162,
+              "gamma": 0.008318905732851434,
+              "delta_error": -2.0795598652645353e-05,
+              "gamma_error": -1.2520168697974232e-07,
+              "delta_within_illustrative_tolerance": true,
+              "gamma_within_illustrative_tolerance": true,
+              "up_premium_change_usd": 0.532561886799142,
+              "down_premium_change_usd": -0.5242429810662905
+            },
+            "cent_rounded": {
+              "delta": 0.5250000000000004,
+              "gamma": 0.010000000000001563,
+              "delta_error": -0.0034232295313685324,
+              "gamma_error": 0.0016809690654631497,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.5300000000000011,
+              "down_premium_change_usd": -0.5199999999999996
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": -0.003402433932715887,
+              "bound": 0.005,
+              "floating_allowance": 1e-07
+            },
+            "gamma": {
+              "rounding_difference": 0.0016810942671501294,
+              "bound": 0.02,
+              "floating_allowance": 1e-07
+            }
+          }
+        },
+        {
+          "h_usd_forward": 5.0,
+          "minus": {
+            "forward": 95.0,
+            "quantlib_price_usd": 12.66532999550088,
+            "reference_price_usd": 12.665329995500878,
+            "rounded_price_usd": 12.67,
+            "rounding_error_usd": 0.0046700044991201395
+          },
+          "plus": {
+            "forward": 105.0,
+            "quantlib_price_usd": 17.94437526678939,
+            "reference_price_usd": 17.944375266789372,
+            "rounded_price_usd": 17.94,
+            "rounding_error_usd": -0.004375266789388377
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.5279045271288509,
+              "gamma": 0.00831588227738294,
+              "delta_error": -0.0005187024025179454,
+              "gamma_error": -3.1486571554738274e-06,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": true,
+              "up_premium_change_usd": 2.7434711641115417,
+              "down_premium_change_usd": -2.535574107176968
+            },
+            "cent_rounded": {
+              "delta": 0.5270000000000001,
+              "gamma": 0.008400000000000105,
+              "delta_error": -0.0014232295313687526,
+              "gamma_error": 8.09690654616918e-05,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": true,
+              "up_premium_change_usd": 2.740000000000002,
+              "down_premium_change_usd": -2.5299999999999994
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": -0.0009045271288508072,
+              "bound": 0.001,
+              "floating_allowance": 1e-07
+            },
+            "gamma": {
+              "rounding_difference": 8.411772261716563e-05,
+              "bound": 0.0008,
+              "floating_allowance": 1e-07
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "OTM",
+      "inputs": {
+        "forward_usd": 60.0,
+        "strike_usd": 100.0,
+        "annual_volatility": 0.3,
+        "maturity_years": 2.0,
+        "continuous_rate": 0.05,
+        "discount": 0.9048374180359595,
+        "stddev": 0.4242640687119285
+      },
+      "base": {
+        "forward": 60.0,
+        "quantlib_price_usd": 1.6296263128627815,
+        "reference_price_usd": 1.62962631286278,
+        "rounded_price_usd": 1.63,
+        "rounding_error_usd": 0.00037368713721841473
+      },
+      "reference": {
+        "value": 1.62962631286278,
+        "delta": 0.14533883201843087,
+        "gamma": 0.008670643839636732
+      },
+      "quantlib_analytic": {
+        "delta": 0.14533883201843087,
+        "gamma": 0.008670643839636732
+      },
+      "perturbations": [
+        {
+          "h_usd_forward": 1e-06,
+          "minus": {
+            "forward": 59.999999,
+            "quantlib_price_usd": 1.6296261675239547,
+            "reference_price_usd": 1.62962616752395,
+            "rounded_price_usd": 1.63,
+            "rounding_error_usd": 0.0003738324760451661
+          },
+          "plus": {
+            "forward": 60.000001,
+            "quantlib_price_usd": 1.629626458201616,
+            "reference_price_usd": 1.6296264582016147,
+            "rounded_price_usd": 1.63,
+            "rounding_error_usd": 0.0003735417983838918
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.14533883063716502,
+              "gamma": 0.007771561172376096,
+              "delta_error": -1.3812658516965115e-09,
+              "gamma_error": -0.0008990826672606363,
+              "delta_within_illustrative_tolerance": true,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 1.453388345229456e-07,
+              "down_premium_change_usd": -1.4533882675138443e-07
+            },
+            "cent_rounded": {
+              "delta": 0.0,
+              "gamma": 0.0,
+              "delta_error": -0.14533883201843087,
+              "gamma_error": -0.008670643839636732,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.0,
+              "down_premium_change_usd": 0.0
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": -0.14533883063716502,
+              "bound": 5000.0,
+              "floating_allowance": 0.0005
+            },
+            "gamma": {
+              "rounding_difference": -0.007771561172376096,
+              "bound": 20000000000.0,
+              "floating_allowance": 2000.0
+            }
+          }
+        },
+        {
+          "h_usd_forward": 0.0001,
+          "minus": {
+            "forward": 59.9999,
+            "quantlib_price_usd": 1.6296117790229334,
+            "reference_price_usd": 1.6296117790229303,
+            "rounded_price_usd": 1.63,
+            "rounding_error_usd": 0.00038822097706647796
+          },
+          "plus": {
+            "forward": 60.0001,
+            "quantlib_price_usd": 1.6296408467893373,
+            "reference_price_usd": 1.6296408467893353,
+            "rounded_price_usd": 1.63,
+            "rounding_error_usd": 0.0003591532106625994
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.14533883201939268,
+              "gamma": 0.008670775208940995,
+              "delta_error": 9.618139618083887e-13,
+              "gamma_error": 1.3136930426295435e-07,
+              "delta_within_illustrative_tolerance": true,
+              "gamma_within_illustrative_tolerance": true,
+              "up_premium_change_usd": 1.4533926555815313e-05,
+              "down_premium_change_usd": -1.4533839848063224e-05
+            },
+            "cent_rounded": {
+              "delta": 0.0,
+              "gamma": 0.0,
+              "delta_error": -0.14533883201843087,
+              "gamma_error": -0.008670643839636732,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.0,
+              "down_premium_change_usd": 0.0
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": -0.14533883201939268,
+              "bound": 50.0,
+              "floating_allowance": 4.9999999999999996e-06
+            },
+            "gamma": {
+              "rounding_difference": -0.008670775208940995,
+              "bound": 2000000.0,
+              "floating_allowance": 0.19999999999999998
+            }
+          }
+        },
+        {
+          "h_usd_forward": 0.01,
+          "minus": {
+            "forward": 59.99,
+            "quantlib_price_usd": 1.62817335804256,
+            "reference_price_usd": 1.6281733580425566,
+            "rounded_price_usd": 1.63,
+            "rounding_error_usd": 0.0018266419574399784
+          },
+          "plus": {
+            "forward": 60.01,
+            "quantlib_price_usd": 1.6310801347473796,
+            "reference_price_usd": 1.6310801347473756,
+            "rounded_price_usd": 1.63,
+            "rounding_error_usd": -0.0010801347473796685
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.14533883524098234,
+              "gamma": 0.008670643765196218,
+              "delta_error": 3.2225514756678564e-09,
+              "gamma_error": -7.44405145164384e-11,
+              "delta_within_illustrative_tolerance": true,
+              "gamma_within_illustrative_tolerance": true,
+              "up_premium_change_usd": 0.0014538218845980833,
+              "down_premium_change_usd": -0.0014529548202215636
+            },
+            "cent_rounded": {
+              "delta": 0.0,
+              "gamma": 0.0,
+              "delta_error": -0.14533883201843087,
+              "gamma_error": -0.008670643839636732,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.0,
+              "down_premium_change_usd": 0.0
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": -0.14533883524098234,
+              "bound": 0.5,
+              "floating_allowance": 1e-07
+            },
+            "gamma": {
+              "rounding_difference": -0.008670643765196218,
+              "bound": 200.0,
+              "floating_allowance": 1.9999999999999998e-05
+            }
+          }
+        },
+        {
+          "h_usd_forward": 0.1,
+          "minus": {
+            "forward": 59.9,
+            "quantlib_price_usd": 1.6151357506049728,
+            "reference_price_usd": 1.615135750604971,
+            "rounded_price_usd": 1.62,
+            "rounding_error_usd": 0.004864249395027276
+          },
+          "plus": {
+            "forward": 60.1,
+            "quantlib_price_usd": 1.6442035814565574,
+            "reference_price_usd": 1.6442035814565572,
+            "rounded_price_usd": 1.64,
+            "rounding_error_usd": -0.004203581456557526
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.145339154257923,
+              "gamma": 0.008670633596730147,
+              "delta_error": 3.2223949211762637e-07,
+              "gamma_error": -1.0242906585411493e-08,
+              "delta_within_illustrative_tolerance": true,
+              "gamma_within_illustrative_tolerance": true,
+              "up_premium_change_usd": 0.01457726859377595,
+              "down_premium_change_usd": -0.014490562257808648
+            },
+            "cent_rounded": {
+              "delta": 0.09999999999999898,
+              "gamma": 2.2204460492503128e-14,
+              "delta_error": -0.04533883201843189,
+              "gamma_error": -0.008670643839614528,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.010000000000000009,
+              "down_premium_change_usd": -0.009999999999999787
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": -0.04533915425792401,
+              "bound": 0.049999999999999996,
+              "floating_allowance": 1e-07
+            },
+            "gamma": {
+              "rounding_difference": -0.008670633596707942,
+              "bound": 1.9999999999999996,
+              "floating_allowance": 1.9999999999999994e-07
+            }
+          }
+        },
+        {
+          "h_usd_forward": 1.0,
+          "minus": {
+            "forward": 59.0,
+            "quantlib_price_usd": 1.4885900687237406,
+            "reference_price_usd": 1.4885900687237346,
+            "rounded_price_usd": 1.49,
+            "rounding_error_usd": 0.0014099312762594352
+          },
+          "plus": {
+            "forward": 61.0,
+            "quantlib_price_usd": 1.7793321767294303,
+            "reference_price_usd": 1.779332176729433,
+            "rounded_price_usd": 1.78,
+            "rounding_error_usd": 0.0006678232705696896
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.1453710540028449,
+              "gamma": 0.008669619727607936,
+              "delta_error": 3.2221984414021465e-05,
+              "gamma_error": -1.0241120287964728e-06,
+              "delta_within_illustrative_tolerance": true,
+              "gamma_within_illustrative_tolerance": true,
+              "up_premium_change_usd": 0.14970586386664886,
+              "down_premium_change_usd": -0.14103624413904092
+            },
+            "cent_rounded": {
+              "delta": 0.14500000000000002,
+              "gamma": 0.010000000000000231,
+              "delta_error": -0.0003388320184308513,
+              "gamma_error": 0.0013293561603634988,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.15000000000000013,
+              "down_premium_change_usd": -0.1399999999999999
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": -0.0003710540028448728,
+              "bound": 0.005,
+              "floating_allowance": 1e-07
+            },
+            "gamma": {
+              "rounding_difference": 0.0013303802723922953,
+              "bound": 0.02,
+              "floating_allowance": 1e-07
+            }
+          }
+        },
+        {
+          "h_usd_forward": 5.0,
+          "minus": {
+            "forward": 55.0,
+            "quantlib_price_usd": 1.0069749059570492,
+            "reference_price_usd": 1.0069749059570487,
+            "rounded_price_usd": 1.01,
+            "rounding_error_usd": 0.0030250940429508155
+          },
+          "plus": {
+            "forward": 65.0,
+            "quantlib_price_usd": 2.4684066986121103,
+            "reference_price_usd": 2.468406698612117,
+            "rounded_price_usd": 2.47,
+            "rounding_error_usd": 0.0015933013878899338
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.1461431792655061,
+              "gamma": 0.00864515915374386,
+              "delta_error": 0.0008043472470752322,
+              "gamma_error": -2.5484685892872977e-05,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": true,
+              "up_premium_change_usd": 0.8387803857493288,
+              "down_premium_change_usd": -0.6226514069057323
+            },
+            "cent_rounded": {
+              "delta": 0.14600000000000002,
+              "gamma": 0.008800000000000016,
+              "delta_error": 0.0006611679815691496,
+              "gamma_error": 0.00012935616036328403,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.8400000000000003,
+              "down_premium_change_usd": -0.6199999999999999
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": -0.00014317926550608262,
+              "bound": 0.001,
+              "floating_allowance": 1e-07
+            },
+            "gamma": {
+              "rounding_difference": 0.000154840846256157,
+              "bound": 0.0008,
+              "floating_allowance": 1e-07
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "short-ATM",
+      "inputs": {
+        "forward_usd": 100.0,
+        "strike_usd": 100.0,
+        "annual_volatility": 0.2,
+        "maturity_years": 0.0027397260273972603,
+        "continuous_rate": 0.05,
+        "discount": 0.9998630230808251,
+        "stddev": 0.010468478451804274
+      },
+      "base": {
+        "forward": 100.0,
+        "quantlib_price_usd": 0.41757275393739746,
+        "reference_price_usd": 0.4175727539373997,
+        "rounded_price_usd": 0.42,
+        "rounding_error_usd": 0.0024272460626025283
+      },
+      "reference": {
+        "value": 0.4175727539373997,
+        "delta": 0.5020193753100995,
+        "gamma": 0.3810316582076363
+      },
+      "quantlib_analytic": {
+        "delta": 0.5020193753101017,
+        "gamma": 0.3810316582076363
+      },
+      "perturbations": [
+        {
+          "h_usd_forward": 1e-06,
+          "minus": {
+            "forward": 99.999999,
+            "quantlib_price_usd": 0.4175722519182099,
+            "reference_price_usd": 0.4175722519182242,
+            "rounded_price_usd": 0.42,
+            "rounding_error_usd": 0.002427748081790082
+          },
+          "plus": {
+            "forward": 100.000001,
+            "quantlib_price_usd": 0.4175732559569545,
+            "reference_price_usd": 0.4175732559569658,
+            "rounded_price_usd": 0.42,
+            "rounding_error_usd": 0.0024267440430454923
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.5020193722948818,
+              "gamma": 0.3694822225952521,
+              "delta_error": -3.0152177421527426e-09,
+              "gamma_error": -0.011549435612384196,
+              "delta_within_illustrative_tolerance": true,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 5.020195570359931e-07,
+              "down_premium_change_usd": -5.020191875537705e-07
+            },
+            "cent_rounded": {
+              "delta": 0.0,
+              "gamma": 0.0,
+              "delta_error": -0.5020193753100995,
+              "gamma_error": -0.3810316582076363,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.0,
+              "down_premium_change_usd": 0.0
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": -0.5020193722948818,
+              "bound": 5000.0,
+              "floating_allowance": 0.0005
+            },
+            "gamma": {
+              "rounding_difference": -0.3694822225952521,
+              "bound": 20000000000.0,
+              "floating_allowance": 2000.0
+            }
+          }
+        },
+        {
+          "h_usd_forward": 0.0001,
+          "minus": {
+            "forward": 99.9999,
+            "quantlib_price_usd": 0.4175225539050196,
+            "reference_price_usd": 0.4175225539050172,
+            "rounded_price_usd": 0.42,
+            "rounding_error_usd": 0.0024774460949804067
+          },
+          "plus": {
+            "forward": 100.0001,
+            "quantlib_price_usd": 0.417622957780085,
+            "reference_price_usd": 0.4176229577800927,
+            "rounded_price_usd": 0.42,
+            "rounding_error_usd": 0.002377042219914971
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.5020193753271784,
+              "gamma": 0.38103096788866253,
+              "delta_error": 1.707889385471617e-11,
+              "gamma_error": -6.903189737617055e-07,
+              "delta_within_illustrative_tolerance": true,
+              "gamma_within_illustrative_tolerance": true,
+              "up_premium_change_usd": 5.020384268755729e-05,
+              "down_premium_change_usd": -5.02000323778784e-05
+            },
+            "cent_rounded": {
+              "delta": 0.0,
+              "gamma": 0.0,
+              "delta_error": -0.5020193753100995,
+              "gamma_error": -0.3810316582076363,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.0,
+              "down_premium_change_usd": 0.0
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": -0.5020193753271784,
+              "bound": 50.0,
+              "floating_allowance": 4.9999999999999996e-06
+            },
+            "gamma": {
+              "rounding_difference": -0.38103096788866253,
+              "bound": 2000000.0,
+              "floating_allowance": 0.19999999999999998
+            }
+          }
+        },
+        {
+          "h_usd_forward": 0.01,
+          "minus": {
+            "forward": 99.99,
+            "quantlib_price_usd": 0.4125716125749537,
+            "reference_price_usd": 0.41257161257495545,
+            "rounded_price_usd": 0.41,
+            "rounding_error_usd": -0.002571612574953752
+          },
+          "plus": {
+            "forward": 100.01,
+            "quantlib_price_usd": 0.42261199817604195,
+            "reference_price_usd": 0.42261199817604184,
+            "rounded_price_usd": 0.42,
+            "rounding_error_usd": -0.002611998176041963
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.502019280054411,
+              "gamma": 0.38102876200762914,
+              "delta_error": -9.525568855917044e-08,
+              "gamma_error": -2.896200007151961e-06,
+              "delta_within_illustrative_tolerance": true,
+              "gamma_within_illustrative_tolerance": true,
+              "up_premium_change_usd": 0.005039244238644491,
+              "down_premium_change_usd": -0.005001141362443728
+            },
+            "cent_rounded": {
+              "delta": 0.5000000000000004,
+              "gamma": -100.00000000000009,
+              "delta_error": -0.002019375310099103,
+              "gamma_error": -100.38103165820772,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.0,
+              "down_premium_change_usd": -0.010000000000000009
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": -0.002019280054410544,
+              "bound": 0.5,
+              "floating_allowance": 1e-07
+            },
+            "gamma": {
+              "rounding_difference": -100.38102876200772,
+              "bound": 200.0,
+              "floating_allowance": 1.9999999999999998e-05
+            }
+          }
+        },
+        {
+          "h_usd_forward": 0.1,
+          "minus": {
+            "forward": 99.9,
+            "quantlib_price_usd": 0.36927547830685925,
+            "reference_price_usd": 0.3692754783068576,
+            "rounded_price_usd": 0.37,
+            "rounding_error_usd": 0.000724521693140745
+          },
+          "plus": {
+            "forward": 100.1,
+            "quantlib_price_usd": 0.4696774525492891,
+            "reference_price_usd": 0.4696774525492898,
+            "rounded_price_usd": 0.47,
+            "rounding_error_usd": 0.0003225474507108639
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.5020098712121492,
+              "gamma": 0.3807422981353447,
+              "delta_error": -9.504097950308044e-06,
+              "gamma_error": -0.0002893600722915779,
+              "delta_within_illustrative_tolerance": true,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.05210469861189165,
+              "down_premium_change_usd": -0.048297275630538206
+            },
+            "cent_rounded": {
+              "delta": 0.4999999999999999,
+              "gamma": 0.0,
+              "delta_error": -0.002019375310099658,
+              "gamma_error": -0.3810316582076363,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.04999999999999999,
+              "down_premium_change_usd": -0.04999999999999999
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": -0.00200987121214935,
+              "bound": 0.049999999999999996,
+              "floating_allowance": 1e-07
+            },
+            "gamma": {
+              "rounding_difference": -0.3807422981353447,
+              "bound": 1.9999999999999996,
+              "floating_allowance": 1.9999999999999994e-07
+            }
+          }
+        },
+        {
+          "h_usd_forward": 1.0,
+          "minus": {
+            "forward": 99.0,
+            "quantlib_price_usd": 0.09357234038347445,
+            "reference_price_usd": 0.09357234038347301,
+            "rounded_price_usd": 0.09,
+            "rounding_error_usd": -0.003572340383474454
+          },
+          "plus": {
+            "forward": 101.0,
+            "quantlib_price_usd": 1.0960813056855225,
+            "reference_price_usd": 1.0960813056855199,
+            "rounded_price_usd": 1.1,
+            "rounding_error_usd": 0.0039186943144775555
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.501254482651024,
+              "gamma": 0.35450813819420207,
+              "delta_error": -0.0007648926590755334,
+              "gamma_error": -0.02652352001343422,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.6785085517481251,
+              "down_premium_change_usd": -0.324000413553923
+            },
+            "cent_rounded": {
+              "delta": 0.505,
+              "gamma": 0.3500000000000001,
+              "delta_error": 0.0029806246899004574,
+              "gamma_error": -0.031031658207636204,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 0.6800000000000002,
+              "down_premium_change_usd": -0.32999999999999996
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": 0.0037455173489759908,
+              "bound": 0.005,
+              "floating_allowance": 1e-07
+            },
+            "gamma": {
+              "rounding_difference": -0.004508138194201983,
+              "bound": 0.02,
+              "floating_allowance": 1e-07
+            }
+          }
+        },
+        {
+          "h_usd_forward": 5.0,
+          "minus": {
+            "forward": 95.0,
+            "quantlib_price_usd": 9.290419806838543e-08,
+            "reference_price_usd": 9.29041970423422e-08,
+            "rounded_price_usd": 0.0,
+            "rounding_error_usd": -9.290419806838543e-08
+          },
+          "plus": {
+            "forward": 105.0,
+            "quantlib_price_usd": 4.9993154504962325,
+            "reference_price_usd": 4.999315450496245,
+            "rounded_price_usd": 5.0,
+            "rounding_error_usd": 0.0006845495037675065
+          },
+          "views": {
+            "unrounded": {
+              "delta": 0.49993153575920346,
+              "gamma": 0.16656680142102545,
+              "delta_error": -0.0020878395508960867,
+              "gamma_error": -0.21446485678661084,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 4.581742696558835,
+              "down_premium_change_usd": -0.4175726610331994
+            },
+            "cent_rounded": {
+              "delta": 0.5,
+              "gamma": 0.1664,
+              "delta_error": -0.002019375310099547,
+              "gamma_error": -0.2146316582076363,
+              "delta_within_illustrative_tolerance": false,
+              "gamma_within_illustrative_tolerance": false,
+              "up_premium_change_usd": 4.58,
+              "down_premium_change_usd": -0.42
+            }
+          },
+          "rounding_envelopes": {
+            "delta": {
+              "rounding_difference": 6.846424079653968e-05,
+              "bound": 0.001,
+              "floating_allowance": 1e-07
+            },
+            "gamma": {
+              "rounding_difference": -0.0001668014210254587,
+              "bound": 0.0008,
+              "floating_allowance": 1e-07
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "producer_claims": []
+}

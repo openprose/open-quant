@@ -77,6 +77,7 @@ With Python 3.10 or newer:
 
 ```sh
 python3 scripts/check_repository.py
+python3 scripts/check_sensitivity.py
 python3 -m unittest discover -s tests -v
 ```
 

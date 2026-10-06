@@ -109,3 +109,9 @@ The candidate now contains 25 definitions and 28 selected package files. Existin
 The subsequent [cash-flow/valuation composition](../examples/cashflow-review/README.md) uses a public-source calculation that reproduces every term, flow, valuation, comparison and control from a prespecified synthetic study. Three packets preserve complete evidence, withhold schedules while retaining aggregates, or add unsupported producer claims. Per-flow valuation rows are independent reference calculations, not an internal library trace.
 
 The reference is authored and no agent has executed or assessed the report. Fixed controls cover date/amount arithmetic, inclusion populations, aggregate comparisons and twelve adverse mutations. They do not establish actual payment, institutional acceptance or arbitrary report fulfillment. The 25 definitions and 28-file package remain unchanged by this example.
+
+## Sensitivity precision composition
+
+The [sensitivity/implementation report](../examples/sensitivity-review/README.md) accounts for all three synthetic calls, six forward bumps and two price representations. A public-source reproduction matches every observation, reference and control in the prespecified study. Complete, missing-unrounded and contradictory packets separate derivative findings from price precision and supplied uncertainty bounds.
+
+The reference report is authored and remains agent-unqualified. Fixed controls cover arithmetic, input/metric identities, missing observations, equality at the illustrative tolerance and twelve adverse mutations. They do not establish an optimal step, spot sensitivity, hedge or arbitrary report fulfillment. All 25 definitions, earlier examples and the 28-file package remain unchanged.
