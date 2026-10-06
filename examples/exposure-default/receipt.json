@@ -1,0 +1,24 @@
+{
+  "kind": "Observed CPU reproduction and authored projections; not agent execution",
+  "source_commit": "f1aa71c7f69bb1d90c64c1e582226398685c13c9",
+  "source_sha256": "6b0d51c23a3d77a70960b63f72d6957beedb05387a7740ca918f14c5d9eeee52",
+  "plan_sha256": "a4058d0c9a60925a2cfb61fbd2d105b9c62dafddb673c63fbf6e4ee467668c00",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "platform": "macOS-26.6.1-arm64-arm-64bit"
+  },
+  "elapsed_seconds": 0.476197250012774,
+  "exit_code": 0,
+  "controls_passed": 126,
+  "observation_sha256": "4665e4ebb4d386e8bf2b1aae839a5c40ac33fff78cbeb2f3e980b51af476606c",
+  "case_sha256": {
+    "complete": "232655a7759c2208b3fdd1d247748153bdf13bff974cfb778fdc309bf7df9c13",
+    "missing-joint": "146c2143dcbe4b2cbc2c3b63de517fece2e35f000ebb9e3db3bf72bb8570e115",
+    "contradictory": "05ba7f26ccb45fc3b3c584e50de2b3378f809d716b7e1a5bf0d3b91c4eecf7db"
+  },
+  "projection": "Source proposals in fixed order become J1-J6. Observer classification flags are removed. J5 joint cells, conditional default probabilities and exact references are absent in missing-joint; its reported aggregates remain. Contradictory adds seven authored statements.",
+  "numerical_comparison": "Every numerical observation and control matches the fixed study; new time and rebound source/plan hashes are separate.",
+  "model_calls": 0
+}

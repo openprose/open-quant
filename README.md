@@ -88,6 +88,7 @@ python3 scripts/check_option_consistency.py
 python3 scripts/check_pnl_attribution.py
 python3 scripts/check_reverse_stress.py
 python3 scripts/check_pricing_probabilities.py
+python3 scripts/check_exposure_default.py
 python3 -m unittest discover -s tests -v
 ```
 

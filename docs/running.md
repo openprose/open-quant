@@ -81,3 +81,7 @@ From the source repository, run `prose run examples/reverse-stress/program.md co
 ## Pricing probabilities
 
 From the source repository, run `prose run examples/pricing-probabilities/program.md complete`, replacing `complete` with `missing-world` or `contradictory` for the other selections. The [example guide](../examples/pricing-probabilities/README.md) provides the assessment invocation. The report explains retained evidence; its optional numerical reproduction is a separate operation. Agent execution remains unqualified.
+
+## Exposure/default dependence
+
+From the source repository, run `prose run examples/exposure-default/program.md complete`, replacing `complete` with `missing-joint` or `contradictory` for the other selections. The [example guide](../examples/exposure-default/README.md) provides the assessment invocation and distinguishes prepared-evidence reporting from optional numerical reproduction. Agent execution remains unqualified.
