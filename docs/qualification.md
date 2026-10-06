@@ -207,3 +207,9 @@ The authored reference distinguishes pricing, replication, conditional physical 
 The [joint-loss report](../examples/exposure-default/README.md) composes existing credit-loss and dependence requirements. Public source `f1aa71c` reproduces six joint proposals, two LP records and all 126 controls from the fixed study. New timing and explicitly rebound source/plan identities are separate. Reporting packets use neutral row IDs and omit observer classification flags; no definition or package content changes.
 
 The missing-joint case retains reported aggregates while withholding one actual joint table and its exact references. Three arithmetic constructions match those aggregates but differ in validity and independence, demonstrating why the missing properties remain unresolved. Twenty-six adverse mutations, six report rows and eleven locators check fixed evidence without native optimization or provider calls. The reference is authored; agent execution, calibrated CVA, institutional acceptance and savings remain unqualified.
+
+## Hedge reporting composition
+
+[The hedge report](../examples/hedge-outcomes/README.md) composes existing optimization and outcomes requirements. Public source `616cc88` reproduces all five native fits, six positions, twelve period summaries and 106 controls. Fresh timing and explicitly rebound source/plan identities are excluded from that equality comparison. No definition or package-content change is needed.
+
+Complete, missing-selection-time and contradictory packets retain numerical findings separately from evidence of advance selection. The reference is authored; no agent has executed or assessed the report. Fixed-record checks and timing controls do not assess arbitrary prose or establish real trading, predictive performance, financial savings or institutional acceptance.

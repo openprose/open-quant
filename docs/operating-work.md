@@ -35,6 +35,7 @@ These operating reports have authored references and deterministic fixture check
 | Example | Composed requirements | Distinction to inspect |
 |---|---|---|
 | [Monitoring](../examples/monitoring-review/README.md) | Monitoring, limitations and remediation | An adverse finding can be the correct result of fulfilled reporting. |
+| [Hedge fit and outcomes](../examples/hedge-outcomes/README.md) | Optimization review, outcomes analysis | Historical fit, permitted positions, lot units and later performance require separate findings. |
 | [Periodic model review](../examples/periodic-review/README.md) | Inventory, monitoring, limitations/remediation, model change | Shared model revisions do not erase use boundaries; combine distinct findings without inventing approval. |
 | [Pricing probabilities](../examples/pricing-probabilities/README.md) | Model description, numerical evidence | Identical prices and replication do not identify physical probabilities; missing assumptions can leave pricing supported. |
 | [Exposure/default dependence](../examples/exposure-default/README.md) | Credit-loss review, dependence review | Identical marginals need not determine expected loss; product equality need not establish independence. |
@@ -151,3 +152,7 @@ The [pricing-probability explanation](../examples/pricing-probabilities/README.m
 ## Periodic model review
 
 [The periodic-review example](../examples/periodic-review/README.md) composes inventory, monitoring, limitations/remediation and model change for one report. Deployment and use identities connect the components: passing evidence for one use does not establish another's finding, and the same revision can be subject to a use change. Registry discrepancies, a monitoring breach, unsupported closure and missing change history remain separate conclusions. The supplied policy and records are authored; no institutional acceptance or agent-execution result is claimed.
+
+## Hedge fit and subsequent performance
+
+[The hedge reporting composition](../examples/hedge-outcomes/README.md) reuses optimization and outcomes requirements for five native fits and six hypothetical positions. Complete, missing-selection-time and contradictory cases preserve unit conversion, original position limits, later deterioration and retrospective selection. Missing timing does not erase supported calculations. No definition or package change is needed; reporting and assessment remain agent-unqualified.

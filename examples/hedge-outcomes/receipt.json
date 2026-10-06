@@ -1,0 +1,23 @@
+{
+  "sourceCommit": "616cc88aedf69e6dd6a148f88545f7bcb3ac1bae",
+  "source_sha256": "6e66ff895eefde9430a79d071a2bd66c0b270bd56777003348e4dbb23997d351",
+  "plan_sha256": "67f4faf19780ec3e4c346355d72159c12999e43a49ed35cba9a0ce3f730def66",
+  "observation_sha256": "e51210ade6a7714fdc1afd83041713ef5cef6dccb61640a02d6033a8bffc2937",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "processSeconds": 0.47710458299843594,
+  "attempts": 1,
+  "nativeFits": 5,
+  "controls": 106,
+  "allControlsPass": true,
+  "case_sha256": {
+    "complete": "60b485ee9dc8404e3fb0a00de5b021be851c48cb04657dc0067e2574997a01a5",
+    "missing-selection-time": "dcb14ce41479c48f0abc3b4d2258197e9db634b8506f41d06dbcfadffd16c523",
+    "contradictory": "67864adc9108047fec5ad8456af50e82d6ceb2c4dc9438e3489b2f7fee8b6e79"
+  },
+  "projection": "Neutral C/S identities; omit observer limit flags and exact candidate references. Missing case removes only C2 selection time. Contradictory case adds producer claims without changing numerical records.",
+  "qualification": "Numerical calculation observed. Reporting and assessment programs remain agent-unqualified."
+}

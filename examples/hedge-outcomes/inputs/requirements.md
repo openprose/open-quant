@@ -1,0 +1,11 @@
+# Reporting requirements
+
+Account for all six candidates, five native fits and eight observations. Preserve identities and signs. Report each candidate's equivalent standard-lot position, its original-limit finding, training and later SSE, and relative improvement or deterioration against the corresponding unhedged baseline. Check the numerical values rather than accepting producer labels. Use absolute allowances of 1e-8 for SSE and 1e-10 for position comparisons; these are synthetic checking criteria, not market policy.
+
+For each native fit, identify the actual objective, unit, constraints, returned outcome and available basis for optimality. Distinguish an unconstrained optimum from the original permitted position and the constrained optimum. Keep the represented position and original limit consistent across standard-lot and basket units. Do not repair a candidate by clipping, rescaling or replacing it with another fit.
+
+For subsequent performance, separate fitted data from evaluation data and use the supplied selection timestamps. An advance-selection claim requires a recorded selection after the selected fitting population and before the first later outcome. A fit selected after later outcomes is a retrospective comparison, not evidence of an advance choice. Earlier timestamps are authored fixture assertions, not proof against undisclosed real-world tuning. Missing C2 timing limits its timing finding without erasing its coefficient, position breach or calculated performance; another candidate's timestamp cannot supply it.
+
+Explain what correlation, fitted SSE, native convergence, position feasibility and later SSE do and do not establish. Retain adverse observations and the later refit without substituting it for the earlier choice. No significance, real-world forecast quality, cost saving, actual hedge execution or institutional acceptance is established by this example.
+
+Check every supplied producer claim and keep known contradictions distinct from missing evidence. A complete gap report may fulfill this reporting obligation; it cannot supply the missing historical record or satisfy a different request for a supported trading recommendation. No institutional owner or approval is to be invented.

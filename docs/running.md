@@ -93,3 +93,7 @@ From the source repository, run `prose run examples/calibration-identification/p
 ## Periodic model review
 
 From the source repository, run `prose run examples/periodic-review/program.md complete`, replacing `complete` with `missing-baseline` or `contradictory` for the other selections. The [example guide](../examples/periodic-review/README.md) gives the common assessment invocation. These are authored synthetic operating records; no financial-model calculation is required or authorized. Agent execution remains unqualified.
+
+## Hedge fit and subsequent outcomes
+
+From the source repository, run `prose run examples/hedge-outcomes/program.md complete`, replacing `complete` with `missing-selection-time` or `contradictory` for the other selections. The [example guide](../examples/hedge-outcomes/README.md) provides the separate assessment invocation and numerical reproduction boundary. This is a hypothetical report, not authority to trade or refit. Agent execution remains unqualified.
