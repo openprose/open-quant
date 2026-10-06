@@ -253,3 +253,7 @@ The [reproduction assessment](../examples/sofr-reproduction/assess.md) adds a si
 ## Pricing methodology documentation
 
 The [third full-document example](../examples/pricing-methodology/README.md) applies the unchanged documentation contract to the retained Black pricing source and records. Complete and baseline-only selections distinguish method knowledge from required observations of actual native results. An authored document, supporting records and ten review cases accompany a separate assessment entry. Fixed checks bind fifty input cells, twenty native prices, nine summary cells and fifteen identities; they do not certify the prose or an agent's interpretation. No new financial calculation or agent invocation occurred, and the package and two-model collection remain unchanged.
+
+## Calibration stability reporting
+
+The [stability example](../examples/calibration-stability/README.md) reuses one prespecified calculation with forty-two native solves and eight condition numbers. Complete, missing-perturbations and contradictory selections distinguish analytical support from native observations. A fixed-record checker verifies 1,002 correspondences, three packet projections, four authored table rows and twelve selected corruptions without a native solver. Reporting and assessment remain agent-unqualified; the example adds no reusable definition or package content.

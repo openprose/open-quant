@@ -1,0 +1,1240 @@
+{
+  "case": "contradictory",
+  "spacings": [
+    {
+      "epsilon": "1",
+      "native_conditions": [
+        {
+          "coordinates": "physical",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "status": "returned",
+          "value": 4.0
+        },
+        {
+          "coordinates": "integrated",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "status": "returned",
+          "value": 4.0
+        }
+      ]
+    },
+    {
+      "epsilon": "1/12",
+      "native_conditions": [
+        {
+          "coordinates": "physical",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.08333333333333333
+            ]
+          ],
+          "status": "returned",
+          "value": 26.0
+        },
+        {
+          "coordinates": "integrated",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "status": "returned",
+          "value": 4.0
+        }
+      ]
+    },
+    {
+      "epsilon": "1/365",
+      "native_conditions": [
+        {
+          "coordinates": "physical",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.0027397260273972603
+            ]
+          ],
+          "status": "returned",
+          "value": 732.0000000000001
+        },
+        {
+          "coordinates": "integrated",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "status": "returned",
+          "value": 4.0
+        }
+      ]
+    },
+    {
+      "epsilon": "1/3650",
+      "native_conditions": [
+        {
+          "coordinates": "physical",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.000273972602739726
+            ]
+          ],
+          "status": "returned",
+          "value": 7302.0
+        },
+        {
+          "coordinates": "integrated",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "status": "returned",
+          "value": 4.0
+        }
+      ]
+    }
+  ],
+  "native_cases": [
+    {
+      "id": "1/baseline",
+      "epsilon": "1",
+      "name": "baseline",
+      "native_q": [
+        0.04,
+        0.13
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.09
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09
+          ],
+          "repriced_q": [
+            0.04,
+            0.13
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.09
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09
+          ],
+          "repriced_q": [
+            0.04,
+            0.13
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/common-up",
+      "epsilon": "1",
+      "name": "common-up",
+      "native_q": [
+        0.04004,
+        0.13004
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.09
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.09
+          ],
+          "repriced_q": [
+            0.04004,
+            0.13004
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.09
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.09
+          ],
+          "repriced_q": [
+            0.04004,
+            0.13004
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/common-down",
+      "epsilon": "1",
+      "name": "common-down",
+      "native_q": [
+        0.03996,
+        0.12996
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.09
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.09
+          ],
+          "repriced_q": [
+            0.03996,
+            0.12996
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.09
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.09
+          ],
+          "repriced_q": [
+            0.03996,
+            0.12996
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/steepen",
+      "epsilon": "1",
+      "name": "steepen",
+      "native_q": [
+        0.03996,
+        0.13004
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.09008
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.09008
+          ],
+          "repriced_q": [
+            0.03996,
+            0.13004
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.09008
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.09008
+          ],
+          "repriced_q": [
+            0.03996,
+            0.13004
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/flatten",
+      "epsilon": "1",
+      "name": "flatten",
+      "native_q": [
+        0.04004,
+        0.12996
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.08992
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.08992
+          ],
+          "repriced_q": [
+            0.04004,
+            0.12996
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.08992
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.08992
+          ],
+          "repriced_q": [
+            0.04004,
+            0.12996
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/12/baseline",
+      "epsilon": "1/12",
+      "name": "baseline",
+      "native_q": [
+        0.04,
+        0.0475
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.09
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09
+          ],
+          "repriced_q": [
+            0.04,
+            0.0475
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.0075
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09
+          ],
+          "repriced_q": [
+            0.04,
+            0.0475
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/12/common-up",
+      "epsilon": "1/12",
+      "name": "common-up",
+      "native_q": [
+        0.04004,
+        0.04754
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.09
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.09
+          ],
+          "repriced_q": [
+            0.04004,
+            0.04754
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.0075
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.09
+          ],
+          "repriced_q": [
+            0.04004,
+            0.04754
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/12/common-down",
+      "epsilon": "1/12",
+      "name": "common-down",
+      "native_q": [
+        0.03996,
+        0.04746
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.09
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.09
+          ],
+          "repriced_q": [
+            0.03996,
+            0.04746
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.0075
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.09
+          ],
+          "repriced_q": [
+            0.03996,
+            0.04746
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/12/steepen",
+      "epsilon": "1/12",
+      "name": "steepen",
+      "native_q": [
+        0.03996,
+        0.04754
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.09095999999999996
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.09095999999999996
+          ],
+          "repriced_q": [
+            0.03996,
+            0.04754
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.0075799999999999965
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.09095999999999996
+          ],
+          "repriced_q": [
+            0.03996,
+            0.04754
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/12/flatten",
+      "epsilon": "1/12",
+      "name": "flatten",
+      "native_q": [
+        0.04004,
+        0.04746
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.08904000000000004
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.08904000000000004
+          ],
+          "repriced_q": [
+            0.04004,
+            0.04746
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.007420000000000003
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.08904000000000004
+          ],
+          "repriced_q": [
+            0.04004,
+            0.04746
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/365/baseline",
+      "epsilon": "1/365",
+      "name": "baseline",
+      "native_q": [
+        0.04,
+        0.04024657534246576
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.09000000000000094
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09000000000000094
+          ],
+          "repriced_q": [
+            0.04,
+            0.04024657534246576
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.000246575342465756
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09000000000000094
+          ],
+          "repriced_q": [
+            0.04,
+            0.04024657534246576
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/365/common-up",
+      "epsilon": "1/365",
+      "name": "common-up",
+      "native_q": [
+        0.04004,
+        0.040286575342465755
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.09000000000000094
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.09000000000000094
+          ],
+          "repriced_q": [
+            0.04004,
+            0.040286575342465755
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.000246575342465756
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.09000000000000094
+          ],
+          "repriced_q": [
+            0.04004,
+            0.040286575342465755
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/365/common-down",
+      "epsilon": "1/365",
+      "name": "common-down",
+      "native_q": [
+        0.03996,
+        0.04020657534246575
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.08999999999999841
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.08999999999999841
+          ],
+          "repriced_q": [
+            0.03996,
+            0.04020657534246575
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.0002465753424657491
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.08999999999999841
+          ],
+          "repriced_q": [
+            0.03996,
+            0.04020657534246575
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/365/steepen",
+      "epsilon": "1/365",
+      "name": "steepen",
+      "native_q": [
+        0.03996,
+        0.040286575342465755
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.11919999999999975
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.11919999999999975
+          ],
+          "repriced_q": [
+            0.03996,
+            0.040286575342465755
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.00032657534246575276
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.11919999999999975
+          ],
+          "repriced_q": [
+            0.03996,
+            0.040286575342465755
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/365/flatten",
+      "epsilon": "1/365",
+      "name": "flatten",
+      "native_q": [
+        0.04004,
+        0.04020657534246575
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.060799999999999604
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.060799999999999604
+          ],
+          "repriced_q": [
+            0.04004,
+            0.04020657534246575
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.00016657534246575234
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.060799999999999604
+          ],
+          "repriced_q": [
+            0.04004,
+            0.04020657534246575
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/3650/baseline",
+      "epsilon": "1/3650",
+      "name": "baseline",
+      "native_q": [
+        0.04,
+        0.040024657534246576
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.08999999999999843
+          ],
+          "physical_parameters": [
+            0.04,
+            0.08999999999999843
+          ],
+          "repriced_q": [
+            0.04,
+            0.040024657534246576
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            2.4657534246574908e-05
+          ],
+          "physical_parameters": [
+            0.04,
+            0.08999999999999841
+          ],
+          "repriced_q": [
+            0.04,
+            0.040024657534246576
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/3650/common-up",
+      "epsilon": "1/3650",
+      "name": "common-up",
+      "native_q": [
+        0.04004,
+        0.040064657534246574
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.08999999999999843
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.08999999999999843
+          ],
+          "repriced_q": [
+            0.04004,
+            0.040064657534246574
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            2.4657534246574908e-05
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.08999999999999841
+          ],
+          "repriced_q": [
+            0.04004,
+            0.040064657534246574
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/3650/common-down",
+      "epsilon": "1/3650",
+      "name": "common-down",
+      "native_q": [
+        0.03996,
+        0.03998465753424658
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.08999999999999843
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.08999999999999843
+          ],
+          "repriced_q": [
+            0.03996,
+            0.03998465753424658
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            2.4657534246574908e-05
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.08999999999999841
+          ],
+          "repriced_q": [
+            0.03996,
+            0.03998465753424658
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/3650/steepen",
+      "epsilon": "1/3650",
+      "name": "steepen",
+      "native_q": [
+        0.03996,
+        0.040064657534246574
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.3819999999999866
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.3819999999999866
+          ],
+          "repriced_q": [
+            0.03996,
+            0.040064657534246574
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.00010465753424657165
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.3819999999999865
+          ],
+          "repriced_q": [
+            0.03996,
+            0.040064657534246574
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/3650/flatten",
+      "epsilon": "1/3650",
+      "name": "flatten",
+      "native_q": [
+        0.04004,
+        0.03998465753424658
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            -0.20199999999998972
+          ],
+          "physical_parameters": [
+            0.04004,
+            -0.20199999999998972
+          ],
+          "repriced_q": [
+            0.04004,
+            0.03998465753424658
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            -5.534246575342183e-05
+          ],
+          "physical_parameters": [
+            0.04004,
+            -0.20199999999998972
+          ],
+          "repriced_q": [
+            0.04004,
+            0.03998465753424658
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/3650/admissible-boundary",
+      "epsilon": "1/3650",
+      "name": "admissible-boundary",
+      "native_q": [
+        0.04,
+        0.04
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.0
+          ],
+          "physical_parameters": [
+            0.04,
+            0.0
+          ],
+          "repriced_q": [
+            0.04,
+            0.04
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.0
+          ],
+          "physical_parameters": [
+            0.04,
+            0.0
+          ],
+          "repriced_q": [
+            0.04,
+            0.04
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "producer_claims": [
+    {
+      "id": "C1",
+      "claim": "An invertible calibration and zero residual establish stable physical variance rates."
+    },
+    {
+      "id": "C2",
+      "claim": "Changing to integrated coordinates reduces the physical uncertainty interval because the condition number is now four."
+    },
+    {
+      "id": "C3",
+      "claim": "The shortest-spacing flatten solution is admissible because the solver returned normally."
+    },
+    {
+      "id": "C4",
+      "claim": "The stipulated uncertainty box is a 95 percent confidence region."
+    },
+    {
+      "id": "C5",
+      "claim": "Because the common shifts leave b unchanged, every allowed joint shift leaves b unchanged."
+    }
+  ]
+}

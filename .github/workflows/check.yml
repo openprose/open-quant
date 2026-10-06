@@ -41,3 +41,4 @@ jobs:
       - run: python3 scripts/check_credit_methodology.py
       - run: python3 scripts/check_quote_sensitivity.py
       - run: python3 scripts/check_pricing_methodology.py
+      - run: python3 scripts/check_calibration_stability.py

@@ -67,3 +67,5 @@ With the inputs supplied and an authenticated harness configured through [the ru
 The two contracts contribute different requirements to one report. A supported issue-closure conclusion would be an additional requested outcome, with the relevant closure criteria and evidence. Adding that outcome changes what fulfillment requires. It does not require a prescribed sequence of steps or another agent.
 
 For a component package installed elsewhere, use the actual selected contract locations and identities. This sketch's paths assume the source checkout; examples and input records are not distributed in the component package.
+
+The [calibration-stability example](../examples/calibration-stability/README.md) composes calibration and sensitivity review. It separates an exact fit, physical parameter uncertainty and a coordinate-dependent condition number. Its missing-perturbations case permits analytical bounds while keeping absent native execution records unresolved.

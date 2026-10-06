@@ -1,0 +1,352 @@
+{
+  "case": "missing-perturbations",
+  "spacings": [
+    {
+      "epsilon": "1",
+      "native_conditions": [
+        {
+          "coordinates": "physical",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "status": "returned",
+          "value": 4.0
+        },
+        {
+          "coordinates": "integrated",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "status": "returned",
+          "value": 4.0
+        }
+      ]
+    },
+    {
+      "epsilon": "1/12",
+      "native_conditions": [
+        {
+          "coordinates": "physical",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.08333333333333333
+            ]
+          ],
+          "status": "returned",
+          "value": 26.0
+        },
+        {
+          "coordinates": "integrated",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "status": "returned",
+          "value": 4.0
+        }
+      ]
+    },
+    {
+      "epsilon": "1/365",
+      "native_conditions": [
+        {
+          "coordinates": "physical",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.0027397260273972603
+            ]
+          ],
+          "status": "returned",
+          "value": 732.0000000000001
+        },
+        {
+          "coordinates": "integrated",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "status": "returned",
+          "value": 4.0
+        }
+      ]
+    },
+    {
+      "epsilon": "1/3650",
+      "native_conditions": [
+        {
+          "coordinates": "physical",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.000273972602739726
+            ]
+          ],
+          "status": "returned",
+          "value": 7302.0
+        },
+        {
+          "coordinates": "integrated",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "status": "returned",
+          "value": 4.0
+        }
+      ]
+    }
+  ],
+  "native_cases": [
+    {
+      "id": "1/baseline",
+      "epsilon": "1",
+      "name": "baseline",
+      "native_q": [
+        0.04,
+        0.13
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.09
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09
+          ],
+          "repriced_q": [
+            0.04,
+            0.13
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.09
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09
+          ],
+          "repriced_q": [
+            0.04,
+            0.13
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/12/baseline",
+      "epsilon": "1/12",
+      "name": "baseline",
+      "native_q": [
+        0.04,
+        0.0475
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.09
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09
+          ],
+          "repriced_q": [
+            0.04,
+            0.0475
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.0075
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09
+          ],
+          "repriced_q": [
+            0.04,
+            0.0475
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/365/baseline",
+      "epsilon": "1/365",
+      "name": "baseline",
+      "native_q": [
+        0.04,
+        0.04024657534246576
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.09000000000000094
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09000000000000094
+          ],
+          "repriced_q": [
+            0.04,
+            0.04024657534246576
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.000246575342465756
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09000000000000094
+          ],
+          "repriced_q": [
+            0.04,
+            0.04024657534246576
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1/3650/baseline",
+      "epsilon": "1/3650",
+      "name": "baseline",
+      "native_q": [
+        0.04,
+        0.040024657534246576
+      ],
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.08999999999999843
+          ],
+          "physical_parameters": [
+            0.04,
+            0.08999999999999843
+          ],
+          "repriced_q": [
+            0.04,
+            0.040024657534246576
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            2.4657534246574908e-05
+          ],
+          "physical_parameters": [
+            0.04,
+            0.08999999999999841
+          ],
+          "repriced_q": [
+            0.04,
+            0.040024657534246576
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "producer_claims": []
+}

@@ -97,3 +97,5 @@ Each script states the limited fixture relationships it checks. See [the test gu
 These checks verify links, imported identities and specified numerical correspondences. They do not assess arbitrary prose, certify the financial model or establish that contract composition outperforms a baseline. [Contributing](CONTRIBUTING.md) explains how to add a contract or model example. Owned code and documentation are [MIT licensed](LICENSE); external sources retain their own terms.
 
 The [implementation-review example](examples/implementation-review/README.md) uses observed synthetic pricing calculations to distinguish correct input mappings, reference agreement, passing identities and missing coverage. It has an authored report and deterministic controls; its report program remains agent-unqualified.
+
+The [calibration-stability example](examples/calibration-stability/README.md) shows why an exact fit and a better matrix condition number need not establish stable physical parameters. It reuses calibration and sensitivity requirements; the worked reporting program remains agent-unqualified.
