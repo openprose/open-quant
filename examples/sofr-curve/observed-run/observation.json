@@ -53,7 +53,7 @@
   },
   "assessmentConclusion": {
     "content": "met as judged in the retained model assessment",
-    "executionEffects": "unresolved because assessor received no execution trace",
+    "executionEffects": "unresolved because evaluator received no execution trace",
     "overall": "unresolved"
   },
   "limitations": [
