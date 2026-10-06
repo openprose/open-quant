@@ -33,6 +33,13 @@ The developer's reason for choosing B is its forward-rate shape on this snapshot
 | Largest five-business-day move, bp | 59.727047 | 5.338172 | Same bounded comparison |
 | Largest outside-window response, bp | 0.030463 | 4.147534 | +1 bp to 5Y, outside actual 4Y–6Y pillars |
 
+| Date of maximum | A | B |
+|---|---|---|
+| Daily comparison | 2046-09-26 | 2029-09-28 |
+| Five-business-day comparison | 2046-09-28 | 2026-12-31 |
+
+These dates identify the later forward start in each comparison. Daily moves compare adjacent business-day starts; five-day moves compare starts five business-day steps apart. They are differences across maturities on one as-of curve, not realized market changes over time. [Sources: results.json: forward_smoothness.A/B.max_jump_date, max_change_over_5_business_days_ending; bootstrap.py: jumps, five.]
+
 The inside locality interval is September 25, 2030 through September 24, 2032, including endpoints; outside excludes those dates. It is not a nominal 4.0-to-6.0-year interval. The last node is September 26, 2056. Daily and five-day measures are different; neither proves global smoothness or stability under arbitrary inputs. A's smaller observed outside-window response can matter for local sensitivities, while the single bump does not characterize every perturbation. [Sources: results.json: repricing_max_abs_error_bp, forward_smoothness, locality_bump_5Y_plus_1bp; bootstrap.py: days, d4, d6; brief.md.]
 
 ## Variants, conventions and endpoint behavior

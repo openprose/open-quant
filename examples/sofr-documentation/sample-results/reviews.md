@@ -10,7 +10,7 @@ These records concern the accompanying authored document under the complete supp
 | D2 | Inputs and provenance | Input units, flags, fixing timing and upstream limitations are explicit. Raw acquisition is outside the declared scope. |
 | D3 | Construction and conventions | Both implementations, instruments, time/accrual/schedule conventions and B's solve/interpolation are described. |
 | D4 | Developer choice and observed comparisons; Construction and conventions; this choice register | B's reason and A's alternative are attributed; unsupplied rationales remain gaps rather than inventions. |
-| D5 | Developer choice and observed comparisons | Repricing, daily/five-day moves and locality values are supplied with units and measured scope. |
+| D5 | Developer choice and observed comparisons | Repricing, daily/five-day moves and locality values are supplied with units and measured scope; recorded move dates identify the later forward start, not a historical market change. |
 | D6 | Variants, conventions and endpoint behavior | End rule, failed/configured variants and payment-lag sensitivity are identified. |
 | D7 | Present-value interpretation | Monthly-grid date, discount-factor difference and one-payment USD interpretation are stated. |
 | D8 | Limitations and unresolved institutional facts; comparison and variant sections | Finite evidence, sparse inputs, method tradeoffs, reproduction limits and unperformed broader checks remain visible. |
@@ -56,7 +56,7 @@ This audit checks support for the specific claim groups below. It does not estab
 | A construction and B's shared dates/separate pricing | bootstrap.py: CurveSet, hw_instruments; hagan_west.py: ois_par_rate | Supported source description; shared dates limit comparison independence. |
 | B's discrete/node forwards, collar, piecewise integration and discounting | hagan_west.py: MonotoneConvex, _sector, _g, _G | Supported implementation account; no unprovided paper theorem is asserted. |
 | Simultaneous root solve and acceptance residual | hagan_west.py: bootstrap | Requested tolerance 1e-14 and residual guard 1e-11 are source values, not model-error bounds. |
-| Four-row A/B comparison table | Selected results.json fields named in D5; bootstrap.py metric definitions | All displayed values match the original record at stated precision. Finite comparisons are not broad validation. |
+| Four-row A/B numerical comparison and four move dates | Selected results.json fields named in D5, including forward_smoothness dates; bootstrap.py jumps/five definitions | Values and dates match the retained record. Dates identify comparisons across maturities on one as-of curve, not realized market changes. Finite comparisons are not broad validation. |
 | Locality date boundaries and last node | bootstrap.py: d4/d6; source-register boundary explanation; results.json.forward_smoothness | Uses actual pillar dates and inclusive inside bounds, not nominal year fractions. |
 | Endpoint behavior and B forward value | hagan_west.py: forward/integral; results.json.forward_smoothness.B | Code end rule plus retained observed values; no market-extrapolation acceptance. |
 | Collar and QuantLib variant outcomes | results.json.interpolation_variants, hagan_west_collar_binding_nodes | Failed (0,1) variant preserved; default variant is not called identical to B. |

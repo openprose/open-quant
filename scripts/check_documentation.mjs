@@ -26,8 +26,9 @@ const result = text(`${base}sample-results/result.md`);
 function checkReference(doc, review) {
   assert.ok(doc.trim().split(/\s+/).length < 1600, 'document size');
   assert.deepEqual(ids(review), expectedIds, 'section-plan population');
-  const table = [...doc.matchAll(/^\| ([^|]+) \| ([^|]+) \| ([^|]+) \|/gm)]
-    .map(m => ({ name: m[1].trim(), A: Number(m[2]), B: Number(m[3]) }));
+  const rows = [...doc.matchAll(/^\| ([^|]+) \| ([^|]+) \| ([^|]+) \|/gm)]
+    .map(m => ({ name: m[1].trim(), A: m[2].trim(), B: m[3].trim() }));
+  const table = rows.map(row => ({ name: row.name, A: Number(row.A), B: Number(row.B) }));
   const bindings = [
     ['Maximum absolute repricing error, bp', original.repricing_max_abs_error_bp, n => Number(n.toPrecision(6))],
     ['Largest daily forward move, bp', { A: original.forward_smoothness.A.max_jump_bp, B: original.forward_smoothness.B.max_jump_bp }, n => Number(n.toFixed(6))],
@@ -38,6 +39,14 @@ function checkReference(doc, review) {
     const candidates = table.filter(row => row.name === name);
     assert.equal(candidates.length, 1, 'comparison row population');
     for (const method of ['A', 'B']) assert.equal(candidates[0][method], format(values[method]), 'comparison value binding');
+  }
+  for (const [name, field] of [
+    ['Daily comparison', 'max_jump_date'],
+    ['Five-business-day comparison', 'max_change_over_5_business_days_ending'],
+  ]) {
+    const candidates = rows.filter(row => row.name === name);
+    assert.equal(candidates.length, 1, 'move-date row population');
+    for (const method of ['A', 'B']) assert.equal(candidates[0][method], original.forward_smoothness[method][field], 'move-date binding');
   }
   assert.equal((doc.match(/\[INSTITUTION-SUPPLIED:/g) ?? []).length, 3, 'selected institutional-gap count');
 }
@@ -54,11 +63,14 @@ for (const definition of ['documentation', 'model-description', 'numerical-evide
 }
 assert.throws(() => checkReference(document.replace('59.712041', '1.684594'), reviews), /comparison value binding/);
 assert.throws(() => checkReference(document.replace('4.147534', '0.030463'), reviews), /comparison value binding/);
+assert.throws(() => checkReference(document.replace('| Daily comparison | 2046-09-26 | 2029-09-28 |', '| Daily comparison | 2029-09-28 | 2046-09-26 |'), reviews), /move-date binding/);
+assert.throws(() => checkReference(document.replace('| Five-business-day comparison | 2046-09-28 | 2026-12-31 |', '| Five-business-day comparison | 2046-09-26 | 2026-12-31 |'), reviews), /move-date binding/);
+assert.throws(() => checkReference(document.replace(/^\| Daily comparison \|.*\n/m, ''), reviews), /move-date row population/);
 assert.throws(() => checkReference(document, reviews.replace(/^\| D5 \|.*\n/m, '')), /section-plan population/);
 assert.throws(() => checkReference(document, reviews.replace('| D5 |', '| D4 |')), /section-plan population/);
 assert.throws(() => checkReference(document.replace('[INSTITUTION-SUPPLIED: accountable model owner]', 'Approved owner'), reviews), /selected institutional-gap count/);
 const wrongProjection = structuredClone(missing); wrongProjection.as_of = '2026-09-19';
 assert.throws(() => checkProjection(wrongProjection), /only locality observations are withheld/);
 console.log(JSON.stringify({ projection: 'matches declared removal', selectedDocumentRequirements: expectedIds,
-  numericComparisonRows: 4, referenceIdentityCount: identities.length, mutationControls: 'passed',
+  numericComparisonRows: 4, moveDateBindings: 4, referenceIdentityCount: identities.length, mutationControls: 'passed',
   scope: 'Fixed identities, numeric correspondences and reference coverage markers; no arbitrary prose, citation-support, contract-fulfillment or execution assessment.' }, null, 2));

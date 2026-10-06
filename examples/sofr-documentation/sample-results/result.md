@@ -6,8 +6,8 @@ Artifacts: document.md, reviews.md and this result.md. The first two hashes belo
 
 | Artifact | SHA-256 |
 |---|---|
-| document.md | 8d5b56af10296736baad8859ed15d60a0eafe934df486fbb77af7c3008f0bfc1 |
-| reviews.md | 45f3e555b234ec5410470d9ece49365d1b0b87e1119fe0758452e1c0a571ec15 |
+| document.md | 5a1d109bb14676ac6a4b4d0a91c5ab0c2743efc9b80c6c109d2c13ce33c30d86 |
+| reviews.md | d20f8d8bc59d6de12b1595256d062a0480b22f3f27b5b54d7ba4039e27aeee33 |
 
 ## Agreement and input identities
 
