@@ -20,21 +20,22 @@ The operating contracts turn supplied model records and house policy into review
 
 For example, a periodic model review can compose monitoring with limitations and remediation. A change review can compose model change, model data and calibration review. Adopt only components relevant to the intended result and bind their inputs explicitly. A caller can require a report that identifies missing data, or a supported substantive conclusion that cannot be reached without that data; state which obligation is intended.
 
-The [monitoring example](../examples/monitoring-review/README.md) provides a small, synthetic composition. It contains authored cases and mechanically checked reference arithmetic, not a recorded model execution. The existing [SOFR decision example](../examples/sofr-curve/program.md) is unchanged.
+## Worked compositions
 
-The [valuation example](../examples/valuation-review/README.md) composes valuation comparison with model data. It distinguishes position-level exceptions from offsetting totals and usable quotes from missing, stale or incompatible evidence. It is also synthetic and not model-executed.
+These operating reports have authored references and deterministic fixture checks. They have not been executed by an agent in this expansion. The original [SOFR decision note](../examples/sofr-curve/program.md) has separately retained CLI evidence; that does not qualify these new compositions.
 
-The [backtesting example](../examples/backtesting-review/README.md) preserves observed exceedances separately from policy exceptions caused by unavailable data. Its separate case files also allow an experiment to stage one selected case without the alternatives. Five illustrative days do not establish an annual regulatory backtest.
+| Example | Composed requirements | Distinction to inspect |
+|---|---|---|
+| [Monitoring](../examples/monitoring-review/README.md) | Monitoring, limitations and remediation | An adverse finding can be the correct result of fulfilled reporting. |
+| [Valuation](../examples/valuation-review/README.md) | Valuation comparison, model data | Offsetting differences do not remove position-level exceptions. |
+| [Backtesting](../examples/backtesting-review/README.md) | Backtesting, outcomes analysis | Observed exceedances differ from policy treatment of missing data. |
+| [SOFR change](../examples/sofr-change-review/README.md) | Model change, sensitivity review | Adding a locality requirement changes the finding without changing evidence. |
+| [SOFR calibration](../examples/calibration-review/README.md) | Calibration review, model data | Rounded displays, missing instruments and conflicting records limit a fit conclusion. |
+| [Vendor inventory](../examples/vendor-inventory-review/README.md) | Model inventory, vendor review | Register accuracy and local-test support are separate findings for an exact deployment. |
+| [Risk report](../examples/risk-report/README.md) | P&L explanation, scenario review, sensitivity review | Residuals, joint effects and assumed actions remain distinct. |
+| [Outcomes](../examples/outcomes-review/README.md) | Outcomes analysis, model data | A comparison can reverse when both models use the same observations. |
 
-The [SOFR change review](../examples/sofr-change-review/README.md) reuses the existing historical model evidence. It composes change and sensitivity review, then optionally adds a locality requirement. The numerical finding changes because the selected requirements change, while the model evidence remains fixed. The original short decision-note program is unaffected.
-
-The [calibration review](../examples/calibration-review/README.md) uses freshly reproduced per-instrument SOFR evidence. It distinguishes selected and excluded instruments, missing item-level support, rounded displays and conflicting source records. The report itself remains unexecuted by an agent.
-
-The [vendor/inventory example](../examples/vendor-inventory-review/README.md) preserves deployment identity across shared model names, versions and local configurations. It separates register accuracy, vendor assertions and the evidence for narrow local checks. These synthetic records are authored; the report has not been run by an agent.
-
-The [risk report](../examples/risk-report/README.md) composes P&L explanation, scenario review and sensitivity interpretation. Its synthetic book preserves offsetting unexplained residuals, nonadditive joint stresses, missing exposures and assumed-only hedges. It is an authored report example, not a recorded financial-model or agent execution.
-
-The [outcomes review](../examples/outcomes-review/README.md) demonstrates why separate-population metrics cannot substitute for a matched comparison. Missing or late forecasts change the eligible population; immature outcomes and zero denominators remain explicit. Its cash-flow observations and reference report are synthetic.
+The SOFR examples use retained historical calculations; calibration also has a fresh numerical reproduction receipt. Other inputs are synthetic. Case selection, house policy and permissions are explicit in each program. Use [the common assessment entry point](../examples/assess-report.md) for an actual operating report, with its original program and selected case or mode.
 
 ## Public foundations and scope
 
