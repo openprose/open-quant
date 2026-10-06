@@ -53,7 +53,7 @@ The assessment contract asks for findings tied to the exact subject, requirement
 
 ## Library
 
-[Operating-work contracts](docs/operating-work.md) add model inventory, change review, monitoring, remediation, data, calibration, valuation, outcomes, backtesting, sensitivities, scenarios, P&L, vendor-model reporting, implementation review and simulation evidence. Start with the small [synthetic monitoring example](examples/monitoring-review/README.md) to see how two contracts compose into one report. These new components have authored cases and offline checks; they have not received model-backed execution qualification.
+[Operating-work contracts](docs/operating-work.md) add model inventory, change review, monitoring, remediation, data, calibration, valuation, outcomes, backtesting, sensitivities, scenarios, P&L, vendor-model reporting, implementation review, dependence inputs and simulation evidence. Start with the small [synthetic monitoring example](examples/monitoring-review/README.md) to see how two contracts compose into one report. These new components have authored cases and offline checks; they have not received model-backed execution qualification.
 
 | Contract | Required result |
 |---|---|

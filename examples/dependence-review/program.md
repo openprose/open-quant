@@ -1,0 +1,11 @@
+# Review proposed dependence inputs
+
+**For agents.** Execute under the caller's selected OpenProse kernel. The working root is the source repository, two directories above this program.
+
+Adopt [dependence review](../../contracts/dependence-review.md) and [model data](../../contracts/model-data.md), including their adopted definitions, for one report. Apply [the brief](inputs/brief.md) and [review policy](inputs/policy.md). The caller selects `complete`, `missing-membership` or `contradictory`; ask for an absent or unknown selection. Read only the corresponding [complete](inputs/complete.json), [missing-membership](inputs/missing-membership.json) or [contradictory](inputs/contradictory.json) packet and [the receipt](receipt.json) for calculation identity and projection scope.
+
+Produce a report under 900 words excluding locators for an AI-literate financial operations reader. Account for all nine matrix candidates, the three pairwise observation populations, the two proposed adjustments and the exposure-alignment comparison. Distinguish mathematical admissibility, selected adjustment criteria, available data lineage and unsupported producer claims. Report what is met, breached or unresolved without hiding known violations behind missing evidence. A reporting obligation can be fulfilled by accurately reporting an invalid input.
+
+Write only `report.md` and `result.md` in a fresh directory under `results/dependence-review/`. Identify the selected case, program, adopted definitions, brief, policy, packet and receipt by computed hash. Attribute calculation-source identity to the receipt rather than claim to have inspected or reproduced it. State checks performed, remaining work, reporting fulfillment and the actual output path.
+
+Use only those selected sources and definitions. Basic arithmetic and identity checks are permitted. Do not inspect the reproduction source, other case packets, sample reports or test answers; they are not substitutes for evidence missing from this selection. Preserve inputs and earlier outputs. Do not regenerate matrices, run decompositions, fill missing records, fetch data, repair a model or issue approvals. Reading restrictions are instructions, not enforced filesystem isolation.

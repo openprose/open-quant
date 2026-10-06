@@ -38,9 +38,10 @@ These operating reports have authored references and deterministic fixture check
 | [Risk report](../examples/risk-report/README.md) | P&L explanation, scenario review, sensitivity review | Residuals, joint effects and assumed actions remain distinct. |
 | [Outcomes](../examples/outcomes-review/README.md) | Outcomes analysis, model data | A comparison can reverse when both models use the same observations. |
 | [Implementation](../examples/implementation-review/README.md) | Implementation review, model description | Passing parity or one baseline does not establish correct price conventions. |
+| [Dependence](../examples/dependence-review/README.md) | Dependence review, model data | Valid pairs, joint validity, observation populations and exposure identity are distinct. |
 | [Simulation](../examples/simulation-review/README.md) | Simulation review, implementation review | A small standard error cannot clear dependent sampling or a different target. |
 
-The SOFR examples use retained historical calculations; calibration also has a fresh numerical reproduction receipt. The implementation and simulation examples use freshly observed calculations on synthetic option inputs. Other inputs are authored synthetic records. Case selection, house policy and permissions are explicit in each program. Use [the common assessment entry point](../examples/assess-report.md) for an actual operating report, with its original program and selected case or mode.
+The SOFR examples use retained historical calculations; calibration also has a fresh numerical reproduction receipt. The implementation and simulation examples use freshly observed calculations on synthetic option inputs. Dependence review uses observed synthetic matrix calculations. Other inputs are authored synthetic records. Case selection, house policy and permissions are explicit in each program. Use [the common assessment entry point](../examples/assess-report.md) for an actual operating report, with its original program and selected case or mode.
 
 Implementation review also has [authored distinguishing cases](../tests/cases/operating-reports.md#implementation-review). Its numerical observations establish finite adapter behavior, not agent qualification. Calibration fit, mathematical consistency and reference agreement remain separate findings.
 
@@ -58,6 +59,6 @@ The components support preparing evidence for these activities. They do not esta
 
 ## Dependence review
 
-[Dependence review](../contracts/dependence-review.md) has [authored distinguishing cases](../tests/cases/dependence-review.md), but no worked report or agent qualification yet. It adds a sixteenth operating domain; the ten worked operating reports remain unchanged. Compose it with model data for lineage questions, implementation review for method conformance, or simulation review for how dependence enters simulated results.
+[Dependence review](../contracts/dependence-review.md) has [authored distinguishing cases](../tests/cases/dependence-review.md) and a [worked data composition](../examples/dependence-review/README.md). This brings the catalog to sixteen operating domains and eleven worked operating reports; it does not establish agent qualification. Compose it with model data for lineage questions, implementation review for method conformance, or simulation review for how dependence enters simulated results.
 
 [R's correlation documentation](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cor.html), Details, explains why pairwise-complete estimates can be non-PSD. [Nick Higham's correlation-matrix overview](https://nhigham.com/2020/04/14/what-is-a-correlation-matrix/) explains joint admissibility and constrained adjustment problems. These primary sources support the component's mathematical distinctions, not institutional acceptance rules. The illustrative thresholds remain caller policy; mathematical validity alone does not establish economic suitability.

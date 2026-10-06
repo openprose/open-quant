@@ -14,3 +14,13 @@ These are authored interpretation cases, not model execution results. Values bel
 | A supplied rank-correlation matrix is used as Pearson correlation with no transformation evidence, or zero Pearson correlation is called independence. | Identify the unsupported interpretation. Do not invent a conversion or joint-distribution assumption. |
 
 These examples do not establish representative sampling, financial suitability, an approved adjustment, runtime reliability or an advantage over ordinary instructions. The [component](../../contracts/dependence-review.md) adds specialist requirements to existing reporting and numerical-evidence contracts; it does not change kernel composition rules.
+
+## Worked report expectations
+
+The [dependence/data composition](../../examples/dependence-review/README.md) supplies all nine numerical candidates. None of inconsistent, clipped_rescaled or shrunk_half meets every replacement criterion. Both alignment matrices are admissible, but the deliberately misbound exposure vector changes the variance.
+
+- `complete`: raw rows and memberships support three distinct six-row pair samples and one four-row common sample. The report must account for each identity and comparison.
+- `missing-membership`: raw rows and every membership list are absent. Specific observation memberships and their reconciliation remain unresolved; the supplied spectra still establish joint violations. Counts alone cannot supply the absent IDs.
+- `contradictory`: unchanged evidence contradicts all four producer claims. Reject the claims without replacing numerical findings or inventing source repairs.
+
+The checker verifies the fixed numerical distinctions. Whether a generated report preserves them requires actual inspection under the selected agreement; no such agent execution is claimed.

@@ -1,0 +1,913 @@
+{
+  "schema": "open-quant-dependence-packet-v1",
+  "subject": "DEPENDENCE-2026-10-06",
+  "case": "complete",
+  "source_sha256": "2a36f1d83b2c3384411c6fda00278cdabec485d8e0af6728dec4180ce58eb26a",
+  "units": "common synthetic units; variance in squared synthetic units",
+  "observation_period": "one shared synthetic period; no financial horizon supplied",
+  "producer_claims": null,
+  "matrices": {
+    "identity": {
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "symmetry_max_abs_error": 0.0,
+      "diagonal_max_abs_error": 0.0,
+      "maximum_absolute_entry": 1.0,
+      "eigenvalues": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "positive_semidefinite_at_tolerance": true,
+      "positive_definite_above_tolerance": true,
+      "eigen_reconstruction_max_abs_error": 0.0,
+      "pair_blocks": [
+        {
+          "variables": [
+            "A",
+            "B"
+          ],
+          "eigenvalues": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "variables": [
+            "A",
+            "C"
+          ],
+          "eigenvalues": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "variables": [
+            "B",
+            "C"
+          ],
+          "eigenvalues": [
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "cholesky": {
+        "succeeded": true,
+        "reconstruction_max_abs_error": 0.0
+      },
+      "variable_order": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "singular": {
+      "matrix": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "symmetry_max_abs_error": 0.0,
+      "diagonal_max_abs_error": 0.0,
+      "maximum_absolute_entry": 1.0,
+      "eigenvalues": [
+        -3.3306690738754696e-16,
+        -2.3721342664653315e-17,
+        2.9999999999999996
+      ],
+      "positive_semidefinite_at_tolerance": true,
+      "positive_definite_above_tolerance": false,
+      "eigen_reconstruction_max_abs_error": 1.1102230246251565e-15,
+      "pair_blocks": [
+        {
+          "variables": [
+            "A",
+            "B"
+          ],
+          "eigenvalues": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "variables": [
+            "A",
+            "C"
+          ],
+          "eigenvalues": [
+            0.0,
+            2.0
+          ]
+        },
+        {
+          "variables": [
+            "B",
+            "C"
+          ],
+          "eigenvalues": [
+            0.0,
+            2.0
+          ]
+        }
+      ],
+      "cholesky": {
+        "succeeded": false,
+        "error": "Matrix is not positive definite"
+      },
+      "variable_order": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "inconsistent": {
+      "matrix": [
+        [
+          1.0,
+          0.9,
+          0.9
+        ],
+        [
+          0.9,
+          1.0,
+          -0.9
+        ],
+        [
+          0.9,
+          -0.9,
+          1.0
+        ]
+      ],
+      "symmetry_max_abs_error": 0.0,
+      "diagonal_max_abs_error": 0.0,
+      "maximum_absolute_entry": 1.0,
+      "eigenvalues": [
+        -0.8000000000000002,
+        1.8999999999999997,
+        1.9000000000000001
+      ],
+      "positive_semidefinite_at_tolerance": false,
+      "positive_definite_above_tolerance": false,
+      "eigen_reconstruction_max_abs_error": 6.661338147750939e-16,
+      "pair_blocks": [
+        {
+          "variables": [
+            "A",
+            "B"
+          ],
+          "eigenvalues": [
+            0.09999999999999992,
+            1.9
+          ]
+        },
+        {
+          "variables": [
+            "A",
+            "C"
+          ],
+          "eigenvalues": [
+            0.09999999999999992,
+            1.9
+          ]
+        },
+        {
+          "variables": [
+            "B",
+            "C"
+          ],
+          "eigenvalues": [
+            0.09999999999999992,
+            1.9
+          ]
+        }
+      ],
+      "cholesky": {
+        "succeeded": false,
+        "error": "Matrix is not positive definite"
+      },
+      "variable_order": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "pairwise_complete": {
+      "matrix": [
+        [
+          1.0,
+          0.980392156862745,
+          0.980392156862745
+        ],
+        [
+          0.980392156862745,
+          1.0,
+          -0.980392156862745
+        ],
+        [
+          0.980392156862745,
+          -0.980392156862745,
+          1.0
+        ]
+      ],
+      "symmetry_max_abs_error": 0.0,
+      "diagonal_max_abs_error": 0.0,
+      "maximum_absolute_entry": 1.0,
+      "eigenvalues": [
+        -0.9607843137254898,
+        1.9803921568627447,
+        1.9803921568627456
+      ],
+      "positive_semidefinite_at_tolerance": false,
+      "positive_definite_above_tolerance": false,
+      "eigen_reconstruction_max_abs_error": 4.440892098500626e-16,
+      "pair_blocks": [
+        {
+          "variables": [
+            "A",
+            "B"
+          ],
+          "eigenvalues": [
+            0.019607843137255054,
+            1.980392156862745
+          ]
+        },
+        {
+          "variables": [
+            "A",
+            "C"
+          ],
+          "eigenvalues": [
+            0.019607843137255054,
+            1.980392156862745
+          ]
+        },
+        {
+          "variables": [
+            "B",
+            "C"
+          ],
+          "eigenvalues": [
+            0.019607843137255054,
+            1.980392156862745
+          ]
+        }
+      ],
+      "cholesky": {
+        "succeeded": false,
+        "error": "Matrix is not positive definite"
+      },
+      "variable_order": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "common_complete": {
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "symmetry_max_abs_error": 0.0,
+      "diagonal_max_abs_error": 0.0,
+      "maximum_absolute_entry": 1.0,
+      "eigenvalues": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "positive_semidefinite_at_tolerance": true,
+      "positive_definite_above_tolerance": true,
+      "eigen_reconstruction_max_abs_error": 0.0,
+      "pair_blocks": [
+        {
+          "variables": [
+            "A",
+            "B"
+          ],
+          "eigenvalues": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "variables": [
+            "A",
+            "C"
+          ],
+          "eigenvalues": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "variables": [
+            "B",
+            "C"
+          ],
+          "eigenvalues": [
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "cholesky": {
+        "succeeded": true,
+        "reconstruction_max_abs_error": 0.0
+      },
+      "variable_order": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "clipped_rescaled": {
+      "matrix": [
+        [
+          1.0,
+          0.5000000000000001,
+          0.5000000000000002
+        ],
+        [
+          0.5,
+          1.0,
+          -0.49999999999999983
+        ],
+        [
+          0.5000000000000002,
+          -0.49999999999999983,
+          1.0
+        ]
+      ],
+      "symmetry_max_abs_error": 1.1102230246251565e-16,
+      "diagonal_max_abs_error": 0.0,
+      "maximum_absolute_entry": 1.0,
+      "eigenvalues": [
+        -1.0510111299784815e-16,
+        1.5,
+        1.5000000000000002
+      ],
+      "positive_semidefinite_at_tolerance": true,
+      "positive_definite_above_tolerance": false,
+      "eigen_reconstruction_max_abs_error": 3.3306690738754696e-16,
+      "pair_blocks": [
+        {
+          "variables": [
+            "A",
+            "B"
+          ],
+          "eigenvalues": [
+            0.5,
+            1.5
+          ]
+        },
+        {
+          "variables": [
+            "A",
+            "C"
+          ],
+          "eigenvalues": [
+            0.4999999999999997,
+            1.5000000000000002
+          ]
+        },
+        {
+          "variables": [
+            "B",
+            "C"
+          ],
+          "eigenvalues": [
+            0.5000000000000002,
+            1.4999999999999998
+          ]
+        }
+      ],
+      "cholesky": {
+        "succeeded": false,
+        "error": "Matrix is not positive definite"
+      },
+      "variable_order": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "shrunk_half": {
+      "matrix": [
+        [
+          1.0,
+          0.45,
+          0.45
+        ],
+        [
+          0.45,
+          1.0,
+          -0.45
+        ],
+        [
+          0.45,
+          -0.45,
+          1.0
+        ]
+      ],
+      "symmetry_max_abs_error": 0.0,
+      "diagonal_max_abs_error": 0.0,
+      "maximum_absolute_entry": 1.0,
+      "eigenvalues": [
+        0.09999999999999976,
+        1.45,
+        1.4500000000000002
+      ],
+      "positive_semidefinite_at_tolerance": true,
+      "positive_definite_above_tolerance": true,
+      "eigen_reconstruction_max_abs_error": 2.220446049250313e-16,
+      "pair_blocks": [
+        {
+          "variables": [
+            "A",
+            "B"
+          ],
+          "eigenvalues": [
+            0.55,
+            1.45
+          ]
+        },
+        {
+          "variables": [
+            "A",
+            "C"
+          ],
+          "eigenvalues": [
+            0.55,
+            1.45
+          ]
+        },
+        {
+          "variables": [
+            "B",
+            "C"
+          ],
+          "eigenvalues": [
+            0.55,
+            1.45
+          ]
+        }
+      ],
+      "cholesky": {
+        "succeeded": true,
+        "reconstruction_max_abs_error": 0.0
+      },
+      "variable_order": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "alignment_original": {
+      "matrix": [
+        [
+          1.0,
+          0.6,
+          0.2
+        ],
+        [
+          0.6,
+          1.0,
+          -0.1
+        ],
+        [
+          0.2,
+          -0.1,
+          1.0
+        ]
+      ],
+      "symmetry_max_abs_error": 0.0,
+      "diagonal_max_abs_error": 0.0,
+      "maximum_absolute_entry": 1.0,
+      "eigenvalues": [
+        0.3322129092212784,
+        1.059038490784268,
+        1.6087485999944537
+      ],
+      "positive_semidefinite_at_tolerance": true,
+      "positive_definite_above_tolerance": true,
+      "eigen_reconstruction_max_abs_error": 4.440892098500626e-16,
+      "pair_blocks": [
+        {
+          "variables": [
+            "A",
+            "B"
+          ],
+          "eigenvalues": [
+            0.4,
+            1.6
+          ]
+        },
+        {
+          "variables": [
+            "A",
+            "C"
+          ],
+          "eigenvalues": [
+            0.8,
+            1.2
+          ]
+        },
+        {
+          "variables": [
+            "B",
+            "C"
+          ],
+          "eigenvalues": [
+            0.9,
+            1.1
+          ]
+        }
+      ],
+      "cholesky": {
+        "succeeded": true,
+        "reconstruction_max_abs_error": 2.220446049250313e-16
+      },
+      "variable_order": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "alignment_permuted": {
+      "matrix": [
+        [
+          1.0,
+          0.2,
+          -0.1
+        ],
+        [
+          0.2,
+          1.0,
+          0.6
+        ],
+        [
+          -0.1,
+          0.6,
+          1.0
+        ]
+      ],
+      "symmetry_max_abs_error": 0.0,
+      "diagonal_max_abs_error": 0.0,
+      "maximum_absolute_entry": 1.0,
+      "eigenvalues": [
+        0.33221290922127805,
+        1.0590384907842676,
+        1.6087485999944535
+      ],
+      "positive_semidefinite_at_tolerance": true,
+      "positive_definite_above_tolerance": true,
+      "eigen_reconstruction_max_abs_error": 5.551115123125783e-16,
+      "pair_blocks": [
+        {
+          "variables": [
+            "C",
+            "A"
+          ],
+          "eigenvalues": [
+            0.8,
+            1.2
+          ]
+        },
+        {
+          "variables": [
+            "C",
+            "B"
+          ],
+          "eigenvalues": [
+            0.9,
+            1.1
+          ]
+        },
+        {
+          "variables": [
+            "A",
+            "B"
+          ],
+          "eigenvalues": [
+            0.4,
+            1.6
+          ]
+        }
+      ],
+      "cholesky": {
+        "succeeded": true,
+        "reconstruction_max_abs_error": 1.1102230246251565e-16
+      },
+      "variable_order": [
+        "C",
+        "A",
+        "B"
+      ]
+    }
+  },
+  "negative_variance_witness": {
+    "exposures": [
+      -0.5773502691896258,
+      0.5773502691896258,
+      0.5773502691896258
+    ],
+    "quadratic_form": -0.8000000000000002
+  },
+  "missing_data": {
+    "variable_order": [
+      "A",
+      "B",
+      "C"
+    ],
+    "observations": [
+      {
+        "id": "O01",
+        "values": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "id": "O02",
+        "values": [
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "id": "O03",
+        "values": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "id": "O04",
+        "values": [
+          1,
+          1,
+          -1
+        ]
+      },
+      {
+        "id": "O05",
+        "values": [
+          -10,
+          -10,
+          null
+        ]
+      },
+      {
+        "id": "O06",
+        "values": [
+          10,
+          10,
+          null
+        ]
+      },
+      {
+        "id": "O07",
+        "values": [
+          -10,
+          null,
+          -10
+        ]
+      },
+      {
+        "id": "O08",
+        "values": [
+          10,
+          null,
+          10
+        ]
+      },
+      {
+        "id": "O09",
+        "values": [
+          null,
+          -10,
+          10
+        ]
+      },
+      {
+        "id": "O10",
+        "values": [
+          null,
+          10,
+          -10
+        ]
+      }
+    ],
+    "pairwise_membership": [
+      {
+        "variables": [
+          "A",
+          "B"
+        ],
+        "count": 6,
+        "observation_ids": [
+          "O01",
+          "O02",
+          "O03",
+          "O04",
+          "O05",
+          "O06"
+        ],
+        "correlation": 0.980392156862745
+      },
+      {
+        "variables": [
+          "A",
+          "C"
+        ],
+        "count": 6,
+        "observation_ids": [
+          "O01",
+          "O02",
+          "O03",
+          "O04",
+          "O07",
+          "O08"
+        ],
+        "correlation": 0.980392156862745
+      },
+      {
+        "variables": [
+          "B",
+          "C"
+        ],
+        "count": 6,
+        "observation_ids": [
+          "O01",
+          "O02",
+          "O03",
+          "O04",
+          "O09",
+          "O10"
+        ],
+        "correlation": -0.980392156862745
+      }
+    ],
+    "common_membership": [
+      "O01",
+      "O02",
+      "O03",
+      "O04"
+    ],
+    "common_count": 4
+  },
+  "adjustments": {
+    "clipped_rescaled": {
+      "delta": [
+        [
+          0.0,
+          -0.3999999999999999,
+          -0.3999999999999998
+        ],
+        [
+          -0.4,
+          0.0,
+          0.4000000000000002
+        ],
+        [
+          -0.3999999999999998,
+          0.4000000000000002,
+          0.0
+        ]
+      ],
+      "maximum_absolute_change": 0.4000000000000002,
+      "frobenius_change": 0.9797958971132712,
+      "fixed_vector_quadratic_form": -5.055309518347868e-17,
+      "meets_illustrative_eigenvalue_floor": false,
+      "preserves_locked_ab": false
+    },
+    "shrunk_half": {
+      "delta": [
+        [
+          0.0,
+          -0.45,
+          -0.45
+        ],
+        [
+          -0.45,
+          0.0,
+          0.45
+        ],
+        [
+          -0.45,
+          0.45,
+          0.0
+        ]
+      ],
+      "maximum_absolute_change": 0.45,
+      "frobenius_change": 1.1022703842524302,
+      "fixed_vector_quadratic_form": 0.10000000000000003,
+      "meets_illustrative_eigenvalue_floor": true,
+      "preserves_locked_ab": false
+    }
+  },
+  "alignment": {
+    "original_labels": [
+      "A",
+      "B",
+      "C"
+    ],
+    "permuted_labels": [
+      "C",
+      "A",
+      "B"
+    ],
+    "original_matrix": [
+      [
+        1.0,
+        0.6,
+        0.2
+      ],
+      [
+        0.6,
+        1.0,
+        -0.1
+      ],
+      [
+        0.2,
+        -0.1,
+        1.0
+      ]
+    ],
+    "permuted_matrix": [
+      [
+        1.0,
+        0.2,
+        -0.1
+      ],
+      [
+        0.2,
+        1.0,
+        0.6
+      ],
+      [
+        -0.1,
+        0.6,
+        1.0
+      ]
+    ],
+    "original_exposures": [
+      1.0,
+      2.0,
+      -1.0
+    ],
+    "permuted_exposures": [
+      -1.0,
+      1.0,
+      2.0
+    ],
+    "original_variance": 8.4,
+    "correctly_bound_variance": 8.4,
+    "positionally_misbound_variance": 4.6000000000000005
+  }
+}

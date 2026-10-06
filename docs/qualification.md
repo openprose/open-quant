@@ -89,3 +89,7 @@ Fixed checks cover projection identities, selected numerical table correspondenc
 The dependence-review component adds joint admissibility, estimation-population, exposure-binding and adjustment-provenance requirements. Eight authored cases distinguish supported, missing and contradictory evidence. No agent has executed this component, and it has no worked report yet. Existing definitions and examples remain unchanged.
 
 The component package now contains 24 definitions and 27 selected files. Earlier package observations above retain their historical scope; they do not qualify the new bytes. Repository/reference closure checks are distinct from interpreting these requirements or assessing financial suitability.
+
+The subsequent [worked dependence report](../examples/dependence-review/README.md) composes model-data requirements with this component. Its public calculation source reproduces every matrix, membership, adjustment and exposure observation from the separately retained deterministic study. Three packets preserve complete evidence, omit membership lists/raw rows, or add contradictory producer claims. The latter two changes are authored evidence selections, not new model calculations.
+
+The reference report is authored and the execution route remains unqualified. Fixed controls cover numerical relationships and twelve adverse mutations; they do not establish arbitrary contract fulfillment or institutional suitability. The 24 definitions and 27-file component package are unchanged by this source-only example.
