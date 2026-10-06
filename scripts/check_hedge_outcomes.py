@@ -27,7 +27,7 @@ def review(packet):
     populations = {}
     for name, records in packet['periods'].items():
         assert len(records) == 4 and len({r['id'] for r in records}) == 4
-        times = [datetime.fromisoformat(r['observed_at']) for r in records]
+        times = [datetime.fromisoformat(r['observed_at'].replace('Z', '+00:00')) for r in records]
         assert len(set(times)) == 4
         x = [number(r['hedge_pnl_thousand_usd_per_lot']) for r in records]
         y = [number(r['position_pnl_thousand_usd']) for r in records]
@@ -85,7 +85,7 @@ def review(packet):
             if selected is None:
                 timing = 'unresolved'
             else:
-                stamp = datetime.fromisoformat(selected)
+                stamp = datetime.fromisoformat(selected.replace('Z', '+00:00'))
                 fit_end = max(populations[fit['period']][5])
                 later_start = min(populations['later'][5])
                 later_end = max(populations['later'][5])
