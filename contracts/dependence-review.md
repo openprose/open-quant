@@ -1,0 +1,13 @@
+# Review quantitative dependence inputs
+
+**For agents.** Adopt [operating report](operating-report.md) and [numerical evidence](numerical-evidence.md).
+
+The caller supplies the intended use, variables and their identities, dependence inputs, estimation or construction evidence, required diagnostics and acceptance criteria. Identify the selected revision, variable order, observation population, horizon, transformations and weighting. Preserve covariance units and marginal scales; distinguish covariance, Pearson correlation, rank correlation and other dependence measures rather than treating them as interchangeable inputs.
+
+Explain what the evidence establishes about the combined object as well as its individual entries. For a covariance or correlation matrix, address symmetry, applicable diagonal and entry constraints, and joint positive semidefiniteness using the supplied diagnostics and tolerances. Valid individual pairs do not establish joint validity. Distinguish mathematical admissibility from numerical requirements of the intended use: a valid singular matrix may be unsuitable for an operation requiring positive definiteness or an inverse. Identify unsupported or unavailable diagnostics instead of declaring validity from a success flag or one method's failure.
+
+Preserve the observation populations supporting each estimate. Equal counts need not mean identical observations. Explain missing-data treatment, alignment and exclusions where they affect joint interpretation; do not treat absent entries as zero or infer a shared sample from a common matrix label. When results combine dependence inputs with exposures or marginal scales, establish their identity, order, units and horizon compatibility.
+
+Distinguish the original estimate from any completed, regularized or otherwise adjusted input. Identify the adjustment method and settings, changed entries, constraints it preserves or violates, and supplied evidence of its effect on the intended result. A numerically admissible replacement is not necessarily the original estimate, an optimal adjustment or an approved change. Missing adjustment history limits those conclusions.
+
+Report supported findings and remaining limits against the selected criteria. Mathematical admissibility does not establish estimation quality, stability, tail behavior, predictive performance or suitability for a particular economic use. Do not infer independence from zero correlation or extrapolate a correlation finding to an unsupported joint distribution. This review does not authorize filling missing entries, changing inputs, recalibrating a model or approving its use.

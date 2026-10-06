@@ -1,0 +1,16 @@
+# Distinguishing cases for dependence review
+
+These are authored interpretation cases, not model execution results. Values below are synthetic analytic constructions. They express expected distinctions for review; no script decides whether arbitrary prose meets them.
+
+| Supplied case | Required distinction |
+|---|---|
+| Three-variable matrix with diagonal one and AB=AC=0.9, BC=-0.9. Every two-variable block has eigenvalues 0.1 and 1.9; the combined matrix has eigenvalues -0.8,1.9,1.9. | Report jointly inadmissible dependence despite individually valid pairs. The quadratic form for (-1,1,1)/sqrt(3) is -0.8; do not clamp it to zero and call it a variance. An accurate adverse report may fulfill its reporting requirements. |
+| All-ones correlation matrix; eigenvalues 0,0,3; ordinary Cholesky fails. | Distinguish valid singular correlation from a method requiring positive definiteness. If the caller requires an inverse, that use is unsupported; if singularity is permitted, Cholesky failure alone does not invalidate the matrix. |
+| Six observations per pair, but AB, AC and BC use different IDs; their correlations are +50/51,+50/51,-50/51. | Equal counts do not prove a shared sample. Preserve pair populations and the negative joint eigenvalue -49/51. Do not claim missing-data handling is harmless or select a preferred estimator without support. |
+| Only pair counts and pairwise checks are supplied; joint diagnostics and observation IDs are absent. | Leave joint validity and sample alignment unresolved. Reporting those gaps can fulfill a reporting requirement; it cannot satisfy a separate requirement for evidence of joint validity. |
+| The 0.9 construction is adjusted to +0.5,+0.5,-0.5 by clipping and rescaling, or +0.45,+0.45,-0.45 by 50% shrinkage toward identity. Caller requires minimum eigenvalue 0.05 and unchanged AB=0.9. | The first is PSD but fails the eigenvalue floor; the second meets the floor. Both change the locked entry, so neither meets the combined policy. Keep original and adjusted identities separate and do not imply approval or nearest-matrix optimality. |
+| An adjusted matrix passes its diagnostics but the original matrix and adjustment history are missing. | Describe admissibility of the supplied candidate within diagnostic scope; leave preservation of fixed inputs and authority unresolved. Missing records are not proof that no adjustment or approval occurred. |
+| Valid matrix AB=0.6, AC=0.2, BC=-0.1; exposures (1,2,-1) in A,B,C order. Matrix reordered to C,A,B. | Correctly reorder exposures to (-1,1,2), preserving variance 8.4. Leaving exposures positionally unchanged gives 4.6 despite a valid matrix. Identify the binding error separately from admissibility. |
+| A supplied rank-correlation matrix is used as Pearson correlation with no transformation evidence, or zero Pearson correlation is called independence. | Identify the unsupported interpretation. Do not invent a conversion or joint-distribution assumption. |
+
+These examples do not establish representative sampling, financial suitability, an approved adjustment, runtime reliability or an advantage over ordinary instructions. The [component](../../contracts/dependence-review.md) adds specialist requirements to existing reporting and numerical-evidence contracts; it does not change kernel composition rules.

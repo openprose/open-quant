@@ -83,3 +83,9 @@ The [full SOFR example](../examples/sofr-documentation/README.md) binds the defa
 Its complete-case document, supporting section/choice/citation/readiness records and identity record are authored references. The missing-locality case removes only the specified numerical results. D5 requires those results, so gap disclosure cannot establish document completeness. D9 deliberately requires disclosure of institutional gaps, which does not supply the missing facts or approval. The dedicated evaluator keeps document findings, report coverage and execution evidence separate.
 
 Fixed checks cover projection identities, selected numerical table correspondences, D1–D10 section-plan markers and reference hashes. They do not evaluate arbitrary prose, determine citation support or certify the authored readiness conclusion. Historical full-document candidates in the predecessor and the earlier short-note runs are not qualification of this composition. All 23 reusable definitions and the existing 26-file component package remain unchanged.
+
+## Dependence-review proposal
+
+The dependence-review component adds joint admissibility, estimation-population, exposure-binding and adjustment-provenance requirements. Eight authored cases distinguish supported, missing and contradictory evidence. No agent has executed this component, and it has no worked report yet. Existing definitions and examples remain unchanged.
+
+The component package now contains 24 definitions and 27 selected files. Earlier package observations above retain their historical scope; they do not qualify the new bytes. Repository/reference closure checks are distinct from interpreting these requirements or assessing financial suitability.

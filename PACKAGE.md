@@ -10,7 +10,7 @@ This package contains contract definitions, its manifest and the license. It doe
 | Ground a report | [Claim evidence](contracts/claim-evidence.md), [numerical evidence](contracts/numerical-evidence.md), [institutional facts](contracts/institutional-facts.md), [operating report](contracts/operating-report.md) |
 | Assess a result | [Assessment](contracts/assessment.md) |
 | Review implementation and use | [Implementation](contracts/implementation-review.md), [simulation](contracts/simulation-review.md), [inventory](contracts/model-inventory.md), [vendor evidence](contracts/vendor-model-review.md) |
-| Review inputs and changes | [Model data](contracts/model-data.md), [calibration](contracts/calibration-review.md), [change impact](contracts/model-change.md) |
+| Review inputs and changes | [Model data](contracts/model-data.md), [dependence](contracts/dependence-review.md), [calibration](contracts/calibration-review.md), [change impact](contracts/model-change.md) |
 | Monitor and follow up | [Monitoring](contracts/model-monitoring.md), [limitations and remediation](contracts/limitations-and-remediation.md) |
 | Explain values and results | [Valuation comparison](contracts/valuation-comparison.md), [P&L explanation](contracts/pnl-explanation.md), [outcomes](contracts/outcomes-analysis.md) |
 | Examine risk evidence | [Backtesting](contracts/backtesting.md), [sensitivities](contracts/sensitivity-review.md), [scenarios](contracts/scenario-review.md) |
