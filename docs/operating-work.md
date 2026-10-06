@@ -11,8 +11,7 @@ The operating contracts turn supplied model records and house policy into review
 | Identify input-quality and lineage gaps | [Model data](../contracts/model-data.md) | Source/input snapshots, transformations and quality criteria. |
 | Explain the evidence for a calibration | [Calibration review](../contracts/calibration-review.md) | Targets, fitted values, conventions, diagnostics and tolerance. |
 | Reproduce selected quantitative results | [Model reproduction](../contracts/model-reproduction.md) | Exact source/input selection, environment, reference outputs, comparison policy and execution limits. |
-| Review counterparty exposure | [Option consistency](../examples/option-consistency/README.md) | Calibration review, implementation review | Individual quote fit does not establish joint consistency; calculation assumptions cannot fill missing instrument terms. |
-| [Counterparty exposure](../contracts/counterparty-exposure.md) | Exposure definition, horizons, netting-set mappings, recognition evidence, collateral allocations and calculation criteria. |
+| Review counterparty exposure | [Counterparty exposure](../contracts/counterparty-exposure.md) | Exposure definition, horizons, netting-set mappings, recognition evidence, collateral allocations and calculation criteria. |
 | Review credit-loss calculations | [Credit-loss review](../contracts/credit-loss-review.md) | Default probabilities, exposure/severity assumptions, loss timing, calculation evidence and criteria. |
 | Review optimization results | [Optimization review](../contracts/optimization-review.md) | Exact problem and variable identities, candidate, constraints, native diagnostics and acceptance criteria. |
 | Review implementation against its documented method | [Implementation review](../contracts/implementation-review.md) | Method conventions, exact implementation, required tests, observations and acceptance criteria. |
@@ -48,6 +47,7 @@ These operating reports have authored references and deterministic fixture check
 | [Implementation](../examples/implementation-review/README.md) | Implementation review, model description | Passing parity or one baseline does not establish correct price conventions. |
 | [Cash flows](../examples/cashflow-review/README.md) | Cash-flow review, valuation comparison | Close aggregate values do not clear a required payment-date convention. |
 | [Sensitivity precision](../examples/sensitivity-review/README.md) | Sensitivity review, implementation review | Small price errors can amplify into large derivative errors; missing unrounded observations remain missing. |
+| [Option consistency](../examples/option-consistency/README.md) | Calibration review, implementation review | Individual quote fit does not establish joint consistency; calculation assumptions cannot fill missing instrument terms. |
 | [Counterparty exposure](../examples/exposure-review/README.md) | Counterparty exposure, implementation review | Correct arithmetic does not establish selected netting or collateral recognition; an actual eligibility choice does not supply a missing intended binding. |
 | [Portfolio tail](../examples/portfolio-tail-review/README.md) | Credit-loss review, dependence review, scenario review | Equal expected loss does not establish equal tail loss; supported risk results and actual solver-allocation evidence remain separate. |
 | [Credit loss](../examples/credit-loss-review/README.md) | Credit-loss review, implementation review | Bounded probabilities do not establish correct conditioning or loss timing; actual parameters do not supply missing intended requirements. |
@@ -74,7 +74,7 @@ The components support preparing evidence for these activities. They do not esta
 
 ## Dependence review
 
-[Dependence review](../contracts/dependence-review.md) has [authored distinguishing cases](../tests/cases/dependence-review.md) and a [worked data composition](../examples/dependence-review/README.md). The current catalog has twenty operating domains and eighteen worked operating reports; these describe authored coverage, not agent qualification. Compose it with model data for lineage questions, implementation review for method conformance, or simulation review for how dependence enters simulated results.
+[Dependence review](../contracts/dependence-review.md) has [authored distinguishing cases](../tests/cases/dependence-review.md) and a [worked data composition](../examples/dependence-review/README.md). The catalog describes authored coverage, not agent qualification. Compose it with model data for lineage questions, implementation review for method conformance, or simulation review for how dependence enters simulated results.
 
 [R's correlation documentation](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cor.html), Details, explains why pairwise-complete estimates can be non-PSD. [Nick Higham's correlation-matrix overview](https://nhigham.com/2020/04/14/what-is-a-correlation-matrix/) explains joint admissibility and constrained adjustment problems. These primary sources support the component's mathematical distinctions, not institutional acceptance rules. The illustrative thresholds remain caller policy; mathematical validity alone does not establish economic suitability.
 
@@ -84,7 +84,7 @@ The components support preparing evidence for these activities. They do not esta
 
 ## Produce evidence before reviewing it
 
-The [bounded SOFR reproduction program](../examples/sofr-reproduction/README.md) applies model-reproduction requirements to one explicitly authorized calculation. It is separate from the eighteen prepared-evidence report compositions above. A normal exit, complete evidence, numerical agreement and fulfillment of the reproduction/reporting program are distinct findings. Dependency setup and agent execution remain separately qualified; reproduction does not establish economic suitability or institutional acceptance.
+The [bounded SOFR reproduction program](../examples/sofr-reproduction/README.md) applies model-reproduction requirements to one explicitly authorized calculation. It is separate from the prepared-evidence report compositions above. A normal exit, complete evidence, numerical agreement and fulfillment of the reproduction/reporting program are distinct findings. Dependency setup and agent execution remain separately qualified; reproduction does not establish economic suitability or institutional acceptance.
 
 
 ## Optimization review
