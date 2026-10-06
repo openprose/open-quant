@@ -1,5 +1,7 @@
 # Offline controls
 
+[SOFR composition cases](cases/sofr-composition.md) cover the added comparison requirement, preservation of the base agreement, selection of the actual composed subject for assessment, and honest coverage. They are authored expectations, not automated semantic checks.
+
 [Assessment evidence cases](cases/assessment-evidence.md) distinguish numerical conflicts, equivalent units, shared scope, explicit placement requirements and information supplied only after execution. These are authored semantic expectations; the offline checks do not decide them.
 
 The fixtures are authored examples with explicit field and unit bindings. Two supported numerical claims and five deliberately defective bindings cover absent evidence, a conflicting value, swapped methods, wrong units and stale source identity. Their labels were supplied by the author, not produced by a model. They are not a benchmark of executor or evaluator accuracy.
