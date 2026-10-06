@@ -46,6 +46,12 @@
     "examples/monitoring-review/inputs/policy.md",
     "examples/monitoring-review/program.md",
     "examples/monitoring-review/sample-results/report.md",
+    "examples/sofr-change-review/README.md",
+    "examples/sofr-change-review/house/locality.md",
+    "examples/sofr-change-review/house/shape.md",
+    "examples/sofr-change-review/inputs/change.md",
+    "examples/sofr-change-review/program.md",
+    "examples/sofr-change-review/sample-results/report.md",
     "examples/sofr-curve/assess.md",
     "examples/sofr-curve/house/requirements.md",
     "examples/sofr-curve/inputs/README.md",
@@ -77,6 +83,7 @@
     "scripts/check_backtesting.mjs",
     "scripts/check_monitoring.mjs",
     "scripts/check_repository.py",
+    "scripts/check_sofr_change.mjs",
     "scripts/check_valuation.mjs",
     "scripts/reproduce_sofr.py",
     "tests/README.md",
@@ -115,7 +122,8 @@
     "vendor-model-review": "contracts/vendor-model-review.md",
     "valuation-review": "examples/valuation-review/program.md",
     "backtesting": "contracts/backtesting.md",
-    "backtesting-review": "examples/backtesting-review/program.md"
+    "backtesting-review": "examples/backtesting-review/program.md",
+    "sofr-change-review": "examples/sofr-change-review/program.md"
   },
   "dependencies": {}
 }

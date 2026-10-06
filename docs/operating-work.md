@@ -26,6 +26,8 @@ The [valuation example](../examples/valuation-review/README.md) composes valuati
 
 The [backtesting example](../examples/backtesting-review/README.md) preserves observed exceedances separately from policy exceptions caused by unavailable data. Its separate case files also allow an experiment to stage one selected case without the alternatives. Five illustrative days do not establish an annual regulatory backtest.
 
+The [SOFR change review](../examples/sofr-change-review/README.md) reuses the existing historical model evidence. It composes change and sensitivity review, then optionally adds a locality requirement. The numerical finding changes because the selected requirements change, while the model evidence remains fixed. The original short decision-note program is unaffected.
+
 ## Public foundations and scope
 
 Checked October 6, 2026. These are Open Quant's reusable reporting requirements, not regulator-issued templates. House thresholds, schedules, identifiers, materiality and approval rules remain caller inputs.

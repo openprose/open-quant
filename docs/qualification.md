@@ -36,5 +36,6 @@ The preceding 47-file SOFR package passed an offline round trip through CLI sour
 | Monitoring and remediation | Authored report, three synthetic cases, explicit arithmetic and mutation checks. | Model execution and assessment of the composed report. |
 | Valuation and model data | Authored report, four synthetic cases, price-scale and exception controls. | Model execution, source independence and actual valuation operations. |
 | Backtesting review | Authored report, four synthetic cases, observed-versus-policy exception counts and timing controls. | Model execution, statistical adequacy and any complete regulatory test. |
+| SOFR change review | Existing historical model evidence, two authored requirement selections, reference report and exact metric/threshold checks. | Model-backed execution of the new composed report and any production-change readiness. |
 
 The shared library definitions are candidates for reuse, not individually certified capabilities. Mechanical checks do not establish that an executor follows them or that an evaluator detects every violation. A complete report can properly find adverse results; its fulfillment depends on the selected reporting requirements. Package checks, source review, financial acceptance and model-backed trials remain separate forms of evidence.

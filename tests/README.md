@@ -11,3 +11,5 @@ The separate [model-description cases](cases/model-description.md) and [numerica
 `node scripts/check_valuation.mjs` checks synthetic price-scale conversions, comparable-subset totals, exact tolerance boundaries, missing/stale/incompatible quotes and offsetting exceptions. It does not reproduce a valuation model or certify source independence.
 
 `node scripts/check_backtesting.mjs` distinguishes observed exceedances from policy treatment of missing/invalid comparisons, preserves separate outcome-series counts and tests timing, identity and coverage controls. Its five-day cases are synthetic; no annual regulatory classification is computed.
+
+`node scripts/check_sofr_change.mjs` applies two authored requirement selections to the unchanged retained SOFR values, with controls for missing support, known violations, equality and incorrect metric binding. It does not run the financial model or evaluate the composed report.

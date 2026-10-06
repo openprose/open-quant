@@ -44,3 +44,9 @@ The checker additionally tests price units, quote currency, duplicate matches, i
 - `late-forecast`: B2's forecast arrives after the permitted start. Both B2 comparisons are unavailable under house policy. APL has zero valid observed exceedances and one policy exception; HPL has one observed exceedance plus one unavailable comparison, for two. The combined count is 2.
 
 The checker covers missing dates, duplicate records, invalid numbers, exact start-time boundaries, wrong identity, negative VaR and out-of-scope records. These are local house-policy controls, not implementation of all MAR32 requirements or evidence of agent behavior.
+
+## SOFR change-review expectations
+
+The historical evidence remains fixed. In `shape`, proposed method B meets both selected numerical criteria and method A fails the daily-move criterion. Adding `house/locality.md` in `shape-and-locality` makes B fail the additional criterion; A still fails the daily-move criterion. Neither meets the combined set. These findings concern the method criteria; an accurate report can fulfill either reporting invocation.
+
+The checker also removes locality data in memory: that makes the additional criterion unresolved, not satisfied by disclosure. A known breached shape criterion still dominates the overall numerical finding. Equality passes under the authored limits. Substituting the five-business-day measure for the daily one changes the result and is an incorrect evidence binding.
