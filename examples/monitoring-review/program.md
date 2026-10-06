@@ -1,6 +1,6 @@
 # Report on a monthly model monitoring packet
 
-**For agents.** Execute under the caller's selected OpenProse kernel. The working root is the repository or extracted-package root, two directories above this program; output paths below are relative to that root.
+**For agents.** Execute under the caller's selected OpenProse kernel. The working root is the root of the source repository, two directories above this program; output paths below are relative to that root.
 
 ## Agreement
 

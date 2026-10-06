@@ -1,6 +1,6 @@
 # Review SOFR input repricing
 
-**For agents.** Execute under the caller's selected OpenProse kernel. The working root is the repository or extracted-package root, two directories above this program.
+**For agents.** Execute under the caller's selected OpenProse kernel. The working root is the root of the source repository, two directories above this program.
 
 Adopt [calibration review](../../contracts/calibration-review.md) and [model data](../../contracts/model-data.md), including their adopted definitions, for one report. The caller selects `complete`, `missing` or `contradictory`; ask for an absent or unknown selection. Use only its corresponding table: [complete](inputs/repricing.csv), [missing](inputs/missing.csv) or [contradictory](inputs/contradictory.csv). Alternative case tables and reference reports are outside the execution's reading scope.
 

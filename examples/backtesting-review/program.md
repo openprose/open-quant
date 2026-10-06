@@ -1,6 +1,6 @@
 # Report on a small backtesting packet
 
-**For agents.** Execute under the caller's selected OpenProse kernel. The working root is the repository or extracted-package root, two directories above this program; output paths below are relative to that root.
+**For agents.** Execute under the caller's selected OpenProse kernel. The working root is the root of the source repository, two directories above this program; output paths below are relative to that root.
 
 Adopt [backtesting](../../contracts/backtesting.md), including its adopted definitions. Produce a concise report for a risk-control reader using [the house policy](inputs/policy.md), [expected population](inputs/population.md) and exactly one caller-selected case: [complete](inputs/cases/complete.json), [missing](inputs/cases/missing.json), [contradictory](inputs/cases/contradictory.json) or [late-forecast](inputs/cases/late-forecast.json). Ask for the case if missing or unknown. Other cases are not part of the selected evidence.
 

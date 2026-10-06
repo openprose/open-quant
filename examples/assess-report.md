@@ -1,6 +1,6 @@
 # Assess a quantitative operating report
 
-**For agents.** Execute under the caller's selected OpenProse kernel. The working root is the repository or extracted-package root, one directory above this file.
+**For agents.** Execute under the caller's selected OpenProse kernel. The working root is the root of the source repository, one directory above this file.
 
 The caller supplies, in order, the subject program path, its result-directory path and its selected case or mode. The directory must contain `report.md` and `result.md`. Ask for missing, ambiguous or unreadable bindings instead of choosing another run. This entry point is for the operating examples; the original SOFR decision note has its own assessment program.
 

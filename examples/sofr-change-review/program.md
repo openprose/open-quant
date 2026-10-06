@@ -1,6 +1,6 @@
 # Review a proposed SOFR interpolation change
 
-**For agents.** Execute under the caller's selected OpenProse kernel. The working root is the repository or extracted-package root, two directories above this program.
+**For agents.** Execute under the caller's selected OpenProse kernel. The working root is the root of the source repository, two directories above this program.
 
 Adopt [model change](../../contracts/model-change.md) and [sensitivity review](../../contracts/sensitivity-review.md), including their adopted definitions, for one report. Use [the hypothetical change request](inputs/change.md), the retained SOFR [brief](../sofr-curve/inputs/brief.md), [evidence guide](../sofr-curve/inputs/evidence.md), [numerical record](../sofr-curve/inputs/results.json), and the retained base [quotes](../sofr-curve/inputs/quotes.csv) and [fixing](../sofr-curve/inputs/sofr-fixing.json). The [calculation source](../sofr-curve/model/bootstrap.py) may be inspected to identify metric grids and interval definitions; it must not be executed. Sensitivity review is limited to the supplied summary of the specified perturbation, not a reconstructed risk surface. The request defines the hypothetical previous and proposed configurations; the historical brief remains evidence of its own developer's stated choice.
 

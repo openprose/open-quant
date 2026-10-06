@@ -1,6 +1,6 @@
 # Review vendor deployments and their model inventory
 
-**For agents.** Execute under the caller's selected OpenProse kernel. The working root is the repository or extracted-package root, two directories above this program.
+**For agents.** Execute under the caller's selected OpenProse kernel. The working root is the root of the source repository, two directories above this program.
 
 Adopt [model inventory](../../contracts/model-inventory.md) and [vendor model review](../../contracts/vendor-model-review.md), including their adopted definitions, for one report. Apply [the house policy](inputs/policy.md). The caller selects `complete`, `missing` or `contradictory`; ask for a missing or unknown selection. Read only the corresponding [complete](inputs/complete.json), [missing](inputs/missing.json) or [contradictory](inputs/contradictory.json) packet, not the alternatives or reference reports.
 
