@@ -131,3 +131,10 @@ The component checkpoint at 66721cf contains 27 definitions across nineteen oper
 The [optimization/implementation report](../examples/optimization-review/README.md) preserves seven native outcomes and one actual rounded export. Public source 0f8b3c8 reproduces every numerical observation, reference and control from the prespecified synthetic study. Complete, missing-candidate and contradictory packets distinguish expected analytical results from actual candidate observations, and native success from original feasibility and optimality.
 
 The authored complete-case reference accounts for all eight candidates. Fixed checks use standard-library arithmetic and twelve adverse mutations; they do not run a solver, assess arbitrary prose, estimate solver reliability or authorize an allocation. All 27 definitions and the 30-file component package remain unchanged. Agent execution and assessment of the worked report remain unperformed.
+
+
+## Historical-availability composition
+
+The [model-data/outcomes report](../examples/availability-review/README.md) reviews six selectors over thirteen synthetic records and ten requested decision cutoffs. Public source dd53d67 reproduces all sixty selections, diagnostic reasons, metrics and seventy-two controls in the prespecified study. Later corrected values deliberately equal the synthetic outcomes; perfect error is a planted illustration, not a forecast result.
+
+The complete, missing-history and contradictory packets preserve observed selections and numeric errors while separating independent timing support. Withheld availability does not prove late data or non-execution. The authored complete-case reference accounts for all sixty selections; fixed checks cover timestamp/identity relationships, denominators, exact boundaries and twelve adverse mutations. These checks do not run a query, assess prose or verify a production feed. Existing definitions, earlier examples and component-package bytes are unchanged; the reporting program remains agent-unqualified.

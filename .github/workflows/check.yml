@@ -25,3 +25,4 @@ jobs:
       - run: node scripts/check_cashflow.mjs
       - run: python3 scripts/check_sensitivity.py
       - run: python3 scripts/check_optimization.py
+      - run: python3 scripts/check_availability.py

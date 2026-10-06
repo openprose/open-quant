@@ -48,3 +48,6 @@ The reproduction-helper tests launch tiny standard-library Python fixtures, not 
 
 
 `python3 scripts/check_optimization.py` checks three fixed packets covering seven native outcomes and a rounded export. It preserves original problem identity, units, constraints, scalar objective/reference arithmetic and unavailable candidate evidence. Twelve adverse mutations test these distinctions. The checker uses standard-library arithmetic, not a new optimizer or model call; it does not assess arbitrary prose or certify a financial allocation.
+
+
+`python3 scripts/check_availability.py` checks three fixed historical-input packets. It separates recorded selections from supported, breached, unavailable, ambiguous or unresolved timing findings; reconstructs all numeric denominators; and rejects twelve selected corruptions. A missing timestamp preserves numeric observations without proving late availability. It executes no query or model and does not assess arbitrary prose or a production data pipeline.

@@ -40,6 +40,7 @@ These operating reports have authored references and deterministic fixture check
 | [Vendor inventory](../examples/vendor-inventory-review/README.md) | Model inventory, vendor review | Register accuracy and local-test support are separate findings for an exact deployment. |
 | [Risk report](../examples/risk-report/README.md) | P&L explanation, scenario review, sensitivity review | Residuals, joint effects and assumed actions remain distinct. |
 | [Outcomes](../examples/outcomes-review/README.md) | Outcomes analysis, model data | A comparison can reverse when both models use the same observations. |
+| [Historical availability](../examples/availability-review/README.md) | Model data, outcomes analysis | Equal errors do not establish available historical inputs; recorded selections and independently supported timing remain distinct. |
 | [Implementation](../examples/implementation-review/README.md) | Implementation review, model description | Passing parity or one baseline does not establish correct price conventions. |
 | [Cash flows](../examples/cashflow-review/README.md) | Cash-flow review, valuation comparison | Close aggregate values do not clear a required payment-date convention. |
 | [Sensitivity precision](../examples/sensitivity-review/README.md) | Sensitivity review, implementation review | Small price errors can amplify into large derivative errors; missing unrounded observations remain missing. |
@@ -48,7 +49,7 @@ These operating reports have authored references and deterministic fixture check
 | [Dependence](../examples/dependence-review/README.md) | Dependence review, model data | Valid pairs, joint validity, observation populations and exposure identity are distinct. |
 | [Simulation](../examples/simulation-review/README.md) | Simulation review, implementation review | A small standard error cannot clear dependent sampling or a different target. |
 
-The SOFR examples use retained historical calculations; calibration also has a fresh numerical reproduction receipt. The implementation and simulation examples use freshly observed calculations on synthetic option inputs. Dependence review uses observed synthetic matrix calculations; selection review uses a fixed synthetic score replicate. Cash-flow, sensitivity and optimization examples also use observed synthetic calculations. Other inputs are authored synthetic records. Case selection, house policy and permissions are explicit in each program. Use [the common assessment entry point](../examples/assess-report.md) for an actual operating report, with its original program and selected case or mode.
+The SOFR examples use retained historical calculations; calibration also has a fresh numerical reproduction receipt. The implementation and simulation examples use freshly observed calculations on synthetic option inputs. Dependence review uses observed synthetic matrix calculations; selection review uses a fixed synthetic score replicate. Cash-flow, sensitivity and optimization examples also use observed synthetic calculations. The historical-availability example uses observed SQLite selections over fixed synthetic input histories. Other inputs are authored synthetic records. Case selection, house policy and permissions are explicit in each program. Use [the common assessment entry point](../examples/assess-report.md) for an actual operating report, with its original program and selected case or mode.
 
 Implementation review also has [authored distinguishing cases](../tests/cases/operating-reports.md#implementation-review). Its numerical observations establish finite adapter behavior, not agent qualification. Calibration fit, mathematical consistency and reference agreement remain separate findings.
 
@@ -66,7 +67,7 @@ The components support preparing evidence for these activities. They do not esta
 
 ## Dependence review
 
-[Dependence review](../contracts/dependence-review.md) has [authored distinguishing cases](../tests/cases/dependence-review.md) and a [worked data composition](../examples/dependence-review/README.md). The current catalog has nineteen operating domains and fifteen worked operating reports; these describe authored coverage, not agent qualification. Compose it with model data for lineage questions, implementation review for method conformance, or simulation review for how dependence enters simulated results.
+[Dependence review](../contracts/dependence-review.md) has [authored distinguishing cases](../tests/cases/dependence-review.md) and a [worked data composition](../examples/dependence-review/README.md). The current catalog has nineteen operating domains and sixteen worked operating reports; these describe authored coverage, not agent qualification. Compose it with model data for lineage questions, implementation review for method conformance, or simulation review for how dependence enters simulated results.
 
 [R's correlation documentation](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cor.html), Details, explains why pairwise-complete estimates can be non-PSD. [Nick Higham's correlation-matrix overview](https://nhigham.com/2020/04/14/what-is-a-correlation-matrix/) explains joint admissibility and constrained adjustment problems. These primary sources support the component's mathematical distinctions, not institutional acceptance rules. The illustrative thresholds remain caller policy; mathematical validity alone does not establish economic suitability.
 
@@ -76,7 +77,7 @@ The components support preparing evidence for these activities. They do not esta
 
 ## Produce evidence before reviewing it
 
-The [bounded SOFR reproduction program](../examples/sofr-reproduction/README.md) applies model-reproduction requirements to one explicitly authorized calculation. It is separate from the fifteen prepared-evidence report compositions above. A normal exit, complete evidence, numerical agreement and fulfillment of the reproduction/reporting program are distinct findings. Dependency setup and agent execution remain separately qualified; reproduction does not establish economic suitability or institutional acceptance.
+The [bounded SOFR reproduction program](../examples/sofr-reproduction/README.md) applies model-reproduction requirements to one explicitly authorized calculation. It is separate from the sixteen prepared-evidence report compositions above. A normal exit, complete evidence, numerical agreement and fulfillment of the reproduction/reporting program are distinct findings. Dependency setup and agent execution remain separately qualified; reproduction does not establish economic suitability or institutional acceptance.
 
 
 ## Optimization review
@@ -84,3 +85,8 @@ The [bounded SOFR reproduction program](../examples/sofr-reproduction/README.md)
 [Optimization review](../contracts/optimization-review.md) has [authored distinguishing cases](../tests/cases/optimization-review.md) for original constraint satisfaction, objective binding, numerical scaling, local/global conclusions and revised candidate artifacts. It composes existing reporting and numerical-evidence requirements. Pair it with model data for input lineage, dependence review for covariance diagnostics or implementation review for the numerical method. Reviewing a candidate does not authorize implementing it.
 
 [The SLSQP reference](https://docs.scipy.org/doc/scipy/reference/optimize.minimize-slsqp.html) documents stopping tolerance and returned multipliers; [OptimizeResult](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.OptimizeResult.html) describes native termination fields. These interface documents do not certify satisfaction of a caller's original problem or provide institution-specific approval rules. The [worked composition](../examples/optimization-review/README.md) retains all seven native outcomes and the rounded export in complete, missing-candidate and contradictory packets. The component and report remain agent-unqualified.
+
+
+## Historical input review
+
+The [historical-availability composition](../examples/availability-review/README.md) uses existing model-data and outcomes-analysis requirements. It preserves observation date, publication, local availability, revision order and metric population as caller bindings. Complete, missing-history and contradictory packets distinguish an observed selected record from evidence that it was eligible at a past decision cutoff. No additional definition or runtime capability is required; agent execution remains unqualified.
