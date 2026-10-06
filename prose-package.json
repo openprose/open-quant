@@ -54,6 +54,13 @@
     "examples/monitoring-review/inputs/policy.md",
     "examples/monitoring-review/program.md",
     "examples/monitoring-review/sample-results/report.md",
+    "examples/risk-report/README.md",
+    "examples/risk-report/inputs/complete.json",
+    "examples/risk-report/inputs/contradictory.json",
+    "examples/risk-report/inputs/missing.json",
+    "examples/risk-report/inputs/policy.md",
+    "examples/risk-report/program.md",
+    "examples/risk-report/sample-results/report.md",
     "examples/sofr-change-review/README.md",
     "examples/sofr-change-review/house/locality.md",
     "examples/sofr-change-review/house/shape.md",
@@ -100,6 +107,7 @@
     "scripts/check_calibration.mjs",
     "scripts/check_monitoring.mjs",
     "scripts/check_repository.py",
+    "scripts/check_risk_report.mjs",
     "scripts/check_sofr_change.mjs",
     "scripts/check_valuation.mjs",
     "scripts/check_vendor_inventory.mjs",
@@ -145,7 +153,8 @@
     "sofr-change-review": "examples/sofr-change-review/program.md",
     "report-assessment": "examples/assess-report.md",
     "sofr-calibration-review": "examples/calibration-review/program.md",
-    "vendor-inventory-review": "examples/vendor-inventory-review/program.md"
+    "vendor-inventory-review": "examples/vendor-inventory-review/program.md",
+    "risk-report": "examples/risk-report/program.md"
   },
   "dependencies": {}
 }

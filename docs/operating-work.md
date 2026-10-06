@@ -32,6 +32,8 @@ The [calibration review](../examples/calibration-review/README.md) uses freshly 
 
 The [vendor/inventory example](../examples/vendor-inventory-review/README.md) preserves deployment identity across shared model names, versions and local configurations. It separates register accuracy, vendor assertions and the evidence for narrow local checks. These synthetic records are authored; the report has not been run by an agent.
 
+The [risk report](../examples/risk-report/README.md) composes P&L explanation, scenario review and sensitivity interpretation. Its synthetic book preserves offsetting unexplained residuals, nonadditive joint stresses, missing exposures and assumed-only hedges. It is an authored report example, not a recorded financial-model or agent execution.
+
 ## Public foundations and scope
 
 Checked October 6, 2026. These are Open Quant's reusable reporting requirements, not regulator-issued templates. House thresholds, schedules, identifiers, materiality and approval rules remain caller inputs.

@@ -36,6 +36,7 @@ The preceding 47-file SOFR package passed an offline round trip through CLI sour
 | Monitoring and remediation | Authored report, three synthetic cases, explicit arithmetic and mutation checks. | Model execution and assessment of the composed report. |
 | Valuation and model data | Authored report, four synthetic cases, price-scale and exception controls. | Model execution, source independence and actual valuation operations. |
 | Backtesting review | Authored report, four synthetic cases, observed-versus-policy exception counts and timing controls. | Model execution, statistical adequacy and any complete regulatory test. |
+| P&L and scenario report | Authored synthetic book, three cases, residual/interaction calculations and scope controls. | Agent execution, model valuation, causal attribution and operational use. |
 | Vendor deployment and inventory review | Authored synthetic records, complete/missing/ambiguous cases, identity and local-check controls. | Agent execution, real vendor verification and institutional model validation. |
 | SOFR calibration review | Fresh numerical reproduction, per-instrument table, authored missing/conflicting cases and precision controls. | Agent execution and assessment of the report, independent financial validation. |
 | SOFR change review | Existing historical model evidence, two authored requirement selections, reference report and exact metric/threshold checks. | Model-backed execution of the new composed report and any production-change readiness. |

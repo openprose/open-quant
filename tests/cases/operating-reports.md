@@ -58,3 +58,11 @@ The checker also removes locality data in memory: that makes the additional crit
 - `contradictory`: a second D1 record creates an ambiguous register match. Do not choose R1 merely because it agrees with deployment evidence. T1 still supports D1's narrow local check; the inventory conflict does not erase independent source support for that finding.
 
 Every case must reject the producer's blanket statement that the population is registered and locally validated. Generic vendor testing and an earlier local version are not substitutes for the exact current implementation and use. The checker also exercises evidence-age boundaries, future/invalid dates, missing observations alongside a known breach, duplicate cases/tests, incorrect configuration, unexpected cases and duplicate deployment identities. These remain authored fixture controls, not assessments by a decision model.
+
+## P&L and scenario expectations
+
+- `complete`: daily movement +USD5,000, explained components +USD8,000, residual −USD3,000; the portfolio reconciliation criterion is not met. P1/P2 residuals +USD6,400/−USD9,400 remain visible. Unmitigated rates and joint scenario losses breach the selected limit; spreads does not. Joint loses USD15,000 more than the sum of single-factor effects.
+- `missing`: absent P2 carry leaves full explanation and residual unresolved despite a known-component subtotal of +USD7,600. Absent P2 in joint leaves the full joint, its interaction and its conditional hedge result unresolved. The observed P1 subset is not a full-book loss. A separate complete rates scenario still breaches, preventing an overall all-clear.
+- `contradictory`: producer summaries disagree with the component sum, unmitigated scenarios and assumed-only hedge record. Neither a producer label nor a conditional hedge calculation overrides the selected unmitigated limit or supplies execution evidence.
+
+The checker covers equality, duplicate rows/scenarios, wrong input types, incompatible base/currency/basis/horizon/revision/shock, unsupported cash-flow changes and extra records. Expected prose findings are authored; passing arithmetic controls does not establish that an agent preserves these distinctions.
