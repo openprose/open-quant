@@ -26,7 +26,7 @@ The full methodology-document contract is available for a caller that supplies a
 
 ## Assess an operating report
 
-All eight examples in the [operating-work catalog](operating-work.md) produce `report.md` and `result.md`. Their common [assessment entry point](../examples/assess-report.md) takes the subject program, actual result directory and the case or mode used for that invocation. For example, replace `YOUR-RUN` with the directory reported by the monitoring execution:
+All nine examples in the [operating-work catalog](operating-work.md) produce `report.md` and `result.md`. Their common [assessment entry point](../examples/assess-report.md) takes the subject program, actual result directory and the case or mode used for that invocation. For example, replace `YOUR-RUN` with the directory reported by the monitoring execution:
 
 ```sh
 prose --harness claude --model haiku --native-profile claude-workspace-tools --permission-mode acceptEdits run examples/assess-report.md examples/monitoring-review/program.md results/monitoring-review/YOUR-RUN complete

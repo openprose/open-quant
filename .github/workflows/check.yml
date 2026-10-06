@@ -17,3 +17,4 @@ jobs:
       - run: node scripts/check_vendor_inventory.mjs
       - run: node scripts/check_risk_report.mjs
       - run: node scripts/check_outcomes.mjs
+      - run: node scripts/check_implementation.mjs

@@ -53,7 +53,7 @@ The assessment contract asks for findings tied to the exact subject, requirement
 
 ## Library
 
-[Operating-work contracts](docs/operating-work.md) add model inventory, change review, monitoring, remediation, data, calibration, valuation, outcomes, backtesting, sensitivities, scenarios, P&L and vendor-model reporting. Start with the small [synthetic monitoring example](examples/monitoring-review/README.md) to see how two contracts compose into one report. These new components have authored cases and offline checks; they have not received model-backed execution qualification.
+[Operating-work contracts](docs/operating-work.md) add model inventory, change review, monitoring, remediation, data, calibration, valuation, outcomes, backtesting, sensitivities, scenarios, P&L, vendor-model reporting and implementation review. Start with the small [synthetic monitoring example](examples/monitoring-review/README.md) to see how two contracts compose into one report. These new components have authored cases and offline checks; they have not received model-backed execution qualification.
 
 | Contract | Required result |
 |---|---|
@@ -91,3 +91,5 @@ done
 Each script states the limited fixture relationships it checks. See [the test guide](tests/README.md) for their coverage.
 
 These checks verify links, imported identities and specified numerical correspondences. They do not assess arbitrary prose, certify the financial model or establish that contract composition outperforms a baseline. [Contributing](CONTRIBUTING.md) explains how to add a contract or model example. Owned code and documentation are [MIT licensed](LICENSE); external sources retain their own terms.
+
+The [implementation-review example](examples/implementation-review/README.md) uses observed synthetic pricing calculations to distinguish correct input mappings, reference agreement, passing identities and missing coverage. It has an authored report and deterministic controls; its report program remains agent-unqualified.

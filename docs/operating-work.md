@@ -35,10 +35,11 @@ These operating reports have authored references and deterministic fixture check
 | [Vendor inventory](../examples/vendor-inventory-review/README.md) | Model inventory, vendor review | Register accuracy and local-test support are separate findings for an exact deployment. |
 | [Risk report](../examples/risk-report/README.md) | P&L explanation, scenario review, sensitivity review | Residuals, joint effects and assumed actions remain distinct. |
 | [Outcomes](../examples/outcomes-review/README.md) | Outcomes analysis, model data | A comparison can reverse when both models use the same observations. |
+| [Implementation](../examples/implementation-review/README.md) | Implementation review, model description | Passing parity or one baseline does not establish correct price conventions. |
 
-The SOFR examples use retained historical calculations; calibration also has a fresh numerical reproduction receipt. Other inputs are synthetic. Case selection, house policy and permissions are explicit in each program. Use [the common assessment entry point](../examples/assess-report.md) for an actual operating report, with its original program and selected case or mode.
+The SOFR examples use retained historical calculations; calibration also has a fresh numerical reproduction receipt. The implementation example uses freshly observed calculations on synthetic option inputs. Other inputs are authored synthetic records. Case selection, house policy and permissions are explicit in each program. Use [the common assessment entry point](../examples/assess-report.md) for an actual operating report, with its original program and selected case or mode.
 
-Implementation review currently has [authored distinguishing cases](../tests/cases/operating-reports.md#implementation-review), not a separate runnable example or agent qualification. It covers an additional question: whether supplied tests support agreement with the documented method. Calibration fit, mathematical consistency and reference agreement remain separate findings.
+Implementation review also has [authored distinguishing cases](../tests/cases/operating-reports.md#implementation-review). Its numerical observations establish finite adapter behavior, not agent qualification. Calibration fit, mathematical consistency and reference agreement remain separate findings.
 
 ## Public foundations and scope
 
