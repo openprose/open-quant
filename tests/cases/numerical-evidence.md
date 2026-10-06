@@ -29,3 +29,7 @@ These are authored illustrations for [numerical evidence](../../contracts/numeri
 ## Rounded equality and acceptance limits
 
 An instrument's target and implied rates both display 3.850000 percent, while its residual is reported at finer precision as a small nonzero basis-point value. Treating the difference as exactly zero erases supplied evidence. Use the residual's precision, identify its units and retain the distinction between calibration fit and predictive quality. If a rounded residual lies on a required threshold and could fall on either side before rounding, exact equality is not established; the finding remains unresolved until sufficient precision is available. These are authored expectations, not model-evaluation results.
+
+## Instrument dates versus nominal year fractions
+
+A source calculation defines an off-window statistic using actual 4Y and 6Y instrument pillar dates, with those endpoints inside the window. A report substitutes exact Act/365F times 4 and 6 while keeping the label “4Y–6Y.” The observations counted by that statistic have changed, so it cannot support the original requirement. Preserve the source interval, calendar convention and endpoint treatment; a familiar label is not enough to establish equivalence. The SOFR change example binds the dates explicitly and permits inspection of the source definition without running it. This is an authored interpretation case, not a new agent evaluation.

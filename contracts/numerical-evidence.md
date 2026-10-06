@@ -4,7 +4,7 @@
 
 The caller supplies the numerical results, their calculation and input identities, the question to address, and any comparison criteria. Adopt [claim evidence](claim-evidence.md) for the resulting discussion. Apply these requirements only to the selected numerical evidence.
 
-Identify what each reported measure means and whether its direction has a specified interpretation. Describe the evaluated methods, inputs, scenario or sample, dates and units. Identify unavailable details that limit interpretation.
+Identify what each reported measure means and whether its direction has a specified interpretation. Describe the evaluated methods, inputs, scenario or sample, dates and units. Preserve the selected population and interval boundaries, including applicable calendars, day-count conventions and endpoint inclusion. A similarly named interval is not necessarily the same measurement scope. Identify unavailable details that limit interpretation.
 
 For a comparison, identify its reference or supplied baseline and establish which conditions are shared and which differ. Distinguish an absolute difference from a relative change; identify the denominator for a relative change. Do not attribute a difference to the method when other changed conditions leave that attribution unsupported. Use caller-supplied acceptance criteria where present; do not invent a threshold or equate a smaller number with a better model.
 
