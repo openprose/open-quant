@@ -57,3 +57,6 @@ The reproduction-helper tests launch tiny standard-library Python fixtures, not 
 
 
 `python3 scripts/check_credit_loss.py` checks three fixed credit-loss packets with six constructions, four intervals and four selected bindings per interval. It preserves observed values when an intended severity is withheld, rejects fourteen selected corruptions and checks exact tolerance boundaries. The checker performs arithmetic without QuantLib or a provider; it does not assess arbitrary prose, infer missing requirements, validate borrower forecasts or establish accounting acceptance.
+
+
+`python3 scripts/check_portfolio_tail.py` checks three fixed packets with six dependence proposals and sixteen risk summaries. It preserves invalid probability tables, exact-versus-native quantile differences, discrete tail-mass definitions and one missing native allocation alongside a known objective/reference. Sixteen adverse mutations and exact tolerance boundaries are checked. The script uses rational arithmetic without a solver or provider; it does not assess arbitrary prose, validate a real portfolio or establish capital requirements.

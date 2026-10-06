@@ -1,0 +1,816 @@
+{
+  "subject": "PORTFOLIO-TAIL-2026-10-06",
+  "case": "missing-allocation",
+  "source_sha256": "fc24b6f759b25f642eb2ca618c9a9842f0e95252a58c5983c5899dbe5e5cd959",
+  "scope": {
+    "horizon": "one year",
+    "currency": "USD",
+    "loss_sign": "positive loss",
+    "default_probabilities": {
+      "A": "1/10",
+      "B": "1/5"
+    },
+    "loss_on_default_usd": {
+      "A": 450000,
+      "B": 500000
+    },
+    "probability_basis": "stipulated synthetic joint distributions",
+    "discounting": "none",
+    "mitigation_or_netting": "none",
+    "alpha_values": [
+      "4/5",
+      "9/10",
+      "19/20",
+      "99/100"
+    ],
+    "var_definition": "smallest supported loss with CDF at least alpha",
+    "es_definition": "mean of worst probability mass 1-alpha, splitting a boundary atom",
+    "lp_method": "highs",
+    "lp_time_limit_seconds": 5,
+    "lp_objective_units": "million USD before conversion to USD tail mean"
+  },
+  "candidates": [
+    {
+      "id": "q_0",
+      "joint_default_probability": "0",
+      "indicator_correlation": "-1/6",
+      "correlation_eigenvalues": [
+        0.8333333333333333,
+        1.1666666666666667
+      ],
+      "states": [
+        {
+          "id": "00",
+          "default_A": false,
+          "default_B": false,
+          "probability": "7/10",
+          "loss_usd": 0
+        },
+        {
+          "id": "10",
+          "default_A": true,
+          "default_B": false,
+          "probability": "1/10",
+          "loss_usd": 450000
+        },
+        {
+          "id": "01",
+          "default_A": false,
+          "default_B": true,
+          "probability": "1/5",
+          "loss_usd": 500000
+        },
+        {
+          "id": "11",
+          "default_A": true,
+          "default_B": true,
+          "probability": "0",
+          "loss_usd": 950000
+        }
+      ],
+      "risk_summaries": [
+        {
+          "alpha": "4/5",
+          "reference": {
+            "alpha": "4/5",
+            "tail_mass": "1/5",
+            "var_usd": 450000,
+            "expected_shortfall_usd": "500000",
+            "allocation": [
+              "0",
+              "0",
+              "1/5",
+              "0"
+            ],
+            "strict_tail_probability": "1/5",
+            "strict_tail_mean_usd": "500000",
+            "inclusive_tail_probability": "3/10",
+            "inclusive_tail_mean_usd": "1450000/3"
+          },
+          "native_var_usd": 500000.0,
+          "linear_program": {
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "allocation": [
+              0.0,
+              -0.0,
+              0.2,
+              0.0
+            ],
+            "expected_shortfall_usd": 500000.0
+          }
+        },
+        {
+          "alpha": "9/10",
+          "reference": {
+            "alpha": "9/10",
+            "tail_mass": "1/10",
+            "var_usd": 500000,
+            "expected_shortfall_usd": "500000",
+            "allocation": [
+              "0",
+              "0",
+              "1/10",
+              "0"
+            ],
+            "strict_tail_probability": "0",
+            "strict_tail_mean_usd": null,
+            "inclusive_tail_probability": "1/5",
+            "inclusive_tail_mean_usd": "500000"
+          },
+          "native_var_usd": 500000.0,
+          "linear_program": {
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "allocation": [
+              0.0,
+              0.0,
+              0.1,
+              0.0
+            ],
+            "expected_shortfall_usd": 500000.0
+          }
+        },
+        {
+          "alpha": "19/20",
+          "reference": {
+            "alpha": "19/20",
+            "tail_mass": "1/20",
+            "var_usd": 500000,
+            "expected_shortfall_usd": "500000",
+            "allocation": [
+              "0",
+              "0",
+              "1/20",
+              "0"
+            ],
+            "strict_tail_probability": "0",
+            "strict_tail_mean_usd": null,
+            "inclusive_tail_probability": "1/5",
+            "inclusive_tail_mean_usd": "500000"
+          },
+          "native_var_usd": 500000.0,
+          "linear_program": {
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "allocation": [
+              0.0,
+              0.0,
+              0.05,
+              0.0
+            ],
+            "expected_shortfall_usd": 500000.0
+          }
+        },
+        {
+          "alpha": "99/100",
+          "reference": {
+            "alpha": "99/100",
+            "tail_mass": "1/100",
+            "var_usd": 500000,
+            "expected_shortfall_usd": "500000",
+            "allocation": [
+              "0",
+              "0",
+              "1/100",
+              "0"
+            ],
+            "strict_tail_probability": "0",
+            "strict_tail_mean_usd": null,
+            "inclusive_tail_probability": "1/5",
+            "inclusive_tail_mean_usd": "500000"
+          },
+          "native_var_usd": 500000.0,
+          "linear_program": {
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "allocation": [
+              0.0,
+              0.0,
+              0.01,
+              0.0
+            ],
+            "expected_shortfall_usd": 500000.0
+          }
+        }
+      ],
+      "expected_loss_usd": "145000",
+      "native_cdf_at_losses": [
+        0.7,
+        0.7999999999999999,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "q_1_50",
+      "joint_default_probability": "1/50",
+      "indicator_correlation": "0",
+      "correlation_eigenvalues": [
+        1.0,
+        1.0
+      ],
+      "states": [
+        {
+          "id": "00",
+          "default_A": false,
+          "default_B": false,
+          "probability": "18/25",
+          "loss_usd": 0
+        },
+        {
+          "id": "10",
+          "default_A": true,
+          "default_B": false,
+          "probability": "2/25",
+          "loss_usd": 450000
+        },
+        {
+          "id": "01",
+          "default_A": false,
+          "default_B": true,
+          "probability": "9/50",
+          "loss_usd": 500000
+        },
+        {
+          "id": "11",
+          "default_A": true,
+          "default_B": true,
+          "probability": "1/50",
+          "loss_usd": 950000
+        }
+      ],
+      "risk_summaries": [
+        {
+          "alpha": "4/5",
+          "reference": {
+            "alpha": "4/5",
+            "tail_mass": "1/5",
+            "var_usd": 450000,
+            "expected_shortfall_usd": "545000",
+            "allocation": [
+              "0",
+              "0",
+              "9/50",
+              "1/50"
+            ],
+            "strict_tail_probability": "1/5",
+            "strict_tail_mean_usd": "545000",
+            "inclusive_tail_probability": "7/25",
+            "inclusive_tail_mean_usd": "3625000/7"
+          },
+          "native_var_usd": 500000.0,
+          "linear_program": {
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "allocation": [
+              0.0,
+              -0.0,
+              0.18,
+              0.02
+            ],
+            "expected_shortfall_usd": 545000.0
+          }
+        },
+        {
+          "alpha": "9/10",
+          "reference": {
+            "alpha": "9/10",
+            "tail_mass": "1/10",
+            "var_usd": 500000,
+            "expected_shortfall_usd": "590000",
+            "allocation": [
+              "0",
+              "0",
+              "2/25",
+              "1/50"
+            ],
+            "strict_tail_probability": "1/50",
+            "strict_tail_mean_usd": "950000",
+            "inclusive_tail_probability": "1/5",
+            "inclusive_tail_mean_usd": "545000"
+          },
+          "native_var_usd": 500000.0,
+          "linear_program": {
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "allocation": [
+              0.0,
+              0.0,
+              0.08,
+              0.02
+            ],
+            "expected_shortfall_usd": 590000.0
+          }
+        },
+        {
+          "alpha": "19/20",
+          "reference": {
+            "alpha": "19/20",
+            "tail_mass": "1/20",
+            "var_usd": 500000,
+            "expected_shortfall_usd": "680000",
+            "allocation": [
+              "0",
+              "0",
+              "3/100",
+              "1/50"
+            ],
+            "strict_tail_probability": "1/50",
+            "strict_tail_mean_usd": "950000",
+            "inclusive_tail_probability": "1/5",
+            "inclusive_tail_mean_usd": "545000"
+          },
+          "native_var_usd": 500000.0,
+          "linear_program": {
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "allocation": null,
+            "expected_shortfall_usd": 680000.0
+          }
+        },
+        {
+          "alpha": "99/100",
+          "reference": {
+            "alpha": "99/100",
+            "tail_mass": "1/100",
+            "var_usd": 950000,
+            "expected_shortfall_usd": "950000",
+            "allocation": [
+              "0",
+              "0",
+              "0",
+              "1/100"
+            ],
+            "strict_tail_probability": "0",
+            "strict_tail_mean_usd": null,
+            "inclusive_tail_probability": "1/50",
+            "inclusive_tail_mean_usd": "950000"
+          },
+          "native_var_usd": 950000.0,
+          "linear_program": {
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "allocation": [
+              0.0,
+              0.0,
+              0.0,
+              0.01
+            ],
+            "expected_shortfall_usd": 950000.0
+          }
+        }
+      ],
+      "expected_loss_usd": "145000",
+      "native_cdf_at_losses": [
+        0.72,
+        0.7999999999999999,
+        0.98,
+        1.0
+      ]
+    },
+    {
+      "id": "q_1_20",
+      "joint_default_probability": "1/20",
+      "indicator_correlation": "1/4",
+      "correlation_eigenvalues": [
+        0.75,
+        1.25
+      ],
+      "states": [
+        {
+          "id": "00",
+          "default_A": false,
+          "default_B": false,
+          "probability": "3/4",
+          "loss_usd": 0
+        },
+        {
+          "id": "10",
+          "default_A": true,
+          "default_B": false,
+          "probability": "1/20",
+          "loss_usd": 450000
+        },
+        {
+          "id": "01",
+          "default_A": false,
+          "default_B": true,
+          "probability": "3/20",
+          "loss_usd": 500000
+        },
+        {
+          "id": "11",
+          "default_A": true,
+          "default_B": true,
+          "probability": "1/20",
+          "loss_usd": 950000
+        }
+      ],
+      "risk_summaries": [
+        {
+          "alpha": "4/5",
+          "reference": {
+            "alpha": "4/5",
+            "tail_mass": "1/5",
+            "var_usd": 450000,
+            "expected_shortfall_usd": "612500",
+            "allocation": [
+              "0",
+              "0",
+              "3/20",
+              "1/20"
+            ],
+            "strict_tail_probability": "1/5",
+            "strict_tail_mean_usd": "612500",
+            "inclusive_tail_probability": "1/4",
+            "inclusive_tail_mean_usd": "580000"
+          },
+          "native_var_usd": 450000.0,
+          "linear_program": {
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "allocation": [
+              0.0,
+              -0.0,
+              0.15,
+              0.05
+            ],
+            "expected_shortfall_usd": 612500.0
+          }
+        },
+        {
+          "alpha": "9/10",
+          "reference": {
+            "alpha": "9/10",
+            "tail_mass": "1/10",
+            "var_usd": 500000,
+            "expected_shortfall_usd": "725000",
+            "allocation": [
+              "0",
+              "0",
+              "1/20",
+              "1/20"
+            ],
+            "strict_tail_probability": "1/20",
+            "strict_tail_mean_usd": "950000",
+            "inclusive_tail_probability": "1/5",
+            "inclusive_tail_mean_usd": "612500"
+          },
+          "native_var_usd": 500000.0,
+          "linear_program": {
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "allocation": [
+              0.0,
+              0.0,
+              0.05,
+              0.05
+            ],
+            "expected_shortfall_usd": 725000.0000000001
+          }
+        },
+        {
+          "alpha": "19/20",
+          "reference": {
+            "alpha": "19/20",
+            "tail_mass": "1/20",
+            "var_usd": 500000,
+            "expected_shortfall_usd": "950000",
+            "allocation": [
+              "0",
+              "0",
+              "0",
+              "1/20"
+            ],
+            "strict_tail_probability": "1/20",
+            "strict_tail_mean_usd": "950000",
+            "inclusive_tail_probability": "1/5",
+            "inclusive_tail_mean_usd": "612500"
+          },
+          "native_var_usd": 500000.0,
+          "linear_program": {
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "allocation": [
+              0.0,
+              0.0,
+              -0.0,
+              0.05
+            ],
+            "expected_shortfall_usd": 950000.0
+          }
+        },
+        {
+          "alpha": "99/100",
+          "reference": {
+            "alpha": "99/100",
+            "tail_mass": "1/100",
+            "var_usd": 950000,
+            "expected_shortfall_usd": "950000",
+            "allocation": [
+              "0",
+              "0",
+              "0",
+              "1/100"
+            ],
+            "strict_tail_probability": "0",
+            "strict_tail_mean_usd": null,
+            "inclusive_tail_probability": "1/20",
+            "inclusive_tail_mean_usd": "950000"
+          },
+          "native_var_usd": 950000.0,
+          "linear_program": {
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "allocation": [
+              0.0,
+              0.0,
+              0.0,
+              0.01
+            ],
+            "expected_shortfall_usd": 950000.0
+          }
+        }
+      ],
+      "expected_loss_usd": "145000",
+      "native_cdf_at_losses": [
+        0.75,
+        0.8,
+        0.9500000000000001,
+        1.0
+      ]
+    },
+    {
+      "id": "q_1_10",
+      "joint_default_probability": "1/10",
+      "indicator_correlation": "2/3",
+      "correlation_eigenvalues": [
+        0.3333333333333334,
+        1.6666666666666665
+      ],
+      "states": [
+        {
+          "id": "00",
+          "default_A": false,
+          "default_B": false,
+          "probability": "4/5",
+          "loss_usd": 0
+        },
+        {
+          "id": "10",
+          "default_A": true,
+          "default_B": false,
+          "probability": "0",
+          "loss_usd": 450000
+        },
+        {
+          "id": "01",
+          "default_A": false,
+          "default_B": true,
+          "probability": "1/10",
+          "loss_usd": 500000
+        },
+        {
+          "id": "11",
+          "default_A": true,
+          "default_B": true,
+          "probability": "1/10",
+          "loss_usd": 950000
+        }
+      ],
+      "risk_summaries": [
+        {
+          "alpha": "4/5",
+          "reference": {
+            "alpha": "4/5",
+            "tail_mass": "1/5",
+            "var_usd": 0,
+            "expected_shortfall_usd": "725000",
+            "allocation": [
+              "0",
+              "0",
+              "1/10",
+              "1/10"
+            ],
+            "strict_tail_probability": "1/5",
+            "strict_tail_mean_usd": "725000",
+            "inclusive_tail_probability": "1",
+            "inclusive_tail_mean_usd": "145000"
+          },
+          "native_var_usd": 0.0,
+          "linear_program": {
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "allocation": [
+              -0.0,
+              0.0,
+              0.1,
+              0.1
+            ],
+            "expected_shortfall_usd": 725000.0000000001
+          }
+        },
+        {
+          "alpha": "9/10",
+          "reference": {
+            "alpha": "9/10",
+            "tail_mass": "1/10",
+            "var_usd": 500000,
+            "expected_shortfall_usd": "950000",
+            "allocation": [
+              "0",
+              "0",
+              "0",
+              "1/10"
+            ],
+            "strict_tail_probability": "1/10",
+            "strict_tail_mean_usd": "950000",
+            "inclusive_tail_probability": "1/5",
+            "inclusive_tail_mean_usd": "725000"
+          },
+          "native_var_usd": 500000.0,
+          "linear_program": {
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "allocation": [
+              0.0,
+              0.0,
+              -0.0,
+              0.1
+            ],
+            "expected_shortfall_usd": 950000.0
+          }
+        },
+        {
+          "alpha": "19/20",
+          "reference": {
+            "alpha": "19/20",
+            "tail_mass": "1/20",
+            "var_usd": 950000,
+            "expected_shortfall_usd": "950000",
+            "allocation": [
+              "0",
+              "0",
+              "0",
+              "1/20"
+            ],
+            "strict_tail_probability": "0",
+            "strict_tail_mean_usd": null,
+            "inclusive_tail_probability": "1/10",
+            "inclusive_tail_mean_usd": "950000"
+          },
+          "native_var_usd": 950000.0,
+          "linear_program": {
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "allocation": [
+              0.0,
+              0.0,
+              0.0,
+              0.05
+            ],
+            "expected_shortfall_usd": 950000.0
+          }
+        },
+        {
+          "alpha": "99/100",
+          "reference": {
+            "alpha": "99/100",
+            "tail_mass": "1/100",
+            "var_usd": 950000,
+            "expected_shortfall_usd": "950000",
+            "allocation": [
+              "0",
+              "0",
+              "0",
+              "1/100"
+            ],
+            "strict_tail_probability": "0",
+            "strict_tail_mean_usd": null,
+            "inclusive_tail_probability": "1/10",
+            "inclusive_tail_mean_usd": "950000"
+          },
+          "native_var_usd": 950000.0,
+          "linear_program": {
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "allocation": [
+              0.0,
+              0.0,
+              0.0,
+              0.01
+            ],
+            "expected_shortfall_usd": 950000.0
+          }
+        }
+      ],
+      "expected_loss_usd": "145000",
+      "native_cdf_at_losses": [
+        0.8,
+        0.8,
+        0.9,
+        1.0
+      ]
+    },
+    {
+      "id": "rho_negative_half",
+      "joint_default_probability": "-1/25",
+      "indicator_correlation": "-1/2",
+      "correlation_eigenvalues": [
+        0.5,
+        1.5
+      ],
+      "states": [
+        {
+          "id": "00",
+          "default_A": false,
+          "default_B": false,
+          "probability": "33/50",
+          "loss_usd": 0
+        },
+        {
+          "id": "10",
+          "default_A": true,
+          "default_B": false,
+          "probability": "7/50",
+          "loss_usd": 450000
+        },
+        {
+          "id": "01",
+          "default_A": false,
+          "default_B": true,
+          "probability": "6/25",
+          "loss_usd": 500000
+        },
+        {
+          "id": "11",
+          "default_A": true,
+          "default_B": true,
+          "probability": "-1/25",
+          "loss_usd": 950000
+        }
+      ],
+      "risk_summaries": [],
+      "expected_loss_usd": null
+    },
+    {
+      "id": "rho_positive_nine_tenths",
+      "joint_default_probability": "16/125",
+      "indicator_correlation": "9/10",
+      "correlation_eigenvalues": [
+        0.09999999999999992,
+        1.9
+      ],
+      "states": [
+        {
+          "id": "00",
+          "default_A": false,
+          "default_B": false,
+          "probability": "207/250",
+          "loss_usd": 0
+        },
+        {
+          "id": "10",
+          "default_A": true,
+          "default_B": false,
+          "probability": "-7/250",
+          "loss_usd": 450000
+        },
+        {
+          "id": "01",
+          "default_A": false,
+          "default_B": true,
+          "probability": "9/125",
+          "loss_usd": 500000
+        },
+        {
+          "id": "11",
+          "default_A": true,
+          "default_B": true,
+          "probability": "16/125",
+          "loss_usd": 950000
+        }
+      ],
+      "risk_summaries": [],
+      "expected_loss_usd": null
+    }
+  ],
+  "producer_claims": []
+}

@@ -152,3 +152,10 @@ At component checkpoint a2e62da, no agent had executed or assessed this new comp
 The [credit-loss/implementation report](../examples/credit-loss-review/README.md) retains all six observed constructions and four intervals. Public source d717a0d reproduces the preceding study's source identity, scope, inputs, probabilities, amounts and 58 controls exactly. Only observation timestamp and duration are excluded from that comparison. Complete, missing-severity and contradictory packets distinguish actual parameters from selected requirements; withholding an intended loss fraction leaves calculation observations intact.
 
 The 725-word complete-case reference is authored. Fixed controls inspect all four bindings per interval, observed arithmetic, source identities, exact tolerance boundaries and fourteen adverse mutations. They do not run QuantLib, assess arbitrary prose or establish accounting acceptance. All definitions, preceding examples and component-package bytes remain unchanged. Agent execution and assessment of this report remain unperformed.
+
+
+## Portfolio-tail composition
+
+The [portfolio-tail report](../examples/portfolio-tail-review/README.md) composes existing credit-loss, dependence and scenario requirements. Public source 77818d9 reproduces all fixed inputs, native/exact quantities and 120 controls from the preceding study, including two native/exact quantile differences at 80%. Only observation timestamp and duration differ. All six proposed tables and sixteen risk summaries remain visible; the two incompatible probability proposals are retained without a risk calculation.
+
+The 931-word complete-case reference is authored. Fixed checks preserve the one missing native allocation without erasing the independently supported risk result; sixteen adverse mutations and exact tolerance-boundary controls exercise selected corruptions. These checks make no solver or provider call and do not assess arbitrary prose. All 28 definitions, previous examples and component-package bytes remain unchanged. Agent reporting and financial acceptance remain unqualified.

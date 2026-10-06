@@ -1,0 +1,51 @@
+{
+  "kind": "observed-synthetic-calculation-with-authored-reporting-projections",
+  "source_commit": "77818d985d37b3c08e35c703f8d6af6e97414c3b",
+  "source_file": "examples/portfolio-tail-review/model/measure.py",
+  "source_sha256": "fc24b6f759b25f642eb2ca618c9a9842f0e95252a58c5983c5899dbe5e5cd959",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "observation_sha256": "2dbe03803465e4eae7ccff490fc5a31682a8d4d969bea7927b8e1b497fc3962f",
+  "execution": {
+    "return_code": 0,
+    "timed_out": false,
+    "wall_seconds": 0.8537744170171209,
+    "attempts": 1,
+    "retries": 0,
+    "provider_calls": 0
+  },
+  "numerical_reproduction": {
+    "matched_all_prespecified_observations": true,
+    "excluded_fields": [
+      "recorded_at",
+      "calculation_seconds"
+    ]
+  },
+  "packets": {
+    "complete": {
+      "path": "inputs/complete.json",
+      "sha256": "010b144775ca983b4798321cbb4852a21d80a04bc9676059fbd7471d86892679"
+    },
+    "missing-allocation": {
+      "path": "inputs/missing-allocation.json",
+      "sha256": "b640215712c090938631455b04c788c26ef4baf7d4f6cc63191feff29b50dcf9"
+    },
+    "contradictory": {
+      "path": "inputs/contradictory.json",
+      "sha256": "ca2a687a35e48c088062c33482bd99b4173854e584d9e4aea0520c22db9b7ae2"
+    }
+  },
+  "authored_changes": {
+    "complete": "Retain all six input tables and sixteen numerical summaries, including independent exact references and native outcomes; omit observer validity flags, diagnostic reasons and implementation control answers.",
+    "missing-allocation": "Withhold only the native allocation for q_1_50 at alpha 19/20. Preserve native objective/status and the separate exact reference; neither supplies the missing observed candidate.",
+    "contradictory": "Retain all numerical records and add six producer assertions."
+  },
+  "limits": [
+    "Synthetic joint distributions with no empirical calibration, regulatory capital or financial operation.",
+    "Reporting programs, projections and reference report are authored, not agent results.",
+    "Native/exact quantile differences are retained; passing implementation controls does not imply all native quantiles meet the selected exact rule."
+  ]
+}

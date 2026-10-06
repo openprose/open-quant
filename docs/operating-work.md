@@ -45,6 +45,7 @@ These operating reports have authored references and deterministic fixture check
 | [Implementation](../examples/implementation-review/README.md) | Implementation review, model description | Passing parity or one baseline does not establish correct price conventions. |
 | [Cash flows](../examples/cashflow-review/README.md) | Cash-flow review, valuation comparison | Close aggregate values do not clear a required payment-date convention. |
 | [Sensitivity precision](../examples/sensitivity-review/README.md) | Sensitivity review, implementation review | Small price errors can amplify into large derivative errors; missing unrounded observations remain missing. |
+| [Portfolio tail](../examples/portfolio-tail-review/README.md) | Credit-loss review, dependence review, scenario review | Equal expected loss does not establish equal tail loss; supported risk results and actual solver-allocation evidence remain separate. |
 | [Credit loss](../examples/credit-loss-review/README.md) | Credit-loss review, implementation review | Bounded probabilities do not establish correct conditioning or loss timing; actual parameters do not supply missing intended requirements. |
 | [Optimization](../examples/optimization-review/README.md) | Optimization review, implementation review | Native success, original feasibility and supported optimality are separate; missing candidates remain unknown. |
 | [Selection history](../examples/selection-review/README.md) | Outcomes analysis, model data | A newly selected evaluation winner does not independently confirm the frozen original candidate. |
@@ -69,7 +70,7 @@ The components support preparing evidence for these activities. They do not esta
 
 ## Dependence review
 
-[Dependence review](../contracts/dependence-review.md) has [authored distinguishing cases](../tests/cases/dependence-review.md) and a [worked data composition](../examples/dependence-review/README.md). The current catalog has twenty operating domains and seventeen worked operating reports; these describe authored coverage, not agent qualification. Compose it with model data for lineage questions, implementation review for method conformance, or simulation review for how dependence enters simulated results.
+[Dependence review](../contracts/dependence-review.md) has [authored distinguishing cases](../tests/cases/dependence-review.md) and a [worked data composition](../examples/dependence-review/README.md). The current catalog has twenty operating domains and eighteen worked operating reports; these describe authored coverage, not agent qualification. Compose it with model data for lineage questions, implementation review for method conformance, or simulation review for how dependence enters simulated results.
 
 [R's correlation documentation](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cor.html), Details, explains why pairwise-complete estimates can be non-PSD. [Nick Higham's correlation-matrix overview](https://nhigham.com/2020/04/14/what-is-a-correlation-matrix/) explains joint admissibility and constrained adjustment problems. These primary sources support the component's mathematical distinctions, not institutional acceptance rules. The illustrative thresholds remain caller policy; mathematical validity alone does not establish economic suitability.
 
@@ -79,7 +80,7 @@ The components support preparing evidence for these activities. They do not esta
 
 ## Produce evidence before reviewing it
 
-The [bounded SOFR reproduction program](../examples/sofr-reproduction/README.md) applies model-reproduction requirements to one explicitly authorized calculation. It is separate from the seventeen prepared-evidence report compositions above. A normal exit, complete evidence, numerical agreement and fulfillment of the reproduction/reporting program are distinct findings. Dependency setup and agent execution remain separately qualified; reproduction does not establish economic suitability or institutional acceptance.
+The [bounded SOFR reproduction program](../examples/sofr-reproduction/README.md) applies model-reproduction requirements to one explicitly authorized calculation. It is separate from the eighteen prepared-evidence report compositions above. A normal exit, complete evidence, numerical agreement and fulfillment of the reproduction/reporting program are distinct findings. Dependency setup and agent execution remain separately qualified; reproduction does not establish economic suitability or institutional acceptance.
 
 
 ## Optimization review
@@ -99,3 +100,8 @@ The [historical-availability composition](../examples/availability-review/README
 [Credit-loss review](../contracts/credit-loss-review.md) adds explicit probability conditioning, horizon, exposure/severity and loss-timing requirements, with [authored distinguishing cases](../tests/cases/credit-loss-review.md). Compose it with model description for a method explanation, model data for lineage, implementation review for formula conformance, or outcomes analysis for empirical evaluation. A numerical loss calculation alone does not establish borrower performance or an accounting reserve.
 
 QuantLib's [default-probability interface](https://github.com/lballabio/QuantLib/blob/v1.43/ql/termstructures/defaulttermstructure.hpp) and [flat-hazard implementation](https://github.com/lballabio/QuantLib/blob/v1.43/ql/termstructures/credit/flathazardrate.hpp) illustrate the distinction between survival, cumulative default probability and hazard. Those definitions do not select a probability basis, institutional loss method or acceptance policy. The [worked composition](../examples/credit-loss-review/README.md) retains all six observed constructions and four intervals in complete, missing-severity and contradictory packets. It remains agent-unqualified.
+
+
+## Portfolio loss distributions
+
+The [portfolio-tail composition](../examples/portfolio-tail-review/README.md) combines existing credit-loss, dependence and scenario requirements. Six proposed joint tables distinguish correlation-matrix definiteness from compatibility with specified default probabilities. Sixteen risk summaries preserve mean loss, exact and native quantiles, expected shortfall and alternative conditional-tail means. Complete, missing-allocation and contradictory packets retain supported mathematical results separately from evidence about an actual solver candidate. No additional definition or package change is needed; agent execution remains unqualified.

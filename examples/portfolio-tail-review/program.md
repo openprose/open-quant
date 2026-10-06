@@ -1,0 +1,11 @@
+# Review portfolio loss distributions and tail measures
+
+**For agents.** Execute under the caller's selected OpenProse kernel. The working root is the source repository, two directories above this program.
+
+Adopt [credit-loss review](../../contracts/credit-loss-review.md), [dependence review](../../contracts/dependence-review.md) and [scenario review](../../contracts/scenario-review.md), including their adopted definitions, for one report. Apply [the brief](inputs/brief.md) and [review policy](inputs/policy.md). The caller selects `complete`, `missing-allocation` or `contradictory`; ask for an absent or unknown selection. Read only its [complete](inputs/complete.json), [missing-allocation](inputs/missing-allocation.json) or [contradictory](inputs/contradictory.json) packet and [receipt](receipt.json).
+
+Produce a report under 1,200 words excluding locators for an AI-literate financial operations reader. Account for all six dependence proposals and sixteen confidence-level summaries. Distinguish correlation-matrix properties, valid joint probabilities, expected loss, quantiles and tail averages. Retain native/exact differences and separate independently supported risk results from evidence about an actual solver allocation. Review any producer assertions against the supplied records.
+
+Write only `report.md` and `result.md` in a fresh directory under `results/portfolio-tail-review/`. Identify the case, program, adopted definitions, brief, policy, selected packet and receipt by computed hash. Attribute calculation-source identity to the receipt rather than claim to have inspected or reproduced it. State checks performed, reporting fulfillment, remaining work and the actual output path.
+
+Use only those sources and definitions. Arithmetic and identity checks are permitted. Do not inspect reproduction source, other cases, reference reports or test answers. Do not rerun a solver, simulate defaults, fetch data, change probabilities, select a new risk definition or undertake financial action. Do not substitute an analytical allocation for a missing observed solver allocation. Reading restrictions are instructions, not enforced filesystem isolation. An accurate report may identify invalid proposals, breached criteria and missing evidence.

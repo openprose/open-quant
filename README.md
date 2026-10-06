@@ -81,6 +81,7 @@ python3 scripts/check_sensitivity.py
 python3 scripts/check_optimization.py
 python3 scripts/check_availability.py
 python3 scripts/check_credit_loss.py
+python3 scripts/check_portfolio_tail.py
 python3 -m unittest discover -s tests -v
 ```
 
