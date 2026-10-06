@@ -4,13 +4,13 @@
 
 ## Inputs
 
-The caller supplies the model brief, permitted source register and evidence, base documentation requirements, house requirements, selected institutional facts and output scope. Read those selections and adopted definitions. Missing inputs or incompatible requirements must be reported.
+The caller supplies the model identity and revision, intended reader, model brief, permitted source register and evidence, base documentation requirements, house requirements, selected institutional facts and output scope. Read those selections and adopted definitions. Missing inputs or incompatible requirements must be reported.
 
-Adopt [claim evidence](claim-evidence.md) and [institutional facts](institutional-facts.md) for the supplied document and supporting reports.
+Adopt [model description](model-description.md) for the model account and [numerical evidence](numerical-evidence.md) for the selected numerical discussion. Bind their inputs to the supplied model brief, evidence and house requirements. Adopt [claim evidence](claim-evidence.md) and [institutional facts](institutional-facts.md) for the document and supporting reports.
 
 ## Required result
 
-Produce a complete methodology document under the supplied base and house requirements. Identify a document location or an explicit unresolved gap for every applicable base requirement. Preserve the developer's choices, stated reasons, alternatives, assumptions and limitations. A shorter decision note is not a substitute for this full scope.
+Produce a complete methodology document under the supplied base and house requirements. Identify a document location or an explicit unresolved gap for every applicable base requirement. Preserve the developer's choices, stated reasons, alternatives, assumptions and limitations. A disclosed gap satisfies gap reporting; it does not satisfy an underlying requirement to supply that information or establish document completeness. A shorter decision note is not a substitute for this full scope.
 
 Return these supporting records, in the caller's required format:
 

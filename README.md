@@ -53,13 +53,15 @@ The assessment contract asks for findings tied to the exact subject, requirement
 
 | Contract | Required result |
 |---|---|
+| [Model description — for agents](contracts/model-description.md) | Purpose, scope, inputs, outputs, method, assumptions and limitations from supplied evidence. |
 | [Model decision — for agents](contracts/model-decision.md) | A bounded account of a supplied modeling choice, alternatives, evidence and limitations. |
 | [Model documentation — for agents](contracts/documentation.md) | A full document and supporting reports under supplied base and house requirements. |
 | [Claim evidence — for agents](contracts/claim-evidence.md) | Support for the particular claim, preserving method, quantity, units, scope and source identity. |
+| [Numerical evidence — for agents](contracts/numerical-evidence.md) | Interpretation of supplied comparisons, their conditions, tradeoffs and limits. |
 | [Institutional facts — for agents](contracts/institutional-facts.md) | Visible missing institutional facts and limits on readiness claims. |
 | [Documentation assessment — for agents](contracts/assessment.md) | Findings against selected requirements, with evidence gaps and assessment coverage visible. |
 
-Use these contracts with your own inputs and house requirements. Private model material can remain in your own repository; this example performs no upload to Open Quant. The selected agent/provider's data handling still applies. A private-model workflow has not been qualified here.
+[Compose these contracts](docs/composition.md) with your own inputs and house requirements. Private model material can remain in your own repository; this example performs no upload to Open Quant. The selected agent/provider's data handling still applies. A private-model workflow has not been qualified here.
 
 ## Inspect without a model
 
