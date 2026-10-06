@@ -25,3 +25,7 @@ These are authored illustrations for [numerical evidence](../../contracts/numeri
 **Result:** “On identical inputs, our reproduction proves B is 20% more accurate.”
 
 **Expected:** Not met. Identical inputs contradict the report; method attribution is unsupported; reproduction contradicts the stated execution. Matching the reported numbers does not cure these failures. A corrected discussion can report both observations and their differing samples without claiming an attributable improvement or reproduction.
+
+## Rounded equality and acceptance limits
+
+An instrument's target and implied rates both display 3.850000 percent, while its residual is reported at finer precision as a small nonzero basis-point value. Treating the difference as exactly zero erases supplied evidence. Use the residual's precision, identify its units and retain the distinction between calibration fit and predictive quality. If a rounded residual lies on a required threshold and could fall on either side before rounding, exact equality is not established; the finding remains unresolved until sufficient precision is available. These are authored expectations, not model-evaluation results.

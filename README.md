@@ -80,6 +80,6 @@ python3 scripts/check_repository.py
 python3 -m unittest discover -s tests -v
 ```
 
-For the additional synthetic operating controls, run `node scripts/check_monitoring.mjs`, `node scripts/check_valuation.mjs` and `node scripts/check_backtesting.mjs` and `node scripts/check_sofr_change.mjs` with Node.js 18 or newer.
+For the additional operating controls, run the check_monitoring.mjs, check_valuation.mjs, check_backtesting.mjs, check_sofr_change.mjs and check_calibration.mjs scripts under scripts/ with Node.js 18 or newer. For example, `node scripts/check_calibration.mjs` checks the worked calibration cases.
 
 These checks verify links, imported identities and specified numerical correspondences. They do not assess arbitrary prose, certify the financial model or establish that contract composition outperforms a baseline. [Contributing](CONTRIBUTING.md) explains how to add a contract or model example. Owned code and documentation are [MIT licensed](LICENSE); external sources retain their own terms.

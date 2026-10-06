@@ -42,6 +42,13 @@
     "examples/backtesting-review/inputs/population.md",
     "examples/backtesting-review/program.md",
     "examples/backtesting-review/sample-results/report.md",
+    "examples/calibration-review/README.md",
+    "examples/calibration-review/inputs/contradictory.csv",
+    "examples/calibration-review/inputs/missing.csv",
+    "examples/calibration-review/inputs/policy.md",
+    "examples/calibration-review/inputs/repricing.csv",
+    "examples/calibration-review/program.md",
+    "examples/calibration-review/sample-results/report.md",
     "examples/monitoring-review/README.md",
     "examples/monitoring-review/inputs/packet.json",
     "examples/monitoring-review/inputs/policy.md",
@@ -81,7 +88,9 @@
     "prose-package.json",
     "provenance/README.md",
     "provenance/import.json",
+    "provenance/reproduction/2026-10-06.json",
     "scripts/check_backtesting.mjs",
+    "scripts/check_calibration.mjs",
     "scripts/check_monitoring.mjs",
     "scripts/check_repository.py",
     "scripts/check_sofr_change.mjs",
@@ -126,7 +135,8 @@
     "backtesting": "contracts/backtesting.md",
     "backtesting-review": "examples/backtesting-review/program.md",
     "sofr-change-review": "examples/sofr-change-review/program.md",
-    "report-assessment": "examples/assess-report.md"
+    "report-assessment": "examples/assess-report.md",
+    "sofr-calibration-review": "examples/calibration-review/program.md"
   },
   "dependencies": {}
 }

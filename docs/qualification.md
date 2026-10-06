@@ -1,6 +1,6 @@
 # Qualification status
 
-The library now has an [observed CLI-generated SOFR note](../examples/sofr-curve/observed-run/README.md) and separate assessment. The sample note remains an authored reference. Historical numerical results are imported calculations with explicit provenance; they have not been newly reproduced.
+The library now has an [observed CLI-generated SOFR note](../examples/sofr-curve/observed-run/README.md) and separate assessment. The sample note remains an authored reference. Historical numerical results are imported calculations with explicit provenance. A separate October 6 numerical reproduction now matches them, conditional on the retained derived inputs; see the checkpoint below.
 
 The offline checker verifies imported file identities, relative Markdown links, a fixed set of computed field correspondences and the scope of the included fixtures. Tests include missing fields, wrong values, swapped method meanings, unit mismatch and stale source identity. They exercise deterministic evidence checks, not general interpretation of natural-language contracts.
 
@@ -36,6 +36,13 @@ The preceding 47-file SOFR package passed an offline round trip through CLI sour
 | Monitoring and remediation | Authored report, three synthetic cases, explicit arithmetic and mutation checks. | Model execution and assessment of the composed report. |
 | Valuation and model data | Authored report, four synthetic cases, price-scale and exception controls. | Model execution, source independence and actual valuation operations. |
 | Backtesting review | Authored report, four synthetic cases, observed-versus-policy exception counts and timing controls. | Model execution, statistical adequacy and any complete regulatory test. |
+| SOFR calibration review | Fresh numerical reproduction, per-instrument table, authored missing/conflicting cases and precision controls. | Agent execution and assessment of the report, independent financial validation. |
 | SOFR change review | Existing historical model evidence, two authored requirement selections, reference report and exact metric/threshold checks. | Model-backed execution of the new composed report and any production-change readiness. |
 
 The shared library definitions are candidates for reuse, not individually certified capabilities. Mechanical checks do not establish that an executor follows them or that an evaluator detects every violation. A complete report can properly find adverse results; its fulfillment depends on the selected reporting requirements. Package checks, source review, financial acceptance and model-backed trials remain separate forms of evidence.
+
+## October 6, 2026 numerical reproduction
+
+The existing helper at source `27e5594bb03751bdfe9272cfd58e4923e72d9d64` completed in 18.16 seconds using the exact documented Python and numerical-package versions in an isolated environment. All fields in results.json matched under the unchanged relative 1e-10 and absolute 1e-12 numeric tolerances, with exact structure and nonnumeric values. Input and script hashes were unchanged. The [public receipt](../provenance/reproduction/2026-10-06.json) records versions, hashes, command scope and comparison.
+
+This is a deterministic calculation using the committed derived quotes and fixing, without new market-data retrieval or quote derivation. The generated run_info.json lists derive_quotes.py as original project metadata; that script was not executed in this invocation. The result does not validate raw-input selection, the financial model independently, agent documentation or contract fulfillment. The earlier default-environment preflight failure remains a separate historical observation.

@@ -13,3 +13,4 @@ jobs:
       - run: node scripts/check_valuation.mjs
       - run: node scripts/check_backtesting.mjs
       - run: node scripts/check_sofr_change.mjs
+      - run: node scripts/check_calibration.mjs

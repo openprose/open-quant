@@ -28,6 +28,8 @@ The [backtesting example](../examples/backtesting-review/README.md) preserves ob
 
 The [SOFR change review](../examples/sofr-change-review/README.md) reuses the existing historical model evidence. It composes change and sensitivity review, then optionally adds a locality requirement. The numerical finding changes because the selected requirements change, while the model evidence remains fixed. The original short decision-note program is unaffected.
 
+The [calibration review](../examples/calibration-review/README.md) uses freshly reproduced per-instrument SOFR evidence. It distinguishes selected and excluded instruments, missing item-level support, rounded displays and conflicting source records. The report itself remains unexecuted by an agent.
+
 ## Public foundations and scope
 
 Checked October 6, 2026. These are Open Quant's reusable reporting requirements, not regulator-issued templates. House thresholds, schedules, identifiers, materiality and approval rules remain caller inputs.
