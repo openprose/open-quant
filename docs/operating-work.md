@@ -10,6 +10,7 @@ The operating contracts turn supplied model records and house policy into review
 | Determine what remains open | [Limitations and remediation](../contracts/limitations-and-remediation.md) | Issues, actions, use restrictions and closure criteria. |
 | Identify input-quality and lineage gaps | [Model data](../contracts/model-data.md) | Source/input snapshots, transformations and quality criteria. |
 | Explain the evidence for a calibration | [Calibration review](../contracts/calibration-review.md) | Targets, fitted values, conventions, diagnostics and tolerance. |
+| Reproduce selected quantitative results | [Model reproduction](../contracts/model-reproduction.md) | Exact source/input selection, environment, reference outputs, comparison policy and execution limits. |
 | Review implementation against its documented method | [Implementation review](../contracts/implementation-review.md) | Method conventions, exact implementation, required tests, observations and acceptance criteria. |
 | Review dependence inputs and adjustments | [Dependence review](../contracts/dependence-review.md) | Variables and order, dependence inputs, estimation populations, joint diagnostics, intended use and adjustment criteria. |
 | Review simulation precision and assumptions | [Simulation review](../contracts/simulation-review.md) | Target quantity, sampling design, uncertainty method, observations and precision criteria. |
@@ -45,7 +46,7 @@ These operating reports have authored references and deterministic fixture check
 | [Dependence](../examples/dependence-review/README.md) | Dependence review, model data | Valid pairs, joint validity, observation populations and exposure identity are distinct. |
 | [Simulation](../examples/simulation-review/README.md) | Simulation review, implementation review | A small standard error cannot clear dependent sampling or a different target. |
 
-The SOFR examples use retained historical calculations; calibration also has a fresh numerical reproduction receipt. The implementation and simulation examples use freshly observed calculations on synthetic option inputs. Dependence review uses observed synthetic matrix calculations; selection review uses a fixed synthetic score replicate. Other inputs are authored synthetic records. Case selection, house policy and permissions are explicit in each program. Use [the common assessment entry point](../examples/assess-report.md) for an actual operating report, with its original program and selected case or mode.
+The SOFR examples use retained historical calculations; calibration also has a fresh numerical reproduction receipt. The implementation and simulation examples use freshly observed calculations on synthetic option inputs. Dependence review uses observed synthetic matrix calculations; selection review uses a fixed synthetic score replicate. Cash-flow and sensitivity examples also use observed synthetic calculations. Other inputs are authored synthetic records. Case selection, house policy and permissions are explicit in each program. Use [the common assessment entry point](../examples/assess-report.md) for an actual operating report, with its original program and selected case or mode.
 
 Implementation review also has [authored distinguishing cases](../tests/cases/operating-reports.md#implementation-review). Its numerical observations establish finite adapter behavior, not agent qualification. Calibration fit, mathematical consistency and reference agreement remain separate findings.
 
@@ -63,10 +64,14 @@ The components support preparing evidence for these activities. They do not esta
 
 ## Dependence review
 
-[Dependence review](../contracts/dependence-review.md) has [authored distinguishing cases](../tests/cases/dependence-review.md) and a [worked data composition](../examples/dependence-review/README.md). Together with cash-flow review, the catalog has seventeen operating domains and fourteen worked operating reports; it does not establish agent qualification. Compose it with model data for lineage questions, implementation review for method conformance, or simulation review for how dependence enters simulated results.
+[Dependence review](../contracts/dependence-review.md) has [authored distinguishing cases](../tests/cases/dependence-review.md) and a [worked data composition](../examples/dependence-review/README.md). Together with cash-flow review, the catalog has eighteen operating domains and fourteen worked operating reports; it does not establish agent qualification. Compose it with model data for lineage questions, implementation review for method conformance, or simulation review for how dependence enters simulated results.
 
 [R's correlation documentation](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cor.html), Details, explains why pairwise-complete estimates can be non-PSD. [Nick Higham's correlation-matrix overview](https://nhigham.com/2020/04/14/what-is-a-correlation-matrix/) explains joint admissibility and constrained adjustment problems. These primary sources support the component's mathematical distinctions, not institutional acceptance rules. The illustrative thresholds remain caller policy; mathematical validity alone does not establish economic suitability.
 
 ## Cash-flow review
 
 [Cash-flow review](../contracts/cashflow-review.md) has [authored distinguishing cases](../tests/cases/cashflow-review.md). It preserves accrual terms, payment dates, flow identity, valuation inclusion and actual-payment evidence as separate questions. Compose it with valuation comparison for a valuation report or model data for lineage questions. A generated schedule is not a payment confirmation or a ledger reconciliation. The [worked valuation composition](../examples/cashflow-review/README.md) has complete, missing-schedule and contradictory packets; it remains agent-unqualified.
+
+## Produce evidence before reviewing it
+
+The [bounded SOFR reproduction program](../examples/sofr-reproduction/README.md) applies model-reproduction requirements to one explicitly authorized calculation. It is separate from the fourteen prepared-evidence report compositions above. A normal exit, complete evidence, numerical agreement and fulfillment of the reproduction/reporting program are distinct findings. Dependency setup and agent execution remain separately qualified; reproduction does not establish economic suitability or institutional acceptance.

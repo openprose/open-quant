@@ -19,6 +19,7 @@
     "contracts/model-description.md",
     "contracts/model-inventory.md",
     "contracts/model-monitoring.md",
+    "contracts/model-reproduction.md",
     "contracts/numerical-evidence.md",
     "contracts/operating-report.md",
     "contracts/outcomes-analysis.md",
@@ -57,7 +58,8 @@
     "README": "PACKAGE.md",
     "simulation-review": "contracts/simulation-review.md",
     "dependence-review": "contracts/dependence-review.md",
-    "cashflow-review": "contracts/cashflow-review.md"
+    "cashflow-review": "contracts/cashflow-review.md",
+    "model-reproduction": "contracts/model-reproduction.md"
   },
   "dependencies": {}
 }

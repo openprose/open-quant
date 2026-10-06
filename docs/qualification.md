@@ -1,5 +1,7 @@
 # Qualification status
 
+The source-only [reproduction program](../examples/sofr-reproduction/README.md) adds a caller-bound request for fresh calculation evidence. Its helper now limits one calculation attempt, retains execution and comparison records separately, and refuses to accept matching partial output from failed or interrupted calculations. Twenty unit tests cover the existing controls and new local-process cases, including timeout, launch failure, missing or invalid results, changed inputs and numerical mismatch. These tests use tiny synthetic processes; live SOFR qualification of the updated helper and agent execution of the new program are recorded separately when performed.
+
 The library now has an [observed CLI-generated SOFR note](../examples/sofr-curve/observed-run/README.md) and separate assessment. The sample note remains an authored reference. Historical numerical results are imported calculations with explicit provenance. A separate October 6 numerical reproduction now matches them, conditional on the retained derived inputs; see the checkpoint below.
 
 The offline checker verifies imported file identities, relative Markdown links, a fixed set of computed field correspondences and the scope of the included fixtures. Tests include missing fields, wrong values, swapped method meanings, unit mismatch and stale source identity. They exercise deterministic evidence checks, not general interpretation of natural-language contracts.
