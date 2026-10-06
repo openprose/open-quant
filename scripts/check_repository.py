@@ -36,13 +36,8 @@ def check_claim(record, source, source_sha256):
     return 'met'
 
 
-def repository_errors(root):
+def local_reference_errors(root):
     errors = []
-    manifest = json.loads((root / 'provenance/import.json').read_text())
-    for item in manifest['files']:
-        path = root / item['path']
-        if not path.is_file() or digest(path) != item['sha256']:
-            errors.append('Imported identity mismatch: ' + item['path'])
     # Repository uses inline Markdown links. External URLs and local anchors
     # are excluded; this verifies file existence, not remote sites or anchors.
     for path in root.rglob('*.md'):
@@ -54,6 +49,17 @@ def repository_errors(root):
             target_path = (path.parent / unquote(target.split('#')[0])).resolve()
             if not target_path.is_relative_to(root.resolve()) or not target_path.exists():
                 errors.append(f'Broken or escaping link: {path.relative_to(root)} -> {target}')
+    return errors
+
+
+def repository_errors(root):
+    errors = []
+    manifest = json.loads((root / 'provenance/import.json').read_text())
+    for item in manifest['files']:
+        path = root / item['path']
+        if not path.is_file() or digest(path) != item['sha256']:
+            errors.append('Imported identity mismatch: ' + item['path'])
+    errors.extend(local_reference_errors(root))
     source_path = root / 'examples/sofr-curve/inputs/results.json'
     source = json.loads(source_path.read_text())
     cases = json.loads((root / 'tests/fixtures/evidence-cases.json').read_text())

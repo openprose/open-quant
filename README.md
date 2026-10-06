@@ -67,7 +67,7 @@ The assessment contract asks for findings tied to the exact subject, requirement
 
 [Compose these contracts](docs/composition.md) with your own inputs and house requirements. Private model material can remain in your own repository; this example performs no upload to Open Quant. The selected agent/provider's data handling still applies. A private-model workflow has not been qualified here.
 
-[Package preparation](docs/package.md) describes the versioned candidate and its current publication status.
+[The component package](PACKAGE.md) contains the reusable contracts. Runnable examples, inputs and development checks remain in this source repository; the clone-and-run flow above is unchanged. [Package preparation](docs/package.md) describes the separate delivery scopes, a versioned SOFR checkpoint and current publication status.
 
 ## Inspect without a model
 

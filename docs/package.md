@@ -1,21 +1,37 @@
-# Package candidate
+# Contract package and runnable examples
 
-Open Quant has a directory-package manifest, [prose-package.json](../prose-package.json), with explicitly selected files and exports. It includes the contracts, the worked examples in the [operating catalog](operating-work.md), the original SOFR decision note, source notices and offline checks. The kernel is supplied separately by the caller's runtime; the package does not bundle a kernel or an executor.
+Open Quant has two delivery scopes. The [component package](../PACKAGE.md) contains reusable requirements for authors to compose with their own evidence. The complete source repository contains those contracts plus examples, inputs, provenance and development checks. The source-clone workshop flow remains available; fetching the component package does not provide an example program.
 
-Every change to selected bytes requires a new candidate digest and package check. Offline round trips have been retained for specific SOFR-only and expanded selections; they qualify those exact bytes, not subsequent additions. The active selection now includes 128 files, at the currently inspected CLI package limit. Further growth requires reviewing distribution boundaries and unnecessary files rather than assuming this package can grow without limit.
+## Component package
 
-The proposed candidate identity is `openprose/open-quant@0.1.0-rc.1`. It is prepared for review, **not published**. Do not expect a registry fetch to succeed until a publisher has released this exact version and retained its receipt.
+[prose-package.json](../prose-package.json) selects all 22 contract definitions, the consumer entry document, license and manifest: 25 files. Definitions retain their existing paths and bytes, so local adoption links resolve without rewriting. The kernel and agent harness remain supplied by the caller's runtime. No package builder, copied source tree or private dependency is required.
 
-The manifest uses the Prose CLI's documented directory-package format. Its `default` export is the full-document contract; `sofr-decision` selects the smaller example, and `sofr-assessment` selects its assessment. Export names locate files; they do not create new language semantics or run those files automatically.
+The proposed identity remains `openprose/open-quant@0.1.0-rc.1`, prepared for review and **not published**. This candidate changes delivery scope before any release: example exports such as `sofr-decision`, `sofr-assessment` and `monitoring-review` are absent. The default export remains full documentation; named component exports still locate their definitions. `README` points to the included consumer entry document.
 
-After authorized publication, fetch the package into a fresh directory using the publication receipt's actual digest:
+After authorized publication, fetch the component package into a fresh directory using the actual publication receipt:
 
 ```sh
 prose cli package fetch openprose/open-quant@0.1.0-rc.1 --output-dir open-quant --sha256 RECEIPT_SHA256 --json
-cd open-quant
-python3 scripts/check_repository.py
 ```
 
-`RECEIPT_SHA256` is a placeholder, not a published hash. Fetch verifies the package and receipt and refuses an existing destination. Follow [runtime setup](running.md) before invoking the example. Registry delivery and model execution are separate operations.
+`RECEIPT_SHA256` is a placeholder. Fetch validates the package and receipt and refuses an occupied destination. Read `open-quant/PACKAGE.md` and reference the installed contracts from your own program. That program supplies its evidence, bindings, permitted effects and output location. There is no `examples/` or `scripts/` directory in this package.
 
-Maintainers publish with the documented `prose cli package publish` command only after release review and explicit publication authority. The earlier candidate's offline check used the CLI source's actual package preparation, receipt matching and materialization functions with a synthetic test receipt. It establishes byte-preserving local packaging, not a production registry round trip, authorization or availability.
+Every change to selected bytes requires a new candidate digest and package check. Offline preparation and extraction do not establish registry availability, publication authority or model execution. Maintainers publish only after explicit release authorization and review of the actual candidate and receipt.
+
+## Versioned demonstration checkout
+
+The self-contained SOFR and operating examples remain available at source checkpoint `6772948763b736e87d4661fd4d1565ce8e841751`. To inspect that exact candidate without installing a provider:
+
+```sh
+git clone https://github.com/openprose/open-quant.git open-quant-examples
+cd open-quant-examples
+git checkout --detach 6772948763b736e87d4661fd4d1565ce8e841751
+python3 scripts/check_repository.py
+python3 -m unittest discover -s tests -v
+```
+
+Follow that checkout's README and runtime guide for installation, authentication, execution and assessment. Its existing commands and relative contract references remain intact. It uses its own checked-out definitions; a component package fetched elsewhere does not silently upgrade the example. A future example revision must receive its own review and qualification.
+
+The preceding 128-file all-in-one candidate is retained for this same source checkpoint, with digest `4c436b6188d750845d0388317dfa02eed04713397205448c2b50dc2008a40cd8`. It remains unpublished. This separate packaging proposal does not overwrite its bytes or change the original SOFR agreement. That bundle reaches the inspected file limit; separating reusable requirements from source examples provides room for library growth without increasing a CLI limit.
+
+The component-only candidate and the complete source checkout require different checks. Package checks cover selected bytes, exports and local-reference closure. Source checks additionally cover imported model evidence, examples and fixture arithmetic. The earlier bounded CLI campaign does not qualify a fresh attendee install, this delivery change or every report example. See [runtime limits](running.md) and [the qualification record](qualification.md).

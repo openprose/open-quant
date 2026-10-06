@@ -9,3 +9,5 @@ Changes use labeled pull requests. Explain the concrete behavior, inspect adopte
 New agent runs need explicit finite limits, selected runtime/model identities and permission for the chosen billing route. Retain actual inputs, outputs and failed attempts separately. Never call a dry run a successful model execution or relabel an authored illustration as generated evidence.
 
 Preserve import hashes and historical records. A changed input is a new revision; update current provenance while retaining the preceding identity in Git. Do not weaken the integrity checker to make an unexplained mismatch pass. Third-party material needs its own provenance and permitted use; the repository's MIT license does not relicense external works.
+
+The default package selects reusable contract definitions, its consumer entry, manifest and license. Examples and development checks remain in the source checkout. When adding a definition, update its package selection/export and consumer index. Verify package reference closure separately from source/example integrity; do not add example files to the component package implicitly.

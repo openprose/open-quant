@@ -52,4 +52,10 @@ This is a deterministic calculation using the committed derived quotes and fixin
 
 ## Implementation-review component
 
-The implementation-review contract has authored distinguishing cases for bounded reference agreement, passing identities with convention errors, unexecuted tests, observer discrepancies and shared input-mapping errors. It has no separate runnable report example or agent execution evidence in this candidate. It adds a fourteenth operating domain; the eight existing compositions cover the preceding thirteen domains. Package selection is now 128 files, at the inspected file-count limit; the retained 127-file package digest applies only to its earlier revision.
+The implementation-review contract has authored distinguishing cases for bounded reference agreement, passing identities with convention errors, unexecuted tests, observer discrepancies and shared input-mapping errors. It has no separate runnable report example or agent execution evidence in this candidate. It adds a fourteenth operating domain; the eight existing compositions cover the preceding thirteen domains. At source 6772948, package selection reached 128 files, the inspected file-count limit. Its package qualification concerns that exact all-in-one checkpoint.
+
+## Component-package separation proposal
+
+A separate candidate selects all 22 reusable definitions, a consumer entry document, license and manifest: 25 files. Definitions and example programs are unchanged. Runnable examples remain in the complete source repository; the delivery guide pins checkpoint 6772948 for the existing demonstration. Example exports are deliberately absent from the component package, so fetching it is not an install-and-run example flow.
+
+The prior all-in-one candidate and its numerical/agent evidence remain historical records for their exact scope. Local-reference, byte and package checks cannot establish registry delivery, authentication or fresh attendee execution. This packaging change introduces no new model results or financial acceptance.

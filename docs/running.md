@@ -2,6 +2,8 @@
 
 The library is Markdown. The public Prose CLI supplies the selected OpenProse kernel to an installed agent harness; it does not parse these contracts into a deterministic interpreter. Use a fresh clone outside a developer workspace whose automatic agent instructions might affect the task.
 
+Run the examples from the complete source checkout. The reusable component package contains contracts only; fetching it does not install these example programs or their inputs. [Package and example delivery](package.md) gives a pinned source checkpoint and keeps the two scopes explicit.
+
 ## Reference route
 
 The README selects released CLI `0.15.0-rc.2`, Claude, model alias `haiku` and permission mode `acceptEdits` with native profile `claude-workspace-tools`. This profile exposes file and shell tools while disabling user/project/local settings sources; it does not grant unrestricted tool permissions. The initially checked platform is macOS ARM64 and the admitted Claude version is 2.1.243. Other platforms are not qualified here. Install and authenticate a native Claude version admitted by that CLI. Native admission and platform restrictions still apply; inspect `prose cli harness list` and the dry-run result rather than assuming the latest installed harness works. The reference route uses the existing Claude subscription/login, not a silent API-key substitution. For another billing route select its documented auth profile explicitly. See the CLI's [credential guide](https://github.com/openprose/prose-cli/blob/main/docs/api-credentials.md).
