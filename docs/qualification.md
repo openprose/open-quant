@@ -1,5 +1,23 @@
 # Qualification status
 
+## Scope at the expanded-library checkpoint
+
+At source `bfb18de`, the candidate contains 29 reusable definitions, 29 authored operating reports, two full methodology-document examples, a two-model collection, the original SOFR decision note and a numerical-reproduction program. These are 34 program entries, with five separate assessment entry points. The component package selects 32 files and exposes 31 names, including aliases; export names are not independent contracts.
+
+| Area | Evidence available | Qualification still needed |
+|---|---|---|
+| Original SOFR decision note | Two CLI executions and four assessments in the bounded campaign below; retained successes and defects. | Reliable fulfillment and assessment, including contradictory evidence, and the attendee route. |
+| Operating reports, full documents and collection | Authored references or review cases; source and fixed-record checks; numerical receipts where supplied. | Agent execution and assessment of these programs. A financial calculation does not qualify the report about it. |
+| Numerical reproduction | Observed helper execution, retained comparisons and local-process tests. | Agent execution and assessment of the reproduction program. |
+| Component package | Selected source files and historical preparation/extraction checks at identified revisions. | Published package, successful registry fetch and end-to-end attendee qualification. |
+| Reuse and commercial value | Composed requirements and finite examples. | A controlled comparison with equivalent plain instructions, observed operating savings and institutional acceptance. |
+
+Use [the operating catalog](operating-work.md) to choose a report, [the composition guide](composition.md) for full documents and the collection, and [the delivery guide](package.md) for the source checkout and component-package distinction. Assessment commands require an actual result directory; an authored reference is not an observed execution.
+
+The checkpoints below retain their original scope. Historical counts, preparation failures and tested revisions do not describe all subsequent additions or qualify later source bytes.
+
+## Reproduction helper and original example
+
 The source-only [reproduction program](../examples/sofr-reproduction/README.md) adds a caller-bound request for fresh calculation evidence. Its helper now limits one calculation attempt, retains execution and comparison records separately, and refuses to accept matching partial output from failed or interrupted calculations. Twenty unit tests cover the existing controls and new local-process cases, including timeout, launch failure, missing or invalid results, changed inputs and numerical mismatch. These tests use tiny synthetic processes. A separately prespecified [SOFR calculation](../provenance/reproduction/2026-10-06-bounded.json) at source f07b037 completed in 2.62 seconds with unchanged source/input identities. Its result file is byte-identical to the retained reference and passes the unchanged numerical comparison. No provider call occurred; agent execution and assessment of the new program remain unperformed. The observed duration is not a performance comparison.
 
 The library now has an [observed CLI-generated SOFR note](../examples/sofr-curve/observed-run/README.md) and separate assessment. The sample note remains an authored reference. Historical numerical results are imported calculations with explicit provenance. A separate October 6 numerical reproduction now matches them, conditional on the retained derived inputs; see the checkpoint below.
@@ -60,7 +78,7 @@ The implementation-review contract has authored distinguishing cases for bounded
 
 ## Component-package separation proposal
 
-A separate candidate selects all 22 reusable definitions, a consumer entry document, license and manifest: 25 files. The separation itself leaves definitions and existing example programs unchanged. The subsequent implementation-review example adds source-only material; its numerical evidence does not change the reusable package. Runnable examples remain in the complete source repository; the delivery guide pins checkpoint 6772948 for the existing demonstration. Example exports are deliberately absent from the component package, so fetching it is not an install-and-run example flow.
+The initial separation candidate selected the then-current 22 reusable definitions, a consumer entry document, license and manifest: 25 files. That change left definitions and existing example programs unchanged. The subsequent implementation-review example added source-only material; its numerical evidence did not change the reusable package. The then-current delivery guide pinned checkpoint 6772948 for the existing demonstration. The maintained [delivery guide](package.md) identifies the expanded source candidate separately from that historical checkpoint. Runnable examples remain in the complete source repository; example exports are absent from the component package, so fetching it is not an install-and-run example flow.
 
 The prior all-in-one candidate and its numerical/agent evidence remain historical records for their exact scope. Local-reference, byte and package checks cannot establish registry delivery, authentication or fresh attendee execution. This packaging change introduces no new model results or financial acceptance.
 

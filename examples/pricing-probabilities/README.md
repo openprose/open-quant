@@ -6,7 +6,7 @@ From the source repository, with an authenticated harness configured as describe
 
 ```sh
 prose run examples/pricing-probabilities/program.md complete
-prose run examples/assess-report.md examples/pricing-probabilities/program.md results/pricing-probabilities/<actual-run> complete
+prose run examples/assess-report.md examples/pricing-probabilities/program.md results/pricing-probabilities/YOUR-RUN complete
 ```
 
 Use the actual fresh result directory from the first invocation. The [program](program.md) accepts `complete`, `missing-world` or `contradictory`. The missing case removes world B's probability inputs, discount factors and all derived physical quantities together, preserving market prices and world A. The contradictory case adds producer statements without changing numerical observations.

@@ -6,7 +6,7 @@ From the source repository, with an authenticated harness configured as describe
 
 ```sh
 prose run examples/reverse-stress/program.md complete
-prose run examples/assess-report.md examples/reverse-stress/program.md results/reverse-stress/<actual-run> complete
+prose run examples/assess-report.md examples/reverse-stress/program.md results/reverse-stress/YOUR-RUN complete
 ```
 
 Use the actual fresh result directory returned by the first invocation. The [program](program.md) accepts `complete`, `missing-candidate` or `contradictory`. The missing case withholds one actual vector, gradient, physical-shock mapping and corresponding diagnostics while retaining its reported success, objective, loss and severity. The analytical bound and seven other observed candidates remain supplied. The contradictory case adds unsupported producer assertions without changing numerical evidence.

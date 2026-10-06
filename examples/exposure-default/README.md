@@ -6,7 +6,7 @@ From the source repository, with an authenticated harness configured through [th
 
 ```sh
 prose run examples/exposure-default/program.md complete
-prose run examples/assess-report.md examples/exposure-default/program.md results/exposure-default/<actual-run> complete
+prose run examples/assess-report.md examples/exposure-default/program.md results/exposure-default/YOUR-RUN complete
 ```
 
 Use the actual result directory from the first invocation. The [program](program.md) accepts `complete`, `missing-joint` or `contradictory`. The missing case withholds one proposal's joint cells, conditional probabilities and exact references while retaining its reported aggregates. The other five proposals and bound evidence remain supplied. The contradictory case adds producer claims without changing numerical records.
