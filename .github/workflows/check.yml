@@ -30,3 +30,4 @@ jobs:
       - run: python3 scripts/check_portfolio_tail.py
       - run: python3 scripts/check_backtest_statistics.py
       - run: python3 scripts/check_exposure.py
+      - run: python3 scripts/check_option_consistency.py

@@ -11,7 +11,8 @@ The operating contracts turn supplied model records and house policy into review
 | Identify input-quality and lineage gaps | [Model data](../contracts/model-data.md) | Source/input snapshots, transformations and quality criteria. |
 | Explain the evidence for a calibration | [Calibration review](../contracts/calibration-review.md) | Targets, fitted values, conventions, diagnostics and tolerance. |
 | Reproduce selected quantitative results | [Model reproduction](../contracts/model-reproduction.md) | Exact source/input selection, environment, reference outputs, comparison policy and execution limits. |
-| Review counterparty exposure | [Counterparty exposure](../contracts/counterparty-exposure.md) | Exposure definition, horizons, netting-set mappings, recognition evidence, collateral allocations and calculation criteria. |
+| Review counterparty exposure | [Option consistency](../examples/option-consistency/README.md) | Calibration review, implementation review | Individual quote fit does not establish joint consistency; calculation assumptions cannot fill missing instrument terms. |
+| [Counterparty exposure](../contracts/counterparty-exposure.md) | Exposure definition, horizons, netting-set mappings, recognition evidence, collateral allocations and calculation criteria. |
 | Review credit-loss calculations | [Credit-loss review](../contracts/credit-loss-review.md) | Default probabilities, exposure/severity assumptions, loss timing, calculation evidence and criteria. |
 | Review optimization results | [Optimization review](../contracts/optimization-review.md) | Exact problem and variable identities, candidate, constraints, native diagnostics and acceptance criteria. |
 | Review implementation against its documented method | [Implementation review](../contracts/implementation-review.md) | Method conventions, exact implementation, required tests, observations and acceptance criteria. |
@@ -120,3 +121,7 @@ The [statistical-evidence composition](../examples/backtest-statistics/README.md
 The [Basel Framework CRE52 version in force January 1, 2023](https://www.bis.org/committees/bcbs/basel-framework/standard/cre/52/inforce/2023-01-01/published/2020-06-05), paragraphs 52.1 and 52.6–52.12, illustrates why netting-set scope and collateral recognition matter. This contract does not implement that standard or establish its jurisdictional applicability. The caller supplies the method and governing requirements.
 
 The [worked exposure composition](../examples/exposure-review/README.md) retains nine SQL constructions over six trades and six collateral records. Its three cases separate actual choices from selected requirements, including one unavailable eligibility binding. A report can retain known breaches and conditional calculations without inventing recognition evidence. The reference is authored and agent execution remains unqualified.
+
+## Option quote consistency
+
+The [option reporting composition](../examples/option-consistency/README.md) reuses calibration, implementation and numerical-evidence requirements. It preserves ten quote inversions, twelve strategy payoffs and 36 spread-dependent costs. A close fit can coexist with a joint-price violation; a negative portfolio cost can coexist with a possible terminal loss. The missing-underlying packet preserves calculations while limiting their applicability to selected instruments. No new definition is required, and agent execution remains unqualified.

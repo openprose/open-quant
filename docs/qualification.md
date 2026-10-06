@@ -177,3 +177,9 @@ At the component checkpoint `ea9b138`, no worked report or agent execution was s
 The [exposure/implementation report](../examples/exposure-review/README.md) preserves all nine constructions and their 24 native group rows. Public source `d09559f` reproduces all numerical inputs, query text, values, references and 142 controls exactly; timestamp/duration and explicitly rebound source/plan identities are recorded separately.
 
 Complete, missing-eligibility and contradictory packets retain actual calculation inputs separately from the selected method. Withholding C2's selected eligibility leaves its observed true flag and all outputs intact; the flag cannot establish the missing requirement. Seventeen adverse mutations and boundary/unknown controls check the fixed packets. The reference is authored; no agent has executed or assessed the program. Neither a numerical match nor a complete report establishes actual legal recognition, regulatory EAD or financial approval.
+
+## Option-consistency composition
+
+The [option fit and consistency report](../examples/option-consistency/README.md) composes existing calibration and implementation requirements. Public source `30aa95e` reproduces every numerical observation and all 111 controls from the fixed study. New timestamp/duration and explicitly rebound source/plan identities are retained separately. No definition or package-content change is needed.
+
+Complete, missing-underlying and contradictory packets retain all ten native inversions, twelve strategies and 36 costs. One missing selected instrument identity limits joint-payoff applicability without erasing mathematical calculations under the original assumptions. The authored reference is not an observed agent result. Eighteen adverse mutations test fixed evidence, not general language interpretation, actual market arbitrage or savings.
