@@ -10,6 +10,7 @@ This package contains contract definitions, its manifest and the license. It doe
 | Ground a report | [Claim evidence](contracts/claim-evidence.md), [numerical evidence](contracts/numerical-evidence.md), [institutional facts](contracts/institutional-facts.md), [operating report](contracts/operating-report.md) |
 | Assess a result | [Assessment](contracts/assessment.md) |
 | Produce calculation evidence | [Model reproduction](contracts/model-reproduction.md) |
+| Review counterparty exposure | [Counterparty exposure](contracts/counterparty-exposure.md) |
 | Review credit-loss calculations | [Credit-loss review](contracts/credit-loss-review.md) |
 | Review optimization results | [Optimization review](contracts/optimization-review.md) |
 | Review implementation and use | [Implementation](contracts/implementation-review.md), [simulation](contracts/simulation-review.md), [inventory](contracts/model-inventory.md), [vendor evidence](contracts/vendor-model-review.md) |

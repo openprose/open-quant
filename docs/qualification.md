@@ -165,3 +165,9 @@ The 931-word complete-case reference is authored. Fixed checks preserve the one 
 The [exception-statistics report](../examples/backtest-statistics/README.md) retains all six constructed sequences and separately specified frequency, uncertainty and clustering questions. Public source `4e35fd8` reproduces all numerical observations and 61 controls exactly. Timestamp/duration and explicitly rebound source/plan identities are excluded from that comparison. These indicators do not establish forecast availability, pairing or regulatory eligibility.
 
 Three packets and an authored reference distinguish complete evidence, one missing ordered sequence and conflicting producer assertions. The missing case preserves supplied aggregate counts and native statistics without claiming that a reported block count verifies actual timing. The fixed-record checker rejects seventeen adverse mutations and checks the strict significance boundary. No agent has executed or assessed this program; source checks do not establish statistical-model adequacy or arbitrary reporting fulfillment.
+
+## Counterparty-exposure component
+
+[Counterparty-exposure review](../contracts/counterparty-exposure.md) adds twelve authored distinguishing cases for netting-set membership, recognition evidence, collateral treatment, aggregation order and exposure meaning. It composes existing reporting and numerical-evidence requirements. Earlier definitions and examples are preserved.
+
+The component has no worked report or agent execution at this checkpoint. The catalog now has 29 definitions across twenty-one operating domains; prior worked-report qualification remains unchanged. Source and package checks establish their stated mechanical properties, not legal enforceability, regulatory compliance, model adequacy or arbitrary contract fulfillment.

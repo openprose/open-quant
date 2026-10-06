@@ -8,6 +8,7 @@
     "contracts/calibration-review.md",
     "contracts/cashflow-review.md",
     "contracts/claim-evidence.md",
+    "contracts/counterparty-exposure.md",
     "contracts/credit-loss-review.md",
     "contracts/dependence-review.md",
     "contracts/documentation.md",
@@ -63,7 +64,8 @@
     "cashflow-review": "contracts/cashflow-review.md",
     "model-reproduction": "contracts/model-reproduction.md",
     "optimization-review": "contracts/optimization-review.md",
-    "credit-loss-review": "contracts/credit-loss-review.md"
+    "credit-loss-review": "contracts/credit-loss-review.md",
+    "counterparty-exposure": "contracts/counterparty-exposure.md"
   },
   "dependencies": {}
 }

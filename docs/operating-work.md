@@ -11,6 +11,7 @@ The operating contracts turn supplied model records and house policy into review
 | Identify input-quality and lineage gaps | [Model data](../contracts/model-data.md) | Source/input snapshots, transformations and quality criteria. |
 | Explain the evidence for a calibration | [Calibration review](../contracts/calibration-review.md) | Targets, fitted values, conventions, diagnostics and tolerance. |
 | Reproduce selected quantitative results | [Model reproduction](../contracts/model-reproduction.md) | Exact source/input selection, environment, reference outputs, comparison policy and execution limits. |
+| Review counterparty exposure | [Counterparty exposure](../contracts/counterparty-exposure.md) | Exposure definition, horizons, netting-set mappings, recognition evidence, collateral allocations and calculation criteria. |
 | Review credit-loss calculations | [Credit-loss review](../contracts/credit-loss-review.md) | Default probabilities, exposure/severity assumptions, loss timing, calculation evidence and criteria. |
 | Review optimization results | [Optimization review](../contracts/optimization-review.md) | Exact problem and variable identities, candidate, constraints, native diagnostics and acceptance criteria. |
 | Review implementation against its documented method | [Implementation review](../contracts/implementation-review.md) | Method conventions, exact implementation, required tests, observations and acceptance criteria. |
@@ -110,3 +111,9 @@ The [portfolio-tail composition](../examples/portfolio-tail-review/README.md) co
 ## Exception frequency and timing
 
 The [statistical-evidence composition](../examples/backtest-statistics/README.md) reuses backtesting and its adopted reporting requirements. Six constructed sequences retain separate excess-frequency tests, probability intervals and conditional clustering calculations. Complete, missing-order and contradictory packets distinguish a reported statistic from evidence supporting its sequence. The example supplements the earlier P&L/availability case; no new definition or package change is needed. It remains agent-unqualified.
+
+## Counterparty exposure
+
+[Counterparty-exposure review](../contracts/counterparty-exposure.md) binds the measure, recognized groups and collateral offsets, with [authored distinguishing cases](../tests/cases/counterparty-exposure.md). It preserves the difference between stipulated assumptions, supported institutional recognition and missing facts. Current exposure is not automatically future exposure or regulatory EAD. The definition composes existing reporting and numerical-evidence requirements; it does not supply a financial formula, legal opinion or permission to move collateral.
+
+The [Basel Framework CRE52 version in force January 1, 2023](https://www.bis.org/committees/bcbs/basel-framework/standard/cre/52/inforce/2023-01-01/published/2020-06-05), paragraphs 52.1 and 52.6–52.12, illustrates why netting-set scope and collateral recognition matter. This contract does not implement that standard or establish its jurisdictional applicability. The caller supplies the method and governing requirements.
