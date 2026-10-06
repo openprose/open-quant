@@ -12,7 +12,7 @@ This package contains contract definitions, its manifest and the license. It doe
 | Review implementation and use | [Implementation](contracts/implementation-review.md), [simulation](contracts/simulation-review.md), [inventory](contracts/model-inventory.md), [vendor evidence](contracts/vendor-model-review.md) |
 | Review inputs and changes | [Model data](contracts/model-data.md), [dependence](contracts/dependence-review.md), [calibration](contracts/calibration-review.md), [change impact](contracts/model-change.md) |
 | Monitor and follow up | [Monitoring](contracts/model-monitoring.md), [limitations and remediation](contracts/limitations-and-remediation.md) |
-| Explain values and results | [Valuation comparison](contracts/valuation-comparison.md), [P&L explanation](contracts/pnl-explanation.md), [outcomes](contracts/outcomes-analysis.md) |
+| Explain values and results | [Cash flows](contracts/cashflow-review.md), [Valuation comparison](contracts/valuation-comparison.md), [P&L explanation](contracts/pnl-explanation.md), [outcomes](contracts/outcomes-analysis.md) |
 | Examine risk evidence | [Backtesting](contracts/backtesting.md), [sensitivities](contracts/sensitivity-review.md), [scenarios](contracts/scenario-review.md) |
 
 The default export is the full-documentation contract. Named exports locate individual definitions; importing a package does not execute them. A report may satisfy several contracts without requiring a separate agent or file for each. A fulfilled report can identify adverse findings or missing evidence; it does not thereby approve a model or establish regulatory compliance.

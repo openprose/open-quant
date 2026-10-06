@@ -99,3 +99,9 @@ The reference report is authored and the execution route remains unqualified. Fi
 The [selection review](../examples/selection-review/README.md) reuses outcomes analysis and model data, adding no definition. Its owned numerical source reproduces the separately retained fixed-score study exactly. The public packet selects replicate 0 at K=64 by index, not favorable outcome; every other study replicate remains outside the report scope. Missing-evaluation and contradictory packets are authored modifications of the supplied evidence, not new score calculations.
 
 The reference is authored, and no agent has executed or assessed the program. Controls establish fixed identities, score comparisons, family-tail arithmetic and selected adverse cases; they do not establish performance of an investment strategy or arbitrary contract fulfillment. All 24 definitions, earlier examples and the 27-file component package remain unchanged.
+
+## Cash-flow review proposal
+
+The cash-flow component adds instrument terms, accrual/payment distinctions, flow identity and settlement-inclusion requirements. Eight authored cases distinguish supported findings, missing evidence and contradictions. It has no worked report or agent execution yet. A close aggregate valuation cannot establish payment-date correctness, and modeled obligations do not establish actual payment.
+
+The candidate now contains 25 definitions and 28 selected package files. Existing definitions and examples are unchanged. Previous package and runtime observations retain their exact historical scope; source/package checks do not establish semantic fulfillment or financial suitability.

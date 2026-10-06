@@ -6,6 +6,7 @@
     "contracts/assessment.md",
     "contracts/backtesting.md",
     "contracts/calibration-review.md",
+    "contracts/cashflow-review.md",
     "contracts/claim-evidence.md",
     "contracts/dependence-review.md",
     "contracts/documentation.md",
@@ -55,7 +56,8 @@
     "implementation-review": "contracts/implementation-review.md",
     "README": "PACKAGE.md",
     "simulation-review": "contracts/simulation-review.md",
-    "dependence-review": "contracts/dependence-review.md"
+    "dependence-review": "contracts/dependence-review.md",
+    "cashflow-review": "contracts/cashflow-review.md"
   },
   "dependencies": {}
 }

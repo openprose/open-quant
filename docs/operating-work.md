@@ -13,6 +13,7 @@ The operating contracts turn supplied model records and house policy into review
 | Review implementation against its documented method | [Implementation review](../contracts/implementation-review.md) | Method conventions, exact implementation, required tests, observations and acceptance criteria. |
 | Review dependence inputs and adjustments | [Dependence review](../contracts/dependence-review.md) | Variables and order, dependence inputs, estimation populations, joint diagnostics, intended use and adjustment criteria. |
 | Review simulation precision and assumptions | [Simulation review](../contracts/simulation-review.md) | Target quantity, sampling design, uncertainty method, observations and precision criteria. |
+| Review instrument cash-flow evidence | [Cash-flow review](../contracts/cashflow-review.md) | Selected terms, flow population, schedules, dates, conventions and review criteria. |
 | Explain differences between valuations | [Valuation comparison](../contracts/valuation-comparison.md) | Positions, prices, source provenance, conventions and tolerance. |
 | Compare predictions with observed outcomes | [Outcomes analysis](../contracts/outcomes-analysis.md) | Dated predictions/outcomes, pairing rules, metrics and evaluation scope. |
 | Account for risk-model backtest exceptions | [Backtesting](../contracts/backtesting.md) | Forecasts, outcome series, timing, sign conventions and exception policy. |
@@ -60,6 +61,10 @@ The components support preparing evidence for these activities. They do not esta
 
 ## Dependence review
 
-[Dependence review](../contracts/dependence-review.md) has [authored distinguishing cases](../tests/cases/dependence-review.md) and a [worked data composition](../examples/dependence-review/README.md). This brings the catalog to sixteen operating domains and twelve worked operating reports; it does not establish agent qualification. Compose it with model data for lineage questions, implementation review for method conformance, or simulation review for how dependence enters simulated results.
+[Dependence review](../contracts/dependence-review.md) has [authored distinguishing cases](../tests/cases/dependence-review.md) and a [worked data composition](../examples/dependence-review/README.md). Together with cash-flow review, the catalog has seventeen operating domains and twelve worked operating reports; it does not establish agent qualification. Compose it with model data for lineage questions, implementation review for method conformance, or simulation review for how dependence enters simulated results.
 
 [R's correlation documentation](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cor.html), Details, explains why pairwise-complete estimates can be non-PSD. [Nick Higham's correlation-matrix overview](https://nhigham.com/2020/04/14/what-is-a-correlation-matrix/) explains joint admissibility and constrained adjustment problems. These primary sources support the component's mathematical distinctions, not institutional acceptance rules. The illustrative thresholds remain caller policy; mathematical validity alone does not establish economic suitability.
+
+## Cash-flow review
+
+[Cash-flow review](../contracts/cashflow-review.md) has [authored distinguishing cases](../tests/cases/cashflow-review.md). It preserves accrual terms, payment dates, flow identity, valuation inclusion and actual-payment evidence as separate questions. Compose it with valuation comparison for a valuation report or model data for lineage questions. A generated schedule is not a payment confirmation or a ledger reconciliation. This component has no worked report or agent qualification yet.

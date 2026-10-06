@@ -4,7 +4,7 @@ Open Quant has two delivery scopes. The [component package](../PACKAGE.md) conta
 
 ## Component package
 
-[prose-package.json](../prose-package.json) selects all 24 contract definitions, the consumer entry document, license and manifest: 27 files. Existing definitions retain their paths and bytes; the dependence-review definition is added, so local adoption links resolve without rewriting. The kernel and agent harness remain supplied by the caller's runtime. No package builder, copied source tree or private dependency is required.
+[prose-package.json](../prose-package.json) selects all 25 contract definitions, the consumer entry document, license and manifest: 28 files. Existing definitions retain their paths and bytes; the cashflow-review definition is added, so local adoption links resolve without rewriting. The kernel and agent harness remain supplied by the caller's runtime. No package builder, copied source tree or private dependency is required.
 
 The proposed identity remains `openprose/open-quant@0.1.0-rc.1`, prepared for review and **not published**. This candidate changes delivery scope before any release: example exports such as `sofr-decision`, `sofr-assessment` and `monitoring-review` are absent. The default export remains full documentation; named component exports still locate their definitions. `README` points to the included consumer entry document.
 
