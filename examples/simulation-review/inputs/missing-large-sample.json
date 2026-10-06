@@ -1,0 +1,123 @@
+{
+  "case": "missing-large-sample",
+  "study": "BLACK-SIMULATION-2026-10-06",
+  "source_sha256": "bf2ad76d9bbfa2884365b028d99d75b33349a43ed266a231cc7970478cf7e19d",
+  "inputs": {
+    "forward_usd": 100.0,
+    "strike_usd": 100.0,
+    "annual_volatility": 0.3,
+    "expiry_years": 2.0,
+    "continuous_rate": 0.05
+  },
+  "target_units": "present-value USD per underlying unit",
+  "discount": 0.9048374180359595,
+  "intended_target_price": 15.200904102677832,
+  "undiscounted_target_price": 16.79959714273634,
+  "rng": {
+    "algorithm": "PCG64DXSM",
+    "root_seed": 2026100601,
+    "spawning": "SeedSequence.spawn(64), sequential"
+  },
+  "observations": [
+    {
+      "replicate": 0,
+      "spawn_key": [
+        0
+      ],
+      "sample_size": 4096,
+      "draws_sha256": "5a0073fb7ef82d9eff5be0283b19a24a81f5ac14f0f8cb669aae0705b31ceed0",
+      "payoffs_sha256": "5ddf1c73860d703f04059f3f7f3a5f87dee682519fc1b81633be636db62348bc",
+      "array_encoding": "little-endian float64, contiguous C order",
+      "known_independent_units": 4096,
+      "views": {
+        "independent_units": {
+          "recorded_rows": 4096,
+          "units_used_for_uncertainty": 4096,
+          "mean": 15.00410689923914,
+          "sample_variance": 845.225961193208,
+          "ddof": 1,
+          "standard_error": 0.45426203278717403,
+          "critical_t": 1.9605434621072302,
+          "degrees_of_freedom": 4095,
+          "nominal_confidence": 0.95,
+          "interval": [
+            14.113506440774707,
+            15.894707357703574
+          ],
+          "contains_intended_target": true,
+          "contains_actual_target": true,
+          "intended_target_error": -0.19679720343869178
+        },
+        "duplicated_naive": {
+          "recorded_rows": 8192,
+          "units_used_for_uncertainty": 8192,
+          "mean": 15.00410689923914,
+          "sample_variance": 845.1227715996062,
+          "ddof": 1,
+          "standard_error": 0.32119215561721,
+          "critical_t": 1.960253645857811,
+          "degrees_of_freedom": 8191,
+          "nominal_confidence": 0.95,
+          "interval": [
+            14.374488805169575,
+            15.633724993308705
+          ],
+          "contains_intended_target": true,
+          "contains_actual_target": true,
+          "intended_target_error": -0.19679720343869178
+        },
+        "duplicated_grouped": {
+          "recorded_rows": 8192,
+          "units_used_for_uncertainty": 4096,
+          "mean": 15.00410689923914,
+          "sample_variance": 845.225961193208,
+          "ddof": 1,
+          "standard_error": 0.45426203278717403,
+          "critical_t": 1.9605434621072302,
+          "degrees_of_freedom": 4095,
+          "nominal_confidence": 0.95,
+          "interval": [
+            14.113506440774707,
+            15.894707357703574
+          ],
+          "contains_intended_target": true,
+          "contains_actual_target": true,
+          "intended_target_error": -0.19679720343869178
+        },
+        "omitted_discount": {
+          "recorded_rows": 4096,
+          "units_used_for_uncertainty": 4096,
+          "mean": 16.58210259673728,
+          "sample_variance": 1032.3613202699655,
+          "ddof": 1,
+          "standard_error": 0.5020371878223112,
+          "critical_t": 1.9605434621072302,
+          "degrees_of_freedom": 4095,
+          "nominal_confidence": 0.95,
+          "interval": [
+            15.597836870417547,
+            17.56636832305701
+          ],
+          "contains_intended_target": false,
+          "contains_actual_target": true,
+          "intended_target_error": 1.381198494059447
+        }
+      },
+      "algebraic_discrepancies": {
+        "duplicate_mean": 0.0,
+        "grouped_mean": 0.0,
+        "grouped_variance": 0.0,
+        "grouped_standard_error": 0.0,
+        "duplicate_standard_error_ratio": 1.1102230246251565e-16,
+        "omitted_discount_mean": 0.0,
+        "omitted_discount_variance": 4.547473508864641e-13,
+        "omitted_discount_standard_error": 1.1102230246251565e-16
+      }
+    }
+  ],
+  "projection_note": "Replicate 0 is selected by index, not performance. The full observed calculation has 64 replicates at both sizes. This packet supplies only the selected records; absent records do not establish unperformed calculation.",
+  "producer_claim": {
+    "origin": "Authored annotation, not a calculation output.",
+    "text": "Use the supplied observations and documented construction to assess each selected requirement."
+  }
+}

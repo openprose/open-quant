@@ -88,3 +88,15 @@ These are authored interpretation cases for [implementation review](../../contra
 **Disputed observer result.** A numerical cross-check initially disagrees with an implementation's analytical integral. Retained refinement changes the numerical measurement while the subject source and inputs stay fixed, bringing the values into agreement. A report must account for that evidence before declaring a subject defect or proposing a repair. The refined check supports its observed scope, not a blanket conclusion that the observer or implementation is always correct.
 
 **Shared convention error.** Two implementations agree after receiving inputs from the same adapter, but the adapter maps the documented quantities incorrectly. Their price agreement does not establish the required convention. Distinguish comparison independence from separate function or provider names, and identify the unsupported mapping.
+
+## Simulation review
+
+These are authored interpretation cases for [simulation review](../../contracts/simulation-review.md), not agent judgments.
+
+- In the worked complete packet, independent_units and duplicated_grouped meet the selected target, uncertainty and larger-sample precision requirements. Duplicated_naive has a small numerical standard error but uses a known invalid independence assumption. Omitted_discount has a valid sampling calculation for a different target. Neither adverse finding is cleared by a number below 0.30.
+- Without the larger-sample record, precision for the otherwise supported views is unresolved. Known method or target violations remain visible; extrapolating an observed result from a smaller prefix is not a substitute for the required observation.
+- A favorable producer label in contradictory does not change the same underlying findings. An accurate report can fulfill its reporting contract while recording these adverse results.
+- A correctly constructed nominal interval misses its reference on one realized draw. That alone is not evidence of a defective uncertainty method. Review its design and repeated-sampling interpretation; do not require a 95% procedure to cover every run.
+- A packet describes quasi-random or adaptively stopped samples but supplies only the ordinary independent-sample standard-error formula. Without support for that formula under the selected design, the reported interval cannot establish the requested precision. Do not invent an effective sample size or repair the sampling procedure.
+
+The last two cases are conceptual authored checks, not additional performed numerical experiments. The deterministic script checks the worked packets and selected mutations; it does not evaluate these prose cases.

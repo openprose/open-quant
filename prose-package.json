@@ -23,6 +23,7 @@
     "contracts/pnl-explanation.md",
     "contracts/scenario-review.md",
     "contracts/sensitivity-review.md",
+    "contracts/simulation-review.md",
     "contracts/valuation-comparison.md",
     "contracts/vendor-model-review.md",
     "prose-package.json"
@@ -51,7 +52,8 @@
     "vendor-model-review": "contracts/vendor-model-review.md",
     "backtesting": "contracts/backtesting.md",
     "implementation-review": "contracts/implementation-review.md",
-    "README": "PACKAGE.md"
+    "README": "PACKAGE.md",
+    "simulation-review": "contracts/simulation-review.md"
   },
   "dependencies": {}
 }
