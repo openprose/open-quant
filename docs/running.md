@@ -85,3 +85,7 @@ From the source repository, run `prose run examples/pricing-probabilities/progra
 ## Exposure/default dependence
 
 From the source repository, run `prose run examples/exposure-default/program.md complete`, replacing `complete` with `missing-joint` or `contradictory` for the other selections. The [example guide](../examples/exposure-default/README.md) provides the assessment invocation and distinguishes prepared-evidence reporting from optional numerical reproduction. Agent execution remains unqualified.
+
+## Calibration identification
+
+From the source repository, run `prose run examples/calibration-identification/program.md complete`, replacing `complete` with `missing-allocation` or `contradictory` for the other selections. The [example guide](../examples/calibration-identification/README.md) gives its assessment invocation. Reporting reads prepared evidence; optional numerical reproduction is separate. Agent execution remains unqualified.

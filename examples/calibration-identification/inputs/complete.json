@@ -1,0 +1,747 @@
+{
+  "study": "calibration-identification",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "quantlib": "1.43",
+    "platform": "macOS-26.6.1-arm64-arm-64bit"
+  },
+  "inputs": {
+    "A": [
+      [
+        0.5,
+        0.5,
+        0
+      ],
+      [
+        0.5,
+        0.5,
+        1
+      ]
+    ],
+    "b": [
+      0.04,
+      0.09
+    ],
+    "bounds": {
+      "lower": [
+        0,
+        0,
+        0
+      ],
+      "upper": null
+    },
+    "forward_USD": 100,
+    "strike_USD": 100,
+    "discount": 1,
+    "original_data_fit_tolerance": 1e-10,
+    "regularization_weight": 1
+  },
+  "witnesses": [
+    {
+      "id": "C1",
+      "variance_rates": [
+        0,
+        0.08,
+        0.05
+      ],
+      "exact_rates": [
+        "0",
+        "2/25",
+        "1/20"
+      ],
+      "original_data_residual": [
+        0,
+        0
+      ],
+      "points": [
+        {
+          "maturity_years": 0.5,
+          "total_variance": 0,
+          "exact_variance": "0",
+          "formula_defined": true,
+          "quantlib_call": 0,
+          "erf_call": 0,
+          "total_stddev": 0
+        },
+        {
+          "maturity_years": 1,
+          "total_variance": 0.04,
+          "exact_variance": "1/25",
+          "formula_defined": true,
+          "quantlib_call": 7.9655674554058,
+          "erf_call": 7.965567455405795,
+          "total_stddev": 0.2
+        },
+        {
+          "maturity_years": 1.5,
+          "total_variance": 0.065,
+          "exact_variance": "13/200",
+          "formula_defined": true,
+          "quantlib_call": 10.143592723785869,
+          "erf_call": 10.143592723785869,
+          "total_stddev": 0.25495097567963926
+        },
+        {
+          "maturity_years": 2,
+          "total_variance": 0.09,
+          "exact_variance": "9/100",
+          "formula_defined": true,
+          "quantlib_call": 11.923538474048499,
+          "erf_call": 11.9235384740485,
+          "total_stddev": 0.3
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "variance_rates": [
+        0.04,
+        0.04,
+        0.05
+      ],
+      "exact_rates": [
+        "1/25",
+        "1/25",
+        "1/20"
+      ],
+      "original_data_residual": [
+        0,
+        0
+      ],
+      "points": [
+        {
+          "maturity_years": 0.5,
+          "total_variance": 0.02,
+          "exact_variance": "1/50",
+          "formula_defined": true,
+          "quantlib_call": 5.637197779701665,
+          "erf_call": 5.637197779701662,
+          "total_stddev": 0.1414213562373095
+        },
+        {
+          "maturity_years": 1,
+          "total_variance": 0.04,
+          "exact_variance": "1/25",
+          "formula_defined": true,
+          "quantlib_call": 7.9655674554058,
+          "erf_call": 7.965567455405795,
+          "total_stddev": 0.2
+        },
+        {
+          "maturity_years": 1.5,
+          "total_variance": 0.065,
+          "exact_variance": "13/200",
+          "formula_defined": true,
+          "quantlib_call": 10.143592723785869,
+          "erf_call": 10.143592723785869,
+          "total_stddev": 0.25495097567963926
+        },
+        {
+          "maturity_years": 2,
+          "total_variance": 0.09,
+          "exact_variance": "9/100",
+          "formula_defined": true,
+          "quantlib_call": 11.923538474048499,
+          "erf_call": 11.9235384740485,
+          "total_stddev": 0.3
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "variance_rates": [
+        0.08,
+        0,
+        0.05
+      ],
+      "exact_rates": [
+        "2/25",
+        "0",
+        "1/20"
+      ],
+      "original_data_residual": [
+        0,
+        0
+      ],
+      "points": [
+        {
+          "maturity_years": 0.5,
+          "total_variance": 0.04,
+          "exact_variance": "1/25",
+          "formula_defined": true,
+          "quantlib_call": 7.9655674554058,
+          "erf_call": 7.965567455405795,
+          "total_stddev": 0.2
+        },
+        {
+          "maturity_years": 1,
+          "total_variance": 0.04,
+          "exact_variance": "1/25",
+          "formula_defined": true,
+          "quantlib_call": 7.9655674554058,
+          "erf_call": 7.965567455405795,
+          "total_stddev": 0.2
+        },
+        {
+          "maturity_years": 1.5,
+          "total_variance": 0.065,
+          "exact_variance": "13/200",
+          "formula_defined": true,
+          "quantlib_call": 10.143592723785869,
+          "erf_call": 10.143592723785869,
+          "total_stddev": 0.25495097567963926
+        },
+        {
+          "maturity_years": 2,
+          "total_variance": 0.09,
+          "exact_variance": "9/100",
+          "formula_defined": true,
+          "quantlib_call": 11.923538474048499,
+          "erf_call": 11.9235384740485,
+          "total_stddev": 0.3
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "variance_rates": [
+        -0.01,
+        0.09,
+        0.05
+      ],
+      "exact_rates": [
+        "-1/100",
+        "9/100",
+        "1/20"
+      ],
+      "original_data_residual": [
+        0,
+        0
+      ],
+      "points": [
+        {
+          "maturity_years": 0.5,
+          "total_variance": -0.005,
+          "exact_variance": "-1/200",
+          "formula_defined": false,
+          "quantlib_call": null,
+          "erf_call": null,
+          "total_stddev": null
+        },
+        {
+          "maturity_years": 1,
+          "total_variance": 0.04,
+          "exact_variance": "1/25",
+          "formula_defined": true,
+          "quantlib_call": 7.9655674554058,
+          "erf_call": 7.965567455405795,
+          "total_stddev": 0.2
+        },
+        {
+          "maturity_years": 1.5,
+          "total_variance": 0.065,
+          "exact_variance": "13/200",
+          "formula_defined": true,
+          "quantlib_call": 10.143592723785869,
+          "erf_call": 10.143592723785869,
+          "total_stddev": 0.25495097567963926
+        },
+        {
+          "maturity_years": 2,
+          "total_variance": 0.09,
+          "exact_variance": "9/100",
+          "formula_defined": true,
+          "quantlib_call": 11.923538474048499,
+          "erf_call": 11.9235384740485,
+          "total_stddev": 0.3
+        }
+      ]
+    }
+  ],
+  "solves": [
+    {
+      "id": "S1",
+      "variance_rates": [
+        0.03999999999999999,
+        0.039999999999999994,
+        0.04999999999999998
+      ],
+      "exact_rates": null,
+      "original_data_residual": [
+        -6.938893903907228e-18,
+        -2.7755575615628914e-17
+      ],
+      "points": [
+        {
+          "maturity_years": 0.5,
+          "total_variance": 0.019999999999999993,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 5.637197779701665,
+          "erf_call": 5.637197779701661,
+          "total_stddev": 0.14142135623730948
+        },
+        {
+          "maturity_years": 1,
+          "total_variance": 0.039999999999999994,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 7.9655674554058,
+          "erf_call": 7.965567455405793,
+          "total_stddev": 0.19999999999999998
+        },
+        {
+          "maturity_years": 1.5,
+          "total_variance": 0.06499999999999999,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 10.143592723785869,
+          "erf_call": 10.143592723785865,
+          "total_stddev": 0.2549509756796392
+        },
+        {
+          "maturity_years": 2,
+          "total_variance": 0.08999999999999997,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 11.923538474048499,
+          "erf_call": 11.923538474048499,
+          "total_stddev": 0.29999999999999993
+        }
+      ],
+      "preference_target": null,
+      "preference_target_exact": null,
+      "preference_residual": null,
+      "system_rank": 2,
+      "native": {
+        "success": true,
+        "status": 3,
+        "message": "The unconstrained solution is optimal.",
+        "x": [
+          0.03999999999999999,
+          0.039999999999999994,
+          0.04999999999999998
+        ],
+        "cost": 4.092601131822876e-34,
+        "fun": [
+          -6.938893903907228e-18,
+          -2.7755575615628914e-17
+        ],
+        "optimality": 2.7755575615628914e-17,
+        "active_mask": [
+          0,
+          0,
+          0
+        ],
+        "nit": 0,
+        "unbounded_sol": [
+          [
+            0.03999999999999999,
+            0.039999999999999994,
+            0.04999999999999998
+          ],
+          [],
+          2,
+          [
+            1.3065629648763766,
+            0.541196100146197
+          ]
+        ]
+      }
+    },
+    {
+      "id": "S2",
+      "variance_rates": [
+        0.010000000000000012,
+        0.07,
+        0.05000000000000002
+      ],
+      "exact_rates": null,
+      "original_data_residual": [
+        6.938893903907228e-18,
+        2.7755575615628914e-17
+      ],
+      "points": [
+        {
+          "maturity_years": 0.5,
+          "total_variance": 0.005000000000000006,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 2.820360330432804,
+          "erf_call": 2.8203603304328024,
+          "total_stddev": 0.0707106781186548
+        },
+        {
+          "maturity_years": 1,
+          "total_variance": 0.04000000000000001,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 7.9655674554058,
+          "erf_call": 7.965567455405795,
+          "total_stddev": 0.2
+        },
+        {
+          "maturity_years": 1.5,
+          "total_variance": 0.06500000000000002,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 10.143592723785869,
+          "erf_call": 10.143592723785869,
+          "total_stddev": 0.25495097567963926
+        },
+        {
+          "maturity_years": 2,
+          "total_variance": 0.09000000000000002,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 11.923538474048499,
+          "erf_call": 11.923538474048504,
+          "total_stddev": 0.30000000000000004
+        }
+      ],
+      "preference_target": -0.06,
+      "preference_target_exact": "-3/50",
+      "preference_residual": 0,
+      "system_rank": 3,
+      "native": {
+        "success": true,
+        "status": 3,
+        "message": "The unconstrained solution is optimal.",
+        "x": [
+          0.010000000000000012,
+          0.07,
+          0.05000000000000002
+        ],
+        "cost": 4.092601131822876e-34,
+        "fun": [
+          6.938893903907228e-18,
+          2.7755575615628914e-17,
+          0
+        ],
+        "optimality": 2.7755575615628914e-17,
+        "active_mask": [
+          0,
+          0,
+          0
+        ],
+        "nit": 0,
+        "unbounded_sol": [
+          [
+            0.010000000000000012,
+            0.07,
+            0.05000000000000002
+          ],
+          [],
+          3,
+          [
+            1.4142135623730951,
+            1.3065629648763764,
+            0.5411961001461968
+          ]
+        ]
+      }
+    },
+    {
+      "id": "S3",
+      "variance_rates": [
+        0.04000000000000002,
+        0.04,
+        0.049999999999999996
+      ],
+      "exact_rates": null,
+      "original_data_residual": [
+        6.938893903907228e-18,
+        0
+      ],
+      "points": [
+        {
+          "maturity_years": 0.5,
+          "total_variance": 0.02000000000000001,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 5.637197779701665,
+          "erf_call": 5.637197779701662,
+          "total_stddev": 0.14142135623730953
+        },
+        {
+          "maturity_years": 1,
+          "total_variance": 0.04000000000000001,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 7.9655674554058,
+          "erf_call": 7.965567455405795,
+          "total_stddev": 0.2
+        },
+        {
+          "maturity_years": 1.5,
+          "total_variance": 0.065,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 10.143592723785869,
+          "erf_call": 10.143592723785869,
+          "total_stddev": 0.25495097567963926
+        },
+        {
+          "maturity_years": 2,
+          "total_variance": 0.09,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 11.923538474048499,
+          "erf_call": 11.9235384740485,
+          "total_stddev": 0.3
+        }
+      ],
+      "preference_target": 0,
+      "preference_target_exact": "0",
+      "preference_residual": 2.0816681711721685e-17,
+      "system_rank": 3,
+      "native": {
+        "success": true,
+        "status": 3,
+        "message": "The unconstrained solution is optimal.",
+        "x": [
+          0.04000000000000002,
+          0.04,
+          0.049999999999999996
+        ],
+        "cost": 2.407412430484045e-34,
+        "fun": [
+          6.938893903907228e-18,
+          0,
+          2.0816681711721685e-17
+        ],
+        "optimality": 2.42861286636753e-17,
+        "active_mask": [
+          0,
+          0,
+          0
+        ],
+        "nit": 0,
+        "unbounded_sol": [
+          [
+            0.04000000000000002,
+            0.04,
+            0.049999999999999996
+          ],
+          [],
+          3,
+          [
+            1.4142135623730951,
+            1.3065629648763764,
+            0.5411961001461968
+          ]
+        ]
+      }
+    },
+    {
+      "id": "S4",
+      "variance_rates": [
+        0.07000000000000002,
+        0.010000000000000005,
+        0.04999999999999999
+      ],
+      "exact_rates": null,
+      "original_data_residual": [
+        1.3877787807814457e-17,
+        0
+      ],
+      "points": [
+        {
+          "maturity_years": 0.5,
+          "total_variance": 0.03500000000000001,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 7.452656612890008,
+          "erf_call": 7.452656612890003,
+          "total_stddev": 0.18708286933869708
+        },
+        {
+          "maturity_years": 1,
+          "total_variance": 0.040000000000000015,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 7.9655674554058,
+          "erf_call": 7.965567455405798,
+          "total_stddev": 0.20000000000000004
+        },
+        {
+          "maturity_years": 1.5,
+          "total_variance": 0.065,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 10.143592723785869,
+          "erf_call": 10.143592723785869,
+          "total_stddev": 0.25495097567963926
+        },
+        {
+          "maturity_years": 2,
+          "total_variance": 0.09,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 11.923538474048499,
+          "erf_call": 11.9235384740485,
+          "total_stddev": 0.3
+        }
+      ],
+      "preference_target": 0.06,
+      "preference_target_exact": "3/50",
+      "preference_residual": 1.3877787807814457e-17,
+      "system_rank": 3,
+      "native": {
+        "success": true,
+        "status": 3,
+        "message": "The unconstrained solution is optimal.",
+        "x": [
+          0.07000000000000002,
+          0.010000000000000005,
+          0.04999999999999999
+        ],
+        "cost": 1.925929944387236e-34,
+        "fun": [
+          1.3877787807814457e-17,
+          0,
+          1.3877787807814457e-17
+        ],
+        "optimality": 2.0816681711721685e-17,
+        "active_mask": [
+          0,
+          0,
+          0
+        ],
+        "nit": 0,
+        "unbounded_sol": [
+          [
+            0.07000000000000002,
+            0.010000000000000005,
+            0.04999999999999999
+          ],
+          [],
+          3,
+          [
+            1.4142135623730951,
+            1.3065629648763764,
+            0.5411961001461968
+          ]
+        ]
+      }
+    },
+    {
+      "id": "S5",
+      "variance_rates": [
+        0.09600000000000003,
+        4.21238193847438e-17,
+        0.041999999999999954
+      ],
+      "exact_rates": null,
+      "original_data_residual": [
+        0.008000000000000035,
+        0
+      ],
+      "points": [
+        {
+          "maturity_years": 0.5,
+          "total_variance": 0.048000000000000015,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 8.722938090343789,
+          "erf_call": 8.722938090343787,
+          "total_stddev": 0.21908902300206648
+        },
+        {
+          "maturity_years": 1,
+          "total_variance": 0.048000000000000036,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 8.722938090343789,
+          "erf_call": 8.722938090343789,
+          "total_stddev": 0.21908902300206654
+        },
+        {
+          "maturity_years": 1.5,
+          "total_variance": 0.069,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 10.449306055450604,
+          "erf_call": 10.449306055450599,
+          "total_stddev": 0.26267851073127396
+        },
+        {
+          "maturity_years": 2,
+          "total_variance": 0.09,
+          "exact_variance": null,
+          "formula_defined": true,
+          "quantlib_call": 11.923538474048499,
+          "erf_call": 11.9235384740485,
+          "total_stddev": 0.3
+        }
+      ],
+      "preference_target": 0.1,
+      "preference_target_exact": "1/10",
+      "preference_residual": -0.004000000000000017,
+      "system_rank": 3,
+      "native": {
+        "success": true,
+        "status": 1,
+        "message": "The first-order optimality measure is less than `tol`.",
+        "x": [
+          0.09600000000000003,
+          4.21238193847438e-17,
+          0.041999999999999954
+        ],
+        "cost": 0.00004000000000000035,
+        "fun": [
+          0.008000000000000035,
+          0,
+          -0.004000000000000017
+        ],
+        "optimality": 3.3699055507795186e-19,
+        "active_mask": [
+          0,
+          -1,
+          0
+        ],
+        "nit": 10,
+        "unbounded_sol": [
+          [
+            0.09000000000000004,
+            -0.009999999999999997,
+            0.049999999999999975
+          ],
+          [],
+          3,
+          [
+            1.4142135623730951,
+            1.3065629648763764,
+            0.5411961001461968
+          ]
+        ]
+      }
+    }
+  ],
+  "source_sha256": "2d22d662139a429dcdcd1bdffce9d7f097e033ee030383df8982792dc0c2a0bf",
+  "plan_sha256": "66aa15263276072af5f1480ddb307089f0a8bce291b4165059ceedb421e12962",
+  "analytical_reference": {
+    "original_rank": 2,
+    "number_of_rates": 3,
+    "original_singular_values": [
+      1.3065629648763766,
+      0.541196100146197
+    ],
+    "null_direction": [
+      1,
+      -1,
+      0
+    ],
+    "q1_plus_q2": "2/25",
+    "q3": "1/20",
+    "half_year_variance_bounds": [
+      "0",
+      "1/25"
+    ],
+    "one_half_year_variance": "13/200"
+  },
+  "case": "complete",
+  "producer_statements": []
+}

@@ -35,3 +35,4 @@ jobs:
       - run: python3 scripts/check_reverse_stress.py
       - run: python3 scripts/check_pricing_probabilities.py
       - run: python3 scripts/check_exposure_default.py
+      - run: python3 scripts/check_calibration_identification.py

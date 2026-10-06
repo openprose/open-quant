@@ -37,6 +37,7 @@ These operating reports have authored references and deterministic fixture check
 | [Monitoring](../examples/monitoring-review/README.md) | Monitoring, limitations and remediation | An adverse finding can be the correct result of fulfilled reporting. |
 | [Pricing probabilities](../examples/pricing-probabilities/README.md) | Model description, numerical evidence | Identical prices and replication do not identify physical probabilities; missing assumptions can leave pricing supported. |
 | [Exposure/default dependence](../examples/exposure-default/README.md) | Credit-loss review, dependence review | Identical marginals need not determine expected loss; product equality need not establish independence. |
+| [Calibration identification](../examples/calibration-identification/README.md) | Calibration review, optimization review | Exact fit can leave some outputs undetermined; regularization selects a result without adding observed data. |
 | [Valuation](../examples/valuation-review/README.md) | Valuation comparison, model data | Offsetting differences do not remove position-level exceptions. |
 | [Backtesting statistics](../examples/backtest-statistics/README.md) | Backtesting, outcomes analysis | Equal exception counts do not establish equal timing; missing order limits verification without erasing aggregate calculations. |
 | [Backtesting](../examples/backtesting-review/README.md) | Backtesting, outcomes analysis | Observed exceedances differ from policy treatment of missing data. |
@@ -141,3 +142,7 @@ The [reverse-stress composition](../examples/reverse-stress/README.md) reuses sc
 ## Pricing probabilities and intended use
 
 The [pricing-probability explanation](../examples/pricing-probabilities/README.md) composes model description and numerical evidence. Six prices and replicating positions remain identical under two physical probability models, while their event probabilities and expected payoffs differ. Complete, missing-world and contradictory packets preserve supported valuations alongside unavailable physical assumptions. This established mathematical distinction supplies a useful reporting case without adding a definition. Agent execution remains unqualified.
+
+## Calibration identification
+
+[The variance-curve example](../examples/calibration-identification/README.md) composes calibration and optimization review for four proposals and five native fits. Exact original-data fit, curve admissibility, native termination and uniqueness under a preference are different findings. Six-month values vary within the exact-fit family while eighteen-month values remain identified. An incompatible preference produces successful optimization but misses an original target. Missing-allocation evidence leaves a particular actual curve unverified without erasing family-level identities. The reference is authored and the reporting program remains agent-unqualified.
