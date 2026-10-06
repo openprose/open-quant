@@ -8,9 +8,11 @@ The caller identifies the subject artifacts, their governing contract and bindin
 
 ## Requirements
 
-Identify the exact subject, selected requirements and evidence assessed. Check each applicable requirement and report whether it is met, not met or unresolved, with supporting locators. Keep findings for composed contracts distinguishable. Do not introduce a preferred procedure, a new house policy or an unadopted source as an extra requirement.
+Identify the exact subject, selected requirements and evidence assessed. Check each applicable requirement and report whether it is met, not met or unresolved. Each finding must identify the requirement, the relevant subject content or omission, and supporting evidence locators. Keep findings for composed contracts distinguishable. Assess meaning within the document's stated scope; do not require repetition or a particular placement unless the agreement requires it. Do not introduce a preferred procedure, a new house policy or an unadopted source as an extra requirement.
 
-Distinguish a known violation from unavailable evidence. Check that evidence concerns the correct claim, result and revision. Report contradictions and limitations. A successful process exit, matching hash, citation or plausible document is insufficient by itself.
+Distinguish a known violation from unavailable evidence. Check that evidence concerns the correct claim, result and revision. Compare competing records for the same quantity under the same units, method, date and conditions. A finding of agreement or conflict must be supported by their actual values and bindings, not just matching labels or locators. Report unresolved conflicts and whether the subject disclosed them; do not silently select a preferred record without authority in the agreement. A successful process exit, matching hash, citation or plausible document is insufficient by itself.
+
+Distinguish evidence available during the subject's execution from evidence supplied afterward for assessment. Later evidence can establish facts about the run without establishing that the subject could access those facts. A violation based on failure to use available information requires evidence of that availability at the relevant time. If availability is unknown, report that limit rather than infer it from your own access.
 
 Distinguish a requirement to disclose a gap from a requirement to supply supported content. Fulfilling the first does not fulfill the second. A locator to absent evidence is not support; a proposed remedy must address the missing substance, not only its citation. Check the subject's fulfillment claim against your findings rather than accepting its self-assessment.
 
