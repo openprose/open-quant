@@ -36,3 +36,4 @@ jobs:
       - run: python3 scripts/check_pricing_probabilities.py
       - run: python3 scripts/check_exposure_default.py
       - run: python3 scripts/check_calibration_identification.py
+      - run: python3 scripts/check_periodic_review.py

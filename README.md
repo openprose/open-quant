@@ -90,6 +90,7 @@ python3 scripts/check_reverse_stress.py
 python3 scripts/check_pricing_probabilities.py
 python3 scripts/check_exposure_default.py
 python3 scripts/check_calibration_identification.py
+python3 scripts/check_periodic_review.py
 python3 -m unittest discover -s tests -v
 ```
 

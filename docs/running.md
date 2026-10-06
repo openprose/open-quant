@@ -89,3 +89,7 @@ From the source repository, run `prose run examples/exposure-default/program.md 
 ## Calibration identification
 
 From the source repository, run `prose run examples/calibration-identification/program.md complete`, replacing `complete` with `missing-allocation` or `contradictory` for the other selections. The [example guide](../examples/calibration-identification/README.md) gives its assessment invocation. Reporting reads prepared evidence; optional numerical reproduction is separate. Agent execution remains unqualified.
+
+## Periodic model review
+
+From the source repository, run `prose run examples/periodic-review/program.md complete`, replacing `complete` with `missing-baseline` or `contradictory` for the other selections. The [example guide](../examples/periodic-review/README.md) gives the common assessment invocation. These are authored synthetic operating records; no financial-model calculation is required or authorized. Agent execution remains unqualified.
