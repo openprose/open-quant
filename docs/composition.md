@@ -8,6 +8,7 @@ Start with the result you want. Supply its evidence, reader, house requirements 
 | Explain one supplied modeling choice | [Model decision](../contracts/model-decision.md) | Claim evidence, institutional facts |
 | Interpret supplied numerical results | [Numerical evidence](../contracts/numerical-evidence.md) | Claim evidence |
 | Produce full methodology documentation and supporting reports | [Documentation](../contracts/documentation.md) | Model description, numerical evidence, claim evidence, institutional facts |
+| Produce fresh calculation evidence within explicit limits | [Model reproduction](../contracts/model-reproduction.md) | Numerical evidence and its claim-evidence requirements |
 | Assess a selected result | [Assessment](../contracts/assessment.md) | The caller supplies the subject's requirements as the assessment basis |
 
 For example, a short model description can use model-description.md with your model brief, evidence and house style. Add numerical-evidence.md when you also want a numerical comparison interpreted. Bind its selected results and question explicitly. The two contracts can apply to sections of one artifact; they do not require two agents, separate files or a new workflow.
@@ -21,3 +22,42 @@ The [authored model-description cases](../tests/cases/model-description.md) and 
 For recurring quantitative operations, see [the operating-work catalog](operating-work.md). The [monitoring](../examples/monitoring-review/program.md) and [valuation](../examples/valuation-review/program.md) programs each compose two domain contracts into one report, with explicit caller policy and scope. Both are authored examples awaiting model-backed qualification.
 
 The [full SOFR methodology example](../examples/sofr-documentation/README.md) binds the documentation contract to an explicit public technical scope. It produces a document, combined supporting records and a result record. A missing-locality case demonstrates that completing gap reporting does not supply a mandatory result. Its [dedicated assessment](../examples/sofr-documentation/assess.md) checks each artifact's requirements separately; the reference output is authored and this composition is agent-unqualified.
+
+## Author a program for your own records
+
+In a source checkout, a monthly review can compose [monitoring](../contracts/model-monitoring.md) and [limitations and remediation](../contracts/limitations-and-remediation.md). Supply the model revisions, reporting period, expected observations, issue records and applicable policy in `inputs/monthly-review/`. The policy identifies thresholds, missing-data treatment, required responses and closure criteria. These are caller inputs; the library does not supply an institution's policy.
+
+Save a program such as this as `review.md` at the source-repository root. The paths below are relative to that root. This is an authoring sketch; the input directory and its contents are yours to supply.
+
+```markdown
+# Monthly model review
+
+Execute under the caller's selected OpenProse kernel. The working root is
+the directory containing this program.
+
+Adopt contracts/model-monitoring.md and
+contracts/limitations-and-remediation.md, including their adopted definitions,
+for one report to the model owner.
+
+Use only the records and policy in inputs/monthly-review/ for the model
+revisions, reporting period, expected observations, issues and review criteria.
+Identify missing bindings and preserve their effect on the findings.
+
+The report must account for monitoring results and outstanding issues,
+including exceptions, unsupported closure claims and unresolved evidence.
+An accurately reported open issue does not prevent fulfillment of this
+reporting obligation. No institutional approval is requested.
+
+Write report.md and result.md in a fresh directory under results/monthly-review/.
+Identify the requirements and evidence used, checks performed, remaining work,
+reporting fulfillment and the actual output path. Preserve earlier results.
+
+Reading supplied records and checking their arithmetic are permitted. Do not
+change inputs or policy, run financial models, close issues or notify owners.
+```
+
+With the inputs supplied and an authenticated harness configured through [the running guide](running.md), the invocation is `prose run review.md`. The sketch has not been executed or qualified. For a prepared input set, start with the [monitoring example](../examples/monitoring-review/README.md).
+
+The two contracts contribute different requirements to one report. A supported issue-closure conclusion would be an additional requested outcome, with the relevant closure criteria and evidence. Adding that outcome changes what fulfillment requires. It does not require a prescribed sequence of steps or another agent.
+
+For a component package installed elsewhere, use the actual selected contract locations and identities. This sketch's paths assume the source checkout; examples and input records are not distributed in the component package.

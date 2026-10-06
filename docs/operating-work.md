@@ -35,6 +35,7 @@ These operating reports have authored references and deterministic fixture check
 | Example | Composed requirements | Distinction to inspect |
 |---|---|---|
 | [Monitoring](../examples/monitoring-review/README.md) | Monitoring, limitations and remediation | An adverse finding can be the correct result of fulfilled reporting. |
+| [Pricing probabilities](../examples/pricing-probabilities/README.md) | Model description, numerical evidence | Identical prices and replication do not identify physical probabilities; missing assumptions can leave pricing supported. |
 | [Valuation](../examples/valuation-review/README.md) | Valuation comparison, model data | Offsetting differences do not remove position-level exceptions. |
 | [Backtesting statistics](../examples/backtest-statistics/README.md) | Backtesting, outcomes analysis | Equal exception counts do not establish equal timing; missing order limits verification without erasing aggregate calculations. |
 | [Backtesting](../examples/backtesting-review/README.md) | Backtesting, outcomes analysis | Observed exceedances differ from policy treatment of missing data. |
