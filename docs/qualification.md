@@ -1,5 +1,15 @@
 # Qualification status
 
+## October 6, 2026 native attendee rehearsal
+
+The [composition exercise](../examples/sofr-curve/COMPOSE.md) now has native Claude/API execution evidence on macOS ARM64 with Node 24.19.0, public Prose CLI 0.15.0-rc.2, Claude Code 2.1.243 and explicitly selected `claude-sonnet-5-5`. The global installation commands succeeded under an isolated prefix; subject directories were fresh public-source clones outside the developer workspace. This is one host/account, not a fresh physical machine or a platform matrix.
+
+At source `52ec72f`, two composition invocations produced the requested comparison table while retaining the original decision-note requirements. They took about 82 and 90 seconds; the earlier Sonnet base-program invocation took about 121 seconds. The supplied numerical record was documented, not recalculated. Both composition runs preserved inputs and recorded eleven verified requirement/input hashes.
+
+These are useful outputs, not unconditional fulfillment results: one misattributes a supported explanation to the wrong input file; another adds an unsupported SDK detail to its runtime record. Both put a title before the required opening disclaimer. An earlier Haiku configuration omitted required hashes and made unsupported materiality claims. That run changed both model and tool permissions relative to the later selection, so this is not a controlled model comparison. Retained failures remain part of the rehearsal record.
+
+The default public main branch still lacks the example, and no Open Quant registry package has been qualified here. Review and integrate the candidate, publish a selected package, then rehearse that exact attendee route before calling the workshop ready. Source execution does not establish package installation, regulatory approval, cost savings or improvement over an equivalent plain-instruction baseline. Keep assessment results subject to inspection as well.
+
 ## Scope at the expanded-library checkpoint
 
 At source `bfb18de`, the candidate contains 29 reusable definitions, 29 authored operating reports, two full methodology-document examples, a two-model collection, the original SOFR decision note and a numerical-reproduction program. These are 34 program entries, with five separate assessment entry points. The component package selects 32 files and exposes 31 names, including aliases; export names are not independent contracts.

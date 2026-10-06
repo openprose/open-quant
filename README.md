@@ -14,39 +14,26 @@ OpenProse is not affiliated with the New York Fed. The New York Fed does not san
 
 ## Start with the example
 
-The initially checked preparation route is macOS ARM64 with Claude Code 2.1.243; other platforms are not qualified here.
-
-Install the [Prose CLI](https://github.com/openprose/prose-cli) and a supported, authenticated agent harness. The reference commands below select Claude explicitly; they use your configured Claude account and can incur model usage. Do not put credentials in this repository.
+Follow [the installation and composition exercise](examples/sofr-curve/COMPOSE.md). It selects public Prose CLI 0.15.0-rc.2, Claude Code 2.1.243 and an explicit Anthropic API configuration on macOS ARM64. Install, select the candidate source and review the local runtime settings before running:
 
 ```sh
-npm install -g @openprose/prose-cli@0.15.0-rc.2 --ignore-scripts
-git clone https://github.com/openprose/open-quant.git
-cd open-quant
-prose --harness claude --model haiku --native-profile claude-workspace-tools --permission-mode acceptEdits --dry-run run examples/sofr-curve/program.md
+prose run examples/sofr-curve/program.md
 ```
 
-The dry run checks runtime preparation without calling a model. It does not establish authentication, contract fulfillment or successful end-to-end execution. Resolve any reported harness/version/platform issue first; see [runtime setup and qualification](docs/running.md).
+The program requests a fresh directory under `results/sofr-curve/` containing `note.md` and `result.md`. Inspect the actual returned paths. No numerical packages, paper downloads or private repositories are needed for this documentation task.
 
-Then run the example:
-
-```sh
-prose --harness claude --model haiku --native-profile claude-workspace-tools --permission-mode acceptEdits run examples/sofr-curve/program.md
-```
-
-The program requests a fresh directory under `results/sofr-curve/` containing `note.md` and `result.md`; the executor should report the actual path. Inspect both. Existing results are preserved. No numerical packages, paper downloads or private repositories are needed for this documentation task.
-
-**Qualification:** an [actual CLI-generated note and separate assessment](examples/sofr-curve/observed-run/README.md) are now retained from a bounded OpenAI API development run. The Claude commands above and the complete attendee installation/workshop remain unqualified. One observed result does not establish reliability across harnesses or accounts. [Current evidence and limits](docs/qualification.md) separate what was checked from what remains.
+**Candidate status:** the example is in stacked, unmerged pull requests; the default main clone does not yet contain it. The exercise is source-checkout use, not a published component-package installation. The October 6 native rehearsal produced useful notes and also found source-attribution and completion-claim defects. [Qualification and limits](docs/qualification.md) distinguish installation, useful output and contract fulfillment.
 
 ## Understand and change it
 
 Read [the program (for agents)](examples/sofr-curve/program.md). It binds [the model brief](examples/sofr-curve/inputs/brief.md), [computed evidence](examples/sofr-curve/inputs/results.json) and [house requirements](examples/sofr-curve/house/requirements.md) to the reusable [model-decision contract](contracts/model-decision.md). That contract composes claim-evidence and institutional-fact requirements.
 
-Edit the house requirements and run again. For example, require the comparison to appear in a table with a separate limitation column. The library contracts and model inputs can remain unchanged. Changing those requirements creates a new agreement; assess the new result against that agreement.
+[Compose a comparison-table requirement](examples/sofr-curve/COMPOSE.md#compose-a-presentation-requirement) with the original program. The reusable definitions and model inputs remain unchanged. The new entry selects both sets of requirements; assess its result against that composed agreement.
 
 To assess a result, substitute the actual directory reported by your run:
 
 ```sh
-prose --harness claude --model haiku --native-profile claude-workspace-tools --permission-mode acceptEdits run examples/sofr-curve/assess.md results/sofr-curve/YOUR-RUN-DIRECTORY
+prose run examples/sofr-curve/assess.md results/sofr-curve/YOUR-RUN-DIRECTORY
 ```
 
 The assessment contract asks for findings tied to the exact subject, requirements and evidence. It permits a completed assessment to identify unmet or unresolved subject requirements. This is a separate invocation, not proof of an independent institutional review.

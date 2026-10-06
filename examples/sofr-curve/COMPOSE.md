@@ -38,7 +38,7 @@ Open the reported `note.md` and `result.md` paths. Check the selected method, bo
 
 ## Compose a presentation requirement
 
-[compare.md](compare.md) is the whole new entry:
+[compare.md](compare.md) adds a small entry; its central composition is:
 
 ```markdown
 Adopt [the decision-note program](program.md) and
