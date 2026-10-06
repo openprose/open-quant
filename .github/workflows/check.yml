@@ -39,3 +39,4 @@ jobs:
       - run: python3 scripts/check_periodic_review.py
       - run: python3 scripts/check_hedge_outcomes.py
       - run: python3 scripts/check_credit_methodology.py
+      - run: python3 scripts/check_quote_sensitivity.py

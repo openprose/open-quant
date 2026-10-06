@@ -1,0 +1,25 @@
+{
+  "sourceCommit": "473b578f7495ddee399e27d766fdba5081f67f15",
+  "source_sha256": "9f7e3b024899e559ae7118ec96b799f6d182fbeea86d0cc3d973ac08ff5a7009",
+  "plan_sha256": "6cd7a7ae3b92ed29d0518feddc2c1b8414a0bc6938647e32f58387e129fcb525",
+  "observation_sha256": "f777cce49c82a787a7a867af045364021f4345ad4e7df8da865cc1df75132d31",
+  "environment": {
+    "python": "3.12.14",
+    "QuantLib": "1.43",
+    "platform": "macOS-26.6.1-arm64-arm-64bit"
+  },
+  "processSeconds": 0.058181166008580476,
+  "attempts": 1,
+  "curves": 13,
+  "nativeValues": 26,
+  "numericalControls": 110,
+  "numericalControlsPassed": 110,
+  "case_sha256": {
+    "complete": "8aed9fe3bb7bfd7f9b5987f7ffec7d117642fedd60d1091212876530aecdd5ef",
+    "missing-node-records": "ee284b37c4d3020f9841c3931711db48d504e37c41011691421791d1db03e7e4",
+    "missing-independent-value": "bb481cfe467c7bf40ca5d9ab8dcb5f4012389c2b7cf2178ab03e4bdc098e2c62",
+    "contradictory": "d3e9b78a1865bc288d4fbdab816fb8bdfa56eacbc480df0017d43099187983db"
+  },
+  "projection": "Omit decimal reference values, analytic gradients/Jacobians and observer controls. Missing-node-records omits only quote_1_plus nodes and implied quotes. Missing-independent-value also omits that scenario six-percent value and the corresponding sensitivity row. Contradictory adds claims only.",
+  "qualification": "Numerical process observed; reporting and assessment are agent-unqualified. Receipt counts do not replace withheld values or identify every property tested."
+}

@@ -1,0 +1,11 @@
+# Reporting requirements
+
+Account for all thirteen requested scenarios, both fixed instruments and all six risk factors. Preserve the distinction between available value records and available or derivable sensitivity findings. Identify withheld fields and their effect on particular conclusions without treating an omitted observation as zero.
+
+Explain the quote and zero-parameter perturbations, what remains fixed, and how the calibration mapping affects their relationship. Report supported signed central changes for one basis point for both instruments, alongside material differences from the actual positive-shock change. Do not substitute one risk coordinate for another, equate par and zero rates, or describe every sensitivity convention as DV01 without defining it. Explain whether the par instrument's first-quote response is supported and why.
+
+Check the requested calibration relationship against available or derived numerical support. A matching base price, a requested shock label or successful native process does not by itself establish the perturbed quote. Distinguish the intended construction, direct native observations and derived implications under the supplied fixed-cash-flow relationship. A missing field may have recoverable content; no particular derivation procedure is required. Preserve assumptions and numerical error propagation. Conversely, duplicated evidence does not establish an additional independent relation.
+
+For arithmetic review, allow USD1e-8 absolute error per retained value, 1e-10 for implied decimal-rate quotes and USD1e-8 for recorded signed changes. Propagate the value allowance when deriving other quantities; do not infer greater certainty from rounded report displays. These are synthetic checking conventions, not institutional thresholds. Explain any conclusion that is underdetermined by the selected values, while preserving conclusions that remain supported.
+
+Check every supplied producer claim. Keep calculation support, report fulfillment and any unknown execution behavior separate. A complete report can accurately identify partial support. Do not invent missing records, claim a new reproduction, infer hedge effectiveness or savings, or imply institutional acceptance.

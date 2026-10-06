@@ -223,3 +223,7 @@ Fixed checks compare 32 numeric table cells, selected identities and artifact ma
 ## Two-model documentation library
 
 [The collection example](../examples/documentation-library/README.md) adopts the existing SOFR and credit full-document programs with separate bindings and output scopes, and requires a collection index/result. No definition, child program, numerical input or calculation changes. Ten authored review cases describe scoped findings, expected population, missing content, unknown execution effects and aggregation. Static source/link and preservation checks do not evaluate those interpretations. No agent execution, assessment, cost comparison or attendee qualification has run.
+
+## Quote and parameter sensitivity
+
+[The curve-risk example](../examples/quote-sensitivity/README.md) composes existing sensitivity and calibration requirements. One public process reproduces thirteen curves, twenty-six native values and 110 controls; fresh timing and plan identity are recorded separately. Four projected cases distinguish complete evidence, recoverable node fields, a missing independent value and contradictory claims. Fixed-record controls and an authored reference do not qualify an agent's interpretation, execution, hedge performance or economic suitability.
