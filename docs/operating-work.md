@@ -35,6 +35,7 @@ These operating reports have authored references and deterministic fixture check
 |---|---|---|
 | [Monitoring](../examples/monitoring-review/README.md) | Monitoring, limitations and remediation | An adverse finding can be the correct result of fulfilled reporting. |
 | [Valuation](../examples/valuation-review/README.md) | Valuation comparison, model data | Offsetting differences do not remove position-level exceptions. |
+| [Backtesting statistics](../examples/backtest-statistics/README.md) | Backtesting, outcomes analysis | Equal exception counts do not establish equal timing; missing order limits verification without erasing aggregate calculations. |
 | [Backtesting](../examples/backtesting-review/README.md) | Backtesting, outcomes analysis | Observed exceedances differ from policy treatment of missing data. |
 | [SOFR change](../examples/sofr-change-review/README.md) | Model change, sensitivity review | Adding a locality requirement changes the finding without changing evidence. |
 | [SOFR calibration](../examples/calibration-review/README.md) | Calibration review, model data | Rounded displays, missing instruments and conflicting records limit a fit conclusion. |
@@ -105,3 +106,7 @@ QuantLib's [default-probability interface](https://github.com/lballabio/QuantLib
 ## Portfolio loss distributions
 
 The [portfolio-tail composition](../examples/portfolio-tail-review/README.md) combines existing credit-loss, dependence and scenario requirements. Six proposed joint tables distinguish correlation-matrix definiteness from compatibility with specified default probabilities. Sixteen risk summaries preserve mean loss, exact and native quantiles, expected shortfall and alternative conditional-tail means. Complete, missing-allocation and contradictory packets retain supported mathematical results separately from evidence about an actual solver candidate. No additional definition or package change is needed; agent execution remains unqualified.
+
+## Exception frequency and timing
+
+The [statistical-evidence composition](../examples/backtest-statistics/README.md) reuses backtesting and its adopted reporting requirements. Six constructed sequences retain separate excess-frequency tests, probability intervals and conditional clustering calculations. Complete, missing-order and contradictory packets distinguish a reported statistic from evidence supporting its sequence. The example supplements the earlier P&L/availability case; no new definition or package change is needed. It remains agent-unqualified.

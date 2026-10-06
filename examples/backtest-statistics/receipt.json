@@ -1,0 +1,30 @@
+{
+  "source_path": "model/measure.py",
+  "source_commit": "4e35fd89007ac56342b20bf52f05f27a2a65cfc9",
+  "source_sha256": "b8af6dd2ff40b67f5570715e2b33b26f639369c84cf3b1240e8634c760a711ef",
+  "plan_path": "model/README.md",
+  "plan_sha256": "d95113b770f7612bd4aba5e549e0258f83b7aa9f74459516b24a1789823d7804",
+  "observation_sha256": "61be728da45343248bd22cadb83841b52a08b60558cd4212ee88fe299b32a589",
+  "recorded_at": "2026-10-06T06:32:11.098134+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "calculation_seconds": 1.0996612909948453,
+  "qualification": "One observed synthetic calculation reproduction; reporting program and assessment are agent-unqualified.",
+  "packets": {
+    "complete": {
+      "path": "inputs/complete.json",
+      "sha256": "e34bb1836bb32714e0abfa135f7584700e287b186255d67d54578e8607e1d9a4"
+    },
+    "missing-order": {
+      "path": "inputs/missing-order.json",
+      "sha256": "840d1b71660dc7cce285e3e260c197971adaa99431a27f133ccc40a03063e951"
+    },
+    "contradictory": {
+      "path": "inputs/contradictory.json",
+      "sha256": "a96f29d0ca7576f007f75bb82f884a2b000c207630a26accfdbbd0525cfcfd00"
+    }
+  }
+}
