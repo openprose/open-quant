@@ -48,6 +48,8 @@ The reproduction-helper tests launch tiny standard-library Python fixtures, not 
 
 [Reproduction-assessment cases](cases/reproduction-assessment.md) cover the separate assessment of a fresh invocation, including historical receipts, required artifacts, changed criteria, attempt limits and incomplete coverage. Their twelve expectations are authored and have not been evaluated by a model. The assessor reads retained calculation evidence; it does not rerun the helper.
 
+`python3 scripts/check_pricing_methodology.py` verifies fifty input cells, twenty native prices, nine summary cells and fifteen artifact/source identities in the authored Black methodology reference. Eight mutations exercise selected incorrect bindings. The [ten interpretation cases](cases/pricing-methodology.md) remain authored expectations; numerical correspondences and coverage markers do not establish document completeness, agent interpretation or model suitability.
+
 
 `python3 scripts/check_optimization.py` checks three fixed packets covering seven native outcomes and a rounded export. It preserves original problem identity, units, constraints, scalar objective/reference arithmetic and unavailable candidate evidence. Twelve adverse mutations test these distinctions. The checker uses standard-library arithmetic, not a new optimizer or model call; it does not assess arbitrary prose or certify a financial allocation.
 

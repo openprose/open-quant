@@ -27,6 +27,8 @@ The [credit-loss methodology example](../examples/credit-methodology/README.md) 
 
 The [two-model documentation library](../examples/documentation-library/README.md) applies those programs together. Shared definitions keep separate model/evidence bindings; the collection index accounts for both documents without merging their findings. An accurate index of unfinished work does not fulfill a requirement to produce that work. This composition remains agent-unqualified.
 
+The [Black pricing-methodology document](../examples/pricing-methodology/README.md) applies the same documentation contract to European-option evidence. Its baseline-only selection retains the method and source mappings while withholding required native observations. Explaining a known formula does not supply an observation of what a particular implementation produced. This third document is separate from the two-model collection and remains agent-unqualified.
+
 ## Author a program for your own records
 
 In a source checkout, a monthly review can compose [monitoring](../contracts/model-monitoring.md) and [limitations and remediation](../contracts/limitations-and-remediation.md). Supply the model revisions, reporting period, expected observations, issue records and applicable policy in `inputs/monthly-review/`. The policy identifies thresholds, missing-data treatment, required responses and closure criteria. These are caller inputs; the library does not supply an institution's policy.

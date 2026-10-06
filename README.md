@@ -4,9 +4,9 @@
 
 Contract authoring is expressing intent by composing requirements. Open Quant provides reusable requirements for documenting a model, supporting its claims and assessing the resulting documentation. You supply the model evidence and your organization's house requirements.
 
-The first example documents one decision in a public USD SOFR curve model: choosing an interpolation method. It produces a short decision note, not a complete model document. The reusable [full-document contract](contracts/documentation.md) is a separate scope, illustrated by the [SOFR methodology document](examples/sofr-documentation/README.md) and [credit-loss methodology document](examples/credit-methodology/README.md).
+The first example documents one decision in a public USD SOFR curve model: choosing an interpolation method. It produces a short decision note, not a complete model document. The reusable [full-document contract](contracts/documentation.md) is a separate scope, illustrated by [SOFR](examples/sofr-documentation/README.md), [credit-loss](examples/credit-methodology/README.md) and [Black option-pricing](examples/pricing-methodology/README.md) methodology documents.
 
-The [two-model library example](examples/documentation-library/README.md) composes both documentation programs and a collection index, preserving each model's requirements and findings. It is authored and has not received agent qualification.
+The [two-model library example](examples/documentation-library/README.md) composes the SOFR and credit documentation programs and a collection index, preserving each model's requirements and findings. It is authored and has not received agent qualification.
 
 This is a methodology demonstration, not a complete regulatory submission. Institutional facts are supplied by the deploying institution. Documentation assessment does not establish model soundness or institutional approval. Open Quant is an initial library, not an established industry standard.
 

@@ -249,3 +249,7 @@ Fixed checks compare 32 numeric table cells, selected identities and artifact ma
 ## Reproduction assessment entry
 
 The [reproduction assessment](../examples/sofr-reproduction/assess.md) adds a sixth source assessment entry using the existing assessment contract. It checks the subject's report, result, fresh calculation evidence and execution requirements separately, without rerunning the financial model. Twelve authored cases distinguish process success, matching partial output, changed criteria, historical receipts and incomplete assessment coverage. The original reproduction program, helper, calculation evidence and component package are unchanged. No agent has executed this assessment; the helper's tests and numerical receipts do not qualify it.
+
+## Pricing methodology documentation
+
+The [third full-document example](../examples/pricing-methodology/README.md) applies the unchanged documentation contract to the retained Black pricing source and records. Complete and baseline-only selections distinguish method knowledge from required observations of actual native results. An authored document, supporting records and ten review cases accompany a separate assessment entry. Fixed checks bind fifty input cells, twenty native prices, nine summary cells and fifteen identities; they do not certify the prose or an agent's interpretation. No new financial calculation or agent invocation occurred, and the package and two-model collection remain unchanged.
