@@ -15,4 +15,4 @@ These authored cases describe [optimization review](../../contracts/optimization
 | A stationary point is supplied for a nonconvex problem without a global bound or other supporting argument. | Do not infer global optimality from stationarity or local solver success. |
 | Constraint residuals or variable identities are missing while the producer labels a candidate optimal. | Preserve supported findings and identify the unavailable checks. The label does not supply the missing evidence. |
 
-The private development study supplies constructed numerical cases for several distinctions. This public component does not yet have a worked report or agent qualification. It reviews supplied evidence; no solver invocation is implied by adopting it.
+The [worked report](../../examples/optimization-review/README.md) supplies constructed numerical evidence, a public reproduction source and three reporting cases. It remains agent-unqualified. This component reviews supplied evidence; no solver invocation is implied by adopting it.

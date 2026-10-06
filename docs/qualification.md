@@ -123,4 +123,11 @@ The reference report is authored and remains agent-unqualified. Fixed controls c
 
 The [optimization-review contract](../contracts/optimization-review.md) adds authored cases distinguishing native termination, original problem identity, feasibility, objective accuracy and actual candidate revisions. It composes existing reporting/numerical requirements; preceding definitions and examples are unchanged. Its private development study retains seven fixed synthetic solver results and one rounded export, with independent two-variable convex references. Those calculations motivate the distinctions; they do not qualify agent execution of the contract.
 
-This candidate contains 27 definitions across nineteen operating domains. Optimization review has no worked report or agent assessment yet. Its component-package bytes and source checks require their own checkpoint; earlier package results retain their original scope.
+The component checkpoint at 66721cf contains 27 definitions across nineteen operating domains, with authored cases but no worked optimization report. Seventeen offline commands and actual CLI-source preparation/extraction of its 30-file package pass. Earlier package results retain their original scope.
+
+
+## Worked optimization composition
+
+The [optimization/implementation report](../examples/optimization-review/README.md) preserves seven native outcomes and one actual rounded export. Public source 0f8b3c8 reproduces every numerical observation, reference and control from the prespecified synthetic study. Complete, missing-candidate and contradictory packets distinguish expected analytical results from actual candidate observations, and native success from original feasibility and optimality.
+
+The authored complete-case reference accounts for all eight candidates. Fixed checks use standard-library arithmetic and twelve adverse mutations; they do not run a solver, assess arbitrary prose, estimate solver reliability or authorize an allocation. All 27 definitions and the 30-file component package remain unchanged. Agent execution and assessment of the worked report remain unperformed.
