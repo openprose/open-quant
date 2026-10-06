@@ -1,0 +1,7 @@
+# Synthetic reverse-stress review
+
+Review the fixed model TOY-REVERSE-STRESS r1 and eight recorded numerical searches. The instantaneous incremental loss of a fixed synthetic portfolio is L=x²+4y²−2x in USD millions from a zero-shock base. x is a rate change divided by 25 basis points; y is an equity-return change divided by 5 percentage points. The scales are stipulated, not estimated volatilities. There is no fitted probability model, actual portfolio, institutional fact or management action to establish.
+
+The selected question is to reach USD3 million loss with minimum dimensionless squared severity x²+y². The mathematical domain is all real x,y. This domain is a property of the synthetic quadratic; it does not establish validity of a real pricing approximation for arbitrary shocks. Three supplied metrics deliberately differ. Each has an elementary polynomial lower bound and attaining reference points; the record also contains native solver outcomes and separately reported derived quantities.
+
+All eight starts and options were fixed before calculation. Retain failures and conflicting producer statements. Four authored scenarios form a separate finite catalog, and (0,2) is an explicitly separate witness. None is a probability estimate or empirical observation. The result is a report about the selected evidence, not a search for new scenarios or an institutional acceptance decision.

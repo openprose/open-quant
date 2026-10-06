@@ -42,6 +42,7 @@ These operating reports have authored references and deterministic fixture check
 | [SOFR calibration](../examples/calibration-review/README.md) | Calibration review, model data | Rounded displays, missing instruments and conflicting records limit a fit conclusion. |
 | [Vendor inventory](../examples/vendor-inventory-review/README.md) | Model inventory, vendor review | Register accuracy and local-test support are separate findings for an exact deployment. |
 | [Risk report](../examples/risk-report/README.md) | P&L explanation, scenario review, sensitivity review | Residuals, joint effects and assumed actions remain distinct. |
+| [Reverse stress](../examples/reverse-stress/README.md) | Scenario review, optimization review | Finding a loss-triggering scenario does not establish the least severe one; a known bound does not supply a missing actual candidate. |
 | [P&L attribution](../examples/pnl-attribution/README.md) | P&L explanation, sensitivity review | Reconciled bridges can allocate factors differently; a known total does not verify missing intermediate valuations. |
 | [Outcomes](../examples/outcomes-review/README.md) | Outcomes analysis, model data | A comparison can reverse when both models use the same observations. |
 | [Historical availability](../examples/availability-review/README.md) | Model data, outcomes analysis | Equal errors do not establish available historical inputs; recorded selections and independently supported timing remain distinct. |
@@ -130,3 +131,7 @@ The [option reporting composition](../examples/option-consistency/README.md) reu
 ## P&L attribution
 
 The [full-revaluation attribution report](../examples/pnl-attribution/README.md) reuses P&L explanation, sensitivity and numerical-evidence requirements. Eight native valuations support six sequential paths, a selected symmetric three-factor allocation and a two-group comparison. Complete, missing-corner and contradictory packets distinguish arithmetic closure from source support and the selected attribution method. It complements the earlier approximation-based risk report without adding a definition. Agent execution remains unqualified.
+
+## Reverse-stress severity
+
+The [reverse-stress composition](../examples/reverse-stress/README.md) reuses scenario and optimization requirements. Eight native results, three exact metric bounds and a finite catalog distinguish successful termination, loss feasibility, severity conventions and global support. Complete, missing-candidate and contradictory packets retain analytical knowledge separately from actual candidate observations. No new definition or package change is required; the reporting program remains agent-unqualified.

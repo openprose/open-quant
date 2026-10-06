@@ -189,3 +189,9 @@ Complete, missing-underlying and contradictory packets retain all ten native inv
 The [attribution report](../examples/pnl-attribution/README.md) composes existing P&L explanation and sensitivity review. Public source `2bbe2ae` reproduces all eight native values, six paths, interactions, grouped results and 31 controls; new timestamp/duration and explicitly rebound source/plan identities are recorded separately. No definition or package-content change is needed.
 
 Complete, missing-corner and contradictory packets retain reported attribution. Missing corner 110 leaves total and four paths supported while two paths and the selected mean allocation lack complete input support. Twenty adverse mutations check fixed evidence, including wrong allocations that preserve the total. The reference is authored; agent interpretation, causal identification, regulatory attribution and operating savings remain unqualified.
+
+## Reverse-stress composition
+
+The [reverse-stress report](../examples/reverse-stress/README.md) composes existing scenario and optimization requirements. Public source `22c314d` reproduces all eight native results, three metric certificates, catalog quantities and 64 controls exactly; new timestamp/duration and explicitly rebound source/plan identities are retained separately. No definition or component-package byte changes.
+
+The authored complete-case reference preserves failures and separates native termination from candidate feasibility and a supported global minimum. Missing one upper-branch candidate leaves reported quantities and the analytical bound available while limiting verification of that actual result; the lower-branch candidate remains supported. Twenty adverse mutations and exact tolerance boundaries check fixed records without a solver or provider call. These checks do not assess arbitrary prose, qualify agent execution or establish scenario likelihood, a realistic financial model or savings.

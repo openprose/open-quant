@@ -73,3 +73,7 @@ prose --harness agents-sdk --auth-profile openai-api-key --model gpt-5.6-luna --
 For assessment, replace the final program path with `examples/sofr-curve/assess.md` and append the actual result-directory path. Each invocation incurs separate model usage; native turns are model requests within that invocation. `native` settlement reports harness completion, not requirement fulfillment.
 
 The observed research setup additionally used a container and disabled provider transport retries; an ordinary native installation is a different configuration. The requested model alias and rates were checked October 5, 2026 against the [official model page](https://developers.openai.com/api/docs/models/gpt-5.6-luna). These records establish one development example, not a fresh-machine qualification or a recommendation that this model is optimal.
+
+## Reverse-stress reporting
+
+From the source repository, run `prose run examples/reverse-stress/program.md complete`, replacing `complete` with `missing-candidate` or `contradictory` for the other evidence selections. The [example guide](../examples/reverse-stress/README.md) gives the corresponding assessment invocation and qualification limits. The reporting program reads the supplied results; its optional numerical reproduction is separate.

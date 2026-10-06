@@ -32,3 +32,4 @@ jobs:
       - run: python3 scripts/check_exposure.py
       - run: python3 scripts/check_option_consistency.py
       - run: python3 scripts/check_pnl_attribution.py
+      - run: python3 scripts/check_reverse_stress.py
