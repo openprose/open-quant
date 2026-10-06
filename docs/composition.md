@@ -25,6 +25,8 @@ The [full SOFR methodology example](../examples/sofr-documentation/README.md) bi
 
 The [credit-loss methodology example](../examples/credit-methodology/README.md) uses the same full-document contract with different model evidence and public requirements. Its optional institutional-records mode adds requirements to supply supported facts. Disclosing the absence of those records can satisfy the public gap requirement while leaving the additional factual-entry requirements unmet; the required outcome changes even though the evidence does not.
 
+The [two-model documentation library](../examples/documentation-library/README.md) applies those programs together. Shared definitions keep separate model/evidence bindings; the collection index accounts for both documents without merging their findings. An accurate index of unfinished work does not fulfill a requirement to produce that work. This composition remains agent-unqualified.
+
 ## Author a program for your own records
 
 In a source checkout, a monthly review can compose [monitoring](../contracts/model-monitoring.md) and [limitations and remediation](../contracts/limitations-and-remediation.md). Supply the model revisions, reporting period, expected observations, issue records and applicable policy in `inputs/monthly-review/`. The policy identifies thresholds, missing-data treatment, required responses and closure criteria. These are caller inputs; the library does not supply an institution's policy.

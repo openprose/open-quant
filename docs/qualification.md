@@ -219,3 +219,7 @@ Complete, missing-selection-time and contradictory packets retain numerical find
 [The second full-document example](../examples/credit-methodology/README.md) reuses the existing documentation contract, credit-loss source, numerical packet and historical receipt. No financial calculation is rerun. A 936-word public reference and supporting records cover eight public requirements, nine choices and nine material citation groups. A separate mode adds three institutional factual-entry requirements; its absent records cannot be supplied by public gap disclosure.
 
 Fixed checks compare 32 numeric table cells, selected identities and artifact mappings. Eight authored cases describe intended interpretation; they have not been evaluated by a model. No agent has produced or assessed this full document, and the numerical receipt does not qualify documentation fulfillment, institutional readiness or regulatory acceptance.
+
+## Two-model documentation library
+
+[The collection example](../examples/documentation-library/README.md) adopts the existing SOFR and credit full-document programs with separate bindings and output scopes, and requires a collection index/result. No definition, child program, numerical input or calculation changes. Ten authored review cases describe scoped findings, expected population, missing content, unknown execution effects and aggregation. Static source/link and preservation checks do not evaluate those interpretations. No agent execution, assessment, cost comparison or attendee qualification has run.

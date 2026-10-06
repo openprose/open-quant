@@ -1,0 +1,11 @@
+# Assess a two-model documentation library
+
+**For agents.** Execute under the caller's selected OpenProse kernel. The working root is the source repository, two directories above this file.
+
+The caller supplies the actual collection result directory and original SOFR selection, `complete` or `missing-locality`. Require index.md and result.md and the referenced child outputs; identify missing evidence and ask for ambiguous bindings. Adopt [assessment](../../contracts/assessment.md) against [the original collection program](program.md) and its two scoped child agreements. Subject programs describe the work being assessed; do not execute or repair them.
+
+Check both expected entries even if the index omits one. For each, check document.md, reviews.md and result.md against that entry's original requirements, selection and registered evidence. The [SOFR](../sofr-documentation/assess.md) and [credit](../credit-methodology/assess.md) assessment entries describe the corresponding artifact boundaries; this invocation uses the single output scope below. A requirement label or shared definition hash alone does not identify its application. Preserve the model and selected binding in every finding and coverage claim.
+
+Check the collection index's paths, hashes, identities and findings against available artifacts; then check the collection result and aggregation. An accurate index can coexist with unfinished documentation. One successful entry cannot establish the other's fulfillment. Distinguish unknown underlying facts, known missing required content, incomplete assessment coverage and unsupported execution claims. Artifact inspection alone does not establish permitted behavior during execution.
+
+Use the subject's original agreement and selected sources. Identify unavailable revisions, absent artifacts or binding conflicts; do not silently substitute a later agreement, alternative case or authored reference. Write only assessment.md in a fresh directory under `results/documentation-library-assessments/`, with source/subject identities, findings and locators, coverage, overall subject fulfillment, assessment fulfillment, remaining work and the actual path. Preserve sources and outputs; do not run financial code, retrieve evidence or create institutional facts.
