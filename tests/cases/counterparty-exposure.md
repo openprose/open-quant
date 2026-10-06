@@ -18,3 +18,5 @@ These authored cases describe [counterparty-exposure review](../../contracts/cou
 | Current exposure is zero and is reported as proof of zero potential future exposure or regulatory EAD. | Preserve measure and horizon distinctions. The current snapshot does not establish future, probability-weighted or regulatory quantities. |
 
 The component reviews supplied evidence. Model execution, legal determinations and financial operations require their own scope and authority. These cases do not qualify an agent or implement a regulatory framework.
+
+The [worked composition](../../examples/exposure-review/README.md) now supplies observed synthetic calculations, three evidence packets and an authored reference. It does not establish agent qualification.

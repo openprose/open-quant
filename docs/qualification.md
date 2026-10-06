@@ -170,4 +170,10 @@ Three packets and an authored reference distinguish complete evidence, one missi
 
 [Counterparty-exposure review](../contracts/counterparty-exposure.md) adds twelve authored distinguishing cases for netting-set membership, recognition evidence, collateral treatment, aggregation order and exposure meaning. It composes existing reporting and numerical-evidence requirements. Earlier definitions and examples are preserved.
 
-The component has no worked report or agent execution at this checkpoint. The catalog now has 29 definitions across twenty-one operating domains; prior worked-report qualification remains unchanged. Source and package checks establish their stated mechanical properties, not legal enforceability, regulatory compliance, model adequacy or arbitrary contract fulfillment.
+At the component checkpoint `ea9b138`, no worked report or agent execution was supplied. The catalog now has 29 definitions across twenty-one operating domains; prior worked-report qualification remains unchanged. Source and package checks establish their stated mechanical properties, not legal enforceability, regulatory compliance, model adequacy or arbitrary contract fulfillment.
+
+## Worked counterparty-exposure composition
+
+The [exposure/implementation report](../examples/exposure-review/README.md) preserves all nine constructions and their 24 native group rows. Public source `d09559f` reproduces all numerical inputs, query text, values, references and 142 controls exactly; timestamp/duration and explicitly rebound source/plan identities are recorded separately.
+
+Complete, missing-eligibility and contradictory packets retain actual calculation inputs separately from the selected method. Withholding C2's selected eligibility leaves its observed true flag and all outputs intact; the flag cannot establish the missing requirement. Seventeen adverse mutations and boundary/unknown controls check the fixed packets. The reference is authored; no agent has executed or assessed the program. Neither a numerical match nor a complete report establishes actual legal recognition, regulatory EAD or financial approval.

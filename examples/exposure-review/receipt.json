@@ -1,0 +1,29 @@
+{
+  "source_path": "model/measure.py",
+  "source_commit": "d09559f1bd87e0764d7f37d16bd0e5b5c4edf809",
+  "source_sha256": "9073a1998a794a2fcba160cdd7c844dabfdfc688e09d678f91991630e9ab95e3",
+  "plan_path": "model/README.md",
+  "plan_sha256": "3a0d2220a2987fb8f857388547d4b2c956c33400073bcac3f284c9d5000ceb85",
+  "observation_sha256": "849281e43ca31381d93476cbb20d0a94d9ad71bb86af3dbb9da712df2962ea5b",
+  "recorded_at": "2026-10-06T06:47:48.739443+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "sqlite": "3.53.1"
+  },
+  "calculation_seconds": 0.0014274580171331763,
+  "qualification": "One observed synthetic SQL reproduction; reporting program and assessment are agent-unqualified.",
+  "packets": {
+    "complete": {
+      "path": "inputs/complete.json",
+      "sha256": "1745b87eb64c15abddf8cf21e3b17c5e1ba93546f3ee52f8e9190910c5c0039b"
+    },
+    "missing-eligibility": {
+      "path": "inputs/missing-eligibility.json",
+      "sha256": "bdae514a821a675c18748b233673b234ebcdb9026016b3ce5c03e556e4cdd18e"
+    },
+    "contradictory": {
+      "path": "inputs/contradictory.json",
+      "sha256": "f89da5d38fff84ce1be27898f9efb1276e5b835dfbf185d77b4d1ec46d56996d"
+    }
+  }
+}
