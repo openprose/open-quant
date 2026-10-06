@@ -66,3 +66,11 @@ Every case must reject the producer's blanket statement that the population is r
 - `contradictory`: producer summaries disagree with the component sum, unmitigated scenarios and assumed-only hedge record. Neither a producer label nor a conditional hedge calculation overrides the selected unmitigated limit or supplies execution evidence.
 
 The checker covers equality, duplicate rows/scenarios, wrong input types, incompatible base/currency/basis/horizon/revision/shock, unsupported cash-flow changes and extra records. Expected prose findings are authored; passing arithmetic controls does not establish that an agent preserves these distinctions.
+
+## Outcome-comparison expectations
+
+- `complete`: F1–F3 are mature and eligible for both models; F4 is immature. A's mean absolute error is USD100,000/3 and B's USD20,000/3. B has 80% lower error against A on this common three-item population; no broader performance or economic claim follows.
+- `missing`: B3 is absent. A's descriptive three-item metric exceeds B's descriptive two-item metric, but that is not a matched comparison. On common F1/F2, A has zero mean error and B USD10,000. A relative comparison against zero is undefined. The full mature-cohort comparison remains unresolved.
+- `late-forecast`: B3 exists but was issued after both its target window and observed outcome. Its correct value does not qualify it as predictive evidence. Eligibility and common-population metrics match missing, with a different recorded cause.
+
+Every case must disclose unavailable training/selection history. Chronologically eligible predictions do not alone establish a pristine holdout. Controls cover exact timing boundaries, missing/duplicate observations, unmatched identities, invalid dates, wrong currency, nonnumeric values, empty metric populations and duplicate cohort identities. These authored cases do not establish model accuracy or evaluator reliability.

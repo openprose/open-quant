@@ -34,6 +34,8 @@ The [vendor/inventory example](../examples/vendor-inventory-review/README.md) pr
 
 The [risk report](../examples/risk-report/README.md) composes P&L explanation, scenario review and sensitivity interpretation. Its synthetic book preserves offsetting unexplained residuals, nonadditive joint stresses, missing exposures and assumed-only hedges. It is an authored report example, not a recorded financial-model or agent execution.
 
+The [outcomes review](../examples/outcomes-review/README.md) demonstrates why separate-population metrics cannot substitute for a matched comparison. Missing or late forecasts change the eligible population; immature outcomes and zero denominators remain explicit. Its cash-flow observations and reference report are synthetic.
+
 ## Public foundations and scope
 
 Checked October 6, 2026. These are Open Quant's reusable reporting requirements, not regulator-issued templates. House thresholds, schedules, identifiers, materiality and approval rules remain caller inputs.

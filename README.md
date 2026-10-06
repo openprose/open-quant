@@ -80,6 +80,14 @@ python3 scripts/check_repository.py
 python3 -m unittest discover -s tests -v
 ```
 
-For the additional operating controls, run the check_monitoring.mjs, check_valuation.mjs, check_backtesting.mjs, check_sofr_change.mjs, check_calibration.mjs, check_vendor_inventory.mjs and check_risk_report.mjs scripts under scripts/ with Node.js 18 or newer. For example, `node scripts/check_calibration.mjs` checks the worked calibration cases.
+For the additional operating controls, use Node.js 18 or newer:
+
+```sh
+for script in scripts/check_*.mjs; do
+  node "$script" || exit 1
+done
+```
+
+Each script states the limited fixture relationships it checks. See [the test guide](tests/README.md) for their coverage.
 
 These checks verify links, imported identities and specified numerical correspondences. They do not assess arbitrary prose, certify the financial model or establish that contract composition outperforms a baseline. [Contributing](CONTRIBUTING.md) explains how to add a contract or model example. Owned code and documentation are [MIT licensed](LICENSE); external sources retain their own terms.
