@@ -2,6 +2,8 @@
 
 This synthetic example composes [valuation comparison](../../contracts/valuation-comparison.md) and [model data](../../contracts/model-data.md). It produces a short exception report from two positions, their internal prices and supplied comparison quotes. It illustrates why matching instrument IDs and subtracting numbers are insufficient: units, valuation basis, timing and coverage also matter.
 
+The cases share one packet. Its file hash covers all cases, while only the selected case and shared records may support the report. Alternative cases are not hidden from the executor; do not treat this layout as a blind trial.
+
 From an authenticated runtime configured as described in [the run guide](../../docs/running.md):
 
 ```sh

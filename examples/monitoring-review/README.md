@@ -4,6 +4,8 @@ This small example composes [model monitoring](../../contracts/model-monitoring.
 
 All institutions, model identifiers, observations and house policies here are synthetic. Values illustrate reporting distinctions; they are not recommended risk limits or financial-model validation results. The example requires no knowledge of yield-curve construction.
 
+The cases share one packet. Its file hash covers all cases, while only the selected case and shared records may support the report. This is an evidence-use restriction, not a blind trial with alternative cases hidden from the executor.
+
 ## Run
 
 Use the authenticated runtime setup in [the run guide](../../docs/running.md). From the repository root, pass one case name, `complete`, `missing` or `contradictory`:

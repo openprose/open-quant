@@ -18,4 +18,4 @@ In `result.md`, identify the chosen program, adopted definitions, policy and pac
 
 ## Permissions
 
-Read only the selected case and shared inputs, the program and adopted definitions. Basic arithmetic on those inputs is permitted. Preserve all source files and previous results. Do not access the network, run financial model code, read sample-results or tests, alter issues or monitoring values, or send notifications. Repository-based read restrictions are instructions to the executor, not a filesystem isolation guarantee.
+Read the program, adopted definitions, house policy and evidence packet. The packet may be read to select the case and compute its file hash; only the selected case and shared records may support the report. Basic arithmetic on those inputs is permitted. Preserve all source files and previous results. Do not access the network, run financial model code, read sample-results or tests, alter issues or monitoring values, or send notifications. These restrictions do not hide alternative cases or enforce filesystem isolation.

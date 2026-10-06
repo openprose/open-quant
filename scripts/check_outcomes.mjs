@@ -9,6 +9,9 @@ const time = text => {
 };
 const metric = pairs => ({ ids: pairs.map(row => row.id), count: pairs.length, maeUsd: pairs.length ? pairs.reduce((sum, row) => sum + row.error, 0) / pairs.length : null });
 function inspect(packet) {
+  // The example policy selects this book and cutoff; self-consistency is weaker.
+  assert.equal(packet.cutoff, '2026-10-01T18:00:00Z', 'cutoff binding');
+  assert.ok(packet.cohort.every(row => row.book === 'DEMO-FLOWS'), 'cohort book binding');
   assert.equal(new Set(packet.cohort.map(row => row.id)).size, packet.cohort.length, 'ambiguous cohort identity');
   const cutoff = time(packet.cutoff);
   assert.ok(Number.isFinite(cutoff), 'invalid cutoff');
@@ -84,4 +87,9 @@ const unmatched = clone(); unmatched.outcomes.push({ ...unmatched.outcomes[0], i
 assert.deepEqual(inspect(unmatched).unmatchedOutcomes, ['O9']);
 const duplicateCohort = clone(); duplicateCohort.cohort.push({ ...duplicateCohort.cohort[0] });
 assert.throws(() => inspect(duplicateCohort), /ambiguous cohort identity/);
+const changedBook = clone();
+for (const records of [changedBook.cohort, changedBook.forecasts, changedBook.outcomes]) for (const row of records) row.book = 'OTHER-BOOK';
+assert.throws(() => inspect(changedBook), /cohort book binding/, 'matching the wrong book does not meet the selected scope');
+const changedCutoff = clone(); changedCutoff.cutoff = '2026-10-01T18:00:01Z';
+assert.throws(() => inspect(changedCutoff), /cutoff binding/, 'a valid time can still be the wrong cutoff');
 console.log(JSON.stringify({ cases, mutationControls: 'passed', scope: 'Authored pairing, timing, denominator and metric controls; no predictive validation, significance test or report evaluation.' }, null, 2));

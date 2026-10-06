@@ -4,9 +4,15 @@ import { readFileSync } from 'node:fs';
 const load = name => JSON.parse(readFileSync(new URL(`../examples/risk-report/inputs/${name}.json`, import.meta.url)));
 const positions = ['P1', 'P2'];
 const shocks = { rates: [100, 0], spreads: [0, 100], joint: [100, 100] };
+// Explicit bindings from inputs/policy.md, not values inferred from the packet.
+const selectedScope = {
+  portfolio: 'TOY-RISK-BOOK', portfolioRevision: 'r1', model: 'TOY-VALUATION', modelRevision: 'r1',
+  currency: 'USD', basis: 'clean-value', opening: '2026-09-29T20:00:00Z', closing: '2026-09-30T20:00:00Z',
+};
 const pick = (rows, key, value) => { const matches = rows.filter(row => row[key] === value); return matches.length === 1 ? matches[0] : null; };
 const total = values => values.every(Number.isFinite) ? values.reduce((a, b) => a + b, 0) : null;
 function inspect(packet) {
+  for (const [field, value] of Object.entries(selectedScope)) assert.equal(packet[field], value, `packet binding ${field}`);
   const fixedBook = ['tradesUsd', 'cashFlowsUsd', 'feesUsd', 'adjustmentsUsd'].every(key => packet[key] === 0);
   const marks = positions.map(id => pick(packet.positions, 'id', id));
   const opening = total(marks.map(row => row?.openingUsd)), closing = total(marks.map(row => row?.closingUsd));
@@ -92,4 +98,15 @@ const flow = clone(); flow.cashFlowsUsd = 1;
 assert.equal(inspect(flow).movementUsd, null, 'fixed-book convention is no longer supported');
 const extras = clone(); extras.scenarios.push({ id: 'other', values: [] }); extras.positions.push({ id: 'P3', openingUsd: 1, closingUsd: 1 });
 assert.deepEqual(inspect(extras).unexpectedPositions, ['P3']); assert.deepEqual(inspect(extras).unexpectedScenarios, ['other']);
+// Agreement among records cannot substitute for the policy's selected scope.
+for (const [field, value, scenarioField] of [
+  ['currency', 'EUR', 'currency'], ['basis', 'dirty-value', 'basis'],
+  ['modelRevision', 'r2', 'modelRevision'], ['portfolioRevision', 'r2', 'portfolioRevision'],
+  ['closing', '2026-10-01T20:00:00Z', 'base'], ['opening', '2026-09-28T20:00:00Z', null],
+  ['portfolio', 'OTHER-BOOK', null], ['model', 'OTHER-MODEL', null],
+]) {
+  const changed = clone(); changed[field] = value;
+  if (scenarioField) for (const scenario of changed.scenarios) scenario[scenarioField] = value;
+  assert.throws(() => inspect(changed), new RegExp(`packet binding ${field}`), 'coherent records still need the selected policy binding');
+}
 console.log(JSON.stringify({ cases, mutationControls: 'passed', scope: 'Authored fixture arithmetic and identities; no financial-model run, causal attribution, accounting action or prose evaluation.' }, null, 2));
