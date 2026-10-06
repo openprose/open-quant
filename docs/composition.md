@@ -23,6 +23,8 @@ For recurring quantitative operations, see [the operating-work catalog](operatin
 
 The [full SOFR methodology example](../examples/sofr-documentation/README.md) binds the documentation contract to an explicit public technical scope. It produces a document, combined supporting records and a result record. A missing-locality case demonstrates that completing gap reporting does not supply a mandatory result. Its [dedicated assessment](../examples/sofr-documentation/assess.md) checks each artifact's requirements separately; the reference output is authored and this composition is agent-unqualified.
 
+The [credit-loss methodology example](../examples/credit-methodology/README.md) uses the same full-document contract with different model evidence and public requirements. Its optional institutional-records mode adds requirements to supply supported facts. Disclosing the absence of those records can satisfy the public gap requirement while leaving the additional factual-entry requirements unmet; the required outcome changes even though the evidence does not.
+
 ## Author a program for your own records
 
 In a source checkout, a monthly review can compose [monitoring](../contracts/model-monitoring.md) and [limitations and remediation](../contracts/limitations-and-remediation.md). Supply the model revisions, reporting period, expected observations, issue records and applicable policy in `inputs/monthly-review/`. The policy identifies thresholds, missing-data treatment, required responses and closure criteria. These are caller inputs; the library does not supply an institution's policy.

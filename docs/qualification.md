@@ -213,3 +213,9 @@ The missing-joint case retains reported aggregates while withholding one actual 
 [The hedge report](../examples/hedge-outcomes/README.md) composes existing optimization and outcomes requirements. Public source `616cc88` reproduces all five native fits, six positions, twelve period summaries and 106 controls. Fresh timing and explicitly rebound source/plan identities are excluded from that equality comparison. No definition or package-content change is needed.
 
 Complete, missing-selection-time and contradictory packets retain numerical findings separately from evidence of advance selection. The reference is authored; no agent has executed or assessed the report. Fixed-record checks and timing controls do not assess arbitrary prose or establish real trading, predictive performance, financial savings or institutional acceptance.
+
+## Credit methodology documentation
+
+[The second full-document example](../examples/credit-methodology/README.md) reuses the existing documentation contract, credit-loss source, numerical packet and historical receipt. No financial calculation is rerun. A 936-word public reference and supporting records cover eight public requirements, nine choices and nine material citation groups. A separate mode adds three institutional factual-entry requirements; its absent records cannot be supplied by public gap disclosure.
+
+Fixed checks compare 32 numeric table cells, selected identities and artifact mappings. Eight authored cases describe intended interpretation; they have not been evaluated by a model. No agent has produced or assessed this full document, and the numerical receipt does not qualify documentation fulfillment, institutional readiness or regulatory acceptance.

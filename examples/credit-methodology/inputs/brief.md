@@ -1,0 +1,11 @@
+# Model and documentation brief
+
+Document `CREDIT-LOSS-2026-10-06`, the public synthetic construction implemented by the existing credit-loss calculation source. This brief selects the `interval_mass` construction for explanation and uses all six observed constructions as comparison evidence. Its purpose is to explain a stipulated loss model and identify changes of meaning that can hide behind plausible probabilities or successful arithmetic.
+
+The selected method assigns one absorbing default event: no cure or competing event is modeled. The hazard is fixed at 0.12 per year. Under the stipulated distribution, survival is `S(t)=exp(-0.12*t)` and cumulative default is `1-S(t)`. Unconditional interval mass is `S(a)-S(b)` for `(a,b]`; conditional on survival to `a`, the probability is that mass divided by `S(a)`. With continuous time here, endpoint equality has no atom, but the disjoint interval definitions remain explicit.
+
+Exposure and loss fraction are deterministic conditional on default in each interval. All selected loss is settled at the interval end, discounted at continuous rate 0.03 per year. The method sums unconditional interval probability × exposure × loss fraction × interval-end discount factor. This is not a continuous default-time settlement model. The rate, exposure and severity choices are supplied stipulations; empirical calibration, economic selection rationale and institutional suitability are absent.
+
+The reference date is January 1, 2026, and the QuantLib curve uses Actual/365 Fixed. Calculations query exact year fractions 0, 1, 2, 3 and 5; these are not asserted to be calendar anniversary dates. The input population, conventions and observed values are in the registered packet. Public mathematical documentation does not establish borrower probabilities, an accounting reserve, a traded credit price or approved deployment.
+
+The current documentation brief's reason for selecting interval mass is that disjoint unconditional probabilities correspond to the selected expected-loss aggregation. It does not retrospectively establish why the original example author chose a particular hazard, discount rate, exposure, severity or interval-end convention. Preserve that distinction in the choice register.

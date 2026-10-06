@@ -97,3 +97,7 @@ From the source repository, run `prose run examples/periodic-review/program.md c
 ## Hedge fit and subsequent outcomes
 
 From the source repository, run `prose run examples/hedge-outcomes/program.md complete`, replacing `complete` with `missing-selection-time` or `contradictory` for the other selections. The [example guide](../examples/hedge-outcomes/README.md) provides the separate assessment invocation and numerical reproduction boundary. This is a hypothetical report, not authority to trade or refit. Agent execution remains unqualified.
+
+## Credit methodology documentation
+
+Run `prose run examples/credit-methodology/program.md public-methodology` from the source repository. Assess the actual three-file result with `prose run examples/credit-methodology/assess.md results/credit-methodology/YOUR-RUN public-methodology`. The [example guide](../examples/credit-methodology/README.md) explains the additional institutional-records mode, unchanged evidence and missing required entries. The generic operating-report assessment expects a different artifact set. This reporting and assessment route remains agent-unqualified.
