@@ -17,3 +17,5 @@ A composed document must satisfy all adopted requirements. A requirement to disc
 The [SOFR decision example](../examples/sofr-curve/program.md) deliberately retains its smaller scope. It does not adopt the full-document or model-description contract. Reuse the component that fits your result rather than adding every available requirement.
 
 The [authored model-description cases](../tests/cases/model-description.md) and [numerical-evidence cases](../tests/cases/numerical-evidence.md) show distinctions a reviewer should check. They are examples of intended meaning, not evidence of model performance.
+
+For recurring quantitative operations, see [the operating-work catalog](operating-work.md). The [monitoring](../examples/monitoring-review/program.md) and [valuation](../examples/valuation-review/program.md) programs each compose two domain contracts into one report, with explicit caller policy and scope. Both are authored examples awaiting model-backed qualification.

@@ -10,6 +10,12 @@ These are authored interpretation cases, not model evaluation results. A mechani
 | Limitations and remediation | Report I1 as overdue with unsupported closure and its recorded owner. | Closure evidence is unavailable: disclose the gap and leave closure unsupported. | Treat an action-complete timestamp as proof that closure criteria were met. |
 | Model data | Distinguish valuation date from feed publication time and trace supplied adjustments. | Transformation evidence missing: identify the missing link rather than invent processing. | Substitute zero for absent quotes, then claim no missing values. |
 | Calibration review | Compare all supplied calibration targets and fits in the correct units, while limiting conclusions to fit. | One target lacks a fit: preserve the missing calibration item and denominator. | A success flag overrides a residual outside the supplied tolerance, or in-sample fit is called predictive accuracy. |
+| Valuation comparison | Normalize supported price scales and show both gross and net differences for the comparable positions. | A stale quote remains unusable under the selected policy; report the omitted comparison in coverage. | Netting two opposite USD10,000 exceptions produces zero, then claiming no exception exists. |
+| Outcomes analysis | Pair predictions with mature outcomes for the supplied horizon and retain exclusions. | Immature outcomes limit coverage instead of counting as favorable outcomes. | Report training-set fit as out-of-sample performance, or compare scores on different populations as a model improvement. |
+| Sensitivity review | Explain a supplied one-basis-point shock with its sign convention and fixed inputs. | An absent negative-shock run prevents a supported symmetry claim. | Treat a one-basis-point change as a one-percent relative change, or add single-factor effects despite known interactions. |
+| Scenario review | Compare supplied scenario outputs with a compatible base and identify assumed mitigation. | A missing exposure remains absent from coverage rather than zero-loss. | Describe the worst tested scenario as the maximum possible loss, or report assumed management action as executed. |
+| P&L explanation | USD100,000 total minus USD95,000 supported components leaves a visible USD5,000 residual. | A missing component stays unexplained rather than assigned to an invented driver. | The arithmetic reconciles, so the report declares the factor attribution causally correct or the regulatory PLA test passed. |
+| Vendor model review | Separate vendor claims from local tests of the supplied version and configuration. | Undisclosed implementation limits conclusions without proving failure. | Treat vendor-wide validation or an earlier version's test as approval of a customized local upgrade. |
 
 ## Monitoring fixture expectations
 
@@ -20,3 +26,11 @@ These are authored interpretation cases, not model evaluation results. A mechani
 All three cases must discuss I1, for which the action-complete date does not satisfy the two-part closure requirement. Each case's source population is separate; importing O3 from a different case would violate the program's evidence boundary.
 
 Additional mechanical mutations check equality at the limit, wrong units, wrong revision, duplicate matches, missing observations and an unrecognized metric. Passing these controls establishes the fixture checker's handling of those cases, not the adequacy or execution of arbitrary contracts.
+
+## Valuation fixture expectations
+
+- `complete`: P1 differs by +USD2,000 and is within tolerance; P2 differs by −USD10,000 and is an exception. Two comparable positions produce net −USD8,000 and gross USD12,000.
+- `missing` and `stale`: P2 cannot be compared. The +USD2,000 net/gross result applies only to P1, not the entire two-position population.
+- `basis-mismatch`: Q1's dirty basis contradicts the required clean basis; the policy does not permit conversion. Only P2 is comparable, with a −USD10,000 exception.
+
+The checker additionally tests price units, quote currency, duplicate matches, invalid prices, exact tolerance equality and offsetting exceptions. It does not establish source independence or assess report prose.

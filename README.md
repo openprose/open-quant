@@ -53,7 +53,7 @@ The assessment contract asks for findings tied to the exact subject, requirement
 
 ## Library
 
-[Operating-work contracts](docs/operating-work.md) add model inventory, change review, monitoring, remediation, data and calibration reporting. Start with the small [synthetic monitoring example](examples/monitoring-review/README.md) to see how two contracts compose into one report. These new components have authored cases and offline checks; they have not received model-backed execution qualification.
+[Operating-work contracts](docs/operating-work.md) add model inventory, change review, monitoring, remediation, data, calibration, valuation, outcomes, sensitivities, scenarios, P&L and vendor-model reporting. Start with the small [synthetic monitoring example](examples/monitoring-review/README.md) to see how two contracts compose into one report. These new components have authored cases and offline checks; they have not received model-backed execution qualification.
 
 | Contract | Required result |
 |---|---|
@@ -80,6 +80,6 @@ python3 scripts/check_repository.py
 python3 -m unittest discover -s tests -v
 ```
 
-For the additional synthetic monitoring controls, run `node scripts/check_monitoring.mjs` with Node.js 18 or newer.
+For the additional synthetic operating controls, run `node scripts/check_monitoring.mjs` and `node scripts/check_valuation.mjs` with Node.js 18 or newer.
 
 These checks verify links, imported identities and specified numerical correspondences. They do not assess arbitrary prose, certify the financial model or establish that contract composition outperforms a baseline. [Contributing](CONTRIBUTING.md) explains how to add a contract or model example. Owned code and documentation are [MIT licensed](LICENSE); external sources retain their own terms.

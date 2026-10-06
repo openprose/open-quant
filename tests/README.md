@@ -7,3 +7,5 @@ The checker compares the bindings to the retained JSON. It cannot infer a senten
 The separate [model-description cases](cases/model-description.md) and [numerical-evidence cases](cases/numerical-evidence.md) are authored semantic review examples. Their expected interpretations are not executed by the Python tests. They distinguish useful output, missing evidence and contradictions without claiming model accuracy.
 
 [Operating-report cases](cases/operating-reports.md) cover inventory, change, monitoring, remediation, data and calibration reporting. `node scripts/check_monitoring.mjs` checks the synthetic monitoring packet against explicit house thresholds, row identity, coverage and status contradictions. Its mutation controls are not a general contract evaluator; the authored sample report is not parsed or certified by this script.
+
+`node scripts/check_valuation.mjs` checks synthetic price-scale conversions, comparable-subset totals, exact tolerance boundaries, missing/stale/incompatible quotes and offsetting exceptions. It does not reproduce a valuation model or certify source independence.
