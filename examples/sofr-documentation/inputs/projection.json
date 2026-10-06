@@ -1,0 +1,8 @@
+{
+  "original_path": "../../sofr-curve/inputs/results.json",
+  "original_sha256": "1b42c6b824fae587d31b9d4c17de8867690e4e1f4eda6b3c31ce82ef96730494",
+  "authored_case": "missing-locality",
+  "transformation": "Remove only locality_bump_5Y_plus_1bp; all other values remain unchanged. This is withheld reporting evidence, not a new financial calculation.",
+  "projected_path": "missing-locality.json",
+  "projected_sha256": "4b5e8be9bc2c514d6cd0cf3e743f27467085d3d829c72d40bfc01bbb91d59bc9"
+}

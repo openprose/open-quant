@@ -22,7 +22,7 @@ To assess a generated note, pass the actual result directory after examples/sofr
 
 Record the installed CLI and harness versions, actual model identity, kernel identity, input hashes, permissions, native completion, output inspection and available usage. Rehearse the exact first run and house-requirement change on every platform claimed. No elapsed-time or success-rate promise follows from the current offline checks.
 
-The full methodology-document contract is available for a caller that supplies all its base, house and report inputs. It is not invoked by the shorter SOFR program. Neither output grants institutional approval.
+The [full methodology-document example](../examples/sofr-documentation/README.md) supplies an explicit public scope, base/house requirements and source bindings for the default documentation contract. It is separate from the short SOFR program and has not been run by an agent. Neither output grants institutional approval.
 
 ## Assess an operating report
 
@@ -35,6 +35,16 @@ prose --harness claude --model haiku --native-profile claude-workspace-tools --p
 This is a separate model invocation with its own usage. The new entry point has not received model-backed qualification. Supply the original requirement/input snapshot if current files differ; current files must not silently replace the old agreement. A content finding and evidence about execution behavior are separate. Read the assessment's coverage and its own fulfillment claim, not only its conclusion about the subject.
 
 For another operating example, substitute its program, actual result directory and original case or mode. For the original SOFR `note.md` output, continue to use `examples/sofr-curve/assess.md` instead.
+
+## Assess a full methodology document
+
+The full example produces document.md, reviews.md and result.md. Use its dedicated entry point with the actual result directory and original case:
+
+```sh
+prose --harness claude --model haiku --native-profile claude-workspace-tools --permission-mode acceptEdits run examples/sofr-documentation/assess.md results/sofr-documentation/YOUR-RUN complete
+```
+
+Replace complete with missing-locality when that was the subject's selection. The common operating-report entry expects a different artifact set; it is not the binding for this full document. This execution and assessment route remains unqualified.
 
 ## Observed OpenAI development route
 
