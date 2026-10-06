@@ -49,6 +49,8 @@ prose --harness claude --model haiku --native-profile claude-workspace-tools --p
 
 The assessment contract asks for findings tied to the exact subject, requirements and evidence. It permits a completed assessment to identify unmet or unresolved subject requirements. This is a separate invocation, not proof of an independent institutional review.
 
+[Public foundations](docs/public-foundations.md) maps the library to current supervisory guidance and separates that guidance from the example's house requirements.
+
 ## Library
 
 | Contract | Required result |
@@ -62,6 +64,8 @@ The assessment contract asks for findings tied to the exact subject, requirement
 | [Documentation assessment — for agents](contracts/assessment.md) | Findings against selected requirements, with evidence gaps and assessment coverage visible. |
 
 [Compose these contracts](docs/composition.md) with your own inputs and house requirements. Private model material can remain in your own repository; this example performs no upload to Open Quant. The selected agent/provider's data handling still applies. A private-model workflow has not been qualified here.
+
+[Package preparation](docs/package.md) describes the versioned candidate and its current publication status.
 
 ## Inspect without a model
 
