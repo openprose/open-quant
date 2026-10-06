@@ -76,21 +76,9 @@ The assessment contract asks for findings tied to the exact subject, requirement
 With Python 3.10 or newer:
 
 ```sh
-python3 scripts/check_repository.py
-python3 scripts/check_sensitivity.py
-python3 scripts/check_optimization.py
-python3 scripts/check_availability.py
-python3 scripts/check_credit_loss.py
-python3 scripts/check_portfolio_tail.py
-python3 scripts/check_backtest_statistics.py
-python3 scripts/check_exposure.py
-python3 scripts/check_option_consistency.py
-python3 scripts/check_pnl_attribution.py
-python3 scripts/check_reverse_stress.py
-python3 scripts/check_pricing_probabilities.py
-python3 scripts/check_exposure_default.py
-python3 scripts/check_calibration_identification.py
-python3 scripts/check_periodic_review.py
+for script in scripts/check_*.py; do
+  python3 "$script" || exit 1
+done
 python3 -m unittest discover -s tests -v
 ```
 
