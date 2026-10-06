@@ -60,6 +60,10 @@ prose --harness claude --model haiku --native-profile claude-workspace-tools --p
 
 Replace complete with missing-locality when that was the subject's selection. The common operating-report entry expects a different artifact set; it is not the binding for this full document. This execution and assessment route remains unqualified.
 
+## Assess a numerical reproduction
+
+The [reproduction example](../examples/sofr-reproduction/README.md) has a separate [assessment entry](../examples/sofr-reproduction/assess.md) for its report, result record and fresh calculation artifacts. Supply the actual external result directory: `prose run examples/sofr-reproduction/assess.md /absolute/actual/reproduction`. The evaluator inspects retained evidence without rerunning the helper. A successful comparison and evidence of permitted execution are separate findings; this model-backed assessment route remains unqualified.
+
 ## Observed OpenAI development route
 
 The October 6 development run used released CLI 0.15.0-rc.2 and the optional `agents-sdk` harness, with an explicit OpenAI API credential route. Follow the CLI's [Agents SDK setup](https://github.com/openprose/prose-cli/blob/1bb5d356acd682222deffc70357bf2ad4528755a/docs/agents-sdk-adapter.md) to understand its separate launcher/dependency prerequisites. Installing the CLI alone does not supply this harness.

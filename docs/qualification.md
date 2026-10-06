@@ -245,3 +245,7 @@ Fixed checks compare 32 numeric table cells, selected identities and artifact ma
 ## Quote and parameter sensitivity
 
 [The curve-risk example](../examples/quote-sensitivity/README.md) composes existing sensitivity and calibration requirements. One public process reproduces thirteen curves, twenty-six native values and 110 controls; fresh timing and plan identity are recorded separately. Four projected cases distinguish complete evidence, recoverable node fields, a missing independent value and contradictory claims. Fixed-record controls and an authored reference do not qualify an agent's interpretation, execution, hedge performance or economic suitability.
+
+## Reproduction assessment entry
+
+The [reproduction assessment](../examples/sofr-reproduction/assess.md) adds a sixth source assessment entry using the existing assessment contract. It checks the subject's report, result, fresh calculation evidence and execution requirements separately, without rerunning the financial model. Twelve authored cases distinguish process success, matching partial output, changed criteria, historical receipts and incomplete assessment coverage. The original reproduction program, helper, calculation evidence and component package are unchanged. No agent has executed this assessment; the helper's tests and numerical receipts do not qualify it.

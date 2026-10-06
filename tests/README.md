@@ -46,6 +46,8 @@ The package test copies the selected component files into a fresh directory, che
 
 The reproduction-helper tests launch tiny standard-library Python fixtures, not the SOFR model. They cover matching and mismatching results, unsuccessful or timed-out processes with matching partial files, missing/invalid/duplicate-key outputs, changed source/staged inputs, launch failure, interruption handling, destination refusal and version preflight. [Model-reproduction interpretation cases](cases/model-reproduction.md) state the corresponding contract distinctions; these tests do not establish agent conformance.
 
+[Reproduction-assessment cases](cases/reproduction-assessment.md) cover the separate assessment of a fresh invocation, including historical receipts, required artifacts, changed criteria, attempt limits and incomplete coverage. Their twelve expectations are authored and have not been evaluated by a model. The assessor reads retained calculation evidence; it does not rerun the helper.
+
 
 `python3 scripts/check_optimization.py` checks three fixed packets covering seven native outcomes and a rounded export. It preserves original problem identity, units, constraints, scalar objective/reference arithmetic and unavailable candidate evidence. Twelve adverse mutations test these distinctions. The checker uses standard-library arithmetic, not a new optimizer or model call; it does not assess arbitrary prose or certify a financial allocation.
 
