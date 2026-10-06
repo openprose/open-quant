@@ -13,3 +13,5 @@ prose --harness claude --model haiku --native-profile claude-workspace-tools --p
 Other cases are `missing`, `contradictory` and `late-forecast`. Each has a separate input file so an experiment can stage only its selected case. These commands can incur provider usage; no model-backed execution of this example has occurred.
 
 Read [the program](program.md) and [authored reference report](sample-results/report.md). `node scripts/check_backtesting.mjs` verifies the explicit fixture arithmetic and mutation controls, not arbitrary prose, statistical adequacy or regulatory eligibility.
+
+For a separate assessment, use [the operating-report evaluator](../assess-report.md) with this program, its actual result directory and the original case or mode. See [the command and its qualification limits](../../docs/running.md#assess-an-operating-report).

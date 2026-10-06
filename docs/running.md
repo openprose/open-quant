@@ -22,6 +22,18 @@ Record the installed CLI and harness versions, actual model identity, kernel ide
 
 The full methodology-document contract is available for a caller that supplies all its base, house and report inputs. It is not invoked by the shorter SOFR program. Neither output grants institutional approval.
 
+## Assess an operating report
+
+The monitoring, valuation, backtesting and SOFR-change programs produce `report.md` and `result.md`. Their common [assessment entry point](../examples/assess-report.md) takes the subject program, actual result directory and the case or mode used for that invocation. For example, replace `YOUR-RUN` with the directory reported by the monitoring execution:
+
+```sh
+prose --harness claude --model haiku --native-profile claude-workspace-tools --permission-mode acceptEdits run examples/assess-report.md examples/monitoring-review/program.md results/monitoring-review/YOUR-RUN complete
+```
+
+This is a separate model invocation with its own usage. The new entry point has not received model-backed qualification. Supply the original requirement/input snapshot if current files differ; current files must not silently replace the old agreement. A content finding and evidence about execution behavior are separate. Read the assessment's coverage and its own fulfillment claim, not only its conclusion about the subject.
+
+For another operating example, substitute its program, actual result directory and original case or mode. For the original SOFR `note.md` output, continue to use `examples/sofr-curve/assess.md` instead.
+
 ## Observed OpenAI development route
 
 The October 6 development run used released CLI 0.15.0-rc.2 and the optional `agents-sdk` harness, with an explicit OpenAI API credential route. Follow the CLI's [Agents SDK setup](https://github.com/openprose/prose-cli/blob/1bb5d356acd682222deffc70357bf2ad4528755a/docs/agents-sdk-adapter.md) to understand its separate launcher/dependency prerequisites. Installing the CLI alone does not supply this harness.

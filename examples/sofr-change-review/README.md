@@ -19,3 +19,5 @@ prose --harness claude --model haiku --native-profile claude-workspace-tools --p
 These calls can incur provider usage. Neither mode has been executed with a model in this expansion. [The authored reference](sample-results/report.md) illustrates the intended distinction; `node scripts/check_sofr_change.mjs` checks the explicitly bound numerical comparisons only.
 
 The source is retained historical calculation evidence with [provenance and notices](../../provenance/README.md), not current market data. The house limits and proposed change are synthetic. This is not a production migration, model validation or approval.
+
+For a separate assessment, use [the operating-report evaluator](../assess-report.md) with this program, its actual result directory and the original case or mode. See [the command and its qualification limits](../../docs/running.md#assess-an-operating-report).

@@ -13,3 +13,5 @@ The separate [model-description cases](cases/model-description.md) and [numerica
 `node scripts/check_backtesting.mjs` distinguishes observed exceedances from policy treatment of missing/invalid comparisons, preserves separate outcome-series counts and tests timing, identity and coverage controls. Its five-day cases are synthetic; no annual regulatory classification is computed.
 
 `node scripts/check_sofr_change.mjs` applies two authored requirement selections to the unchanged retained SOFR values, with controls for missing support, known violations, equality and incorrect metric binding. It does not run the financial model or evaluate the composed report.
+
+[Report-assessment cases](cases/report-assessment.md) distinguish correct adverse findings, unknown execution effects, binding conflicts, incomplete coverage and an evaluator's own missing result requirements. These are authored expectations awaiting model-backed trials.

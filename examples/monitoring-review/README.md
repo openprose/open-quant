@@ -12,7 +12,7 @@ Use the authenticated runtime setup in [the run guide](../../docs/running.md). F
 prose --harness claude --model haiku --native-profile claude-workspace-tools --permission-mode acceptEdits run examples/monitoring-review/program.md complete
 ```
 
-This command can incur provider usage. The new example has not been run with a model. Inspect the reported result directory, then assess it with the [assessment contract](../../contracts/assessment.md), supplying its exact program, adopted definitions, selected case, house policy and outputs. An automatic evaluator can itself miss requirements; inspect its findings.
+This command can incur provider usage. The new example has not been run with a model. Inspect the reported result directory, then use [the operating-report assessment entry point](../assess-report.md) with this program, that directory and the selected case. The [run guide](../../docs/running.md#assess-an-operating-report) shows the command. An automatic evaluator can itself miss requirements; inspect its findings.
 
 ## Inspect before spending
 

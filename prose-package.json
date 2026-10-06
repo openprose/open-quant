@@ -32,6 +32,7 @@
     "docs/public-foundations.md",
     "docs/qualification.md",
     "docs/running.md",
+    "examples/assess-report.md",
     "examples/backtesting-review/README.md",
     "examples/backtesting-review/inputs/cases/complete.json",
     "examples/backtesting-review/inputs/cases/contradictory.json",
@@ -90,6 +91,7 @@
     "tests/cases/model-description.md",
     "tests/cases/numerical-evidence.md",
     "tests/cases/operating-reports.md",
+    "tests/cases/report-assessment.md",
     "tests/fixtures/evidence-cases.json",
     "tests/test_checks.py",
     "tests/test_package.py"
@@ -123,7 +125,8 @@
     "valuation-review": "examples/valuation-review/program.md",
     "backtesting": "contracts/backtesting.md",
     "backtesting-review": "examples/backtesting-review/program.md",
-    "sofr-change-review": "examples/sofr-change-review/program.md"
+    "sofr-change-review": "examples/sofr-change-review/program.md",
+    "report-assessment": "examples/assess-report.md"
   },
   "dependencies": {}
 }
