@@ -1,0 +1,605 @@
+{
+  "subject": "CASHFLOW-2026-10-06",
+  "case": "complete",
+  "inputs": {
+    "currency": "USD",
+    "sign": "receiving positive",
+    "notional": 1000000.0,
+    "annual_coupon_rate": 0.05,
+    "accrual_boundaries": [
+      "2025-11-30",
+      "2026-02-28",
+      "2026-05-31",
+      "2026-08-31",
+      "2026-11-30"
+    ],
+    "payment_calendar": "WeekendsOnly",
+    "evaluation_date": "2026-02-27",
+    "settlement_date": "2026-03-02",
+    "discount_reference_date": "2026-03-02",
+    "continuous_discount_rate": 0.04,
+    "discount_day_count": "Actual/365 Fixed",
+    "quote_basis": "absolute USD NPV, not price per 100",
+    "actual_payment_evidence": null
+  },
+  "variants": {
+    "selected": {
+      "accrual_convention": "Actual/360",
+      "payment_convention": "Following",
+      "flows": [
+        {
+          "id": "C1",
+          "kind": "coupon",
+          "accrual_start": "2025-11-30",
+          "accrual_end": "2026-02-28",
+          "accrual_days": 90,
+          "year_fraction": 0.25,
+          "day_count_denominator": 360,
+          "unadjusted_payment_date": "2026-02-28",
+          "payment_date": "2026-03-02",
+          "nominal_usd": 1000000.0,
+          "annual_coupon_rate": 0.05,
+          "amount_usd": 12499.999999999956,
+          "reference_amount_usd": 12500.0
+        },
+        {
+          "id": "C2",
+          "kind": "coupon",
+          "accrual_start": "2026-02-28",
+          "accrual_end": "2026-05-31",
+          "accrual_days": 92,
+          "year_fraction": 0.25555555555555554,
+          "day_count_denominator": 360,
+          "unadjusted_payment_date": "2026-05-31",
+          "payment_date": "2026-06-01",
+          "nominal_usd": 1000000.0,
+          "annual_coupon_rate": 0.05,
+          "amount_usd": 12777.777777777777,
+          "reference_amount_usd": 12777.777777777777
+        },
+        {
+          "id": "C3",
+          "kind": "coupon",
+          "accrual_start": "2026-05-31",
+          "accrual_end": "2026-08-31",
+          "accrual_days": 92,
+          "year_fraction": 0.25555555555555554,
+          "day_count_denominator": 360,
+          "unadjusted_payment_date": "2026-08-31",
+          "payment_date": "2026-08-31",
+          "nominal_usd": 1000000.0,
+          "annual_coupon_rate": 0.05,
+          "amount_usd": 12777.777777777777,
+          "reference_amount_usd": 12777.777777777777
+        },
+        {
+          "id": "C4",
+          "kind": "coupon",
+          "accrual_start": "2026-08-31",
+          "accrual_end": "2026-11-30",
+          "accrual_days": 91,
+          "year_fraction": 0.25277777777777777,
+          "day_count_denominator": 360,
+          "unadjusted_payment_date": "2026-11-30",
+          "payment_date": "2026-11-30",
+          "nominal_usd": 1000000.0,
+          "annual_coupon_rate": 0.05,
+          "amount_usd": 12638.888888888867,
+          "reference_amount_usd": 12638.888888888889
+        },
+        {
+          "id": "P1",
+          "kind": "principal",
+          "payment_date": "2026-11-30",
+          "amount_usd": 1000000.0,
+          "reference_amount_usd": 1000000.0
+        }
+      ],
+      "valuations": {
+        "exclude_settlement": {
+          "include_settlement_date_flows": false,
+          "quantlib_npv_usd": 1007968.0913917664,
+          "reference_npv_usd": 1007968.0913917663,
+          "flows": [
+            {
+              "id": "C1",
+              "payment_date": "2026-03-02",
+              "included": false,
+              "days_from_settlement": 0,
+              "reference_discount": null,
+              "reference_pv_usd": 0.0
+            },
+            {
+              "id": "C2",
+              "payment_date": "2026-06-01",
+              "included": true,
+              "days_from_settlement": 91,
+              "reference_discount": 0.9900769587737215,
+              "reference_pv_usd": 12650.983362108664
+            },
+            {
+              "id": "C3",
+              "payment_date": "2026-08-31",
+              "included": true,
+              "days_from_settlement": 182,
+              "reference_discount": 0.9802523842946214,
+              "reference_pv_usd": 12525.447132653495
+            },
+            {
+              "id": "C4",
+              "payment_date": "2026-11-30",
+              "included": true,
+              "days_from_settlement": 273,
+              "reference_discount": 0.970525299473108,
+              "reference_pv_usd": 12266.361423896225
+            },
+            {
+              "id": "P1",
+              "payment_date": "2026-11-30",
+              "included": true,
+              "days_from_settlement": 273,
+              "reference_discount": 0.970525299473108,
+              "reference_pv_usd": 970525.2994731079
+            }
+          ],
+          "included_ids": [
+            "C2",
+            "C3",
+            "C4",
+            "P1"
+          ]
+        },
+        "include_settlement": {
+          "include_settlement_date_flows": true,
+          "quantlib_npv_usd": 1020468.0913917663,
+          "reference_npv_usd": 1020468.0913917663,
+          "flows": [
+            {
+              "id": "C1",
+              "payment_date": "2026-03-02",
+              "included": true,
+              "days_from_settlement": 0,
+              "reference_discount": 1.0,
+              "reference_pv_usd": 12500.0
+            },
+            {
+              "id": "C2",
+              "payment_date": "2026-06-01",
+              "included": true,
+              "days_from_settlement": 91,
+              "reference_discount": 0.9900769587737215,
+              "reference_pv_usd": 12650.983362108664
+            },
+            {
+              "id": "C3",
+              "payment_date": "2026-08-31",
+              "included": true,
+              "days_from_settlement": 182,
+              "reference_discount": 0.9802523842946214,
+              "reference_pv_usd": 12525.447132653495
+            },
+            {
+              "id": "C4",
+              "payment_date": "2026-11-30",
+              "included": true,
+              "days_from_settlement": 273,
+              "reference_discount": 0.970525299473108,
+              "reference_pv_usd": 12266.361423896225
+            },
+            {
+              "id": "P1",
+              "payment_date": "2026-11-30",
+              "included": true,
+              "days_from_settlement": 273,
+              "reference_discount": 0.970525299473108,
+              "reference_pv_usd": 970525.2994731079
+            }
+          ],
+          "included_ids": [
+            "C1",
+            "C2",
+            "C3",
+            "C4",
+            "P1"
+          ]
+        }
+      },
+      "include_minus_exclude_usd": 12499.999999999884,
+      "selected_accrual_convention_met": true,
+      "selected_payment_convention_met": true
+    },
+    "wrong_day_count": {
+      "accrual_convention": "Actual/365 (Fixed)",
+      "payment_convention": "Following",
+      "flows": [
+        {
+          "id": "C1",
+          "kind": "coupon",
+          "accrual_start": "2025-11-30",
+          "accrual_end": "2026-02-28",
+          "accrual_days": 90,
+          "year_fraction": 0.2465753424657534,
+          "day_count_denominator": 365,
+          "unadjusted_payment_date": "2026-02-28",
+          "payment_date": "2026-03-02",
+          "nominal_usd": 1000000.0,
+          "annual_coupon_rate": 0.05,
+          "amount_usd": 12328.767123287676,
+          "reference_amount_usd": 12328.767123287671
+        },
+        {
+          "id": "C2",
+          "kind": "coupon",
+          "accrual_start": "2026-02-28",
+          "accrual_end": "2026-05-31",
+          "accrual_days": 92,
+          "year_fraction": 0.25205479452054796,
+          "day_count_denominator": 365,
+          "unadjusted_payment_date": "2026-05-31",
+          "payment_date": "2026-06-01",
+          "nominal_usd": 1000000.0,
+          "annual_coupon_rate": 0.05,
+          "amount_usd": 12602.739726027323,
+          "reference_amount_usd": 12602.739726027397
+        },
+        {
+          "id": "C3",
+          "kind": "coupon",
+          "accrual_start": "2026-05-31",
+          "accrual_end": "2026-08-31",
+          "accrual_days": 92,
+          "year_fraction": 0.25205479452054796,
+          "day_count_denominator": 365,
+          "unadjusted_payment_date": "2026-08-31",
+          "payment_date": "2026-08-31",
+          "nominal_usd": 1000000.0,
+          "annual_coupon_rate": 0.05,
+          "amount_usd": 12602.739726027323,
+          "reference_amount_usd": 12602.739726027397
+        },
+        {
+          "id": "C4",
+          "kind": "coupon",
+          "accrual_start": "2026-08-31",
+          "accrual_end": "2026-11-30",
+          "accrual_days": 91,
+          "year_fraction": 0.2493150684931507,
+          "day_count_denominator": 365,
+          "unadjusted_payment_date": "2026-11-30",
+          "payment_date": "2026-11-30",
+          "nominal_usd": 1000000.0,
+          "annual_coupon_rate": 0.05,
+          "amount_usd": 12465.7534246575,
+          "reference_amount_usd": 12465.753424657534
+        },
+        {
+          "id": "P1",
+          "kind": "principal",
+          "payment_date": "2026-11-30",
+          "amount_usd": 1000000.0,
+          "reference_amount_usd": 1000000.0
+        }
+      ],
+      "valuations": {
+        "exclude_settlement": {
+          "include_settlement_date_flows": false,
+          "quantlib_npv_usd": 1007455.1764339764,
+          "reference_npv_usd": 1007455.1764339765,
+          "flows": [
+            {
+              "id": "C1",
+              "payment_date": "2026-03-02",
+              "included": false,
+              "days_from_settlement": 0,
+              "reference_discount": null,
+              "reference_pv_usd": 0.0
+            },
+            {
+              "id": "C2",
+              "payment_date": "2026-06-01",
+              "included": true,
+              "days_from_settlement": 91,
+              "reference_discount": 0.9900769587737215,
+              "reference_pv_usd": 12477.682220161969
+            },
+            {
+              "id": "C3",
+              "payment_date": "2026-08-31",
+              "included": true,
+              "days_from_settlement": 182,
+              "reference_discount": 0.9802523842946214,
+              "reference_pv_usd": 12353.8656650829
+            },
+            {
+              "id": "C4",
+              "payment_date": "2026-11-30",
+              "included": true,
+              "days_from_settlement": 273,
+              "reference_discount": 0.970525299473108,
+              "reference_pv_usd": 12098.329075623675
+            },
+            {
+              "id": "P1",
+              "payment_date": "2026-11-30",
+              "included": true,
+              "days_from_settlement": 273,
+              "reference_discount": 0.970525299473108,
+              "reference_pv_usd": 970525.2994731079
+            }
+          ],
+          "included_ids": [
+            "C2",
+            "C3",
+            "C4",
+            "P1"
+          ]
+        },
+        "include_settlement": {
+          "include_settlement_date_flows": true,
+          "quantlib_npv_usd": 1019783.943557264,
+          "reference_npv_usd": 1019783.9435572642,
+          "flows": [
+            {
+              "id": "C1",
+              "payment_date": "2026-03-02",
+              "included": true,
+              "days_from_settlement": 0,
+              "reference_discount": 1.0,
+              "reference_pv_usd": 12328.767123287671
+            },
+            {
+              "id": "C2",
+              "payment_date": "2026-06-01",
+              "included": true,
+              "days_from_settlement": 91,
+              "reference_discount": 0.9900769587737215,
+              "reference_pv_usd": 12477.682220161969
+            },
+            {
+              "id": "C3",
+              "payment_date": "2026-08-31",
+              "included": true,
+              "days_from_settlement": 182,
+              "reference_discount": 0.9802523842946214,
+              "reference_pv_usd": 12353.8656650829
+            },
+            {
+              "id": "C4",
+              "payment_date": "2026-11-30",
+              "included": true,
+              "days_from_settlement": 273,
+              "reference_discount": 0.970525299473108,
+              "reference_pv_usd": 12098.329075623675
+            },
+            {
+              "id": "P1",
+              "payment_date": "2026-11-30",
+              "included": true,
+              "days_from_settlement": 273,
+              "reference_discount": 0.970525299473108,
+              "reference_pv_usd": 970525.2994731079
+            }
+          ],
+          "included_ids": [
+            "C1",
+            "C2",
+            "C3",
+            "C4",
+            "P1"
+          ]
+        }
+      },
+      "include_minus_exclude_usd": 12328.76712328766,
+      "selected_accrual_convention_met": false,
+      "selected_payment_convention_met": true
+    },
+    "unadjusted_payment": {
+      "accrual_convention": "Actual/360",
+      "payment_convention": "Unadjusted",
+      "flows": [
+        {
+          "id": "C1",
+          "kind": "coupon",
+          "accrual_start": "2025-11-30",
+          "accrual_end": "2026-02-28",
+          "accrual_days": 90,
+          "year_fraction": 0.25,
+          "day_count_denominator": 360,
+          "unadjusted_payment_date": "2026-02-28",
+          "payment_date": "2026-02-28",
+          "nominal_usd": 1000000.0,
+          "annual_coupon_rate": 0.05,
+          "amount_usd": 12499.999999999956,
+          "reference_amount_usd": 12500.0
+        },
+        {
+          "id": "C2",
+          "kind": "coupon",
+          "accrual_start": "2026-02-28",
+          "accrual_end": "2026-05-31",
+          "accrual_days": 92,
+          "year_fraction": 0.25555555555555554,
+          "day_count_denominator": 360,
+          "unadjusted_payment_date": "2026-05-31",
+          "payment_date": "2026-05-31",
+          "nominal_usd": 1000000.0,
+          "annual_coupon_rate": 0.05,
+          "amount_usd": 12777.777777777777,
+          "reference_amount_usd": 12777.777777777777
+        },
+        {
+          "id": "C3",
+          "kind": "coupon",
+          "accrual_start": "2026-05-31",
+          "accrual_end": "2026-08-31",
+          "accrual_days": 92,
+          "year_fraction": 0.25555555555555554,
+          "day_count_denominator": 360,
+          "unadjusted_payment_date": "2026-08-31",
+          "payment_date": "2026-08-31",
+          "nominal_usd": 1000000.0,
+          "annual_coupon_rate": 0.05,
+          "amount_usd": 12777.777777777777,
+          "reference_amount_usd": 12777.777777777777
+        },
+        {
+          "id": "C4",
+          "kind": "coupon",
+          "accrual_start": "2026-08-31",
+          "accrual_end": "2026-11-30",
+          "accrual_days": 91,
+          "year_fraction": 0.25277777777777777,
+          "day_count_denominator": 360,
+          "unadjusted_payment_date": "2026-11-30",
+          "payment_date": "2026-11-30",
+          "nominal_usd": 1000000.0,
+          "annual_coupon_rate": 0.05,
+          "amount_usd": 12638.888888888867,
+          "reference_amount_usd": 12638.888888888889
+        },
+        {
+          "id": "P1",
+          "kind": "principal",
+          "payment_date": "2026-11-30",
+          "amount_usd": 1000000.0,
+          "reference_amount_usd": 1000000.0
+        }
+      ],
+      "valuations": {
+        "exclude_settlement": {
+          "include_settlement_date_flows": false,
+          "quantlib_npv_usd": 1007969.4778768724,
+          "reference_npv_usd": 1007969.4778768723,
+          "flows": [
+            {
+              "id": "C1",
+              "payment_date": "2026-02-28",
+              "included": false,
+              "days_from_settlement": -2,
+              "reference_discount": null,
+              "reference_pv_usd": 0.0
+            },
+            {
+              "id": "C2",
+              "payment_date": "2026-05-31",
+              "included": true,
+              "days_from_settlement": 90,
+              "reference_discount": 0.9901854663037541,
+              "reference_pv_usd": 12652.369847214635
+            },
+            {
+              "id": "C3",
+              "payment_date": "2026-08-31",
+              "included": true,
+              "days_from_settlement": 182,
+              "reference_discount": 0.9802523842946214,
+              "reference_pv_usd": 12525.447132653495
+            },
+            {
+              "id": "C4",
+              "payment_date": "2026-11-30",
+              "included": true,
+              "days_from_settlement": 273,
+              "reference_discount": 0.970525299473108,
+              "reference_pv_usd": 12266.361423896225
+            },
+            {
+              "id": "P1",
+              "payment_date": "2026-11-30",
+              "included": true,
+              "days_from_settlement": 273,
+              "reference_discount": 0.970525299473108,
+              "reference_pv_usd": 970525.2994731079
+            }
+          ],
+          "included_ids": [
+            "C2",
+            "C3",
+            "C4",
+            "P1"
+          ]
+        },
+        "include_settlement": {
+          "include_settlement_date_flows": true,
+          "quantlib_npv_usd": 1007969.4778768724,
+          "reference_npv_usd": 1007969.4778768723,
+          "flows": [
+            {
+              "id": "C1",
+              "payment_date": "2026-02-28",
+              "included": false,
+              "days_from_settlement": -2,
+              "reference_discount": null,
+              "reference_pv_usd": 0.0
+            },
+            {
+              "id": "C2",
+              "payment_date": "2026-05-31",
+              "included": true,
+              "days_from_settlement": 90,
+              "reference_discount": 0.9901854663037541,
+              "reference_pv_usd": 12652.369847214635
+            },
+            {
+              "id": "C3",
+              "payment_date": "2026-08-31",
+              "included": true,
+              "days_from_settlement": 182,
+              "reference_discount": 0.9802523842946214,
+              "reference_pv_usd": 12525.447132653495
+            },
+            {
+              "id": "C4",
+              "payment_date": "2026-11-30",
+              "included": true,
+              "days_from_settlement": 273,
+              "reference_discount": 0.970525299473108,
+              "reference_pv_usd": 12266.361423896225
+            },
+            {
+              "id": "P1",
+              "payment_date": "2026-11-30",
+              "included": true,
+              "days_from_settlement": 273,
+              "reference_discount": 0.970525299473108,
+              "reference_pv_usd": 970525.2994731079
+            }
+          ],
+          "included_ids": [
+            "C2",
+            "C3",
+            "C4",
+            "P1"
+          ]
+        }
+      },
+      "include_minus_exclude_usd": 0.0,
+      "selected_accrual_convention_met": true,
+      "selected_payment_convention_met": false
+    }
+  },
+  "comparisons": {
+    "wrong_day_count": {
+      "exclude_settlement": {
+        "npv_difference_from_selected_usd": -512.9149577900534,
+        "within_illustrative_ten_usd": false
+      },
+      "include_settlement": {
+        "npv_difference_from_selected_usd": -684.147834502277,
+        "within_illustrative_ten_usd": false
+      }
+    },
+    "unadjusted_payment": {
+      "exclude_settlement": {
+        "npv_difference_from_selected_usd": 1.3864851059624925,
+        "within_illustrative_ten_usd": true
+      },
+      "include_settlement": {
+        "npv_difference_from_selected_usd": -12498.613514893921,
+        "within_illustrative_ten_usd": false
+      }
+    }
+  },
+  "producer_claims": [],
+  "source_sha256": "f23bcb23d4b7306a2dc68f98ed6c29b22c905d78196c6c386e7134b4fcd9536e"
+}

@@ -14,3 +14,13 @@ These are authored interpretation cases for the [component](../../contracts/cash
 | A valuation record is labeled clean price per 100, but its comparison is an absolute USD present value, with no accrued-interest or scale reconciliation. | Leave that comparison unresolved; matching digits or instrument IDs do not establish a common price basis. Do not invent normalization. |
 
 These cases test the intended distinctions for review. Whether an agent preserves them requires execution and assessment against the selected agreement. No such qualification is claimed here.
+
+## Worked report expectations
+
+The [cash-flow/valuation composition](../../examples/cashflow-review/README.md) retains three constructions and six observed aggregate valuations.
+
+- `complete`: Selected meets supplied conventions within this fixed scope. Wrong day count breaches Act/360; Unadjusted breaches Following payments even though its exclude-settlement comparison is within USD10. C4 and P1 remain distinct.
+- `missing-schedule`: declared convention differences and aggregate values remain available. Actual flow dates/amounts and population reconciliation remain unresolved. Expected terms are not observations of withheld records.
+- `contradictory`: all four producer claims are unsupported or contradicted. Close valuation does not clear dates; modeled obligations do not establish paid status; adjusted payment does not extend accrual; shared dates do not remove principal.
+
+No case supplies payment confirmation. Paid and unpaid are both unsupported conclusions. An accurately supported adverse report can fulfill the reporting agreement.
