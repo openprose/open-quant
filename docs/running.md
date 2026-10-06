@@ -12,6 +12,20 @@ A dry run resolves the kernel and checks preparation without dispatching a model
 
 Ordinary published CLI startup resolves the current public kernel. Pinning the CLI version does not freeze the kernel. Retain the observed kernel identity with any qualified run. A runtime mismatch is not solved by pointing at an unrelated private development build or silently downgrading a shared harness. This initial example has no private kernel or repository prerequisite.
 
+## Runner options and case selection
+
+Place runner options before the language command `run`. Arguments after `run` identify the program and the caller's selected case, mode or output path. For example, this prepares the P&L example's `missing-corner` invocation without starting a model:
+
+```sh
+prose --harness claude --model haiku --native-profile claude-workspace-tools --permission-mode acceptEdits --dry-run run examples/pnl-attribution/program.md missing-corner
+```
+
+Keep `--dry-run` before `run`; appending it after the program or case passes it as language input and does not enable the runner's dry-run mode. Quote any path containing spaces so the shell passes it as one argument.
+
+Preparation checks the selected runtime. The runner preserves the program and case arguments without interpreting them. It does not check that the program file exists, that its case is valid, that required input records are complete or that the result will satisfy the contract. Choose a case from the example's README and inspect the executor's actual result after an authorized run.
+
+An isolated October 6 preparation check used released CLI 0.15.0-rc.2 and native Claude 2.1.243 on macOS ARM64. It resolved kernel 0.1.0-rc.1 and stopped at `HARNESS_NEEDS_AUTH` with `wouldStartModel: false`; the source snapshot was unchanged. The fresh Claude configuration was deliberately unauthenticated. This establishes the preparation boundary and an authentication prerequisite, not a completed attendee execution.
+
 ## Working scope
 
 Run from the repository root. The program directs the executor to the selected sources and writes fresh results under results/. Source files and prior runs remain unchanged. Native `acceptEdits` is a harness permission choice, not a filesystem confinement guarantee. Use a suitable isolated environment for stronger enforcement.
@@ -26,7 +40,7 @@ The [full methodology-document example](../examples/sofr-documentation/README.md
 
 ## Assess an operating report
 
-All twelve examples in the [operating-work catalog](operating-work.md) produce `report.md` and `result.md`. Their common [assessment entry point](../examples/assess-report.md) takes the subject program, actual result directory and the case or mode used for that invocation. For example, replace `YOUR-RUN` with the directory reported by the monitoring execution:
+The worked operating reports in the [operating-work catalog](operating-work.md) produce `report.md` and `result.md`. Their common [assessment entry point](../examples/assess-report.md) takes the subject program, actual result directory and the case or mode used for that invocation. For example, replace `YOUR-RUN` with the directory reported by the monitoring execution:
 
 ```sh
 prose --harness claude --model haiku --native-profile claude-workspace-tools --permission-mode acceptEdits run examples/assess-report.md examples/monitoring-review/program.md results/monitoring-review/YOUR-RUN complete
