@@ -7,7 +7,7 @@ Artifacts: document.md, reviews.md and this result.md. The first two hashes belo
 | Artifact | SHA-256 |
 |---|---|
 | document.md | 8d5b56af10296736baad8859ed15d60a0eafe934df486fbb77af7c3008f0bfc1 |
-| reviews.md | d20a5b5e964c02430d7af3171e05b6497b356f09952ffd586d183b6b0a5a2e59 |
+| reviews.md | 45f3e555b234ec5410470d9ece49365d1b0b87e1119fe0758452e1c0a571ec15 |
 
 ## Agreement and input identities
 
@@ -39,4 +39,4 @@ Paths below are relative to the source repository root. Hashes identify this aut
 
 The authored review maps the document to D1–D10 and records the selected choices and material claim groups. Institutional facts remain unresolved under a requirement to disclose them. Raw acquisition, upstream quote derivation and institutional acceptance are outside the selected public scope.
 
-No invocation-level fulfillment is claimed. Agent execution, independent assessment under the selected agreement and execution-boundary evidence remain outstanding. The missing-locality selection would leave D5 unmet; these complete-case records must not be reused as an assessment of that case. Existing historical numerical reproduction is reported from its receipt, not claimed as work performed by this document's authoring invocation.
+No invocation-level fulfillment is claimed. Agent execution, independent assessment under the selected agreement and execution-boundary evidence remain outstanding. Existing historical numerical reproduction is reported from its receipt, not claimed as work performed by this document's authoring invocation.

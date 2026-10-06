@@ -40,8 +40,6 @@ Evidence: `inputs/complete.json`, S1–S5 native outputs and preference fields; 
 
 All nine records are accounted for. This report can fulfill its content obligation while identifying C4's inadmissibility and S5's misfit. No producer statements appear in this case. Economic suitability, empirical uncertainty and institutional approval are not established. The receipt records numerical reproduction, not execution of this report or compliance with its permissions. An actual invocation must also supply its result record and available execution evidence.
 
-In `missing-allocation`, C2's retained longer-maturity values and reported residuals do not determine its actual rates, six-month price or admissibility. Family-level identities remain available; another proposal or optimum cannot replace the missing actual vector. In `contradictory`, the same numerical records do not support the seven added producer claims.
-
 ## Source identities
 
 - `examples/calibration-identification/program.md` — SHA-256 `d07570c098e3c30af3b16634e9688ae605487670d3b7132adf021791367526b6`.

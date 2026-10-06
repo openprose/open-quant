@@ -72,6 +72,6 @@ No material claim group in this authored document is intentionally left unchecke
 
 The authored document supplies D1–D10 under the declared public scope. The section plan covers all ten IDs; the choice register preserves known reasons and absences; the citation audit covers the document's material claim groups. These are manual authoring findings on these exact artifacts, not an independent evaluator result or broad assurance that any executor follows the contracts.
 
-Institutional facts remain unresolved. D9 asks for disclosure, so that does not by itself make this public account incomplete. In contrast, the missing-locality case removes numerical evidence required by D5: a document can then report an honest gap but cannot be declared complete. This reference must not be reused unchanged for that case.
+Institutional facts remain unresolved. D9 asks for disclosure, so that does not by itself make this public account incomplete.
 
 The program has not been executed in an authenticated CLI run. Tool permissions, source preservation and runtime behavior of a future invocation are untested. An overall fulfillment claim for such an invocation is therefore unavailable here. Its own result record and separate assessment remain required. Source/package checks and numeric correspondences do not substitute for that assessment.
