@@ -93,3 +93,9 @@ The component package now contains 24 definitions and 27 selected files. Earlier
 The subsequent [worked dependence report](../examples/dependence-review/README.md) composes model-data requirements with this component. Its public calculation source reproduces every matrix, membership, adjustment and exposure observation from the separately retained deterministic study. Three packets preserve complete evidence, omit membership lists/raw rows, or add contradictory producer claims. The latter two changes are authored evidence selections, not new model calculations.
 
 The reference report is authored and the execution route remains unqualified. Fixed controls cover numerical relationships and twelve adverse mutations; they do not establish arbitrary contract fulfillment or institutional suitability. The 24 definitions and 27-file component package are unchanged by this source-only example.
+
+## Selection-history composition
+
+The [selection review](../examples/selection-review/README.md) reuses outcomes analysis and model data, adding no definition. Its owned numerical source reproduces the separately retained fixed-score study exactly. The public packet selects replicate 0 at K=64 by index, not favorable outcome; every other study replicate remains outside the report scope. Missing-evaluation and contradictory packets are authored modifications of the supplied evidence, not new score calculations.
+
+The reference is authored, and no agent has executed or assessed the program. Controls establish fixed identities, score comparisons, family-tail arithmetic and selected adverse cases; they do not establish performance of an investment strategy or arbitrary contract fulfillment. All 24 definitions, earlier examples and the 27-file component package remain unchanged.
