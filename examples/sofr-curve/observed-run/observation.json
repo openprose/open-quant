@@ -1,0 +1,66 @@
+{
+  "status": "observed development example; not an attendee rehearsal or regulatory acceptance",
+  "date": "2026-10-06",
+  "librarySubjectCommit": "53ca4037325920d5fa6dbaf561ad34ab20cd77c6",
+  "assessmentCandidate": "b256adcfd2811fe2088793e64adf81fb4006e763",
+  "cliVersion": "0.15.0-rc.2",
+  "harness": "Agents SDK 0.1.0 in research container; transport retries disabled",
+  "containerImage": "sha256:906b7fdedc3b7cb74920365205af7a882a944ac7a0db5f61659d5ef866b6390a",
+  "kernel": {
+    "version": "kernel-0.1.0-rc.1",
+    "sha256": "6cd37fd568df61026688ca2e3f684dbf76e1a51fa8a67fbd832f6225bbb81cb7"
+  },
+  "requestedModel": "gpt-5.6-luna",
+  "servedSnapshot": null,
+  "provider": "OpenAI API",
+  "execution": {
+    "trial": "01-baseline",
+    "elapsedSeconds": 42.787,
+    "requests": 8,
+    "inputTokens": 105131,
+    "cachedInputTokens": 84387,
+    "cacheWriteTokens": 20720,
+    "outputTokens": 3766,
+    "estimatedUsd": 0.01139174,
+    "conservativeObservedUsageUsd": 0.0593443,
+    "billedUsd": null,
+    "reservedUsd": 6,
+    "servedSnapshot": null
+  },
+  "assessment": {
+    "trial": "06-baseline-assessment-v2",
+    "elapsedSeconds": 42.866,
+    "requests": 9,
+    "inputTokens": 94543,
+    "cachedInputTokens": 76977,
+    "cacheWriteTokens": 17539,
+    "outputTokens": 3591,
+    "estimatedUsd": 0.01023889,
+    "conservativeObservedUsageUsd": 0.0537353,
+    "billedUsd": null,
+    "reservedUsd": 6,
+    "servedSnapshot": null
+  },
+  "coordinatorObservation": {
+    "sourceFilesChanged": [],
+    "addedFiles": [
+      "note.md",
+      "result.md"
+    ],
+    "nativeExitCode": 0,
+    "containerExportSucceeded": true,
+    "containerCleanupSucceeded": true
+  },
+  "assessmentConclusion": {
+    "content": "met as judged in the retained model assessment",
+    "executionEffects": "unresolved because assessor received no execution trace",
+    "overall": "unresolved"
+  },
+  "limitations": [
+    "One baseline execution, not a reliability estimate.",
+    "Retained financial calculations were not rerun.",
+    "Research container provisioning is separate from CLI installation.",
+    "Assessment output is evidence to review, not an institutional approval.",
+    "Estimated usage is not actual billed cost."
+  ]
+}

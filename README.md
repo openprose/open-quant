@@ -33,7 +33,7 @@ prose --harness claude --model haiku --native-profile claude-workspace-tools --p
 
 The program requests a fresh directory under `results/sofr-curve/` containing `note.md` and `result.md`; the executor should report the actual path. Inspect both. Existing results are preserved. No numerical packages, paper downloads or private repositories are needed for this documentation task.
 
-**Qualification:** this initial version has offline repository and evidence checks. The complete model-backed example and workshop timing are not yet qualified. The commands are the intended public CLI route, not a claim that every supported harness or account has executed this example successfully. [Current evidence and limits](docs/qualification.md) separate what was checked from what remains.
+**Qualification:** an [actual CLI-generated note and separate assessment](examples/sofr-curve/observed-run/README.md) are now retained from a bounded OpenAI API development run. The Claude commands above and the complete attendee installation/workshop remain unqualified. One observed result does not establish reliability across harnesses or accounts. [Current evidence and limits](docs/qualification.md) separate what was checked from what remains.
 
 ## Understand and change it
 
