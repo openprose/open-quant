@@ -1,0 +1,369 @@
+{
+  "schema": "pricing-probabilities-study-v1",
+  "source_sha256": "641c2541d19d74537a6bd2ce8da317e36c3da841885fd3ecfd8b2192b990a049",
+  "plan_sha256": "f9b7a47d33ea29baf4b2ba59a6f1f7d2cb373faa4a11a70edbd365bbef32aedd",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.6.1-arm64-arm-64bit"
+  },
+  "market": {
+    "currency": "USD",
+    "horizon_years": 1,
+    "state_order": [
+      "down",
+      "up"
+    ],
+    "bond_price": 0.9523809523809523,
+    "exact_bond_price": "20/21",
+    "stock_price": 100.0,
+    "terminal_stock_prices": [
+      80.0,
+      130.0
+    ]
+  },
+  "pricing": {
+    "native_state_prices": [
+      0.4761904761904761,
+      0.4761904761904763
+    ],
+    "exact_state_prices": [
+      "10/21",
+      "10/21"
+    ],
+    "native_q_down_up": [
+      0.49999999999999994,
+      0.5000000000000001
+    ],
+    "exact_q_down_up": [
+      "1/2",
+      "1/2"
+    ]
+  },
+  "payoffs": [
+    {
+      "id": "bond",
+      "payoff_down_up_usd": [
+        1,
+        1
+      ],
+      "native": {
+        "price_usd": 0.9523809523809523,
+        "replication_cost_usd": 0.9523809523809523,
+        "bond_units_stock_shares": [
+          1.0,
+          0.0
+        ],
+        "replicated_payoff_down_up_usd": [
+          1.0,
+          1.0
+        ],
+        "q_expected_payoff_usd": 1.0
+      },
+      "exact": {
+        "price_usd": "20/21",
+        "bond_units_stock_shares": [
+          "1",
+          "0"
+        ],
+        "q_expected_payoff_usd": "1"
+      }
+    },
+    {
+      "id": "stock",
+      "payoff_down_up_usd": [
+        80,
+        130
+      ],
+      "native": {
+        "price_usd": 100.0,
+        "replication_cost_usd": 100.0,
+        "bond_units_stock_shares": [
+          0.0,
+          1.0
+        ],
+        "replicated_payoff_down_up_usd": [
+          80.0,
+          130.0
+        ],
+        "q_expected_payoff_usd": 105.0
+      },
+      "exact": {
+        "price_usd": "100",
+        "bond_units_stock_shares": [
+          "0",
+          "1"
+        ],
+        "q_expected_payoff_usd": "105"
+      }
+    },
+    {
+      "id": "call-100",
+      "payoff_down_up_usd": [
+        0,
+        30
+      ],
+      "native": {
+        "price_usd": 14.285714285714288,
+        "replication_cost_usd": 14.285714285714292,
+        "bond_units_stock_shares": [
+          -48.0,
+          0.6
+        ],
+        "replicated_payoff_down_up_usd": [
+          0.0,
+          30.0
+        ],
+        "q_expected_payoff_usd": 15.000000000000004
+      },
+      "exact": {
+        "price_usd": "100/7",
+        "bond_units_stock_shares": [
+          "-48",
+          "3/5"
+        ],
+        "q_expected_payoff_usd": "15"
+      }
+    },
+    {
+      "id": "put-100",
+      "payoff_down_up_usd": [
+        20,
+        0
+      ],
+      "native": {
+        "price_usd": 9.523809523809522,
+        "replication_cost_usd": 9.523809523809518,
+        "bond_units_stock_shares": [
+          52.0,
+          -0.4
+        ],
+        "replicated_payoff_down_up_usd": [
+          20.0,
+          0.0
+        ],
+        "q_expected_payoff_usd": 9.999999999999998
+      },
+      "exact": {
+        "price_usd": "200/21",
+        "bond_units_stock_shares": [
+          "52",
+          "-2/5"
+        ],
+        "q_expected_payoff_usd": "10"
+      }
+    },
+    {
+      "id": "digital-up",
+      "payoff_down_up_usd": [
+        0,
+        1
+      ],
+      "native": {
+        "price_usd": 0.4761904761904763,
+        "replication_cost_usd": 0.4761904761904763,
+        "bond_units_stock_shares": [
+          -1.6,
+          0.02
+        ],
+        "replicated_payoff_down_up_usd": [
+          0.0,
+          1.0
+        ],
+        "q_expected_payoff_usd": 0.5000000000000001
+      },
+      "exact": {
+        "price_usd": "10/21",
+        "bond_units_stock_shares": [
+          "-8/5",
+          "1/50"
+        ],
+        "q_expected_payoff_usd": "1/2"
+      }
+    },
+    {
+      "id": "digital-down",
+      "payoff_down_up_usd": [
+        1,
+        0
+      ],
+      "native": {
+        "price_usd": 0.4761904761904761,
+        "replication_cost_usd": 0.4761904761904763,
+        "bond_units_stock_shares": [
+          2.6,
+          -0.02
+        ],
+        "replicated_payoff_down_up_usd": [
+          1.0,
+          0.0
+        ],
+        "q_expected_payoff_usd": 0.49999999999999994
+      },
+      "exact": {
+        "price_usd": "10/21",
+        "bond_units_stock_shares": [
+          "13/5",
+          "-1/50"
+        ],
+        "q_expected_payoff_usd": "1/2"
+      }
+    }
+  ],
+  "physical_worlds": [
+    {
+      "id": "A",
+      "p_down_up": [
+        0.4,
+        0.6
+      ],
+      "discount_factors_down_up": [
+        1.1904761904761902,
+        0.7936507936507938
+      ],
+      "exact_p_down_up": [
+        "2/5",
+        "3/5"
+      ],
+      "exact_discount_factors_down_up": [
+        "25/21",
+        "50/63"
+      ],
+      "stock_expected_return": 0.1,
+      "payoffs": [
+        {
+          "id": "bond",
+          "p_expected_payoff_usd": 1.0,
+          "p_expected_discounted_payoff_usd": 0.9523809523809523,
+          "exact_p_expected_payoff_usd": "1"
+        },
+        {
+          "id": "stock",
+          "p_expected_payoff_usd": 110.0,
+          "p_expected_discounted_payoff_usd": 100.0,
+          "exact_p_expected_payoff_usd": "110"
+        },
+        {
+          "id": "call-100",
+          "p_expected_payoff_usd": 18.0,
+          "p_expected_discounted_payoff_usd": 14.285714285714288,
+          "exact_p_expected_payoff_usd": "18"
+        },
+        {
+          "id": "put-100",
+          "p_expected_payoff_usd": 8.0,
+          "p_expected_discounted_payoff_usd": 9.523809523809522,
+          "exact_p_expected_payoff_usd": "8"
+        },
+        {
+          "id": "digital-up",
+          "p_expected_payoff_usd": 0.6,
+          "p_expected_discounted_payoff_usd": 0.4761904761904763,
+          "exact_p_expected_payoff_usd": "3/5"
+        },
+        {
+          "id": "digital-down",
+          "p_expected_payoff_usd": 0.4,
+          "p_expected_discounted_payoff_usd": 0.4761904761904761,
+          "exact_p_expected_payoff_usd": "2/5"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "p_down_up": [
+        0.2,
+        0.8
+      ],
+      "discount_factors_down_up": [
+        2.3809523809523805,
+        0.5952380952380953
+      ],
+      "exact_p_down_up": [
+        "1/5",
+        "4/5"
+      ],
+      "exact_discount_factors_down_up": [
+        "50/21",
+        "25/42"
+      ],
+      "stock_expected_return": 0.2,
+      "payoffs": [
+        {
+          "id": "bond",
+          "p_expected_payoff_usd": 1.0,
+          "p_expected_discounted_payoff_usd": 0.9523809523809523,
+          "exact_p_expected_payoff_usd": "1"
+        },
+        {
+          "id": "stock",
+          "p_expected_payoff_usd": 120.0,
+          "p_expected_discounted_payoff_usd": 100.0,
+          "exact_p_expected_payoff_usd": "120"
+        },
+        {
+          "id": "call-100",
+          "p_expected_payoff_usd": 24.0,
+          "p_expected_discounted_payoff_usd": 14.285714285714288,
+          "exact_p_expected_payoff_usd": "24"
+        },
+        {
+          "id": "put-100",
+          "p_expected_payoff_usd": 4.0,
+          "p_expected_discounted_payoff_usd": 9.523809523809522,
+          "exact_p_expected_payoff_usd": "4"
+        },
+        {
+          "id": "digital-up",
+          "p_expected_payoff_usd": 0.8,
+          "p_expected_discounted_payoff_usd": 0.4761904761904763,
+          "exact_p_expected_payoff_usd": "4/5"
+        },
+        {
+          "id": "digital-down",
+          "p_expected_payoff_usd": 0.2,
+          "p_expected_discounted_payoff_usd": 0.4761904761904761,
+          "exact_p_expected_payoff_usd": "1/5"
+        }
+      ]
+    }
+  ],
+  "equality_control": {
+    "p_equals_q": [
+      "1/2",
+      "1/2"
+    ],
+    "constant_discount_factor": "20/21"
+  },
+  "producer_statements": [
+    {
+      "id": "C1",
+      "statement": "Exact replication identifies a 50% physical down-event probability in both worlds."
+    },
+    {
+      "id": "C2",
+      "statement": "The put price is its physical expected payoff in both worlds."
+    },
+    {
+      "id": "C3",
+      "statement": "Dividing the put price by the bond price recovers its physical expected payoff in world A."
+    },
+    {
+      "id": "C4",
+      "statement": "State prices already form probabilities without normalization."
+    },
+    {
+      "id": "C5",
+      "statement": "Positive stochastic discount factors must be constant and cannot exceed one."
+    },
+    {
+      "id": "C6",
+      "statement": "The pricing measure can never equal a physical probability measure."
+    },
+    {
+      "id": "C7",
+      "statement": "These calculations establish an empirically validated 20% expected stock return."
+    }
+  ],
+  "case": "contradictory"
+}

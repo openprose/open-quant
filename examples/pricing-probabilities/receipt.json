@@ -1,0 +1,24 @@
+{
+  "kind": "Observed CPU reproduction and authored evidence projections; not an agent result",
+  "source_commit": "da9ca0b63e7c7a86f1d0a4b7faa5675f38a6a79c",
+  "source_sha256": "641c2541d19d74537a6bd2ce8da317e36c3da841885fd3ecfd8b2192b990a049",
+  "plan_sha256": "f9b7a47d33ea29baf4b2ba59a6f1f7d2cb373faa4a11a70edbd365bbef32aedd",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.6.1-arm64-arm-64bit"
+  },
+  "elapsed_seconds": 0.10602454200852662,
+  "exit_code": 0,
+  "controls_passed": 63,
+  "observation_sha256": "e92e821392ecd40d399cfdef44bf699a01596a0e99e7338d1268631f51f5a733",
+  "numerical_comparison": "Every numerical observation/control matches the prespecified study; new timing and rebound source/plan identities are separate.",
+  "case_sha256": {
+    "complete": "768763ff97c5ea53977a11594d86a0174f72d1bc6a8ce8afd548cb06ec8e21f6",
+    "missing-world": "dc2da192750909e26b05fb662cf8b921bd751787400aea6a2edec6561781d327",
+    "contradictory": "11b3bd9eca236089fa791452cfe433a6bc076ed69b52af174ea7e039d8a23b51"
+  },
+  "missing_projection": "All world B probability inputs, discount factors, physical expectations and expected return withheld together; world A and all market and pricing records unchanged.",
+  "contradictory_projection": "Seven authored producer statements added; numerical records unchanged.",
+  "model_calls": 0
+}

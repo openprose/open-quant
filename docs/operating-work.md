@@ -135,3 +135,7 @@ The [full-revaluation attribution report](../examples/pnl-attribution/README.md)
 ## Reverse-stress severity
 
 The [reverse-stress composition](../examples/reverse-stress/README.md) reuses scenario and optimization requirements. Eight native results, three exact metric bounds and a finite catalog distinguish successful termination, loss feasibility, severity conventions and global support. Complete, missing-candidate and contradictory packets retain analytical knowledge separately from actual candidate observations. No new definition or package change is required; the reporting program remains agent-unqualified.
+
+## Pricing probabilities and intended use
+
+The [pricing-probability explanation](../examples/pricing-probabilities/README.md) composes model description and numerical evidence. Six prices and replicating positions remain identical under two physical probability models, while their event probabilities and expected payoffs differ. Complete, missing-world and contradictory packets preserve supported valuations alongside unavailable physical assumptions. This established mathematical distinction supplies a useful reporting case without adding a definition. Agent execution remains unqualified.

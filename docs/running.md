@@ -77,3 +77,7 @@ The observed research setup additionally used a container and disabled provider 
 ## Reverse-stress reporting
 
 From the source repository, run `prose run examples/reverse-stress/program.md complete`, replacing `complete` with `missing-candidate` or `contradictory` for the other evidence selections. The [example guide](../examples/reverse-stress/README.md) gives the corresponding assessment invocation and qualification limits. The reporting program reads the supplied results; its optional numerical reproduction is separate.
+
+## Pricing probabilities
+
+From the source repository, run `prose run examples/pricing-probabilities/program.md complete`, replacing `complete` with `missing-world` or `contradictory` for the other selections. The [example guide](../examples/pricing-probabilities/README.md) provides the assessment invocation. The report explains retained evidence; its optional numerical reproduction is a separate operation. Agent execution remains unqualified.
