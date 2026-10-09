@@ -1,0 +1,11 @@
+# Illustrative cash-flow review policy
+
+This is caller-authored policy for the synthetic example, not an institutional settlement rule. Preserve the subject, USD receiving direction, notional, rate, five flow identities, four accrual periods and both inclusion choices specified in the brief. Identify source and observation limitations explicitly.
+
+For each construction, report whether its declared and observed accrual/payment conventions meet the selected requirements. With flow evidence, account for every expected date and amount. Check amounts against independent date/arithmetic references at USD1e-8 absolute tolerance and aggregate NPVs against supplied references at USD1e-7. Preserve coupon and principal identities even when their dates coincide. Do not label the independent reference population as an observed internal QuantLib trace.
+
+Compare each variant with selected under the same inclusion policy. Report signed differences and whether their absolute values are at most USD10, including equality. This illustrative aggregate tolerance is a separate question from convention compliance. A value within tolerance does not clear an incorrect payment date, day count or missing obligation. Show the include-minus-exclude difference for each construction and explain the supporting settlement-date evidence where available.
+
+In `missing-schedule`, instrument flow records and per-valuation reference rows and included-ID lists are absent. The declared conventions and aggregate values remain known. Identify convention differences supported by those declarations, but leave actual flow dates, amounts and population reconciliation unresolved. Expected dates or amounts calculated from the brief are not observations of the omitted schedule. Aggregate equality cannot supply those observations or establish actual payment.
+
+The `contradictory` packet adds producer assertions without changing numerical evidence. Assess them against the selected requirements and observation scope. Absence of payment evidence supports neither a paid nor an unpaid conclusion. Report fulfillment concerns accurate coverage and support of the review, separately from whether a construction meets every substantive requirement. This policy does not require an all-clear underlying result.

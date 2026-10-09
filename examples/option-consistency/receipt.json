@@ -1,0 +1,30 @@
+{
+  "source_path": "model/measure.py",
+  "source_commit": "30aa95eec0d7346273e91a465c89f28c847e05a1",
+  "source_sha256": "ce73f762656768b1ffc3d90597d4a4ecec1c9fbac16f109db3a133c4d48fa34f",
+  "plan_path": "model/README.md",
+  "plan_sha256": "cc6a9aa1d6b18739a21772422117481f01e5011e4bedd5d9e80f488bbb36aa58",
+  "observation_sha256": "241bdc5af70e09a30b6fbbd17472fff539136f63b8e4a1bb97b0c8d073a29169",
+  "recorded_at": "2026-10-06T07:04:00.217081+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "quantlib": "1.43",
+    "native_sha256": "04a53b6f425e728083149241f77e9b9711db845614ce65d2544a09a0970597d8"
+  },
+  "calculation_seconds": 0.015518333995714784,
+  "qualification": "One observed synthetic option calculation reproduction; reporting program and assessment are agent-unqualified.",
+  "packets": {
+    "complete": {
+      "path": "inputs/complete.json",
+      "sha256": "f744803bf399c159d2fc5763cb8df0ed43e849cb78117e3521238f9a500b64ec"
+    },
+    "missing-underlying": {
+      "path": "inputs/missing-underlying.json",
+      "sha256": "8e526bc5aeb3ab4606104078152e579666fd489751c25d72a41ac56c9a7aed66"
+    },
+    "contradictory": {
+      "path": "inputs/contradictory.json",
+      "sha256": "15bd42b9b692f3b7a164452762bae973daaf74bae15e14e07270d694783f3e2b"
+    }
+  }
+}

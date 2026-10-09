@@ -1,0 +1,30 @@
+{
+  "source_path": "model/measure.py",
+  "source_commit": "2bbe2aee9ad1e70b8258668cb433b3a6d1869bae",
+  "source_sha256": "eae69c964d016663aa8940e56a8d4add71aee96d8d5a139ae1b0c9f57f531bd1",
+  "plan_path": "model/README.md",
+  "plan_sha256": "94c669297db72c0f02f56107e2a4aa8d279c9f570cce18e55e439554ff447c3d",
+  "observation_sha256": "87d32ee12b5003eaac4075e4f731e8313a172923521b1779a12dcbd5d018ef63",
+  "recorded_at": "2026-10-06T07:17:41.103604+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "quantlib": "1.43",
+    "native_sha256": "04a53b6f425e728083149241f77e9b9711db845614ce65d2544a09a0970597d8"
+  },
+  "calculation_seconds": 0.015625333006028086,
+  "qualification": "One observed synthetic native-price reproduction; reporting and assessment are agent-unqualified.",
+  "packets": {
+    "complete": {
+      "path": "inputs/complete.json",
+      "sha256": "120391c1b0a089aa8fe59ce0e31ff2a406882225bc42fd31e9cdb5f4604d1b85"
+    },
+    "missing-corner": {
+      "path": "inputs/missing-corner.json",
+      "sha256": "45942c60c7ac37d98ea5b1ccf436932cc7c8952cc2e23f9ccfb097e57b6ff9bb"
+    },
+    "contradictory": {
+      "path": "inputs/contradictory.json",
+      "sha256": "1dfb050e4c4203132cfd1fe07e9c1b7ce3d1285bc2d05bc62d3f1c54a4f626b8"
+    }
+  }
+}

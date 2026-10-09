@@ -1,0 +1,46 @@
+{
+  "source_project": "Open Quant Docs, AIE NYC 2026 predecessor",
+  "source_revision": "f87af03fd53519d8bd351c1ec07fa82178cabcb1",
+  "source_license": "MIT, copyright 2026 OpenProse",
+  "public_access": "Predecessor repository access is not required to use this repository. Imported owned source and numeric summaries are included here.",
+  "files": [
+    {
+      "path": "examples/sofr-curve/inputs/results.json",
+      "source_path": "src/model/worked-example/out/results.json",
+      "sha256": "1b42c6b824fae587d31b9d4c17de8867690e4e1f4eda6b3c31ce82ef96730494",
+      "transformation": "unchanged"
+    },
+    {
+      "path": "examples/sofr-curve/inputs/quotes.csv",
+      "source_path": "src/model/worked-example/out/quotes.csv",
+      "sha256": "df36b297eebf0a20600bdbdab60d615ff30713435aaa297afc521106eafae81d",
+      "transformation": "unchanged"
+    },
+    {
+      "path": "examples/sofr-curve/inputs/sofr-fixing.json",
+      "source_path": "src/model/worked-example/out/sofr_fixing.json",
+      "sha256": "0f554854fdbd9944a1caf795d4bc24e8cf5297dec04f5b30c2188214edd8570e",
+      "transformation": "unchanged"
+    },
+    {
+      "path": "examples/sofr-curve/model/bootstrap.py",
+      "source_path": "src/model/worked-example/bootstrap.py",
+      "sha256": "d897203d1b145f81b60248df422ef79411362a212098e0408a05fb757f3e56b2",
+      "transformation": "unchanged"
+    },
+    {
+      "path": "examples/sofr-curve/model/hagan_west.py",
+      "source_path": "src/model/worked-example/hagan_west.py",
+      "sha256": "f4433cbd42322ea27c95463ad48cdd128f3c16f49b2b39ff5fab2bd1790f36e5",
+      "transformation": "unchanged"
+    }
+  ],
+  "excluded": [
+    "private history and coordination",
+    "native/provider transcripts",
+    "third-party PDFs",
+    "raw transaction archives",
+    "historical generated documentation and assessments"
+  ],
+  "limit": "Retained results are historical calculations, not a new numerical reproduction, agent run or independent financial review."
+}

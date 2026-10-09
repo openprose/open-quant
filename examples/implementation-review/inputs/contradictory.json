@@ -1,0 +1,940 @@
+{
+  "study": "BLACK-ADAPTERS-2026-10-06",
+  "source_sha256": "dd34a025c295037b496fe5a8adce0006b71c3421e6ab17c57cdae49bd5236a35",
+  "price_units": "present-value USD per underlying unit",
+  "absolute_tolerance": 1e-09,
+  "observations": [
+    {
+      "case": "baseline",
+      "inputs": {
+        "forward_usd": 100.0,
+        "strike_usd": 100.0,
+        "annual_volatility": 0.2,
+        "expiry_years": 1.0,
+        "continuous_rate": 0.0
+      },
+      "reference": {
+        "call": {
+          "price": 7.965567455405798,
+          "estimated_error": 1.5989230926888288e-11,
+          "tail_bound": 2.322394913449023e-30,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            0.10000000000000002,
+            12.0
+          ]
+        },
+        "put": {
+          "price": 7.9655674554057985,
+          "estimated_error": 2.3755096042986757e-11,
+          "tail_bound": 2.322394913449023e-30,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            0.10000000000000002,
+            12.0
+          ]
+        }
+      },
+      "reference_usable": true,
+      "expected_parity": 0.0,
+      "variants": {
+        "correct": {
+          "prices": {
+            "call": 7.9655674554058,
+            "put": 7.9655674554058
+          },
+          "price_errors": {
+            "call": 2.6645352591003757e-15,
+            "put": 1.7763568394002505e-15
+          },
+          "price_agreement": true,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        },
+        "wrong-time-scaling": {
+          "prices": {
+            "call": 7.9655674554058,
+            "put": 7.9655674554058
+          },
+          "price_errors": {
+            "call": 2.6645352591003757e-15,
+            "put": 1.7763568394002505e-15
+          },
+          "price_agreement": true,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        },
+        "omitted-discount": {
+          "prices": {
+            "call": 7.9655674554058,
+            "put": 7.9655674554058
+          },
+          "price_errors": {
+            "call": 2.6645352591003757e-15,
+            "put": 1.7763568394002505e-15
+          },
+          "price_agreement": true,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        }
+      }
+    },
+    {
+      "case": "short-expiry",
+      "inputs": {
+        "forward_usd": 100.0,
+        "strike_usd": 100.0,
+        "annual_volatility": 0.2,
+        "expiry_years": 0.25,
+        "continuous_rate": 0.03
+      },
+      "reference": {
+        "call": {
+          "price": 3.9579648348352605,
+          "estimated_error": 9.230901476860938e-12,
+          "tail_bound": 9.92367048625723e-31,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            0.05000000000000001,
+            12.0
+          ]
+        },
+        "put": {
+          "price": 3.957964834835261,
+          "estimated_error": 1.115629402548728e-11,
+          "tail_bound": 9.92367048625723e-31,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            0.05000000000000001,
+            12.0
+          ]
+        }
+      },
+      "reference_usable": true,
+      "expected_parity": 0.0,
+      "variants": {
+        "correct": {
+          "prices": {
+            "call": 3.9579648348352623,
+            "put": 3.9579648348352623
+          },
+          "price_errors": {
+            "call": 1.7763568394002505e-15,
+            "put": 1.3322676295501878e-15
+          },
+          "price_agreement": true,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        },
+        "wrong-time-scaling": {
+          "prices": {
+            "call": 7.906049172044553,
+            "put": 7.906049172044553
+          },
+          "price_errors": {
+            "call": 3.9480843372092926,
+            "put": 3.948084337209292
+          },
+          "price_agreement": false,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        },
+        "omitted-discount": {
+          "prices": {
+            "call": 3.9877611676744946,
+            "put": 3.9877611676744946
+          },
+          "price_errors": {
+            "call": 0.029796332839234108,
+            "put": 0.029796332839233663
+          },
+          "price_agreement": false,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        }
+      }
+    },
+    {
+      "case": "long-expiry",
+      "inputs": {
+        "forward_usd": 100.0,
+        "strike_usd": 100.0,
+        "annual_volatility": 0.2,
+        "expiry_years": 4.0,
+        "continuous_rate": 0.03
+      },
+      "reference": {
+        "call": {
+          "price": 14.059411221960858,
+          "estimated_error": 1.7410026318423174e-11,
+          "tail_bound": 1.8590309474146638e-29,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            0.20000000000000004,
+            12.0
+          ]
+        },
+        "put": {
+          "price": 14.059411221960854,
+          "estimated_error": 4.478865355997793e-11,
+          "tail_bound": 1.8590309474146638e-29,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            0.20000000000000004,
+            12.0
+          ]
+        }
+      },
+      "reference_usable": true,
+      "expected_parity": 0.0,
+      "variants": {
+        "correct": {
+          "prices": {
+            "call": 14.059411221960854,
+            "put": 14.059411221960852
+          },
+          "price_errors": {
+            "call": -3.552713678800501e-15,
+            "put": -1.7763568394002505e-15
+          },
+          "price_agreement": true,
+          "parity_error": 1.7763568394002505e-15,
+          "parity_agreement": true
+        },
+        "wrong-time-scaling": {
+          "prices": {
+            "call": 7.064824566248489,
+            "put": 7.064824566248489
+          },
+          "price_errors": {
+            "call": -6.994586655712369,
+            "put": -6.994586655712365
+          },
+          "price_agreement": false,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        },
+        "omitted-discount": {
+          "prices": {
+            "call": 15.851941887820606,
+            "put": 15.851941887820605
+          },
+          "price_errors": {
+            "call": 1.7925306658597489,
+            "put": 1.7925306658597506
+          },
+          "price_agreement": false,
+          "parity_error": 1.7763568394002505e-15,
+          "parity_agreement": true
+        }
+      }
+    },
+    {
+      "case": "in-the-money",
+      "inputs": {
+        "forward_usd": 120.0,
+        "strike_usd": 100.0,
+        "annual_volatility": 0.2,
+        "expiry_years": 2.0,
+        "continuous_rate": 0.03
+      },
+      "reference": {
+        "call": {
+          "price": 23.384611745526374,
+          "estimated_error": 2.621946388302321e-11,
+          "tail_bound": 6.223591748886278e-30,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            -0.5031826895901581,
+            12.0
+          ]
+        },
+        "put": {
+          "price": 4.549321073841397,
+          "estimated_error": 6.2591483865603046e-12,
+          "tail_bound": 6.223591748886278e-30,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            -0.5031826895901581,
+            12.0
+          ]
+        }
+      },
+      "reference_usable": true,
+      "expected_parity": 18.835290671684973,
+      "variants": {
+        "correct": {
+          "prices": {
+            "call": 23.384611745526378,
+            "put": 4.549321073841402
+          },
+          "price_errors": {
+            "call": 3.552713678800501e-15,
+            "put": 5.329070518200751e-15
+          },
+          "price_agreement": true,
+          "parity_error": 3.552713678800501e-15,
+          "parity_agreement": true
+        },
+        "wrong-time-scaling": {
+          "prices": {
+            "call": 20.85754053449511,
+            "put": 2.0222498628101393
+          },
+          "price_errors": {
+            "call": -2.527071211031263,
+            "put": -2.5270712110312576
+          },
+          "price_agreement": false,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        },
+        "omitted-discount": {
+          "prices": {
+            "call": 24.830635378173785,
+            "put": 4.830635378173781
+          },
+          "price_errors": {
+            "call": 1.4460236326474103,
+            "put": 0.28131430433238425
+          },
+          "price_agreement": false,
+          "parity_error": 1.1647093283150305,
+          "parity_agreement": false
+        }
+      }
+    },
+    {
+      "case": "out-of-the-money",
+      "inputs": {
+        "forward_usd": 80.0,
+        "strike_usd": 100.0,
+        "annual_volatility": 0.2,
+        "expiry_years": 2.0,
+        "continuous_rate": 0.03
+      },
+      "reference": {
+        "call": {
+          "price": 2.903132607130432,
+          "estimated_error": 2.5546438983001333e-12,
+          "tail_bound": 4.26059635577096e-30,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            0.9303529477989397,
+            12.0
+          ]
+        },
+        "put": {
+          "price": 21.738423278815404,
+          "estimated_error": 1.1533810968203818e-10,
+          "tail_bound": 4.26059635577096e-30,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            0.9303529477989397,
+            12.0
+          ]
+        }
+      },
+      "reference_usable": true,
+      "expected_parity": -18.835290671684973,
+      "variants": {
+        "correct": {
+          "prices": {
+            "call": 2.903132607130431,
+            "put": 21.7384232788154
+          },
+          "price_errors": {
+            "call": -8.881784197001252e-16,
+            "put": -3.552713678800501e-15
+          },
+          "price_agreement": true,
+          "parity_error": 3.552713678800501e-15,
+          "parity_agreement": true
+        },
+        "wrong-time-scaling": {
+          "prices": {
+            "call": 1.1168663548724111,
+            "put": 19.95215702655738
+          },
+          "price_errors": {
+            "call": -1.7862662522580208,
+            "put": -1.7862662522580237
+          },
+          "price_agreement": false,
+          "parity_error": 3.552713678800501e-15,
+          "parity_agreement": true
+        },
+        "omitted-discount": {
+          "prices": {
+            "call": 3.0826523017186034,
+            "put": 23.082652301718596
+          },
+          "price_errors": {
+            "call": 0.1795196945881714,
+            "put": 1.3442290229031926
+          },
+          "price_agreement": false,
+          "parity_error": -1.1647093283150198,
+          "parity_agreement": false
+        }
+      }
+    },
+    {
+      "case": "zero-volatility",
+      "inputs": {
+        "forward_usd": 120.0,
+        "strike_usd": 100.0,
+        "annual_volatility": 0.0,
+        "expiry_years": 2.0,
+        "continuous_rate": 0.03
+      },
+      "reference": {
+        "call": {
+          "price": 18.835290671684973,
+          "estimated_error": 0.0,
+          "tail_bound": 0.0,
+          "warnings": [],
+          "method": "deterministic payoff"
+        },
+        "put": {
+          "price": 0.0,
+          "estimated_error": 0.0,
+          "tail_bound": 0.0,
+          "warnings": [],
+          "method": "deterministic payoff"
+        }
+      },
+      "reference_usable": true,
+      "expected_parity": 18.835290671684973,
+      "variants": {
+        "correct": {
+          "prices": {
+            "call": 18.835290671684973,
+            "put": 0.0
+          },
+          "price_errors": {
+            "call": 0.0,
+            "put": 0.0
+          },
+          "price_agreement": true,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        },
+        "wrong-time-scaling": {
+          "prices": {
+            "call": 18.835290671684973,
+            "put": 0.0
+          },
+          "price_errors": {
+            "call": 0.0,
+            "put": 0.0
+          },
+          "price_agreement": true,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        },
+        "omitted-discount": {
+          "prices": {
+            "call": 20.0,
+            "put": 0.0
+          },
+          "price_errors": {
+            "call": 1.164709328315027,
+            "put": 0.0
+          },
+          "price_agreement": false,
+          "parity_error": 1.164709328315027,
+          "parity_agreement": false
+        }
+      }
+    },
+    {
+      "case": "zero-expiry",
+      "inputs": {
+        "forward_usd": 120.0,
+        "strike_usd": 100.0,
+        "annual_volatility": 0.2,
+        "expiry_years": 0.0,
+        "continuous_rate": 0.03
+      },
+      "reference": {
+        "call": {
+          "price": 20.0,
+          "estimated_error": 0.0,
+          "tail_bound": 0.0,
+          "warnings": [],
+          "method": "deterministic payoff"
+        },
+        "put": {
+          "price": 0.0,
+          "estimated_error": 0.0,
+          "tail_bound": 0.0,
+          "warnings": [],
+          "method": "deterministic payoff"
+        }
+      },
+      "reference_usable": true,
+      "expected_parity": 20.0,
+      "variants": {
+        "correct": {
+          "prices": {
+            "call": 20.0,
+            "put": 0.0
+          },
+          "price_errors": {
+            "call": 0.0,
+            "put": 0.0
+          },
+          "price_agreement": true,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        },
+        "wrong-time-scaling": {
+          "prices": {
+            "call": 22.147298810578143,
+            "put": 2.1472988105781456
+          },
+          "price_errors": {
+            "call": 2.1472988105781425,
+            "put": 2.1472988105781456
+          },
+          "price_agreement": false,
+          "parity_error": -3.552713678800501e-15,
+          "parity_agreement": true
+        },
+        "omitted-discount": {
+          "prices": {
+            "call": 20.0,
+            "put": 0.0
+          },
+          "price_errors": {
+            "call": 0.0,
+            "put": 0.0
+          },
+          "price_agreement": true,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        }
+      }
+    },
+    {
+      "case": "zero-strike",
+      "inputs": {
+        "forward_usd": 100.0,
+        "strike_usd": 0.0,
+        "annual_volatility": 0.2,
+        "expiry_years": 2.0,
+        "continuous_rate": 0.03
+      },
+      "reference": {
+        "call": {
+          "price": 94.17645335842488,
+          "estimated_error": 7.486716148046225e-11,
+          "tail_bound": 4.907488482788295e-30,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            12.0
+          ]
+        },
+        "put": {
+          "price": 0.0,
+          "estimated_error": 0.0,
+          "tail_bound": 4.907488482788295e-30,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            12.0
+          ]
+        }
+      },
+      "reference_usable": true,
+      "expected_parity": 94.17645335842487,
+      "variants": {
+        "correct": {
+          "prices": {
+            "call": 94.17645335842487,
+            "put": 0.0
+          },
+          "price_errors": {
+            "call": -1.4210854715202004e-14,
+            "put": 0.0
+          },
+          "price_agreement": true,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        },
+        "wrong-time-scaling": {
+          "prices": {
+            "call": 94.17645335842487,
+            "put": 0.0
+          },
+          "price_errors": {
+            "call": -1.4210854715202004e-14,
+            "put": 0.0
+          },
+          "price_agreement": true,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        },
+        "omitted-discount": {
+          "prices": {
+            "call": 100.0,
+            "put": 0.0
+          },
+          "price_errors": {
+            "call": 5.8235466415751205,
+            "put": 0.0
+          },
+          "price_agreement": false,
+          "parity_error": 5.823546641575135,
+          "parity_agreement": false
+        }
+      }
+    },
+    {
+      "case": "negative-rate",
+      "inputs": {
+        "forward_usd": 100.0,
+        "strike_usd": 100.0,
+        "annual_volatility": 0.2,
+        "expiry_years": 2.0,
+        "continuous_rate": -0.01
+      },
+      "reference": {
+        "call": {
+          "price": 11.473481762517077,
+          "estimated_error": 1.956017794448457e-11,
+          "tail_bound": 5.6786926944234104e-30,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            0.14142135623730953,
+            12.0
+          ]
+        },
+        "put": {
+          "price": 11.473481762517077,
+          "estimated_error": 3.538025617867151e-11,
+          "tail_bound": 5.6786926944234104e-30,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            0.14142135623730953,
+            12.0
+          ]
+        }
+      },
+      "reference_usable": true,
+      "expected_parity": 0.0,
+      "variants": {
+        "correct": {
+          "prices": {
+            "call": 11.473481762517071,
+            "put": 11.473481762517077
+          },
+          "price_errors": {
+            "call": -5.329070518200751e-15,
+            "put": 0.0
+          },
+          "price_agreement": true,
+          "parity_error": -5.329070518200751e-15,
+          "parity_agreement": true
+        },
+        "wrong-time-scaling": {
+          "prices": {
+            "call": 8.126482592078512,
+            "put": 8.126482592078512
+          },
+          "price_errors": {
+            "call": -3.346999170438565,
+            "put": -3.346999170438565
+          },
+          "price_agreement": false,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        },
+        "omitted-discount": {
+          "prices": {
+            "call": 11.246291601828487,
+            "put": 11.246291601828492
+          },
+          "price_errors": {
+            "call": -0.22719016068858977,
+            "put": -0.22719016068858444
+          },
+          "price_agreement": false,
+          "parity_error": -5.329070518200751e-15,
+          "parity_agreement": true
+        }
+      }
+    },
+    {
+      "case": "higher-volatility",
+      "inputs": {
+        "forward_usd": 100.0,
+        "strike_usd": 100.0,
+        "annual_volatility": 0.8,
+        "expiry_years": 5.0,
+        "continuous_rate": 0.04
+      },
+      "reference": {
+        "call": {
+          "price": 51.49051991864178,
+          "estimated_error": 1.56250237689699e-10,
+          "tail_bound": 7.236159377450097e-23,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            0.894427190999916,
+            12.0
+          ]
+        },
+        "put": {
+          "price": 51.49051991864179,
+          "estimated_error": 2.1000201393377854e-10,
+          "tail_bound": 7.236159377450097e-23,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            0.894427190999916,
+            12.0
+          ]
+        }
+      },
+      "reference_usable": true,
+      "expected_parity": 0.0,
+      "variants": {
+        "correct": {
+          "prices": {
+            "call": 51.490519918641795,
+            "put": 51.49051991864179
+          },
+          "price_errors": {
+            "call": 1.4210854715202004e-14,
+            "put": 0.0
+          },
+          "price_agreement": true,
+          "parity_error": 7.105427357601002e-15,
+          "parity_agreement": true
+        },
+        "wrong-time-scaling": {
+          "prices": {
+            "call": 25.449711910662444,
+            "put": 25.449711910662444
+          },
+          "price_errors": {
+            "call": -26.040808007979336,
+            "put": -26.040808007979344
+          },
+          "price_agreement": false,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        },
+        "omitted-discount": {
+          "prices": {
+            "call": 62.89066304773026,
+            "put": 62.89066304773025
+          },
+          "price_errors": {
+            "call": 11.400143129088477,
+            "put": 11.400143129088463
+          },
+          "price_agreement": false,
+          "parity_error": 7.105427357601002e-15,
+          "parity_agreement": true
+        }
+      }
+    }
+  ],
+  "invalid_input_controls": [
+    {
+      "variant": "correct",
+      "case": "zero-forward",
+      "inputs": [
+        0.0,
+        100.0,
+        0.2,
+        1.0,
+        0.03
+      ],
+      "rejected": true,
+      "error": "outside selected positive-forward Black domain"
+    },
+    {
+      "variant": "correct",
+      "case": "negative-strike",
+      "inputs": [
+        100.0,
+        -1.0,
+        0.2,
+        1.0,
+        0.03
+      ],
+      "rejected": true,
+      "error": "outside selected positive-forward Black domain"
+    },
+    {
+      "variant": "correct",
+      "case": "negative-volatility",
+      "inputs": [
+        100.0,
+        100.0,
+        -0.2,
+        1.0,
+        0.03
+      ],
+      "rejected": true,
+      "error": "outside selected positive-forward Black domain"
+    },
+    {
+      "variant": "correct",
+      "case": "negative-expiry",
+      "inputs": [
+        100.0,
+        100.0,
+        0.2,
+        -1.0,
+        0.03
+      ],
+      "rejected": true,
+      "error": "outside selected positive-forward Black domain"
+    },
+    {
+      "variant": "wrong-time-scaling",
+      "case": "zero-forward",
+      "inputs": [
+        0.0,
+        100.0,
+        0.2,
+        1.0,
+        0.03
+      ],
+      "rejected": true,
+      "error": "outside selected positive-forward Black domain"
+    },
+    {
+      "variant": "wrong-time-scaling",
+      "case": "negative-strike",
+      "inputs": [
+        100.0,
+        -1.0,
+        0.2,
+        1.0,
+        0.03
+      ],
+      "rejected": true,
+      "error": "outside selected positive-forward Black domain"
+    },
+    {
+      "variant": "wrong-time-scaling",
+      "case": "negative-volatility",
+      "inputs": [
+        100.0,
+        100.0,
+        -0.2,
+        1.0,
+        0.03
+      ],
+      "rejected": true,
+      "error": "outside selected positive-forward Black domain"
+    },
+    {
+      "variant": "wrong-time-scaling",
+      "case": "negative-expiry",
+      "inputs": [
+        100.0,
+        100.0,
+        0.2,
+        -1.0,
+        0.03
+      ],
+      "rejected": true,
+      "error": "outside selected positive-forward Black domain"
+    },
+    {
+      "variant": "omitted-discount",
+      "case": "zero-forward",
+      "inputs": [
+        0.0,
+        100.0,
+        0.2,
+        1.0,
+        0.03
+      ],
+      "rejected": true,
+      "error": "outside selected positive-forward Black domain"
+    },
+    {
+      "variant": "omitted-discount",
+      "case": "negative-strike",
+      "inputs": [
+        100.0,
+        -1.0,
+        0.2,
+        1.0,
+        0.03
+      ],
+      "rejected": true,
+      "error": "outside selected positive-forward Black domain"
+    },
+    {
+      "variant": "omitted-discount",
+      "case": "negative-volatility",
+      "inputs": [
+        100.0,
+        100.0,
+        -0.2,
+        1.0,
+        0.03
+      ],
+      "rejected": true,
+      "error": "outside selected positive-forward Black domain"
+    },
+    {
+      "variant": "omitted-discount",
+      "case": "negative-expiry",
+      "inputs": [
+        100.0,
+        100.0,
+        0.2,
+        -1.0,
+        0.03
+      ],
+      "rejected": true,
+      "error": "outside selected positive-forward Black domain"
+    }
+  ],
+  "case": "contradictory",
+  "record_scope": "All ten valid-input cases and twelve invalid-input controls from the observed run.",
+  "producer_claim": {
+    "origin": "Authored exercise annotation; not output from the calculation.",
+    "text": "All three adapters agree with the intended prices in all ten required cases."
+  }
+}

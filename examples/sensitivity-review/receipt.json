@@ -1,0 +1,41 @@
+{
+  "observed_at": "2026-10-06T05:03:21.196235+00:00",
+  "source_commit": "2ef0f49c87ac351bd1c401d05e3e144456358ca3",
+  "source_path": "model/measure.py",
+  "source_sha256": "f4ccd290e09a9d422b313d725f07c71dcc4c6a1f663906d1cc52c76773324905",
+  "environment": {
+    "python": "3.12.14",
+    "quantlib": "1.43",
+    "quantlib_binary_sha256": "04a53b6f425e728083149241f77e9b9711db845614ce65d2544a09a0970597d8",
+    "platform": "macOS-26.6.1-arm64-arm-64bit"
+  },
+  "timeout_seconds": 120,
+  "wall_seconds": 0.07266645797062665,
+  "exit_code": 0,
+  "provider_calls": 0,
+  "command": [
+    "python",
+    "examples/sensitivity-review/model/measure.py",
+    "observations.json"
+  ],
+  "raw_output_sha256": "7fdd999d8152de009f41afd9627c58206c18b2934f8e3e7398598f60f81577a4",
+  "projection": {
+    "selection": "All three cases, six bumps and two representations; no outcome-based filtering. Subject/case names, omissions and producer claims authored.",
+    "missing_unrounded": "Unrounded/reference price observations, base reference value, rounding errors, unrounded derivative views and observed rounding-only differences withheld. Analytic derivative references, observed analytic QuantLib derivatives, rounded prices/views, bounds and input conventions unchanged.",
+    "packets": {
+      "complete": {
+        "path": "inputs/complete.json",
+        "sha256": "9cf5fb2200e92ccfb122a1870d9a04939a2cd006df9efbdf2fc980c06fc4c1d1"
+      },
+      "missing-unrounded": {
+        "path": "inputs/missing-unrounded.json",
+        "sha256": "069a62ca5aaa6c1e8448674dc6a6094a17f97b55344494d4f18f1bc966afff62"
+      },
+      "contradictory": {
+        "path": "inputs/contradictory.json",
+        "sha256": "765ec68acce693d5dade4a8a1da49f93debcf63bf5f9ba5bea431455f4bbc945"
+      }
+    }
+  },
+  "scope": "Synthetic forward sensitivities under fixed Black inputs; not spot risk, market evidence, a hedge or agent performance."
+}

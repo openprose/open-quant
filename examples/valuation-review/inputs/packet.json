@@ -1,0 +1,26 @@
+{
+  "synthetic": true,
+  "review_time": "2026-09-30T20:00:00Z",
+  "source_metadata": {"SYNTHETIC-FEED": {"description": "Authored comparison data, not a real market feed", "independence_verified": false}},
+  "positions": [
+    {"id": "P1", "instrument": "USD-ZERO-2028", "currency": "USD", "settlement": "2026-10-02", "par": 1000000, "internal_price": 98.4, "price_unit": "percent_of_par", "basis": "clean", "valuation_time": "2026-09-30T20:00:00Z", "comparison_source": "SYNTHETIC-FEED"},
+    {"id": "P2", "instrument": "USD-ZERO-2030", "currency": "USD", "settlement": "2026-10-02", "par": 2000000, "internal_price": 96.3, "price_unit": "percent_of_par", "basis": "clean", "valuation_time": "2026-09-30T20:00:00Z", "comparison_source": "SYNTHETIC-FEED"}
+  ],
+  "cases": {
+    "complete": [
+      {"id": "Q1", "instrument": "USD-ZERO-2028", "currency": "USD", "settlement": "2026-10-02", "price": 98.2, "price_unit": "percent_of_par", "basis": "clean", "valuation_time": "2026-09-30T20:00:00Z", "source": "SYNTHETIC-FEED"},
+      {"id": "Q2", "instrument": "USD-ZERO-2030", "currency": "USD", "settlement": "2026-10-02", "price": 96.8, "price_unit": "percent_of_par", "basis": "clean", "valuation_time": "2026-09-30T20:00:00Z", "source": "SYNTHETIC-FEED"}
+    ],
+    "missing": [
+      {"id": "Q1", "instrument": "USD-ZERO-2028", "currency": "USD", "settlement": "2026-10-02", "price": 98.2, "price_unit": "percent_of_par", "basis": "clean", "valuation_time": "2026-09-30T20:00:00Z", "source": "SYNTHETIC-FEED"}
+    ],
+    "stale": [
+      {"id": "Q1", "instrument": "USD-ZERO-2028", "currency": "USD", "settlement": "2026-10-02", "price": 98.2, "price_unit": "percent_of_par", "basis": "clean", "valuation_time": "2026-09-30T20:00:00Z", "source": "SYNTHETIC-FEED"},
+      {"id": "Q2", "instrument": "USD-ZERO-2030", "currency": "USD", "settlement": "2026-10-02", "price": 96.8, "price_unit": "percent_of_par", "basis": "clean", "valuation_time": "2026-09-29T20:00:00Z", "source": "SYNTHETIC-FEED"}
+    ],
+    "basis-mismatch": [
+      {"id": "Q1", "instrument": "USD-ZERO-2028", "currency": "USD", "settlement": "2026-10-02", "price": 98.2, "price_unit": "percent_of_par", "basis": "dirty", "valuation_time": "2026-09-30T20:00:00Z", "source": "SYNTHETIC-FEED"},
+      {"id": "Q2", "instrument": "USD-ZERO-2030", "currency": "USD", "settlement": "2026-10-02", "price": 96.8, "price_unit": "percent_of_par", "basis": "clean", "valuation_time": "2026-09-30T20:00:00Z", "source": "SYNTHETIC-FEED"}
+    ]
+  }
+}

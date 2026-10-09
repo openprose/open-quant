@@ -1,0 +1,427 @@
+{
+  "subject": "SYNTHETIC-PAR-CURVE r1",
+  "reference_date": "2026-01-01",
+  "payment_dates": [
+    "January 1st, 2027",
+    "January 1st, 2028"
+  ],
+  "times_years": [
+    1,
+    2
+  ],
+  "base_par_quotes": [
+    0.03,
+    0.04
+  ],
+  "cashflows_usd": {
+    "four_percent": [
+      40000,
+      1040000
+    ],
+    "six_percent": [
+      60000,
+      1060000
+    ]
+  },
+  "principal_usd": 1000000,
+  "shock_size_decimal": 0.0001,
+  "scenarios": [
+    {
+      "id": "base",
+      "coordinate": "base",
+      "factor_mask": [
+        0,
+        0
+      ],
+      "direction": 0,
+      "shock_decimal": 0.0,
+      "discount_nodes": [
+        0.970873786407767,
+        0.9241971620612397
+      ],
+      "implied_par_quotes": [
+        0.030000000000000027,
+        0.04000000000000002
+      ],
+      "values_usd": {
+        "four_percent": 1000000.0,
+        "six_percent": 1037901.4189693801
+      },
+      "requested_par_quotes": [
+        0.03,
+        0.04
+      ]
+    },
+    {
+      "id": "quote_1_plus",
+      "coordinate": "quote",
+      "factor_mask": [
+        1,
+        0
+      ],
+      "direction": 1,
+      "shock_decimal": 0.0001,
+      "values_usd": {
+        "four_percent": 1000000.0
+      },
+      "requested_par_quotes": [
+        0.0301,
+        0.04
+      ]
+    },
+    {
+      "id": "quote_1_minus",
+      "coordinate": "quote",
+      "factor_mask": [
+        1,
+        0
+      ],
+      "direction": -1,
+      "shock_decimal": -0.0001,
+      "discount_nodes": [
+        0.9709680551509855,
+        0.9241935363403466
+      ],
+      "implied_par_quotes": [
+        0.029900000000000038,
+        0.04000000000000005
+      ],
+      "values_usd": {
+        "four_percent": 999999.9999999999,
+        "six_percent": 1037903.2318298266
+      },
+      "requested_par_quotes": [
+        0.0299,
+        0.04
+      ]
+    },
+    {
+      "id": "quote_2_plus",
+      "coordinate": "quote",
+      "factor_mask": [
+        0,
+        1
+      ],
+      "direction": 1,
+      "shock_decimal": 0.0001,
+      "discount_nodes": [
+        0.970873786407767,
+        0.9240149612201216
+      ],
+      "implied_par_quotes": [
+        0.030000000000000027,
+        0.04010000000000003
+      ],
+      "values_usd": {
+        "four_percent": 999810.5111252371,
+        "six_percent": 1037708.286077795
+      },
+      "requested_par_quotes": [
+        0.03,
+        0.040100000000000004
+      ]
+    },
+    {
+      "id": "quote_2_minus",
+      "coordinate": "quote",
+      "factor_mask": [
+        0,
+        1
+      ],
+      "direction": -1,
+      "shock_decimal": -0.0001,
+      "discount_nodes": [
+        0.970873786407767,
+        0.9243793979443505
+      ],
+      "implied_par_quotes": [
+        0.030000000000000027,
+        0.03989999999999999
+      ],
+      "values_usd": {
+        "four_percent": 1000189.5253184353,
+        "six_percent": 1038094.5890054776
+      },
+      "requested_par_quotes": [
+        0.03,
+        0.0399
+      ]
+    },
+    {
+      "id": "quote_parallel_plus",
+      "coordinate": "quote",
+      "factor_mask": [
+        1,
+        1
+      ],
+      "direction": 1,
+      "shock_decimal": 0.0001,
+      "discount_nodes": [
+        0.9707795359673818,
+        0.9240185949502047
+      ],
+      "implied_par_quotes": [
+        0.030100000000000016,
+        0.040100000000000066
+      ],
+      "values_usd": {
+        "four_percent": 999810.5201869081,
+        "six_percent": 1037706.4828052599
+      },
+      "requested_par_quotes": [
+        0.0301,
+        0.040100000000000004
+      ]
+    },
+    {
+      "id": "quote_parallel_minus",
+      "coordinate": "quote",
+      "factor_mask": [
+        1,
+        1
+      ],
+      "direction": -1,
+      "shock_decimal": -0.0001,
+      "discount_nodes": [
+        0.9709680551509855,
+        0.9243757809399709
+      ],
+      "implied_par_quotes": [
+        0.029900000000000038,
+        0.03989999999999999
+      ],
+      "values_usd": {
+        "four_percent": 1000189.5343836091,
+        "six_percent": 1038096.4111054282
+      },
+      "requested_par_quotes": [
+        0.0299,
+        0.0399
+      ]
+    },
+    {
+      "id": "zero_1_plus",
+      "coordinate": "zero",
+      "factor_mask": [
+        1,
+        0
+      ],
+      "direction": 1,
+      "shock_decimal": 0.0001,
+      "discount_nodes": [
+        0.9707767038833334,
+        0.9241971620612397
+      ],
+      "implied_par_quotes": [
+        0.030103005150171613,
+        0.040002049263605774
+      ],
+      "values_usd": {
+        "four_percent": 999996.1166990226,
+        "six_percent": 1037895.594017914
+      },
+      "requested_par_quotes": null
+    },
+    {
+      "id": "zero_1_minus",
+      "coordinate": "zero",
+      "factor_mask": [
+        1,
+        0
+      ],
+      "direction": -1,
+      "shock_decimal": -0.0001,
+      "discount_nodes": [
+        0.9709708786409386,
+        0.9241971620612397
+      ],
+      "implied_par_quotes": [
+        0.029897005149828182,
+        0.0399979507414417
+      ],
+      "values_usd": {
+        "four_percent": 1000003.8836893268,
+        "six_percent": 1037907.2445033704
+      },
+      "requested_par_quotes": null
+    },
+    {
+      "id": "zero_2_plus",
+      "coordinate": "zero",
+      "factor_mask": [
+        0,
+        1
+      ],
+      "direction": 1,
+      "shock_decimal": 0.0001,
+      "discount_nodes": [
+        0.970873786407767,
+        0.9240123411115385
+      ],
+      "implied_par_quotes": [
+        0.030000000000000027,
+        0.04010143817345948
+      ],
+      "values_usd": {
+        "four_percent": 999807.7862123108,
+        "six_percent": 1037705.5087626969
+      },
+      "requested_par_quotes": null
+    },
+    {
+      "id": "zero_2_minus",
+      "coordinate": "zero",
+      "factor_mask": [
+        0,
+        1
+      ],
+      "direction": -1,
+      "shock_decimal": -0.0001,
+      "discount_nodes": [
+        0.970873786407767,
+        0.9243820199788275
+      ],
+      "implied_par_quotes": [
+        0.030000000000000027,
+        0.03989856132684388
+      ],
+      "values_usd": {
+        "four_percent": 1000192.2522342913,
+        "six_percent": 1038097.3683620231
+      },
+      "requested_par_quotes": null
+    },
+    {
+      "id": "zero_parallel_plus",
+      "coordinate": "zero",
+      "factor_mask": [
+        1,
+        1
+      ],
+      "direction": 1,
+      "shock_decimal": 0.0001,
+      "discount_nodes": [
+        0.9707767038833334,
+        0.9240123411115385
+      ],
+      "implied_par_quotes": [
+        0.030103005150171613,
+        0.04010349283429974
+      ],
+      "values_usd": {
+        "four_percent": 999803.9029113334,
+        "six_percent": 1037699.6838112308
+      },
+      "requested_par_quotes": null
+    },
+    {
+      "id": "zero_parallel_minus",
+      "coordinate": "zero",
+      "factor_mask": [
+        1,
+        1
+      ],
+      "direction": -1,
+      "shock_decimal": -0.0001,
+      "discount_nodes": [
+        0.9709708786409386,
+        0.9243820199788275
+      ],
+      "implied_par_quotes": [
+        0.029897005149828182,
+        0.0398965174644991
+      ],
+      "values_usd": {
+        "four_percent": 1000196.1359236182,
+        "six_percent": 1038103.1938960134
+      },
+      "requested_par_quotes": null
+    }
+  ],
+  "sensitivities": [
+    {
+      "factor": "quote_1",
+      "instrument": "four_percent",
+      "central_derivative_usd_per_unit_rate": 5.820766091346741e-07,
+      "signed_central_change_for_1bp_usd": 5.820766091346741e-11,
+      "positive_1bp_change_usd": 0.0
+    },
+    {
+      "factor": "quote_2",
+      "instrument": "four_percent",
+      "central_derivative_usd_per_unit_rate": -1895070.9659908898,
+      "signed_central_change_for_1bp_usd": -189.50709659908898,
+      "positive_1bp_change_usd": -189.4888747629011
+    },
+    {
+      "factor": "quote_parallel",
+      "instrument": "four_percent",
+      "central_derivative_usd_per_unit_rate": -1895070.983504993,
+      "signed_central_change_for_1bp_usd": -189.5070983504993,
+      "positive_1bp_change_usd": -189.47981309192255
+    },
+    {
+      "factor": "zero_1",
+      "instrument": "four_percent",
+      "central_derivative_usd_per_unit_rate": -38834.95152113028,
+      "signed_central_change_for_1bp_usd": -3.883495152113028,
+      "positive_1bp_change_usd": -3.8833009774098173
+    },
+    {
+      "factor": "zero_2",
+      "instrument": "four_percent",
+      "central_derivative_usd_per_unit_rate": -1922330.1099025412,
+      "signed_central_change_for_1bp_usd": -192.23301099025412,
+      "positive_1bp_change_usd": -192.21378768922295
+    },
+    {
+      "factor": "zero_parallel",
+      "instrument": "four_percent",
+      "central_derivative_usd_per_unit_rate": -1961165.0614242535,
+      "signed_central_change_for_1bp_usd": -196.11650614242535,
+      "positive_1bp_change_usd": -196.09708866663277
+    },
+    {
+      "factor": "quote_2",
+      "instrument": "six_percent",
+      "central_derivative_usd_per_unit_rate": -1931514.6384132095,
+      "signed_central_change_for_1bp_usd": -193.15146384132095,
+      "positive_1bp_change_usd": -193.13289158511907
+    },
+    {
+      "factor": "quote_parallel",
+      "instrument": "six_percent",
+      "central_derivative_usd_per_unit_rate": -1949641.5008418262,
+      "signed_central_change_for_1bp_usd": -194.96415008418262,
+      "positive_1bp_change_usd": -194.9361641202122
+    },
+    {
+      "factor": "zero_1",
+      "instrument": "six_percent",
+      "central_derivative_usd_per_unit_rate": -58252.42728169542,
+      "signed_central_change_for_1bp_usd": -5.825242728169542,
+      "positive_1bp_change_usd": -5.824951466056518
+    },
+    {
+      "factor": "zero_2",
+      "instrument": "six_percent",
+      "central_derivative_usd_per_unit_rate": -1959297.9966313578,
+      "signed_central_change_for_1bp_usd": -195.92979966313578,
+      "positive_1bp_change_usd": -195.9102066832129
+    },
+    {
+      "factor": "zero_parallel",
+      "instrument": "six_percent",
+      "central_derivative_usd_per_unit_rate": -2017550.4239130532,
+      "signed_central_change_for_1bp_usd": -201.75504239130532,
+      "positive_1bp_change_usd": -201.7351581492694
+    }
+  ],
+  "withheld": [
+    "quote_1_plus.discount_nodes",
+    "quote_1_plus.implied_par_quotes",
+    "quote_1_plus.values_usd.six_percent",
+    "sensitivities[quote_1,six_percent]"
+  ],
+  "producer_claims": []
+}

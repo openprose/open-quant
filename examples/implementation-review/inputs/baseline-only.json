@@ -1,0 +1,94 @@
+{
+  "study": "BLACK-ADAPTERS-2026-10-06",
+  "source_sha256": "dd34a025c295037b496fe5a8adce0006b71c3421e6ab17c57cdae49bd5236a35",
+  "price_units": "present-value USD per underlying unit",
+  "absolute_tolerance": 1e-09,
+  "observations": [
+    {
+      "case": "baseline",
+      "inputs": {
+        "forward_usd": 100.0,
+        "strike_usd": 100.0,
+        "annual_volatility": 0.2,
+        "expiry_years": 1.0,
+        "continuous_rate": 0.0
+      },
+      "reference": {
+        "call": {
+          "price": 7.965567455405798,
+          "estimated_error": 1.5989230926888288e-11,
+          "tail_bound": 2.322394913449023e-30,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            0.10000000000000002,
+            12.0
+          ]
+        },
+        "put": {
+          "price": 7.9655674554057985,
+          "estimated_error": 2.3755096042986757e-11,
+          "tail_bound": 2.322394913449023e-30,
+          "warnings": [],
+          "method": "discounted payoff quadrature",
+          "integration_knots": [
+            -12.0,
+            0.10000000000000002,
+            12.0
+          ]
+        }
+      },
+      "reference_usable": true,
+      "expected_parity": 0.0,
+      "variants": {
+        "correct": {
+          "prices": {
+            "call": 7.9655674554058,
+            "put": 7.9655674554058
+          },
+          "price_errors": {
+            "call": 2.6645352591003757e-15,
+            "put": 1.7763568394002505e-15
+          },
+          "price_agreement": true,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        },
+        "wrong-time-scaling": {
+          "prices": {
+            "call": 7.9655674554058,
+            "put": 7.9655674554058
+          },
+          "price_errors": {
+            "call": 2.6645352591003757e-15,
+            "put": 1.7763568394002505e-15
+          },
+          "price_agreement": true,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        },
+        "omitted-discount": {
+          "prices": {
+            "call": 7.9655674554058,
+            "put": 7.9655674554058
+          },
+          "price_errors": {
+            "call": 2.6645352591003757e-15,
+            "put": 1.7763568394002505e-15
+          },
+          "price_agreement": true,
+          "parity_error": 0.0,
+          "parity_agreement": true
+        }
+      }
+    }
+  ],
+  "invalid_input_controls": [],
+  "case": "baseline-only",
+  "record_scope": "Supplied projection of an observed ten-case run. Absent records are withheld in this authored case; they do not establish that tests were not performed.",
+  "producer_claim": {
+    "origin": "Authored exercise annotation; not output from the calculation.",
+    "text": "The supplied numerical records determine which selected criteria have support."
+  }
+}

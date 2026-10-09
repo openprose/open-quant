@@ -1,0 +1,41 @@
+{
+  "observed_at": "2026-10-06T04:55:10.313578+00:00",
+  "source_commit": "7363963e89820d3878c81747d0abdabc13fe4969",
+  "source_path": "model/measure.py",
+  "source_sha256": "f23bcb23d4b7306a2dc68f98ed6c29b22c905d78196c6c386e7134b4fcd9536e",
+  "environment": {
+    "python": "3.12.14",
+    "quantlib": "1.43",
+    "quantlib_binary_sha256": "04a53b6f425e728083149241f77e9b9711db845614ce65d2544a09a0970597d8",
+    "platform": "macOS-26.6.1-arm64-arm-64bit"
+  },
+  "timeout_seconds": 120,
+  "wall_seconds": 0.18119783303700387,
+  "exit_code": 0,
+  "provider_calls": 0,
+  "command": [
+    "python",
+    "examples/cashflow-review/model/measure.py",
+    "observations.json"
+  ],
+  "raw_output_sha256": "74afab22c5e8bd651ceb97a267a687142f75bd921583f55658f8cc8da0cb0395",
+  "projection": {
+    "selection": "All three synthetic constructions and both settlement-inclusion choices, with every flow and comparison unchanged. Case labels, subject identity and producer claims are authored.",
+    "missing_schedule": "All instrument flow records and per-valuation reference flow rows/included-ID lists withheld; declared conventions, aggregate valuations, inclusion differences and comparisons unchanged.",
+    "packets": {
+      "complete": {
+        "path": "inputs/complete.json",
+        "sha256": "329a2529734f8aea2823bf58dd67a297fb938ff42d86f5d45ac22d70cd6569b8"
+      },
+      "missing-schedule": {
+        "path": "inputs/missing-schedule.json",
+        "sha256": "c5f1d05191b896de0c2bc753fda8513f1d8db15dd8302cc8df6ca85187319f0c"
+      },
+      "contradictory": {
+        "path": "inputs/contradictory.json",
+        "sha256": "0c27c85d4aeea36c30016d06f1caf50ffa1ae198dbc9041ce81191813f40bfe6"
+      }
+    }
+  },
+  "scope": "Synthetic modeled obligations and observed QuantLib aggregate NPVs. Per-flow inclusion/PV rows are independent references, not internal library traces. No payment or entitlement evidence."
+}

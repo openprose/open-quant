@@ -1,0 +1,41 @@
+{
+  "observed_at": "2026-10-06T04:30:15.391413+00:00",
+  "source_commit": "2aa07aa839220563fb756ac2b59c364593a42a4a",
+  "source_sha256": "2a36f1d83b2c3384411c6fda00278cdabec485d8e0af6728dec4180ce58eb26a",
+  "source_path": "model/measure.py",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "numpy_linalg_binary_sha256": "dbaefc13a7379c877dee2618ea6f96d69560743d3ad392d57f3a866f1378728d"
+  },
+  "command": [
+    "python",
+    "examples/dependence-review/model/measure.py",
+    "observations.json"
+  ],
+  "timeout_seconds": 120,
+  "wall_seconds": 0.18113816605182365,
+  "exit_code": 0,
+  "provider_calls": 0,
+  "raw_output_sha256": "15448c6fc4cca24193073cdce73cd1456aad1ae8af9e556837e122d22c962174",
+  "projection": {
+    "selection": "All nine matrix candidates and all associated data, adjustment and exposure records copied from one observed calculation. Subject/case labels, common_count, producer claims and omissions are authored. No numerical outcome selection.",
+    "missing_membership": "Raw observations and every membership list omitted; counts, matrix diagnostics, adjustments and exposure results unchanged.",
+    "packets": {
+      "complete": {
+        "path": "inputs/complete.json",
+        "sha256": "7e08da4e3ccc88706f1c9606d0a79e25695025be515ab6fbb517c3d8f9be5c1f"
+      },
+      "missing-membership": {
+        "path": "inputs/missing-membership.json",
+        "sha256": "94b6cd3dea343c70a3a0c9400a829cbdcc74aec0fe0cb9725deab74e0a1f38d7"
+      },
+      "contradictory": {
+        "path": "inputs/contradictory.json",
+        "sha256": "4779c9b125838609108ceb1f5691fa181640ac8e88ad1593d37ba236d09fcea6"
+      }
+    }
+  },
+  "scope": "Synthetic CPU evidence only, not agent execution, statistical suitability or institutional acceptance."
+}

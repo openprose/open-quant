@@ -1,0 +1,134 @@
+{
+  "portfolio": "TOY-RISK-BOOK",
+  "portfolioRevision": "r1",
+  "model": "TOY-VALUATION",
+  "modelRevision": "r1",
+  "currency": "USD",
+  "basis": "clean-value",
+  "opening": "2026-09-29T20:00:00Z",
+  "closing": "2026-09-30T20:00:00Z",
+  "positions": [
+    {
+      "id": "P1",
+      "openingUsd": 590000,
+      "closingUsd": 600000
+    },
+    {
+      "id": "P2",
+      "openingUsd": 405000,
+      "closingUsd": 400000
+    }
+  ],
+  "tradesUsd": 0,
+  "cashFlowsUsd": 0,
+  "feesUsd": 0,
+  "adjustmentsUsd": 0,
+  "pnl": {
+    "rateMoveBp": -10,
+    "spreadMoveBp": 10,
+    "openingSensitivities": [
+      {
+        "position": "P1",
+        "rateUsdPerBp": -600,
+        "spreadUsdPerBp": -300
+      },
+      {
+        "position": "P2",
+        "rateUsdPerBp": -600,
+        "spreadUsdPerBp": -200
+      }
+    ],
+    "carry": [
+      {
+        "position": "P1",
+        "amountUsd": 600
+      },
+      {
+        "position": "P2",
+        "amountUsd": 400
+      }
+    ],
+    "producerExplainedUsd": 8000
+  },
+  "scenarios": [
+    {
+      "id": "rates",
+      "base": "2026-09-30T20:00:00Z",
+      "portfolioRevision": "r1",
+      "modelRevision": "r1",
+      "currency": "USD",
+      "basis": "clean-value",
+      "horizon": "instantaneous",
+      "rateMoveBp": 100,
+      "spreadMoveBp": 0,
+      "values": [
+        {
+          "position": "P1",
+          "valueUsd": 570000
+        },
+        {
+          "position": "P2",
+          "valueUsd": 380000
+        }
+      ]
+    },
+    {
+      "id": "spreads",
+      "base": "2026-09-30T20:00:00Z",
+      "portfolioRevision": "r1",
+      "modelRevision": "r1",
+      "currency": "USD",
+      "basis": "clean-value",
+      "horizon": "instantaneous",
+      "rateMoveBp": 0,
+      "spreadMoveBp": 100,
+      "values": [
+        {
+          "position": "P1",
+          "valueUsd": 595000
+        },
+        {
+          "position": "P2",
+          "valueUsd": 385000
+        }
+      ]
+    },
+    {
+      "id": "joint",
+      "base": "2026-09-30T20:00:00Z",
+      "portfolioRevision": "r1",
+      "modelRevision": "r1",
+      "currency": "USD",
+      "basis": "clean-value",
+      "horizon": "instantaneous",
+      "rateMoveBp": 100,
+      "spreadMoveBp": 100,
+      "values": [
+        {
+          "position": "P1",
+          "valueUsd": 555000
+        },
+        {
+          "position": "P2",
+          "valueUsd": 360000
+        }
+      ]
+    }
+  ],
+  "assumedHedge": {
+    "id": "H1",
+    "status": "assumed-only",
+    "approved": false,
+    "executionEvidence": null,
+    "pnlUsdByScenario": {
+      "rates": 40000,
+      "spreads": 0,
+      "joint": 40000
+    }
+  },
+  "producerSummary": {
+    "fullyExplained": false,
+    "allUnmitigatedScenariosWithinLimit": false,
+    "hedgeExecuted": false
+  }
+}

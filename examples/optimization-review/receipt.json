@@ -1,0 +1,51 @@
+{
+  "kind": "observed-synthetic-calculation-with-authored-reporting-projections",
+  "source_commit": "0f8b3c8dfb8ad9ee5f9ad126ac28994acc1b2fe6",
+  "source_file": "examples/optimization-review/model/measure.py",
+  "source_sha256": "cedaf99b7f2cec122a85f06128656651bf6c84ac9859bd7768346f0696e27f65",
+  "environment": {
+    "python": "3.12.14",
+    "scipy": "1.18.1",
+    "numpy": "2.5.3"
+  },
+  "observation_sha256": "50ae26db6b10af523daefbd8f9801ef20279b22888d3231b8f35eed42cef8c45",
+  "execution": {
+    "return_code": 0,
+    "timed_out": false,
+    "wall_seconds": 0.6646480419440195,
+    "attempts": 1,
+    "retries": 0,
+    "provider_calls": 0
+  },
+  "numerical_reproduction": {
+    "matched_all_prespecified_observations": true,
+    "excluded_fields": [
+      "recorded_at",
+      "calculation_seconds"
+    ]
+  },
+  "packets": {
+    "complete": {
+      "path": "inputs/complete.json",
+      "sha256": "9057042cdcbe8c3e76e5abdeb63abb99e2e2a9d2c83f7fc5a47c50c7cf238774"
+    },
+    "missing-candidate": {
+      "path": "inputs/missing-candidate.json",
+      "sha256": "cc1d4519ce170b337568d88429a61058d3fbf0f11d1e05b9d90e14962d5a9e68"
+    },
+    "contradictory": {
+      "path": "inputs/contradictory.json",
+      "sha256": "282158b5c8fc51890665ce5dfc85f2d0c43fec9c0100bbb06463e51b534eb88e"
+    }
+  },
+  "authored_changes": {
+    "complete": "Select the specification, all seven solver records and derived export; omit environment/control summaries from the agent packet.",
+    "missing-candidate": "Remove scaled_objective weights, native objective/gradient/multipliers and all selected-problem diagnostics; retain observed termination fields and analytical reference.",
+    "contradictory": "Preserve all numerical records and add five conflicting producer assertions."
+  },
+  "limits": [
+    "Fixed synthetic construction; no financial operation or economically useful expected-return estimate.",
+    "Reporting cases, policy and reference are authored, not agent results.",
+    "Mechanical controls and analytical references do not certify arbitrary report fulfillment."
+  ]
+}

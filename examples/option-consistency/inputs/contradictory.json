@@ -1,0 +1,928 @@
+{
+  "subject": "OPTION-CONSISTENCY-2026-10-06",
+  "case": "contradictory",
+  "source_sha256": "ce73f762656768b1ffc3d90597d4a4ecec1c9fbac16f109db3a133c4d48fa34f",
+  "calculation_assumptions": {
+    "forward": 100,
+    "discount": 1,
+    "time_years": 1,
+    "displacement": 0,
+    "option_style": "European",
+    "underlying_domain": "nonnegative terminal values",
+    "unit": "USD per option, unit notional",
+    "market_data": false,
+    "same_underlying_maturity_settlement": true,
+    "fractional_positions_permitted": true,
+    "simultaneous_quotes_for_quantities_assumed": true,
+    "other_costs_or_constraints_modeled": false,
+    "global_arbitrage_free_claim": false,
+    "price_tolerance_usd": 1e-08,
+    "stddev_tolerance": 1e-09
+  },
+  "inputs": {
+    "strikes": [
+      80,
+      90,
+      105,
+      110,
+      130
+    ],
+    "authored_call_prices": [
+      21,
+      14,
+      9,
+      8,
+      3
+    ],
+    "constant_stddev": 0.2,
+    "payoff_nodes": [
+      0,
+      80,
+      90,
+      105,
+      110,
+      130,
+      230
+    ],
+    "half_spreads": [
+      "0",
+      "1/20",
+      "1/5"
+    ]
+  },
+  "selected_instrument_terms": [
+    {
+      "strike": 80,
+      "underlying": "U1",
+      "expiry": "T1",
+      "time_years": 1,
+      "style": "European",
+      "currency": "USD",
+      "notional": 1,
+      "settlement": "cash at T1"
+    },
+    {
+      "strike": 90,
+      "underlying": "U1",
+      "expiry": "T1",
+      "time_years": 1,
+      "style": "European",
+      "currency": "USD",
+      "notional": 1,
+      "settlement": "cash at T1"
+    },
+    {
+      "strike": 105,
+      "underlying": "U1",
+      "expiry": "T1",
+      "time_years": 1,
+      "style": "European",
+      "currency": "USD",
+      "notional": 1,
+      "settlement": "cash at T1"
+    },
+    {
+      "strike": 110,
+      "underlying": "U1",
+      "expiry": "T1",
+      "time_years": 1,
+      "style": "European",
+      "currency": "USD",
+      "notional": 1,
+      "settlement": "cash at T1"
+    },
+    {
+      "strike": 130,
+      "underlying": "U1",
+      "expiry": "T1",
+      "time_years": 1,
+      "style": "European",
+      "currency": "USD",
+      "notional": 1,
+      "settlement": "cash at T1"
+    }
+  ],
+  "terms_provenance": "Synthetic caller stipulations, not actual market instrument records.",
+  "slices": [
+    {
+      "id": "constant_volatility",
+      "quotes": [
+        {
+          "strike": 80,
+          "call_mid_usd": 21.185929513210425,
+          "call_mid_exact_input": "847437180528417/40000000000000",
+          "put_from_parity_usd": 1.185929513210425,
+          "intrinsic_bound_usd": 20,
+          "forward_bound_usd": 100,
+          "reference_implied_stddev": 0.19999999999999946,
+          "native_success": true,
+          "native_error": null,
+          "native_implied_stddev": 0.20000000000000012,
+          "native_call_usd": 21.185929513210425,
+          "native_put_usd": 1.1859295132104286,
+          "repricing_residual_usd": 0.0,
+          "parity_residual_usd": -3.552713678800501e-15
+        },
+        {
+          "strike": 90,
+          "call_mid_usd": 13.589108116054808,
+          "call_mid_exact_input": "1698638514506851/125000000000000",
+          "put_from_parity_usd": 3.5891081160548026,
+          "intrinsic_bound_usd": 10,
+          "forward_bound_usd": 100,
+          "reference_implied_stddev": 0.20000000000000007,
+          "native_success": true,
+          "native_error": null,
+          "native_implied_stddev": 0.1999999999999999,
+          "native_call_usd": 13.589108116054797,
+          "native_put_usd": 3.5891081160547973,
+          "repricing_residual_usd": -1.0658141036401503e-14,
+          "parity_residual_usd": 0.0
+        },
+        {
+          "strike": 105,
+          "call_mid_usd": 5.905593471555492,
+          "call_mid_exact_input": "1476398367888873/250000000000000",
+          "put_from_parity_usd": 10.905593471555491,
+          "intrinsic_bound_usd": 0,
+          "forward_bound_usd": 100,
+          "reference_implied_stddev": 0.20000000000000007,
+          "native_success": true,
+          "native_error": null,
+          "native_implied_stddev": 0.2,
+          "native_call_usd": 5.905593471555492,
+          "native_put_usd": 10.905593471555491,
+          "repricing_residual_usd": 0.0,
+          "parity_residual_usd": 8.881784197001252e-16
+        },
+        {
+          "strike": 110,
+          "call_mid_usd": 4.292010941409885,
+          "call_mid_exact_input": "858402188281977/200000000000000",
+          "put_from_parity_usd": 14.292010941409885,
+          "intrinsic_bound_usd": 0,
+          "forward_bound_usd": 100,
+          "reference_implied_stddev": 0.1999999999999998,
+          "native_success": true,
+          "native_error": null,
+          "native_implied_stddev": 0.2,
+          "native_call_usd": 4.292010941409885,
+          "native_put_usd": 14.292010941409892,
+          "repricing_residual_usd": 0.0,
+          "parity_residual_usd": -7.105427357601002e-15
+        },
+        {
+          "strike": 130,
+          "call_mid_usd": 1.0088716159685935,
+          "call_mid_exact_input": "2017743231937187/2000000000000000",
+          "put_from_parity_usd": 31.008871615968587,
+          "intrinsic_bound_usd": 0,
+          "forward_bound_usd": 100,
+          "reference_implied_stddev": 0.20000000000000007,
+          "native_success": true,
+          "native_error": null,
+          "native_implied_stddev": 0.19999999999999965,
+          "native_call_usd": 1.008871615968595,
+          "native_put_usd": 31.0088716159686,
+          "repricing_residual_usd": 1.5543122344752192e-15,
+          "parity_residual_usd": -7.105427357601002e-15
+        }
+      ],
+      "adjacent_slopes": [
+        {
+          "strikes": [
+            80,
+            90
+          ],
+          "call_slope": "-7596821397155617/10000000000000000"
+        },
+        {
+          "strikes": [
+            90,
+            105
+          ],
+          "call_slope": "-1920878661124829/3750000000000000"
+        },
+        {
+          "strikes": [
+            105,
+            110
+          ],
+          "call_slope": "-1613582530145607/5000000000000000"
+        },
+        {
+          "strikes": [
+            110,
+            130
+          ],
+          "call_slope": "-6566278650882583/40000000000000000"
+        }
+      ],
+      "strategies": [
+        {
+          "strikes": [
+            80,
+            90,
+            105
+          ],
+          "lower_weight": "3/5",
+          "middle_weight": "-1",
+          "upper_weight": "2/5",
+          "payoff_nodes": [
+            0,
+            80,
+            90,
+            105,
+            110,
+            130,
+            230
+          ],
+          "terminal_payoff_usd": [
+            "0",
+            "0",
+            "6",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "tail_slope": "0",
+          "minimum_payoff_usd": "0",
+          "mid_cost_usd": "7423434902468219/5000000000000000",
+          "costs": [
+            {
+              "half_spread_usd": "0",
+              "purchase_cost_usd": "7423434902468219/5000000000000000"
+            },
+            {
+              "half_spread_usd": "1/20",
+              "purchase_cost_usd": "7923434902468219/5000000000000000"
+            },
+            {
+              "half_spread_usd": "1/5",
+              "purchase_cost_usd": "9423434902468219/5000000000000000"
+            }
+          ],
+          "id": "strike_aware_90",
+          "weighting": "strike_aware"
+        },
+        {
+          "strikes": [
+            80,
+            90,
+            105
+          ],
+          "lower_weight": "1/2",
+          "middle_weight": "-1",
+          "upper_weight": "1/2",
+          "payoff_nodes": [
+            0,
+            80,
+            90,
+            105,
+            110,
+            130,
+            230
+          ],
+          "terminal_payoff_usd": [
+            "0",
+            "0",
+            "5",
+            "-5/2",
+            "-5/2",
+            "-5/2",
+            "-5/2"
+          ],
+          "tail_slope": "0",
+          "minimum_payoff_usd": "-5/2",
+          "mid_cost_usd": "-86693247343699/2000000000000000",
+          "costs": [
+            {
+              "half_spread_usd": "0",
+              "purchase_cost_usd": "-86693247343699/2000000000000000"
+            },
+            {
+              "half_spread_usd": "1/20",
+              "purchase_cost_usd": "113306752656301/2000000000000000"
+            },
+            {
+              "half_spread_usd": "1/5",
+              "purchase_cost_usd": "713306752656301/2000000000000000"
+            }
+          ],
+          "id": "equal_wings_90",
+          "weighting": "equal_wings"
+        },
+        {
+          "strikes": [
+            90,
+            105,
+            110
+          ],
+          "lower_weight": "1/4",
+          "middle_weight": "-1",
+          "upper_weight": "3/4",
+          "payoff_nodes": [
+            0,
+            80,
+            90,
+            105,
+            110,
+            130,
+            230
+          ],
+          "terminal_payoff_usd": [
+            "0",
+            "0",
+            "0",
+            "15/4",
+            "0",
+            "0",
+            "0"
+          ],
+          "tail_slope": "0",
+          "minimum_payoff_usd": "0",
+          "mid_cost_usd": "568553410812499/800000000000000",
+          "costs": [
+            {
+              "half_spread_usd": "0",
+              "purchase_cost_usd": "568553410812499/800000000000000"
+            },
+            {
+              "half_spread_usd": "1/20",
+              "purchase_cost_usd": "648553410812499/800000000000000"
+            },
+            {
+              "half_spread_usd": "1/5",
+              "purchase_cost_usd": "888553410812499/800000000000000"
+            }
+          ],
+          "id": "strike_aware_105",
+          "weighting": "strike_aware"
+        },
+        {
+          "strikes": [
+            90,
+            105,
+            110
+          ],
+          "lower_weight": "1/2",
+          "middle_weight": "-1",
+          "upper_weight": "1/2",
+          "payoff_nodes": [
+            0,
+            80,
+            90,
+            105,
+            110,
+            130,
+            230
+          ],
+          "terminal_payoff_usd": [
+            "0",
+            "0",
+            "0",
+            "15/2",
+            "5",
+            "5",
+            "5"
+          ],
+          "tail_slope": "0",
+          "minimum_payoff_usd": "0",
+          "mid_cost_usd": "6069932114353709/2000000000000000",
+          "costs": [
+            {
+              "half_spread_usd": "0",
+              "purchase_cost_usd": "6069932114353709/2000000000000000"
+            },
+            {
+              "half_spread_usd": "1/20",
+              "purchase_cost_usd": "6269932114353709/2000000000000000"
+            },
+            {
+              "half_spread_usd": "1/5",
+              "purchase_cost_usd": "6869932114353709/2000000000000000"
+            }
+          ],
+          "id": "equal_wings_105",
+          "weighting": "equal_wings"
+        },
+        {
+          "strikes": [
+            105,
+            110,
+            130
+          ],
+          "lower_weight": "4/5",
+          "middle_weight": "-1",
+          "upper_weight": "1/5",
+          "payoff_nodes": [
+            0,
+            80,
+            90,
+            105,
+            110,
+            130,
+            230
+          ],
+          "terminal_payoff_usd": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "4",
+            "0",
+            "0"
+          ],
+          "tail_slope": "0",
+          "minimum_payoff_usd": "0",
+          "mid_cost_usd": "6342381590282273/10000000000000000",
+          "costs": [
+            {
+              "half_spread_usd": "0",
+              "purchase_cost_usd": "6342381590282273/10000000000000000"
+            },
+            {
+              "half_spread_usd": "1/20",
+              "purchase_cost_usd": "7342381590282273/10000000000000000"
+            },
+            {
+              "half_spread_usd": "1/5",
+              "purchase_cost_usd": "10342381590282273/10000000000000000"
+            }
+          ],
+          "id": "strike_aware_110",
+          "weighting": "strike_aware"
+        },
+        {
+          "strikes": [
+            105,
+            110,
+            130
+          ],
+          "lower_weight": "1/2",
+          "middle_weight": "-1",
+          "upper_weight": "1/2",
+          "payoff_nodes": [
+            0,
+            80,
+            90,
+            105,
+            110,
+            130,
+            230
+          ],
+          "terminal_payoff_usd": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "5/2",
+            "-15/2",
+            "-15/2"
+          ],
+          "tail_slope": "0",
+          "minimum_payoff_usd": "-15/2",
+          "mid_cost_usd": "-3339113590591369/4000000000000000",
+          "costs": [
+            {
+              "half_spread_usd": "0",
+              "purchase_cost_usd": "-3339113590591369/4000000000000000"
+            },
+            {
+              "half_spread_usd": "1/20",
+              "purchase_cost_usd": "-2939113590591369/4000000000000000"
+            },
+            {
+              "half_spread_usd": "1/5",
+              "purchase_cost_usd": "-1739113590591369/4000000000000000"
+            }
+          ],
+          "id": "equal_wings_110",
+          "weighting": "equal_wings"
+        }
+      ]
+    },
+    {
+      "id": "authored_quotes",
+      "quotes": [
+        {
+          "strike": 80,
+          "call_mid_usd": 21.0,
+          "call_mid_exact_input": "21",
+          "put_from_parity_usd": 1.0,
+          "intrinsic_bound_usd": 20,
+          "forward_bound_usd": 100,
+          "reference_implied_stddev": 0.1899182710258681,
+          "native_success": true,
+          "native_error": null,
+          "native_implied_stddev": 0.18991827102642786,
+          "native_call_usd": 21.00000000000997,
+          "native_put_usd": 1.0000000000099707,
+          "repricing_residual_usd": 9.968914582714206e-12,
+          "parity_residual_usd": 0.0
+        },
+        {
+          "strike": 90,
+          "call_mid_usd": 14.0,
+          "call_mid_exact_input": "14",
+          "put_from_parity_usd": 4.0,
+          "intrinsic_bound_usd": 10,
+          "forward_bound_usd": 100,
+          "reference_implied_stddev": 0.2124375864164914,
+          "native_success": true,
+          "native_error": null,
+          "native_implied_stddev": 0.21243758641707383,
+          "native_call_usd": 14.000000000019377,
+          "native_put_usd": 4.00000000001938,
+          "repricing_residual_usd": 1.9376500404177932e-11,
+          "parity_residual_usd": -3.552713678800501e-15
+        },
+        {
+          "strike": 105,
+          "call_mid_usd": 9.0,
+          "call_mid_exact_input": "9",
+          "put_from_parity_usd": 14.0,
+          "intrinsic_bound_usd": 0,
+          "forward_bound_usd": 100,
+          "reference_implied_stddev": 0.2778930252937867,
+          "native_success": true,
+          "native_error": null,
+          "native_implied_stddev": 0.2778930252937865,
+          "native_call_usd": 8.999999999999996,
+          "native_put_usd": 13.999999999999996,
+          "repricing_residual_usd": -3.552713678800501e-15,
+          "parity_residual_usd": 0.0
+        },
+        {
+          "strike": 110,
+          "call_mid_usd": 8.0,
+          "call_mid_exact_input": "8",
+          "put_from_parity_usd": 18.0,
+          "intrinsic_bound_usd": 0,
+          "forward_bound_usd": 100,
+          "reference_implied_stddev": 0.29641358873124557,
+          "native_success": true,
+          "native_error": null,
+          "native_implied_stddev": 0.2964135887312455,
+          "native_call_usd": 8.000000000000002,
+          "native_put_usd": 17.999999999999982,
+          "repricing_residual_usd": 1.7763568394002505e-15,
+          "parity_residual_usd": 1.9539925233402755e-14
+        },
+        {
+          "strike": 130,
+          "call_mid_usd": 3.0,
+          "call_mid_exact_input": "3",
+          "put_from_parity_usd": 33.0,
+          "intrinsic_bound_usd": 0,
+          "forward_bound_usd": 100,
+          "reference_implied_stddev": 0.28081396951199034,
+          "native_success": true,
+          "native_error": null,
+          "native_implied_stddev": 0.2808139695119903,
+          "native_call_usd": 3.000000000000002,
+          "native_put_usd": 33.0,
+          "repricing_residual_usd": 2.220446049250313e-15,
+          "parity_residual_usd": 3.552713678800501e-15
+        }
+      ],
+      "adjacent_slopes": [
+        {
+          "strikes": [
+            80,
+            90
+          ],
+          "call_slope": "-7/10"
+        },
+        {
+          "strikes": [
+            90,
+            105
+          ],
+          "call_slope": "-1/3"
+        },
+        {
+          "strikes": [
+            105,
+            110
+          ],
+          "call_slope": "-1/5"
+        },
+        {
+          "strikes": [
+            110,
+            130
+          ],
+          "call_slope": "-1/4"
+        }
+      ],
+      "strategies": [
+        {
+          "strikes": [
+            80,
+            90,
+            105
+          ],
+          "lower_weight": "3/5",
+          "middle_weight": "-1",
+          "upper_weight": "2/5",
+          "payoff_nodes": [
+            0,
+            80,
+            90,
+            105,
+            110,
+            130,
+            230
+          ],
+          "terminal_payoff_usd": [
+            "0",
+            "0",
+            "6",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "tail_slope": "0",
+          "minimum_payoff_usd": "0",
+          "mid_cost_usd": "11/5",
+          "costs": [
+            {
+              "half_spread_usd": "0",
+              "purchase_cost_usd": "11/5"
+            },
+            {
+              "half_spread_usd": "1/20",
+              "purchase_cost_usd": "23/10"
+            },
+            {
+              "half_spread_usd": "1/5",
+              "purchase_cost_usd": "13/5"
+            }
+          ],
+          "id": "strike_aware_90",
+          "weighting": "strike_aware"
+        },
+        {
+          "strikes": [
+            80,
+            90,
+            105
+          ],
+          "lower_weight": "1/2",
+          "middle_weight": "-1",
+          "upper_weight": "1/2",
+          "payoff_nodes": [
+            0,
+            80,
+            90,
+            105,
+            110,
+            130,
+            230
+          ],
+          "terminal_payoff_usd": [
+            "0",
+            "0",
+            "5",
+            "-5/2",
+            "-5/2",
+            "-5/2",
+            "-5/2"
+          ],
+          "tail_slope": "0",
+          "minimum_payoff_usd": "-5/2",
+          "mid_cost_usd": "1",
+          "costs": [
+            {
+              "half_spread_usd": "0",
+              "purchase_cost_usd": "1"
+            },
+            {
+              "half_spread_usd": "1/20",
+              "purchase_cost_usd": "11/10"
+            },
+            {
+              "half_spread_usd": "1/5",
+              "purchase_cost_usd": "7/5"
+            }
+          ],
+          "id": "equal_wings_90",
+          "weighting": "equal_wings"
+        },
+        {
+          "strikes": [
+            90,
+            105,
+            110
+          ],
+          "lower_weight": "1/4",
+          "middle_weight": "-1",
+          "upper_weight": "3/4",
+          "payoff_nodes": [
+            0,
+            80,
+            90,
+            105,
+            110,
+            130,
+            230
+          ],
+          "terminal_payoff_usd": [
+            "0",
+            "0",
+            "0",
+            "15/4",
+            "0",
+            "0",
+            "0"
+          ],
+          "tail_slope": "0",
+          "minimum_payoff_usd": "0",
+          "mid_cost_usd": "1/2",
+          "costs": [
+            {
+              "half_spread_usd": "0",
+              "purchase_cost_usd": "1/2"
+            },
+            {
+              "half_spread_usd": "1/20",
+              "purchase_cost_usd": "3/5"
+            },
+            {
+              "half_spread_usd": "1/5",
+              "purchase_cost_usd": "9/10"
+            }
+          ],
+          "id": "strike_aware_105",
+          "weighting": "strike_aware"
+        },
+        {
+          "strikes": [
+            90,
+            105,
+            110
+          ],
+          "lower_weight": "1/2",
+          "middle_weight": "-1",
+          "upper_weight": "1/2",
+          "payoff_nodes": [
+            0,
+            80,
+            90,
+            105,
+            110,
+            130,
+            230
+          ],
+          "terminal_payoff_usd": [
+            "0",
+            "0",
+            "0",
+            "15/2",
+            "5",
+            "5",
+            "5"
+          ],
+          "tail_slope": "0",
+          "minimum_payoff_usd": "0",
+          "mid_cost_usd": "2",
+          "costs": [
+            {
+              "half_spread_usd": "0",
+              "purchase_cost_usd": "2"
+            },
+            {
+              "half_spread_usd": "1/20",
+              "purchase_cost_usd": "21/10"
+            },
+            {
+              "half_spread_usd": "1/5",
+              "purchase_cost_usd": "12/5"
+            }
+          ],
+          "id": "equal_wings_105",
+          "weighting": "equal_wings"
+        },
+        {
+          "strikes": [
+            105,
+            110,
+            130
+          ],
+          "lower_weight": "4/5",
+          "middle_weight": "-1",
+          "upper_weight": "1/5",
+          "payoff_nodes": [
+            0,
+            80,
+            90,
+            105,
+            110,
+            130,
+            230
+          ],
+          "terminal_payoff_usd": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "4",
+            "0",
+            "0"
+          ],
+          "tail_slope": "0",
+          "minimum_payoff_usd": "0",
+          "mid_cost_usd": "-1/5",
+          "costs": [
+            {
+              "half_spread_usd": "0",
+              "purchase_cost_usd": "-1/5"
+            },
+            {
+              "half_spread_usd": "1/20",
+              "purchase_cost_usd": "-1/10"
+            },
+            {
+              "half_spread_usd": "1/5",
+              "purchase_cost_usd": "1/5"
+            }
+          ],
+          "id": "strike_aware_110",
+          "weighting": "strike_aware"
+        },
+        {
+          "strikes": [
+            105,
+            110,
+            130
+          ],
+          "lower_weight": "1/2",
+          "middle_weight": "-1",
+          "upper_weight": "1/2",
+          "payoff_nodes": [
+            0,
+            80,
+            90,
+            105,
+            110,
+            130,
+            230
+          ],
+          "terminal_payoff_usd": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "5/2",
+            "-15/2",
+            "-15/2"
+          ],
+          "tail_slope": "0",
+          "minimum_payoff_usd": "-15/2",
+          "mid_cost_usd": "-2",
+          "costs": [
+            {
+              "half_spread_usd": "0",
+              "purchase_cost_usd": "-2"
+            },
+            {
+              "half_spread_usd": "1/20",
+              "purchase_cost_usd": "-19/10"
+            },
+            {
+              "half_spread_usd": "1/5",
+              "purchase_cost_usd": "-8/5"
+            }
+          ],
+          "id": "equal_wings_110",
+          "weighting": "equal_wings"
+        }
+      ]
+    }
+  ],
+  "producer_claims": [
+    {
+      "id": "C1",
+      "text": "Every quote fits and satisfies parity, so the entire slice is arbitrage-free."
+    },
+    {
+      "id": "C2",
+      "text": "Any negative-cost equal-wing portfolio is an arbitrage opportunity."
+    },
+    {
+      "id": "C3",
+      "text": "A half-spread of 0.20 establishes global absence of arbitrage."
+    },
+    {
+      "id": "C4",
+      "text": "The calculation assumes a shared underlying, which establishes the identity of every selected instrument."
+    },
+    {
+      "id": "C5",
+      "text": "These numerical checks authorize trading and establish production readiness."
+    }
+  ]
+}

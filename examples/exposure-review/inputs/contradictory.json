@@ -1,0 +1,755 @@
+{
+  "subject": "EXPOSURE-2026-10-06",
+  "case": "contradictory",
+  "source_sha256": "9073a1998a794a2fcba160cdd7c844dabfdfc688e09d678f91991630e9ab95e3",
+  "selected_method": {
+    "scope": {
+      "as_of": "2026-10-06T00:00:00Z",
+      "reporting_currency": "USD",
+      "usd_per_eur": "11/10",
+      "positive_trade_sign": "asset to reporting bank",
+      "collateral": "received only; exclusive set allocation",
+      "legal_recognition": "stipulated synthetic set boundaries, not a legal determination",
+      "selected_measure": "sum over netting sets of max(signed trade value - recognized collateral, 0)",
+      "future_exposure_included": false,
+      "regulatory_ead": false,
+      "amount_tolerance_usd": 1e-06
+    },
+    "inputs": {
+      "netting_sets": [
+        {
+          "id": "NS-A1",
+          "counterparty": "CP-A"
+        },
+        {
+          "id": "NS-A2",
+          "counterparty": "CP-A"
+        },
+        {
+          "id": "NS-B1",
+          "counterparty": "CP-B"
+        }
+      ],
+      "trades": [
+        {
+          "id": "T1",
+          "netting_set": "NS-A1",
+          "currency": "USD",
+          "signed_value": 1000000
+        },
+        {
+          "id": "T2",
+          "netting_set": "NS-A1",
+          "currency": "EUR",
+          "signed_value": -600000
+        },
+        {
+          "id": "T3",
+          "netting_set": "NS-A2",
+          "currency": "USD",
+          "signed_value": -400000
+        },
+        {
+          "id": "T4",
+          "netting_set": "NS-A2",
+          "currency": "USD",
+          "signed_value": 100000
+        },
+        {
+          "id": "T5",
+          "netting_set": "NS-B1",
+          "currency": "USD",
+          "signed_value": 500000
+        },
+        {
+          "id": "T6",
+          "netting_set": "NS-B1",
+          "currency": "EUR",
+          "signed_value": 200000
+        }
+      ],
+      "collateral": [
+        {
+          "id": "C1",
+          "netting_set": "NS-A1",
+          "currency": "USD",
+          "market_value": 100000,
+          "haircut": "0",
+          "settled": true,
+          "eligible": true
+        },
+        {
+          "id": "C2",
+          "netting_set": "NS-A1",
+          "currency": "EUR",
+          "market_value": 100000,
+          "haircut": "1/10",
+          "settled": true,
+          "eligible": true
+        },
+        {
+          "id": "C3",
+          "netting_set": "NS-A1",
+          "currency": "USD",
+          "market_value": 80000,
+          "haircut": "0",
+          "settled": false,
+          "eligible": true
+        },
+        {
+          "id": "C4",
+          "netting_set": "NS-A2",
+          "currency": "USD",
+          "market_value": 200000,
+          "haircut": "0",
+          "settled": true,
+          "eligible": true
+        },
+        {
+          "id": "C5",
+          "netting_set": "NS-B1",
+          "currency": "USD",
+          "market_value": 250000,
+          "haircut": "1/20",
+          "settled": true,
+          "eligible": true
+        },
+        {
+          "id": "C6",
+          "netting_set": "NS-B1",
+          "currency": "USD",
+          "market_value": 300000,
+          "haircut": "0",
+          "settled": true,
+          "eligible": false
+        }
+      ]
+    }
+  },
+  "observed_calculation_inputs": {
+    "netting_sets": [
+      {
+        "id": "NS-A1",
+        "counterparty": "CP-A"
+      },
+      {
+        "id": "NS-A2",
+        "counterparty": "CP-A"
+      },
+      {
+        "id": "NS-B1",
+        "counterparty": "CP-B"
+      }
+    ],
+    "trades": [
+      {
+        "id": "T1",
+        "netting_set": "NS-A1",
+        "currency": "USD",
+        "signed_value": 1000000
+      },
+      {
+        "id": "T2",
+        "netting_set": "NS-A1",
+        "currency": "EUR",
+        "signed_value": -600000
+      },
+      {
+        "id": "T3",
+        "netting_set": "NS-A2",
+        "currency": "USD",
+        "signed_value": -400000
+      },
+      {
+        "id": "T4",
+        "netting_set": "NS-A2",
+        "currency": "USD",
+        "signed_value": 100000
+      },
+      {
+        "id": "T5",
+        "netting_set": "NS-B1",
+        "currency": "USD",
+        "signed_value": 500000
+      },
+      {
+        "id": "T6",
+        "netting_set": "NS-B1",
+        "currency": "EUR",
+        "signed_value": 200000
+      }
+    ],
+    "collateral": [
+      {
+        "id": "C1",
+        "netting_set": "NS-A1",
+        "currency": "USD",
+        "market_value": 100000,
+        "haircut": "0",
+        "settled": true,
+        "eligible": true
+      },
+      {
+        "id": "C2",
+        "netting_set": "NS-A1",
+        "currency": "EUR",
+        "market_value": 100000,
+        "haircut": "1/10",
+        "settled": true,
+        "eligible": true
+      },
+      {
+        "id": "C3",
+        "netting_set": "NS-A1",
+        "currency": "USD",
+        "market_value": 80000,
+        "haircut": "0",
+        "settled": false,
+        "eligible": true
+      },
+      {
+        "id": "C4",
+        "netting_set": "NS-A2",
+        "currency": "USD",
+        "market_value": 200000,
+        "haircut": "0",
+        "settled": true,
+        "eligible": true
+      },
+      {
+        "id": "C5",
+        "netting_set": "NS-B1",
+        "currency": "USD",
+        "market_value": 250000,
+        "haircut": "1/20",
+        "settled": true,
+        "eligible": true
+      },
+      {
+        "id": "C6",
+        "netting_set": "NS-B1",
+        "currency": "USD",
+        "market_value": 300000,
+        "haircut": "0",
+        "settled": true,
+        "eligible": false
+      }
+    ]
+  },
+  "scope_measures": {
+    "signed_trade_total_usd": "760000",
+    "positive_individual_trade_total_usd": "1820000",
+    "positive_unsecured_net_set_total_usd": "1060000"
+  },
+  "constructions": [
+    {
+      "id": "selected_sets",
+      "query": "WITH tv AS (\n      SELECT t.id, t.netting_set AS group_id, t.amount*(CASE WHEN t.currency='USD' THEN 1.0 ELSE 11.0/10.0 END) AS value\n      FROM trades t JOIN netting_sets s ON s.id=t.netting_set\n    ), cv AS (\n      SELECT c.id, c.netting_set AS group_id, CASE WHEN (c.settled=1) AND (c.eligible=1) THEN c.amount*(CASE WHEN c.currency='USD' THEN 1.0 ELSE 11.0/10.0 END)*(1.0-c.haircut) ELSE 0.0 END AS value\n      FROM collateral c JOIN netting_sets s ON s.id=c.netting_set\n    ), t AS (\n      SELECT group_id,sum(value) AS value,count(*) AS n FROM tv GROUP BY group_id\n    ), c AS (\n      SELECT group_id,sum(value) AS value,count(*) AS n FROM cv GROUP BY group_id\n    ) SELECT t.group_id,t.value AS trade_value_usd,c.value AS recognized_collateral_usd,\n      max(t.value-c.value,0.0) AS current_exposure_usd,t.n AS trade_rows,c.n AS collateral_rows\n      FROM t JOIN c ON t.group_id=c.group_id ORDER BY t.group_id",
+      "native_rows": [
+        {
+          "group_id": "NS-A1",
+          "trade_value_usd": 340000.0,
+          "recognized_collateral_usd": 199000.0,
+          "current_exposure_usd": 141000.0,
+          "trade_rows": 2,
+          "collateral_rows": 3
+        },
+        {
+          "group_id": "NS-A2",
+          "trade_value_usd": -300000.0,
+          "recognized_collateral_usd": 200000.0,
+          "current_exposure_usd": 0.0,
+          "trade_rows": 2,
+          "collateral_rows": 1
+        },
+        {
+          "group_id": "NS-B1",
+          "trade_value_usd": 720000.0,
+          "recognized_collateral_usd": 237500.0,
+          "current_exposure_usd": 482500.0,
+          "trade_rows": 2,
+          "collateral_rows": 2
+        }
+      ],
+      "exact_reference_rows": [
+        {
+          "group_id": "NS-A1",
+          "trade_value_usd": "340000",
+          "recognized_collateral_usd": "199000",
+          "current_exposure_usd": "141000",
+          "trade_rows": 2,
+          "collateral_rows": 3
+        },
+        {
+          "group_id": "NS-A2",
+          "trade_value_usd": "-300000",
+          "recognized_collateral_usd": "200000",
+          "current_exposure_usd": "0",
+          "trade_rows": 2,
+          "collateral_rows": 1
+        },
+        {
+          "group_id": "NS-B1",
+          "trade_value_usd": "720000",
+          "recognized_collateral_usd": "237500",
+          "current_exposure_usd": "482500",
+          "trade_rows": 2,
+          "collateral_rows": 2
+        }
+      ],
+      "native_total_usd": 623500.0,
+      "exact_total_usd": "623500",
+      "difference_from_selected_sets_construction_usd": "0"
+    },
+    {
+      "id": "counterparty_pool",
+      "query": "WITH tv AS (\n      SELECT t.id, s.counterparty AS group_id, t.amount*(CASE WHEN t.currency='USD' THEN 1.0 ELSE 11.0/10.0 END) AS value\n      FROM trades t JOIN netting_sets s ON s.id=t.netting_set\n    ), cv AS (\n      SELECT c.id, s.counterparty AS group_id, CASE WHEN (c.settled=1) AND (c.eligible=1) THEN c.amount*(CASE WHEN c.currency='USD' THEN 1.0 ELSE 11.0/10.0 END)*(1.0-c.haircut) ELSE 0.0 END AS value\n      FROM collateral c JOIN netting_sets s ON s.id=c.netting_set\n    ), t AS (\n      SELECT group_id,sum(value) AS value,count(*) AS n FROM tv GROUP BY group_id\n    ), c AS (\n      SELECT group_id,sum(value) AS value,count(*) AS n FROM cv GROUP BY group_id\n    ) SELECT t.group_id,t.value AS trade_value_usd,c.value AS recognized_collateral_usd,\n      max(t.value-c.value,0.0) AS current_exposure_usd,t.n AS trade_rows,c.n AS collateral_rows\n      FROM t JOIN c ON t.group_id=c.group_id ORDER BY t.group_id",
+      "native_rows": [
+        {
+          "group_id": "CP-A",
+          "trade_value_usd": 40000.0,
+          "recognized_collateral_usd": 399000.0,
+          "current_exposure_usd": 0.0,
+          "trade_rows": 4,
+          "collateral_rows": 4
+        },
+        {
+          "group_id": "CP-B",
+          "trade_value_usd": 720000.0,
+          "recognized_collateral_usd": 237500.0,
+          "current_exposure_usd": 482500.0,
+          "trade_rows": 2,
+          "collateral_rows": 2
+        }
+      ],
+      "exact_reference_rows": [
+        {
+          "group_id": "CP-A",
+          "trade_value_usd": "40000",
+          "recognized_collateral_usd": "399000",
+          "current_exposure_usd": "0",
+          "trade_rows": 4,
+          "collateral_rows": 4
+        },
+        {
+          "group_id": "CP-B",
+          "trade_value_usd": "720000",
+          "recognized_collateral_usd": "237500",
+          "current_exposure_usd": "482500",
+          "trade_rows": 2,
+          "collateral_rows": 2
+        }
+      ],
+      "native_total_usd": 482500.0,
+      "exact_total_usd": "482500",
+      "difference_from_selected_sets_construction_usd": "-141000"
+    },
+    {
+      "id": "global_pool",
+      "query": "WITH tv AS (\n      SELECT t.id, 'ALL' AS group_id, t.amount*(CASE WHEN t.currency='USD' THEN 1.0 ELSE 11.0/10.0 END) AS value\n      FROM trades t JOIN netting_sets s ON s.id=t.netting_set\n    ), cv AS (\n      SELECT c.id, 'ALL' AS group_id, CASE WHEN (c.settled=1) AND (c.eligible=1) THEN c.amount*(CASE WHEN c.currency='USD' THEN 1.0 ELSE 11.0/10.0 END)*(1.0-c.haircut) ELSE 0.0 END AS value\n      FROM collateral c JOIN netting_sets s ON s.id=c.netting_set\n    ), t AS (\n      SELECT group_id,sum(value) AS value,count(*) AS n FROM tv GROUP BY group_id\n    ), c AS (\n      SELECT group_id,sum(value) AS value,count(*) AS n FROM cv GROUP BY group_id\n    ) SELECT t.group_id,t.value AS trade_value_usd,c.value AS recognized_collateral_usd,\n      max(t.value-c.value,0.0) AS current_exposure_usd,t.n AS trade_rows,c.n AS collateral_rows\n      FROM t JOIN c ON t.group_id=c.group_id ORDER BY t.group_id",
+      "native_rows": [
+        {
+          "group_id": "ALL",
+          "trade_value_usd": 760000.0,
+          "recognized_collateral_usd": 636500.0,
+          "current_exposure_usd": 123500.0,
+          "trade_rows": 6,
+          "collateral_rows": 6
+        }
+      ],
+      "exact_reference_rows": [
+        {
+          "group_id": "ALL",
+          "trade_value_usd": "760000",
+          "recognized_collateral_usd": "636500",
+          "current_exposure_usd": "123500",
+          "trade_rows": 6,
+          "collateral_rows": 6
+        }
+      ],
+      "native_total_usd": 123500.0,
+      "exact_total_usd": "123500",
+      "difference_from_selected_sets_construction_usd": "-500000"
+    },
+    {
+      "id": "omit_haircuts",
+      "query": "WITH tv AS (\n      SELECT t.id, t.netting_set AS group_id, t.amount*(CASE WHEN t.currency='USD' THEN 1.0 ELSE 11.0/10.0 END) AS value\n      FROM trades t JOIN netting_sets s ON s.id=t.netting_set\n    ), cv AS (\n      SELECT c.id, c.netting_set AS group_id, CASE WHEN (c.settled=1) AND (c.eligible=1) THEN c.amount*(CASE WHEN c.currency='USD' THEN 1.0 ELSE 11.0/10.0 END)*1.0 ELSE 0.0 END AS value\n      FROM collateral c JOIN netting_sets s ON s.id=c.netting_set\n    ), t AS (\n      SELECT group_id,sum(value) AS value,count(*) AS n FROM tv GROUP BY group_id\n    ), c AS (\n      SELECT group_id,sum(value) AS value,count(*) AS n FROM cv GROUP BY group_id\n    ) SELECT t.group_id,t.value AS trade_value_usd,c.value AS recognized_collateral_usd,\n      max(t.value-c.value,0.0) AS current_exposure_usd,t.n AS trade_rows,c.n AS collateral_rows\n      FROM t JOIN c ON t.group_id=c.group_id ORDER BY t.group_id",
+      "native_rows": [
+        {
+          "group_id": "NS-A1",
+          "trade_value_usd": 340000.0,
+          "recognized_collateral_usd": 210000.0,
+          "current_exposure_usd": 130000.0,
+          "trade_rows": 2,
+          "collateral_rows": 3
+        },
+        {
+          "group_id": "NS-A2",
+          "trade_value_usd": -300000.0,
+          "recognized_collateral_usd": 200000.0,
+          "current_exposure_usd": 0.0,
+          "trade_rows": 2,
+          "collateral_rows": 1
+        },
+        {
+          "group_id": "NS-B1",
+          "trade_value_usd": 720000.0,
+          "recognized_collateral_usd": 250000.0,
+          "current_exposure_usd": 470000.0,
+          "trade_rows": 2,
+          "collateral_rows": 2
+        }
+      ],
+      "exact_reference_rows": [
+        {
+          "group_id": "NS-A1",
+          "trade_value_usd": "340000",
+          "recognized_collateral_usd": "210000",
+          "current_exposure_usd": "130000",
+          "trade_rows": 2,
+          "collateral_rows": 3
+        },
+        {
+          "group_id": "NS-A2",
+          "trade_value_usd": "-300000",
+          "recognized_collateral_usd": "200000",
+          "current_exposure_usd": "0",
+          "trade_rows": 2,
+          "collateral_rows": 1
+        },
+        {
+          "group_id": "NS-B1",
+          "trade_value_usd": "720000",
+          "recognized_collateral_usd": "250000",
+          "current_exposure_usd": "470000",
+          "trade_rows": 2,
+          "collateral_rows": 2
+        }
+      ],
+      "native_total_usd": 600000.0,
+      "exact_total_usd": "600000",
+      "difference_from_selected_sets_construction_usd": "-23500"
+    },
+    {
+      "id": "include_pending",
+      "query": "WITH tv AS (\n      SELECT t.id, t.netting_set AS group_id, t.amount*(CASE WHEN t.currency='USD' THEN 1.0 ELSE 11.0/10.0 END) AS value\n      FROM trades t JOIN netting_sets s ON s.id=t.netting_set\n    ), cv AS (\n      SELECT c.id, c.netting_set AS group_id, CASE WHEN (1) AND (c.eligible=1) THEN c.amount*(CASE WHEN c.currency='USD' THEN 1.0 ELSE 11.0/10.0 END)*(1.0-c.haircut) ELSE 0.0 END AS value\n      FROM collateral c JOIN netting_sets s ON s.id=c.netting_set\n    ), t AS (\n      SELECT group_id,sum(value) AS value,count(*) AS n FROM tv GROUP BY group_id\n    ), c AS (\n      SELECT group_id,sum(value) AS value,count(*) AS n FROM cv GROUP BY group_id\n    ) SELECT t.group_id,t.value AS trade_value_usd,c.value AS recognized_collateral_usd,\n      max(t.value-c.value,0.0) AS current_exposure_usd,t.n AS trade_rows,c.n AS collateral_rows\n      FROM t JOIN c ON t.group_id=c.group_id ORDER BY t.group_id",
+      "native_rows": [
+        {
+          "group_id": "NS-A1",
+          "trade_value_usd": 340000.0,
+          "recognized_collateral_usd": 279000.0,
+          "current_exposure_usd": 61000.0,
+          "trade_rows": 2,
+          "collateral_rows": 3
+        },
+        {
+          "group_id": "NS-A2",
+          "trade_value_usd": -300000.0,
+          "recognized_collateral_usd": 200000.0,
+          "current_exposure_usd": 0.0,
+          "trade_rows": 2,
+          "collateral_rows": 1
+        },
+        {
+          "group_id": "NS-B1",
+          "trade_value_usd": 720000.0,
+          "recognized_collateral_usd": 237500.0,
+          "current_exposure_usd": 482500.0,
+          "trade_rows": 2,
+          "collateral_rows": 2
+        }
+      ],
+      "exact_reference_rows": [
+        {
+          "group_id": "NS-A1",
+          "trade_value_usd": "340000",
+          "recognized_collateral_usd": "279000",
+          "current_exposure_usd": "61000",
+          "trade_rows": 2,
+          "collateral_rows": 3
+        },
+        {
+          "group_id": "NS-A2",
+          "trade_value_usd": "-300000",
+          "recognized_collateral_usd": "200000",
+          "current_exposure_usd": "0",
+          "trade_rows": 2,
+          "collateral_rows": 1
+        },
+        {
+          "group_id": "NS-B1",
+          "trade_value_usd": "720000",
+          "recognized_collateral_usd": "237500",
+          "current_exposure_usd": "482500",
+          "trade_rows": 2,
+          "collateral_rows": 2
+        }
+      ],
+      "native_total_usd": 543500.0,
+      "exact_total_usd": "543500",
+      "difference_from_selected_sets_construction_usd": "-80000"
+    },
+    {
+      "id": "include_ineligible",
+      "query": "WITH tv AS (\n      SELECT t.id, t.netting_set AS group_id, t.amount*(CASE WHEN t.currency='USD' THEN 1.0 ELSE 11.0/10.0 END) AS value\n      FROM trades t JOIN netting_sets s ON s.id=t.netting_set\n    ), cv AS (\n      SELECT c.id, c.netting_set AS group_id, CASE WHEN (c.settled=1) AND (1) THEN c.amount*(CASE WHEN c.currency='USD' THEN 1.0 ELSE 11.0/10.0 END)*(1.0-c.haircut) ELSE 0.0 END AS value\n      FROM collateral c JOIN netting_sets s ON s.id=c.netting_set\n    ), t AS (\n      SELECT group_id,sum(value) AS value,count(*) AS n FROM tv GROUP BY group_id\n    ), c AS (\n      SELECT group_id,sum(value) AS value,count(*) AS n FROM cv GROUP BY group_id\n    ) SELECT t.group_id,t.value AS trade_value_usd,c.value AS recognized_collateral_usd,\n      max(t.value-c.value,0.0) AS current_exposure_usd,t.n AS trade_rows,c.n AS collateral_rows\n      FROM t JOIN c ON t.group_id=c.group_id ORDER BY t.group_id",
+      "native_rows": [
+        {
+          "group_id": "NS-A1",
+          "trade_value_usd": 340000.0,
+          "recognized_collateral_usd": 199000.0,
+          "current_exposure_usd": 141000.0,
+          "trade_rows": 2,
+          "collateral_rows": 3
+        },
+        {
+          "group_id": "NS-A2",
+          "trade_value_usd": -300000.0,
+          "recognized_collateral_usd": 200000.0,
+          "current_exposure_usd": 0.0,
+          "trade_rows": 2,
+          "collateral_rows": 1
+        },
+        {
+          "group_id": "NS-B1",
+          "trade_value_usd": 720000.0,
+          "recognized_collateral_usd": 537500.0,
+          "current_exposure_usd": 182500.0,
+          "trade_rows": 2,
+          "collateral_rows": 2
+        }
+      ],
+      "exact_reference_rows": [
+        {
+          "group_id": "NS-A1",
+          "trade_value_usd": "340000",
+          "recognized_collateral_usd": "199000",
+          "current_exposure_usd": "141000",
+          "trade_rows": 2,
+          "collateral_rows": 3
+        },
+        {
+          "group_id": "NS-A2",
+          "trade_value_usd": "-300000",
+          "recognized_collateral_usd": "200000",
+          "current_exposure_usd": "0",
+          "trade_rows": 2,
+          "collateral_rows": 1
+        },
+        {
+          "group_id": "NS-B1",
+          "trade_value_usd": "720000",
+          "recognized_collateral_usd": "537500",
+          "current_exposure_usd": "182500",
+          "trade_rows": 2,
+          "collateral_rows": 2
+        }
+      ],
+      "native_total_usd": 323500.0,
+      "exact_total_usd": "323500",
+      "difference_from_selected_sets_construction_usd": "-300000"
+    },
+    {
+      "id": "invert_fx",
+      "query": "WITH tv AS (\n      SELECT t.id, t.netting_set AS group_id, t.amount*(CASE WHEN t.currency='USD' THEN 1.0 ELSE 10.0/11.0 END) AS value\n      FROM trades t JOIN netting_sets s ON s.id=t.netting_set\n    ), cv AS (\n      SELECT c.id, c.netting_set AS group_id, CASE WHEN (c.settled=1) AND (c.eligible=1) THEN c.amount*(CASE WHEN c.currency='USD' THEN 1.0 ELSE 10.0/11.0 END)*(1.0-c.haircut) ELSE 0.0 END AS value\n      FROM collateral c JOIN netting_sets s ON s.id=c.netting_set\n    ), t AS (\n      SELECT group_id,sum(value) AS value,count(*) AS n FROM tv GROUP BY group_id\n    ), c AS (\n      SELECT group_id,sum(value) AS value,count(*) AS n FROM cv GROUP BY group_id\n    ) SELECT t.group_id,t.value AS trade_value_usd,c.value AS recognized_collateral_usd,\n      max(t.value-c.value,0.0) AS current_exposure_usd,t.n AS trade_rows,c.n AS collateral_rows\n      FROM t JOIN c ON t.group_id=c.group_id ORDER BY t.group_id",
+      "native_rows": [
+        {
+          "group_id": "NS-A1",
+          "trade_value_usd": 454545.4545454546,
+          "recognized_collateral_usd": 181818.18181818182,
+          "current_exposure_usd": 272727.27272727276,
+          "trade_rows": 2,
+          "collateral_rows": 3
+        },
+        {
+          "group_id": "NS-A2",
+          "trade_value_usd": -300000.0,
+          "recognized_collateral_usd": 200000.0,
+          "current_exposure_usd": 0.0,
+          "trade_rows": 2,
+          "collateral_rows": 1
+        },
+        {
+          "group_id": "NS-B1",
+          "trade_value_usd": 681818.1818181819,
+          "recognized_collateral_usd": 237500.0,
+          "current_exposure_usd": 444318.1818181819,
+          "trade_rows": 2,
+          "collateral_rows": 2
+        }
+      ],
+      "exact_reference_rows": [
+        {
+          "group_id": "NS-A1",
+          "trade_value_usd": "5000000/11",
+          "recognized_collateral_usd": "2000000/11",
+          "current_exposure_usd": "3000000/11",
+          "trade_rows": 2,
+          "collateral_rows": 3
+        },
+        {
+          "group_id": "NS-A2",
+          "trade_value_usd": "-300000",
+          "recognized_collateral_usd": "200000",
+          "current_exposure_usd": "0",
+          "trade_rows": 2,
+          "collateral_rows": 1
+        },
+        {
+          "group_id": "NS-B1",
+          "trade_value_usd": "7500000/11",
+          "recognized_collateral_usd": "237500",
+          "current_exposure_usd": "4887500/11",
+          "trade_rows": 2,
+          "collateral_rows": 2
+        }
+      ],
+      "native_total_usd": 717045.4545454546,
+      "exact_total_usd": "7887500/11",
+      "difference_from_selected_sets_construction_usd": "1029000/11"
+    },
+    {
+      "id": "join_before_aggregation",
+      "query": "WITH tv AS (\n      SELECT t.id, t.netting_set AS group_id, t.amount*(CASE WHEN t.currency='USD' THEN 1.0 ELSE 11.0/10.0 END) AS value\n      FROM trades t JOIN netting_sets s ON s.id=t.netting_set\n    ), cv AS (\n      SELECT c.id, c.netting_set AS group_id, CASE WHEN (c.settled=1) AND (c.eligible=1) THEN c.amount*(CASE WHEN c.currency='USD' THEN 1.0 ELSE 11.0/10.0 END)*(1.0-c.haircut) ELSE 0.0 END AS value\n      FROM collateral c JOIN netting_sets s ON s.id=c.netting_set\n    )\n        SELECT tv.group_id, sum(tv.value) AS trade_value_usd,\n          sum(cv.value) AS recognized_collateral_usd,\n          max(sum(tv.value)-sum(cv.value),0.0) AS current_exposure_usd,\n          count(tv.id) AS trade_rows, count(cv.id) AS collateral_rows\n        FROM tv JOIN cv ON tv.group_id=cv.group_id\n        GROUP BY tv.group_id ORDER BY tv.group_id",
+      "native_rows": [
+        {
+          "group_id": "NS-A1",
+          "trade_value_usd": 1020000.0,
+          "recognized_collateral_usd": 398000.0,
+          "current_exposure_usd": 622000.0,
+          "trade_rows": 6,
+          "collateral_rows": 6
+        },
+        {
+          "group_id": "NS-A2",
+          "trade_value_usd": -300000.0,
+          "recognized_collateral_usd": 400000.0,
+          "current_exposure_usd": 0.0,
+          "trade_rows": 2,
+          "collateral_rows": 2
+        },
+        {
+          "group_id": "NS-B1",
+          "trade_value_usd": 1440000.0,
+          "recognized_collateral_usd": 475000.0,
+          "current_exposure_usd": 965000.0,
+          "trade_rows": 4,
+          "collateral_rows": 4
+        }
+      ],
+      "exact_reference_rows": [
+        {
+          "group_id": "NS-A1",
+          "trade_value_usd": "1020000",
+          "recognized_collateral_usd": "398000",
+          "current_exposure_usd": "622000",
+          "trade_rows": 6,
+          "collateral_rows": 6
+        },
+        {
+          "group_id": "NS-A2",
+          "trade_value_usd": "-300000",
+          "recognized_collateral_usd": "400000",
+          "current_exposure_usd": "0",
+          "trade_rows": 2,
+          "collateral_rows": 2
+        },
+        {
+          "group_id": "NS-B1",
+          "trade_value_usd": "1440000",
+          "recognized_collateral_usd": "475000",
+          "current_exposure_usd": "965000",
+          "trade_rows": 4,
+          "collateral_rows": 4
+        }
+      ],
+      "native_total_usd": 1587000.0,
+      "exact_total_usd": "1587000",
+      "difference_from_selected_sets_construction_usd": "963500"
+    },
+    {
+      "id": "floor_trades_first",
+      "query": "WITH tv AS (\n      SELECT t.id, t.netting_set AS group_id, max(t.amount*(CASE WHEN t.currency='USD' THEN 1.0 ELSE 11.0/10.0 END),0.0) AS value\n      FROM trades t JOIN netting_sets s ON s.id=t.netting_set\n    ), cv AS (\n      SELECT c.id, c.netting_set AS group_id, CASE WHEN (c.settled=1) AND (c.eligible=1) THEN c.amount*(CASE WHEN c.currency='USD' THEN 1.0 ELSE 11.0/10.0 END)*(1.0-c.haircut) ELSE 0.0 END AS value\n      FROM collateral c JOIN netting_sets s ON s.id=c.netting_set\n    ), t AS (\n      SELECT group_id,sum(value) AS value,count(*) AS n FROM tv GROUP BY group_id\n    ), c AS (\n      SELECT group_id,sum(value) AS value,count(*) AS n FROM cv GROUP BY group_id\n    ) SELECT t.group_id,t.value AS trade_value_usd,c.value AS recognized_collateral_usd,\n      max(t.value-c.value,0.0) AS current_exposure_usd,t.n AS trade_rows,c.n AS collateral_rows\n      FROM t JOIN c ON t.group_id=c.group_id ORDER BY t.group_id",
+      "native_rows": [
+        {
+          "group_id": "NS-A1",
+          "trade_value_usd": 1000000.0,
+          "recognized_collateral_usd": 199000.0,
+          "current_exposure_usd": 801000.0,
+          "trade_rows": 2,
+          "collateral_rows": 3
+        },
+        {
+          "group_id": "NS-A2",
+          "trade_value_usd": 100000.0,
+          "recognized_collateral_usd": 200000.0,
+          "current_exposure_usd": 0.0,
+          "trade_rows": 2,
+          "collateral_rows": 1
+        },
+        {
+          "group_id": "NS-B1",
+          "trade_value_usd": 720000.0,
+          "recognized_collateral_usd": 237500.0,
+          "current_exposure_usd": 482500.0,
+          "trade_rows": 2,
+          "collateral_rows": 2
+        }
+      ],
+      "exact_reference_rows": [
+        {
+          "group_id": "NS-A1",
+          "trade_value_usd": "1000000",
+          "recognized_collateral_usd": "199000",
+          "current_exposure_usd": "801000",
+          "trade_rows": 2,
+          "collateral_rows": 3
+        },
+        {
+          "group_id": "NS-A2",
+          "trade_value_usd": "100000",
+          "recognized_collateral_usd": "200000",
+          "current_exposure_usd": "0",
+          "trade_rows": 2,
+          "collateral_rows": 1
+        },
+        {
+          "group_id": "NS-B1",
+          "trade_value_usd": "720000",
+          "recognized_collateral_usd": "237500",
+          "current_exposure_usd": "482500",
+          "trade_rows": 2,
+          "collateral_rows": 2
+        }
+      ],
+      "native_total_usd": 1283500.0,
+      "exact_total_usd": "1283500",
+      "difference_from_selected_sets_construction_usd": "660000"
+    }
+  ],
+  "producer_claims": [
+    {
+      "id": "C1",
+      "text": "Pooling all positions is valid because every individual amount and the final sum are arithmetically correct."
+    },
+    {
+      "id": "C2",
+      "text": "A common counterparty automatically makes separate netting sets interchangeable."
+    },
+    {
+      "id": "C3",
+      "text": "Pending or ineligible collateral can offset exposure whenever its recorded market value is positive."
+    },
+    {
+      "id": "C4",
+      "text": "Higher exposure from a different construction automatically conforms to the selected method."
+    },
+    {
+      "id": "C5",
+      "text": "A calculation that uses an eligible flag proves that eligibility is the intended requirement and an established institutional fact."
+    },
+    {
+      "id": "C6",
+      "text": "These current-exposure calculations establish regulatory EAD, actual legal enforceability and approval to move collateral."
+    }
+  ]
+}

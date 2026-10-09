@@ -1,0 +1,290 @@
+{
+  "as_of": "2026-09-18",
+  "spot": "2026-09-22",
+  "quantlib_version": "1.43",
+  "scipy_version": "1.18.1",
+  "python": "3.12.14",
+  "instruments": [
+    "O/N",
+    "T/N",
+    "1M",
+    "2M",
+    "3M",
+    "4M",
+    "6M",
+    "1Y",
+    "18M",
+    "2Y",
+    "3Y",
+    "4Y",
+    "5Y",
+    "6Y",
+    "7Y",
+    "8Y",
+    "9Y",
+    "10Y",
+    "12Y",
+    "15Y",
+    "20Y",
+    "30Y"
+  ],
+  "repricing_max_abs_error_bp": {
+    "A": 3.860106678743591e-09,
+    "B": 2.7554347692415604e-10
+  },
+  "df_difference_A_minus_B_monthly_grid": {
+    "max_abs": 0.0022745819731463945,
+    "max_abs_date": "2050-04-18",
+    "max_abs_pv_per_notional_usd": 227458.19731463946
+  },
+  "forward_smoothness": {
+    "A": {
+      "max_jump_bp": 59.712040847870185,
+      "max_jump_date": "2046-09-26",
+      "jumps_over_2bp": 18,
+      "min_forward_pct": 3.849999999999909,
+      "max_forward_pct": 4.877809187786353,
+      "last_node_date": "2056-09-26",
+      "jump_at_last_node_bp": 7.993605777301127e-10,
+      "forward_last_node_pct": 4.224752952715072,
+      "forward_one_year_past_last_node_pct": 4.224752952707078,
+      "max_change_over_5_business_days_bp": 59.72704713901322,
+      "max_change_over_5_business_days_ending": "2046-09-28"
+    },
+    "B": {
+      "max_jump_bp": 1.6845939549980926,
+      "max_jump_date": "2029-09-28",
+      "jumps_over_2bp": 0,
+      "min_forward_pct": 3.8499999999972445,
+      "max_forward_pct": 4.892957621879468,
+      "last_node_date": "2056-09-26",
+      "jump_at_last_node_bp": 0.0,
+      "forward_last_node_pct": 3.995694889390222,
+      "forward_one_year_past_last_node_pct": 3.995694889390222,
+      "max_change_over_5_business_days_bp": 5.3381719640643865,
+      "max_change_over_5_business_days_ending": "2026-12-31"
+    }
+  },
+  "forward_total_variation_bp": {
+    "A": 421.3288736703902,
+    "B": 364.9532555796586
+  },
+  "off_node": {
+    "date": "2031-03-24",
+    "years": 4.5,
+    "df": {
+      "A": 0.8139715557104203,
+      "B": 0.8139742502766556
+    },
+    "pv_of_notional_usd": {
+      "A": 81397155.57104203,
+      "B": 81397425.02766556
+    },
+    "pv_difference_A_minus_B_usd": -269.45662352506616
+  },
+  "locality_bump_5Y_plus_1bp": {
+    "A": {
+      "max_change_inside_4Y_6Y_bp": 5.5366864065486965,
+      "max_change_outside_4Y_6Y_bp": 0.030463315869866392,
+      "first_date_with_change_over_0.01bp": "2030-09-25",
+      "last_date_with_change_over_0.01bp": "2033-09-23"
+    },
+    "B": {
+      "max_change_inside_4Y_6Y_bp": 7.664973904919492,
+      "max_change_outside_4Y_6Y_bp": 4.147533778020573,
+      "first_date_with_change_over_0.01bp": "2029-09-26",
+      "last_date_with_change_over_0.01bp": "2033-09-23"
+    }
+  },
+  "pv_ladder_4p5y": {
+    "A": {
+      "abs_pv_change_total_usd": 40224.864013871374,
+      "abs_pv_change_4Y_5Y_usd": 37865.89081241631,
+      "share_outside_4Y_5Y": 0.058644653233422495
+    },
+    "B": {
+      "abs_pv_change_total_usd": 42866.65459842798,
+      "abs_pv_change_4Y_5Y_usd": 37750.28240194933,
+      "share_outside_4Y_5Y": 0.11935552807674155
+    }
+  },
+  "extrapolation": {
+    "A": {
+      "df_40Y": 0.16426042674503108,
+      "zero_40Y_pct": 4.51204682508388,
+      "on_forward_35Y_pct": 4.224752952715072
+    },
+    "B": {
+      "df_40Y": 0.16853911087131007,
+      "zero_40Y_pct": 4.447812873710563,
+      "on_forward_35Y_pct": 3.995694889398216
+    }
+  },
+  "convention_sensitivities": {
+    "payment_lag_0_vs_2": {
+      "A": {
+        "max_abs_df_diff_monthly_grid": 1.3257876583572248e-05,
+        "max_abs_pv_diff_per_notional_usd": 1325.7876583572247,
+        "pv_diff_at_off_node_usd": 33.15266017267504
+      },
+      "B": {
+        "max_abs_df_diff_monthly_grid": 4.791806782811214e-06,
+        "max_abs_pv_diff_per_notional_usd": 479.18067828112146,
+        "pv_diff_at_off_node_usd": 0.721690962546262
+      }
+    },
+    "quarterly_vs_annual_payments": {
+      "A": {
+        "max_abs_df_diff_monthly_grid": 0.006616209339669998,
+        "max_abs_pv_diff_per_notional_usd": 661620.9339669999,
+        "pv_diff_at_off_node_usd": -291018.9796542451
+      },
+      "B": {
+        "max_abs_df_diff_monthly_grid": 0.006613210953206106,
+        "max_abs_pv_diff_per_notional_usd": 661321.0953206106,
+        "pv_diff_at_off_node_usd": -290572.77172939153
+      }
+    },
+    "fixed_leg_act365_vs_act360": {
+      "A": {
+        "max_abs_df_diff_monthly_grid": 0.005000698682172011,
+        "max_abs_pv_diff_per_notional_usd": 500069.86821720115,
+        "pv_diff_at_off_node_usd": -226555.72029339767
+      },
+      "B": {
+        "max_abs_df_diff_monthly_grid": 0.005001424128942444,
+        "max_abs_pv_diff_per_notional_usd": 500142.4128942444,
+        "pv_diff_at_off_node_usd": -226553.02046536986
+      }
+    },
+    "anchor_plus_1bp": {
+      "A": {
+        "max_abs_df_diff_monthly_grid": 1.1071025222131325e-06,
+        "max_abs_pv_diff_per_notional_usd": 110.71025222131325,
+        "pv_diff_at_off_node_usd": -90.41702914158734
+      },
+      "B": {
+        "max_abs_df_diff_monthly_grid": 1.3106156619979714e-06,
+        "max_abs_pv_diff_per_notional_usd": 131.06156619979714,
+        "pv_diff_at_off_node_usd": -90.41732845771477
+      }
+    }
+  },
+  "interpolation_variants": {
+    "B_without_positivity_collar": {
+      "bootstrap": "converged",
+      "max_abs_df_diff_monthly_grid": 0.0,
+      "max_abs_pv_diff_per_notional_usd": 0.0,
+      "pv_diff_at_off_node_usd": 0.0
+    },
+    "quantlib_convexmonotone_default_0.3_0.7": {
+      "bootstrap": "converged",
+      "max_abs_df_diff_monthly_grid": 8.011750101993842e-05,
+      "max_abs_pv_diff_per_notional_usd": 8011.750101993842,
+      "pv_diff_at_off_node_usd": 338.06240293809964,
+      "max_daily_forward_jump_bp": 20.556156775963785,
+      "jump_at_last_node_bp": 7.993605777301127e-10
+    },
+    "quantlib_convexmonotone_paper_setting_0_1": {
+      "bootstrap": "failed",
+      "error": "1st iteration: failed at 5th alive instrument, pillar December 24th, 2026, maturity December 22nd, 2026, reference date September 18th, 2026: root not bracketed: f[-1,1] -> [2.375741e-01,4.775343e-02]"
+    }
+  },
+  "hagan_west_sectors": {
+    "i": 10,
+    "ii": 4,
+    "iii": 3,
+    "iv": 5
+  },
+  "forward_after_3Y_node": {
+    "A": {
+      "forward_at_3Y_node_pct": 4.4319413889866155,
+      "forward_3_business_days_later_pct": 4.431941388978622,
+      "change_bp": -7.993605777301127e-10
+    },
+    "B": {
+      "forward_at_3Y_node_pct": 4.470456670614631,
+      "forward_3_business_days_later_pct": 4.431669989044096,
+      "change_bp": -3.878668157053511
+    }
+  },
+  "discrete_forwards_pct": {
+    "intervals": [
+      "as-of-O/N",
+      "O/N-T/N",
+      "T/N-1M",
+      "1M-2M",
+      "2M-3M",
+      "3M-4M",
+      "4M-6M",
+      "6M-1Y",
+      "1Y-18M",
+      "18M-2Y",
+      "2Y-3Y",
+      "3Y-4Y",
+      "4Y-5Y",
+      "5Y-6Y",
+      "6Y-7Y",
+      "7Y-8Y",
+      "8Y-9Y",
+      "9Y-10Y",
+      "10Y-12Y",
+      "12Y-15Y",
+      "15Y-20Y",
+      "20Y-30Y"
+    ],
+    "A": [
+      3.902846174120969,
+      3.9032635097737183,
+      3.9451274596072623,
+      4.088173721932579,
+      4.197642666136971,
+      4.328388643029949,
+      4.407446629629543,
+      4.70004048789658,
+      4.777635043348288,
+      4.685796536581488,
+      4.586562117649615,
+      4.493219557206066,
+      4.494906963313376,
+      4.52192201637066,
+      4.555225656876922,
+      4.588800379479333,
+      4.705674858141196,
+      4.690752524193069,
+      4.8567393413523945,
+      4.944216828260174,
+      4.8885164456318995,
+      4.283178757356207
+    ],
+    "B": [
+      3.902846174120969,
+      3.903263509765615,
+      3.952945847092619,
+      4.082606246489664,
+      4.198166858492496,
+      4.328466124785481,
+      4.407727460680162,
+      4.699737405195468,
+      4.776722427721289,
+      4.6855618057383515,
+      4.586671356309223,
+      4.493479874238412,
+      4.494972938648029,
+      4.521941386245467,
+      4.555319658626004,
+      4.58924124699735,
+      4.705007319361886,
+      4.691083909646386,
+      4.8574470963186425,
+      4.944087836593326,
+      4.885237286768962,
+      4.259519432281139
+    ]
+  },
+  "hagan_west_collar_binding_nodes": 0,
+  "notes": {
+    "repricing": "A: QuantLib IterativeBootstrap default accuracy; B: simultaneous solve to 1e-14 in par rate. Errors measure solver tolerance, not model error.",
+    "pv_ladder": "PV change of the cash flow per +1 bp on each input; not hedge notionals."
+  }
+}

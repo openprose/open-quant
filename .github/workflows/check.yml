@@ -1,0 +1,44 @@
+name: Offline repository checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - run: python3 scripts/check_repository.py
+      - run: python3 -m unittest discover -s tests -v
+      - run: node scripts/check_monitoring.mjs
+      - run: node scripts/check_valuation.mjs
+      - run: node scripts/check_backtesting.mjs
+      - run: node scripts/check_sofr_change.mjs
+      - run: node scripts/check_calibration.mjs
+      - run: node scripts/check_vendor_inventory.mjs
+      - run: node scripts/check_risk_report.mjs
+      - run: node scripts/check_outcomes.mjs
+      - run: node scripts/check_implementation.mjs
+      - run: node scripts/check_simulation.mjs
+      - run: node scripts/check_documentation.mjs
+      - run: node scripts/check_dependence.mjs
+      - run: node scripts/check_selection.mjs
+      - run: node scripts/check_cashflow.mjs
+      - run: python3 scripts/check_sensitivity.py
+      - run: python3 scripts/check_optimization.py
+      - run: python3 scripts/check_availability.py
+      - run: python3 scripts/check_credit_loss.py
+      - run: python3 scripts/check_portfolio_tail.py
+      - run: python3 scripts/check_backtest_statistics.py
+      - run: python3 scripts/check_exposure.py
+      - run: python3 scripts/check_option_consistency.py
+      - run: python3 scripts/check_pnl_attribution.py
+      - run: python3 scripts/check_reverse_stress.py
+      - run: python3 scripts/check_pricing_probabilities.py
+      - run: python3 scripts/check_exposure_default.py
+      - run: python3 scripts/check_calibration_identification.py
+      - run: python3 scripts/check_periodic_review.py
+      - run: python3 scripts/check_hedge_outcomes.py
+      - run: python3 scripts/check_credit_methodology.py
+      - run: python3 scripts/check_quote_sensitivity.py
+      - run: python3 scripts/check_pricing_methodology.py
+      - run: python3 scripts/check_calibration_stability.py

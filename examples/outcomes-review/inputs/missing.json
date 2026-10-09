@@ -1,0 +1,149 @@
+{
+  "cutoff": "2026-10-01T18:00:00Z",
+  "cohort": [
+    {
+      "id": "F1",
+      "book": "DEMO-FLOWS",
+      "windowStart": "2026-09-28T09:00:00Z",
+      "windowEnd": "2026-09-28T17:00:00Z"
+    },
+    {
+      "id": "F2",
+      "book": "DEMO-FLOWS",
+      "windowStart": "2026-09-29T09:00:00Z",
+      "windowEnd": "2026-09-29T17:00:00Z"
+    },
+    {
+      "id": "F3",
+      "book": "DEMO-FLOWS",
+      "windowStart": "2026-09-30T09:00:00Z",
+      "windowEnd": "2026-09-30T17:00:00Z"
+    },
+    {
+      "id": "F4",
+      "book": "DEMO-FLOWS",
+      "windowStart": "2026-10-02T09:00:00Z",
+      "windowEnd": "2026-10-02T17:00:00Z"
+    }
+  ],
+  "forecasts": [
+    {
+      "id": "A1",
+      "observation": "F1",
+      "model": "A",
+      "revision": "r1",
+      "book": "DEMO-FLOWS",
+      "issued": "2026-09-27T18:00:00Z",
+      "windowStart": "2026-09-28T09:00:00Z",
+      "windowEnd": "2026-09-28T17:00:00Z",
+      "currency": "USD",
+      "netFlowUsd": 100000
+    },
+    {
+      "id": "B1",
+      "observation": "F1",
+      "model": "B",
+      "revision": "r1",
+      "book": "DEMO-FLOWS",
+      "issued": "2026-09-27T18:00:00Z",
+      "windowStart": "2026-09-28T09:00:00Z",
+      "windowEnd": "2026-09-28T17:00:00Z",
+      "currency": "USD",
+      "netFlowUsd": 110000
+    },
+    {
+      "id": "A2",
+      "observation": "F2",
+      "model": "A",
+      "revision": "r1",
+      "book": "DEMO-FLOWS",
+      "issued": "2026-09-28T18:00:00Z",
+      "windowStart": "2026-09-29T09:00:00Z",
+      "windowEnd": "2026-09-29T17:00:00Z",
+      "currency": "USD",
+      "netFlowUsd": 200000
+    },
+    {
+      "id": "B2",
+      "observation": "F2",
+      "model": "B",
+      "revision": "r1",
+      "book": "DEMO-FLOWS",
+      "issued": "2026-09-28T18:00:00Z",
+      "windowStart": "2026-09-29T09:00:00Z",
+      "windowEnd": "2026-09-29T17:00:00Z",
+      "currency": "USD",
+      "netFlowUsd": 190000
+    },
+    {
+      "id": "A3",
+      "observation": "F3",
+      "model": "A",
+      "revision": "r1",
+      "book": "DEMO-FLOWS",
+      "issued": "2026-09-29T18:00:00Z",
+      "windowStart": "2026-09-30T09:00:00Z",
+      "windowEnd": "2026-09-30T17:00:00Z",
+      "currency": "USD",
+      "netFlowUsd": 0
+    },
+    {
+      "id": "A4",
+      "observation": "F4",
+      "model": "A",
+      "revision": "r1",
+      "book": "DEMO-FLOWS",
+      "issued": "2026-10-01T18:00:00Z",
+      "windowStart": "2026-10-02T09:00:00Z",
+      "windowEnd": "2026-10-02T17:00:00Z",
+      "currency": "USD",
+      "netFlowUsd": 300000
+    },
+    {
+      "id": "B4",
+      "observation": "F4",
+      "model": "B",
+      "revision": "r1",
+      "book": "DEMO-FLOWS",
+      "issued": "2026-10-01T18:00:00Z",
+      "windowStart": "2026-10-02T09:00:00Z",
+      "windowEnd": "2026-10-02T17:00:00Z",
+      "currency": "USD",
+      "netFlowUsd": 280000
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "O1",
+      "observation": "F1",
+      "book": "DEMO-FLOWS",
+      "windowStart": "2026-09-28T09:00:00Z",
+      "windowEnd": "2026-09-28T17:00:00Z",
+      "available": "2026-09-28T17:05:00Z",
+      "currency": "USD",
+      "netFlowUsd": 100000
+    },
+    {
+      "id": "O2",
+      "observation": "F2",
+      "book": "DEMO-FLOWS",
+      "windowStart": "2026-09-29T09:00:00Z",
+      "windowEnd": "2026-09-29T17:00:00Z",
+      "available": "2026-09-29T17:05:00Z",
+      "currency": "USD",
+      "netFlowUsd": 200000
+    },
+    {
+      "id": "O3",
+      "observation": "F3",
+      "book": "DEMO-FLOWS",
+      "windowStart": "2026-09-30T09:00:00Z",
+      "windowEnd": "2026-09-30T17:00:00Z",
+      "available": "2026-09-30T17:05:00Z",
+      "currency": "USD",
+      "netFlowUsd": 100000
+    }
+  ],
+  "trainingAndSelectionHistory": null,
+  "producerClaim": "B has lower mean absolute error than A on the supplied evaluation data."
+}

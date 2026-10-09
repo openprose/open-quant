@@ -1,0 +1,26 @@
+{
+  "sourceCommit": "5ea97de7b9dcc60ecf3e1790728c6b24fadff481",
+  "source_sha256": "2d22d662139a429dcdcd1bdffce9d7f097e033ee030383df8982792dc0c2a0bf",
+  "plan_sha256": "66aa15263276072af5f1480ddb307089f0a8bce291b4165059ceedb421e12962",
+  "observation_sha256": "694a9f754dbc7e7cf6ef3e08135ce6bdd6fa8372058f9f960cf5f5d500f2bb53",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "quantlib": "1.43",
+    "platform": "macOS-26.6.1-arm64-arm-64bit"
+  },
+  "calculationSeconds": 0.0015815829974599183,
+  "processSeconds": 0.495880167,
+  "attempts": 1,
+  "nativeSolves": 5,
+  "controls": 90,
+  "allControlsPass": true,
+  "case_sha256": {
+    "complete": "aea334641dce67e75ace14d1b6345eac8d0c221d5eb1c55451ab730ddb58f27c",
+    "missing-allocation": "951dceff4bf83dd1f7c221721cc3ed3c204b287fbd570a500c5cce130682f971",
+    "contradictory": "4b1ed58b4ac19a45c9d9a372ce7089694a3c6bece254e04a4fd486990955fc4f"
+  },
+  "projection": "Authored projection of retained calculation: neutral C/S identities; omit observer admissibility/fit flags, control summaries and exact minimizer labels. Missing case withholds C2 rates and all half-year result fields; contradictory case adds producer statements without changing numerical records.",
+  "qualification": "Numerical calculation observed. Reporting and assessment programs remain agent-unqualified."
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "observed-synthetic-selection-with-authored-review-projections",
+  "source_commit": "dd53d671d2d42eb607cc5a404685f5bb91a5fcb4",
+  "source_file": "examples/availability-review/model/measure.py",
+  "source_sha256": "e22fd7d564bfcd56c6d9fe279b197407c779bc4d932218fcb000ebaa048d5a2f",
+  "environment": {
+    "python": "3.12.14",
+    "sqlite": "3.53.1"
+  },
+  "observation_sha256": "fc69f533d024235f487507180cec7fbccac08e4908ab9ed2ee0ac215ead9aa6d",
+  "execution": {
+    "return_code": 0,
+    "timed_out": false,
+    "wall_seconds": 0.023524541000369936,
+    "attempts": 1,
+    "retries": 0,
+    "provider_calls": 0
+  },
+  "numerical_reproduction": {
+    "matched_all_prespecified_observations": true,
+    "excluded_fields": [
+      "recorded_at",
+      "calculation_seconds"
+    ]
+  },
+  "packets": {
+    "complete": {
+      "path": "inputs/complete.json",
+      "sha256": "6c6550486341a480897dc360b0b48b7c235dcd60200a432120d4fed7a698b686"
+    },
+    "missing-history": {
+      "path": "inputs/missing-history.json",
+      "sha256": "9ee3e58663498276c41106d2d97cfcbae73042a8ce0ed6c3dba861587036765f"
+    },
+    "contradictory": {
+      "path": "inputs/contradictory.json",
+      "sha256": "b1c309b339b08937de76987fc43519a4efa78951aa272ebc81afad652ea9ec42"
+    }
+  },
+  "authored_changes": {
+    "all": "Select tables and observed selection/error records; omit SQL, reference selection IDs, observer validity findings and controls from the review packet.",
+    "missing-history": "Withhold only R05 local availability. Retain actual selection IDs, prediction values and numeric metrics; a recorded selection does not supply its missing timestamp.",
+    "contradictory": "Preserve all numerical data and add six producer assertions."
+  },
+  "limits": [
+    "Synthetic retrospective selection exercise, not logs of a production forecasting system.",
+    "Corrected feature values deliberately equal later synthetic outcomes; perfect error is planted.",
+    "Source and packet identities do not substitute for independently checking the available timing evidence.",
+    "Programs, report criteria and reference reports are authored and agent-unqualified."
+  ]
+}

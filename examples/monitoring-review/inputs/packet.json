@@ -1,0 +1,37 @@
+{
+  "synthetic": true,
+  "reporting_period": "2026-09",
+  "review_date": "2026-10-05",
+  "models": [
+    {"id": "USD-CURVE", "revision": "r3", "use": "discount-factor production", "owner": "Rates Analytics"},
+    {"id": "CREDIT-SPREAD", "revision": "r2", "use": "spread interpolation", "owner": "Credit Analytics"}
+  ],
+  "expected_observations": [
+    {"id": "E1", "model": "USD-CURVE", "revision": "r3", "metric": "max_repricing_error", "period": "2026-09", "unit": "bp"},
+    {"id": "E2", "model": "USD-CURVE", "revision": "r3", "metric": "missing_required_inputs", "period": "2026-09", "unit": "count"},
+    {"id": "E3", "model": "CREDIT-SPREAD", "revision": "r2", "metric": "max_repricing_error", "period": "2026-09", "unit": "bp"},
+    {"id": "E4", "model": "CREDIT-SPREAD", "revision": "r2", "metric": "missing_required_inputs", "period": "2026-09", "unit": "count"}
+  ],
+  "cases": {
+    "complete": [
+      {"id": "O1", "model": "USD-CURVE", "revision": "r3", "metric": "max_repricing_error", "period": "2026-09", "unit": "bp", "value": 1.0, "producer_status": "within limit"},
+      {"id": "O2", "model": "USD-CURVE", "revision": "r3", "metric": "missing_required_inputs", "period": "2026-09", "unit": "count", "value": 0, "producer_status": "within limit"},
+      {"id": "O3", "model": "CREDIT-SPREAD", "revision": "r2", "metric": "max_repricing_error", "period": "2026-09", "unit": "bp", "value": 1.2, "producer_status": "breach"},
+      {"id": "O4", "model": "CREDIT-SPREAD", "revision": "r2", "metric": "missing_required_inputs", "period": "2026-09", "unit": "count", "value": 0, "producer_status": "within limit"}
+    ],
+    "missing": [
+      {"id": "O1", "model": "USD-CURVE", "revision": "r3", "metric": "max_repricing_error", "period": "2026-09", "unit": "bp", "value": 1.0, "producer_status": "within limit"},
+      {"id": "O2", "model": "USD-CURVE", "revision": "r3", "metric": "missing_required_inputs", "period": "2026-09", "unit": "count", "value": 0, "producer_status": "within limit"},
+      {"id": "O4", "model": "CREDIT-SPREAD", "revision": "r2", "metric": "missing_required_inputs", "period": "2026-09", "unit": "count", "value": 0, "producer_status": "within limit"}
+    ],
+    "contradictory": [
+      {"id": "O1", "model": "USD-CURVE", "revision": "r3", "metric": "max_repricing_error", "period": "2026-09", "unit": "bp", "value": 1.0, "producer_status": "within limit"},
+      {"id": "O2", "model": "USD-CURVE", "revision": "r3", "metric": "missing_required_inputs", "period": "2026-09", "unit": "count", "value": 0, "producer_status": "within limit"},
+      {"id": "O3", "model": "CREDIT-SPREAD", "revision": "r2", "metric": "max_repricing_error", "period": "2026-09", "unit": "bp", "value": 1.2, "producer_status": "within limit"},
+      {"id": "O4", "model": "CREDIT-SPREAD", "revision": "r2", "metric": "missing_required_inputs", "period": "2026-09", "unit": "count", "value": 0, "producer_status": "within limit"}
+    ]
+  },
+  "issues": [
+    {"id": "I1", "model": "CREDIT-SPREAD", "revision": "r2", "metric": "max_repricing_error", "opened": "2026-09-25", "due": "2026-10-01", "owner": "Credit Analytics", "action": "Investigate quote mapping", "producer_status": "closed", "action_complete": "2026-09-30", "closure_observation": null, "review_record": null}
+  ]
+}

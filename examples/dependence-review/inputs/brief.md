@@ -1,0 +1,11 @@
+# Synthetic dependence-input review
+
+Review DEPENDENCE-2026-10-06 on October 6, 2026. The subject is a constructed three-variable covariance-use example with unit marginal scales, not a production portfolio. Values have common synthetic units; quadratic forms have squared synthetic units. The intended operation is variance aggregation over the same synthetic observation period, not inversion or a risk-quantile calculation. No market date, financial horizon, institutional acceptance or approval record is supplied. Do not invent them.
+
+All candidates are Pearson correlation inputs with order A,B,C, except alignment_permuted, whose order is C,A,B. Identity and singular are mathematical controls. Pairwise_complete and common_complete use different missing-data selections from the same constructed observation set; rows are equally weighted within each estimate. These are finite constructions, not evidence of a representative economic population or a general preference for one missing-data estimator.
+
+Inconsistent is a deliberately inadmissible construction. Clipped_rescaled and shrunk_half are two proposed adjustments of it. Clipping sets negative eigenvalues to zero, then rescales the resulting positive diagonal to one. Shrinking takes 50% of the original plus 50% of identity. Neither construction is claimed to solve a constrained nearest-matrix problem or to be approved for use. The fixed witness vector (-1,1,1)/sqrt(3) demonstrates what the quadratic form implies; do not interpret a negative value as a realizable variance.
+
+Alignment_original and alignment_permuted are the same valid input in different variable orders. Exposures are A=1, B=2, C=-1. Compare the named-variable binding with a deliberately incorrect calculation that retains the old exposure positions after reordering the matrix. A valid matrix does not establish that this binding is correct.
+
+The receipt identifies one actual CPU calculation, its environment and authored packet projections. These observations are not an agent-generated report or independent financial review. The reporting invocation reads the supplied results; it does not reproduce the calculation. Source availability elsewhere does not extend its evidence scope.

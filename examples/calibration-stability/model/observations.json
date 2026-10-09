@@ -1,0 +1,3248 @@
+{
+  "started_utc": "2026-10-06T10:30:46.662420+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "float": "binary64",
+    "linalg_binary_sha256": "dbaefc13a7379c877dee2618ea6f96d69560743d3ad392d57f3a866f1378728d"
+  },
+  "identity": {
+    "source_sha256": "334ae2876ef3ed632e14a854aa2f84b09b7e531bcd63baf82ec4171a0817f2a3",
+    "plan_sha256": "6dce30b3bcb47321f28443011dae1a53bb819850123872cf67fd3a8a8037c851"
+  },
+  "limits": {
+    "processes": 1,
+    "attempts": 1,
+    "seconds": 120,
+    "provider_calls": 0
+  },
+  "tolerances": {
+    "parameter_absolute": 1e-10,
+    "repricing_absolute": 1e-12,
+    "condition_relative": 1e-12
+  },
+  "spacings": [
+    {
+      "epsilon": {
+        "fraction": "1",
+        "decimal": 1.0
+      },
+      "eta": {
+        "fraction": "1/25000",
+        "decimal": 4e-05
+      },
+      "baseline_q": [
+        {
+          "fraction": "1/25",
+          "decimal": 0.04
+        },
+        {
+          "fraction": "13/100",
+          "decimal": 0.13
+        }
+      ],
+      "raw_b_interval": [
+        {
+          "fraction": "281/3125",
+          "decimal": 0.08992
+        },
+        {
+          "fraction": "563/6250",
+          "decimal": 0.09008
+        }
+      ],
+      "admissible_b_interval": [
+        {
+          "fraction": "281/3125",
+          "decimal": 0.08992
+        },
+        {
+          "fraction": "563/6250",
+          "decimal": 0.09008
+        }
+      ],
+      "conditions": [
+        {
+          "coordinates": "physical",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "exact": {
+            "fraction": "4",
+            "decimal": 4.0
+          },
+          "status": "returned",
+          "value": 4.0
+        },
+        {
+          "coordinates": "integrated",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "exact": {
+            "fraction": "4",
+            "decimal": 4.0
+          },
+          "status": "returned",
+          "value": 4.0
+        }
+      ]
+    },
+    {
+      "epsilon": {
+        "fraction": "1/12",
+        "decimal": 0.08333333333333333
+      },
+      "eta": {
+        "fraction": "1/25000",
+        "decimal": 4e-05
+      },
+      "baseline_q": [
+        {
+          "fraction": "1/25",
+          "decimal": 0.04
+        },
+        {
+          "fraction": "19/400",
+          "decimal": 0.0475
+        }
+      ],
+      "raw_b_interval": [
+        {
+          "fraction": "1113/12500",
+          "decimal": 0.08904
+        },
+        {
+          "fraction": "1137/12500",
+          "decimal": 0.09096
+        }
+      ],
+      "admissible_b_interval": [
+        {
+          "fraction": "1113/12500",
+          "decimal": 0.08904
+        },
+        {
+          "fraction": "1137/12500",
+          "decimal": 0.09096
+        }
+      ],
+      "conditions": [
+        {
+          "coordinates": "physical",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.08333333333333333
+            ]
+          ],
+          "exact": {
+            "fraction": "26",
+            "decimal": 26.0
+          },
+          "status": "returned",
+          "value": 26.0
+        },
+        {
+          "coordinates": "integrated",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "exact": {
+            "fraction": "4",
+            "decimal": 4.0
+          },
+          "status": "returned",
+          "value": 4.0
+        }
+      ]
+    },
+    {
+      "epsilon": {
+        "fraction": "1/365",
+        "decimal": 0.0027397260273972603
+      },
+      "eta": {
+        "fraction": "1/25000",
+        "decimal": 4e-05
+      },
+      "baseline_q": [
+        {
+          "fraction": "1/25",
+          "decimal": 0.04
+        },
+        {
+          "fraction": "1469/36500",
+          "decimal": 0.04024657534246576
+        }
+      ],
+      "raw_b_interval": [
+        {
+          "fraction": "38/625",
+          "decimal": 0.0608
+        },
+        {
+          "fraction": "149/1250",
+          "decimal": 0.1192
+        }
+      ],
+      "admissible_b_interval": [
+        {
+          "fraction": "38/625",
+          "decimal": 0.0608
+        },
+        {
+          "fraction": "149/1250",
+          "decimal": 0.1192
+        }
+      ],
+      "conditions": [
+        {
+          "coordinates": "physical",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.0027397260273972603
+            ]
+          ],
+          "exact": {
+            "fraction": "732",
+            "decimal": 732.0
+          },
+          "status": "returned",
+          "value": 732.0000000000001
+        },
+        {
+          "coordinates": "integrated",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "exact": {
+            "fraction": "4",
+            "decimal": 4.0
+          },
+          "status": "returned",
+          "value": 4.0
+        }
+      ]
+    },
+    {
+      "epsilon": {
+        "fraction": "1/3650",
+        "decimal": 0.000273972602739726
+      },
+      "eta": {
+        "fraction": "1/25000",
+        "decimal": 4e-05
+      },
+      "baseline_q": [
+        {
+          "fraction": "1/25",
+          "decimal": 0.04
+        },
+        {
+          "fraction": "14609/365000",
+          "decimal": 0.040024657534246576
+        }
+      ],
+      "raw_b_interval": [
+        {
+          "fraction": "-101/500",
+          "decimal": -0.202
+        },
+        {
+          "fraction": "191/500",
+          "decimal": 0.382
+        }
+      ],
+      "admissible_b_interval": [
+        {
+          "fraction": "0",
+          "decimal": 0.0
+        },
+        {
+          "fraction": "191/500",
+          "decimal": 0.382
+        }
+      ],
+      "conditions": [
+        {
+          "coordinates": "physical",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.000273972602739726
+            ]
+          ],
+          "exact": {
+            "fraction": "7302",
+            "decimal": 7302.0
+          },
+          "status": "returned",
+          "value": 7302.0
+        },
+        {
+          "coordinates": "integrated",
+          "matrix": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "exact": {
+            "fraction": "4",
+            "decimal": 4.0
+          },
+          "status": "returned",
+          "value": 4.0
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "1/baseline",
+      "epsilon": "1",
+      "name": "baseline",
+      "intended_q": [
+        {
+          "fraction": "1/25",
+          "decimal": 0.04
+        },
+        {
+          "fraction": "13/100",
+          "decimal": 0.13
+        }
+      ],
+      "native_q": [
+        0.04,
+        0.13
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "3/3602879701896396800",
+          "decimal": 8.326672684688674e-19
+        },
+        {
+          "fraction": "1/225179981368524800",
+          "decimal": 4.440892098500626e-18
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "1/25",
+          "decimal": 0.04
+        },
+        {
+          "fraction": "9/100",
+          "decimal": 0.09
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.09
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09
+          ],
+          "repriced_q": [
+            0.04,
+            0.13
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.09
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09
+          ],
+          "repriced_q": [
+            0.04,
+            0.13
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/common-up",
+      "epsilon": "1",
+      "name": "common-up",
+      "intended_q": [
+        {
+          "fraction": "1001/25000",
+          "decimal": 0.04004
+        },
+        {
+          "fraction": "3251/25000",
+          "decimal": 0.13004
+        }
+      ],
+      "native_q": [
+        0.04004,
+        0.13004
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "-359/450359962737049600000",
+          "decimal": -7.971401316808624e-19
+        },
+        {
+          "fraction": "-623/56294995342131200000",
+          "decimal": -1.1066703109463561e-17
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "1001/25000",
+          "decimal": 0.04004
+        },
+        {
+          "fraction": "9/100",
+          "decimal": 0.09
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.09
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.09
+          ],
+          "repriced_q": [
+            0.04004,
+            0.13004
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.09
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.09
+          ],
+          "repriced_q": [
+            0.04004,
+            0.13004
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/common-down",
+      "epsilon": "1",
+      "name": "common-down",
+      "intended_q": [
+        {
+          "fraction": "999/25000",
+          "decimal": 0.03996
+        },
+        {
+          "fraction": "3249/25000",
+          "decimal": 0.12996
+        }
+      ],
+      "native_q": [
+        0.03996,
+        0.12996
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "1109/450359962737049600000",
+          "decimal": 2.462474668618597e-18
+        },
+        {
+          "fraction": "-879/112589990684262400000",
+          "decimal": -7.8070883091641e-18
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "999/25000",
+          "decimal": 0.03996
+        },
+        {
+          "fraction": "9/100",
+          "decimal": 0.09
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.09
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.09
+          ],
+          "repriced_q": [
+            0.03996,
+            0.12996
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.09
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.09
+          ],
+          "repriced_q": [
+            0.03996,
+            0.12996
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/steepen",
+      "epsilon": "1",
+      "name": "steepen",
+      "intended_q": [
+        {
+          "fraction": "999/25000",
+          "decimal": 0.03996
+        },
+        {
+          "fraction": "3251/25000",
+          "decimal": 0.13004
+        }
+      ],
+      "native_q": [
+        0.03996,
+        0.13004
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "1109/450359962737049600000",
+          "decimal": 2.462474668618597e-18
+        },
+        {
+          "fraction": "-623/56294995342131200000",
+          "decimal": -1.1066703109463561e-17
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "999/25000",
+          "decimal": 0.03996
+        },
+        {
+          "fraction": "563/6250",
+          "decimal": 0.09008
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.09008
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.09008
+          ],
+          "repriced_q": [
+            0.03996,
+            0.13004
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.09008
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.09008
+          ],
+          "repriced_q": [
+            0.03996,
+            0.13004
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/flatten",
+      "epsilon": "1",
+      "name": "flatten",
+      "intended_q": [
+        {
+          "fraction": "1001/25000",
+          "decimal": 0.04004
+        },
+        {
+          "fraction": "3249/25000",
+          "decimal": 0.12996
+        }
+      ],
+      "native_q": [
+        0.04004,
+        0.12996
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "-359/450359962737049600000",
+          "decimal": -7.971401316808624e-19
+        },
+        {
+          "fraction": "-879/112589990684262400000",
+          "decimal": -7.8070883091641e-18
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "1001/25000",
+          "decimal": 0.04004
+        },
+        {
+          "fraction": "281/3125",
+          "decimal": 0.08992
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.08992
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.08992
+          ],
+          "repriced_q": [
+            0.04004,
+            0.12996
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.08992
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.08992
+          ],
+          "repriced_q": [
+            0.04004,
+            0.12996
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/12/baseline",
+      "epsilon": "1/12",
+      "name": "baseline",
+      "intended_q": [
+        {
+          "fraction": "1/25",
+          "decimal": 0.04
+        },
+        {
+          "fraction": "19/400",
+          "decimal": 0.0475
+        }
+      ],
+      "native_q": [
+        0.04,
+        0.0475
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "3/3602879701896396800",
+          "decimal": 8.326672684688674e-19
+        },
+        {
+          "fraction": "1/1801439850948198400",
+          "decimal": 5.551115123125783e-19
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "1/25",
+          "decimal": 0.04
+        },
+        {
+          "fraction": "9/100",
+          "decimal": 0.09
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.09
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09
+          ],
+          "repriced_q": [
+            0.04,
+            0.0475
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.0075
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09
+          ],
+          "repriced_q": [
+            0.04,
+            0.0475
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/12/common-up",
+      "epsilon": "1/12",
+      "name": "common-up",
+      "intended_q": [
+        {
+          "fraction": "1001/25000",
+          "decimal": 0.04004
+        },
+        {
+          "fraction": "2377/50000",
+          "decimal": 0.04754
+        }
+      ],
+      "native_q": [
+        0.04004,
+        0.04754
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "-359/450359962737049600000",
+          "decimal": -7.971401316808624e-19
+        },
+        {
+          "fraction": "-121/112589990684262400000",
+          "decimal": -1.0746958878371515e-18
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "1001/25000",
+          "decimal": 0.04004
+        },
+        {
+          "fraction": "9/100",
+          "decimal": 0.09
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.09
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.09
+          ],
+          "repriced_q": [
+            0.04004,
+            0.04754
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.0075
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.09
+          ],
+          "repriced_q": [
+            0.04004,
+            0.04754
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/12/common-down",
+      "epsilon": "1/12",
+      "name": "common-down",
+      "intended_q": [
+        {
+          "fraction": "999/25000",
+          "decimal": 0.03996
+        },
+        {
+          "fraction": "2373/50000",
+          "decimal": 0.04746
+        }
+      ],
+      "native_q": [
+        0.03996,
+        0.04746
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "1109/450359962737049600000",
+          "decimal": 2.462474668618597e-18
+        },
+        {
+          "fraction": "123/56294995342131200000",
+          "decimal": 2.184918912462308e-18
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "999/25000",
+          "decimal": 0.03996
+        },
+        {
+          "fraction": "9/100",
+          "decimal": 0.09
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.09
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.09
+          ],
+          "repriced_q": [
+            0.03996,
+            0.04746
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.0075
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.09
+          ],
+          "repriced_q": [
+            0.03996,
+            0.04746
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/12/steepen",
+      "epsilon": "1/12",
+      "name": "steepen",
+      "intended_q": [
+        {
+          "fraction": "999/25000",
+          "decimal": 0.03996
+        },
+        {
+          "fraction": "2377/50000",
+          "decimal": 0.04754
+        }
+      ],
+      "native_q": [
+        0.03996,
+        0.04754
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "1109/450359962737049600000",
+          "decimal": 2.462474668618597e-18
+        },
+        {
+          "fraction": "-121/112589990684262400000",
+          "decimal": -1.0746958878371515e-18
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "999/25000",
+          "decimal": 0.03996
+        },
+        {
+          "fraction": "1137/12500",
+          "decimal": 0.09096
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.09095999999999996
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.09095999999999996
+          ],
+          "repriced_q": [
+            0.03996,
+            0.04754
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            -4.163336342344337e-17
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.0075799999999999965
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.09095999999999996
+          ],
+          "repriced_q": [
+            0.03996,
+            0.04754
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            -4.163336342344337e-17
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/12/flatten",
+      "epsilon": "1/12",
+      "name": "flatten",
+      "intended_q": [
+        {
+          "fraction": "1001/25000",
+          "decimal": 0.04004
+        },
+        {
+          "fraction": "2373/50000",
+          "decimal": 0.04746
+        }
+      ],
+      "native_q": [
+        0.04004,
+        0.04746
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "-359/450359962737049600000",
+          "decimal": -7.971401316808624e-19
+        },
+        {
+          "fraction": "123/56294995342131200000",
+          "decimal": 2.184918912462308e-18
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "1001/25000",
+          "decimal": 0.04004
+        },
+        {
+          "fraction": "1113/12500",
+          "decimal": 0.08904
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.08904000000000004
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.08904000000000004
+          ],
+          "repriced_q": [
+            0.04004,
+            0.04746
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            4.163336342344337e-17
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.007420000000000003
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.08904000000000004
+          ],
+          "repriced_q": [
+            0.04004,
+            0.04746
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            4.163336342344337e-17
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/365/baseline",
+      "epsilon": "1/365",
+      "name": "baseline",
+      "intended_q": [
+        {
+          "fraction": "1/25",
+          "decimal": 0.04
+        },
+        {
+          "fraction": "1469/36500",
+          "decimal": 0.04024657534246576
+        }
+      ],
+      "native_q": [
+        0.04,
+        0.04024657534246576
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "3/3602879701896396800",
+          "decimal": 8.326672684688674e-19
+        },
+        {
+          "fraction": "1127/328762772798046208000",
+          "decimal": 3.4280036952124695e-18
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "1/25",
+          "decimal": 0.04
+        },
+        {
+          "fraction": "9/100",
+          "decimal": 0.09
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.09000000000000094
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09000000000000094
+          ],
+          "repriced_q": [
+            0.04,
+            0.04024657534246576
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            9.43689570931383e-16
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.000246575342465756
+          ],
+          "physical_parameters": [
+            0.04,
+            0.09000000000000094
+          ],
+          "repriced_q": [
+            0.04,
+            0.04024657534246576
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            9.43689570931383e-16
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/365/common-up",
+      "epsilon": "1/365",
+      "name": "common-up",
+      "intended_q": [
+        {
+          "fraction": "1001/25000",
+          "decimal": 0.04004
+        },
+        {
+          "fraction": "73523/1825000",
+          "decimal": 0.040286575342465755
+        }
+      ],
+      "native_q": [
+        0.04004,
+        0.040286575342465755
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "-359/450359962737049600000",
+          "decimal": -7.971401316808624e-19
+        },
+        {
+          "fraction": "29559/16438138639902310400000",
+          "decimal": 1.79819629506274e-18
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "1001/25000",
+          "decimal": 0.04004
+        },
+        {
+          "fraction": "9/100",
+          "decimal": 0.09
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.09000000000000094
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.09000000000000094
+          ],
+          "repriced_q": [
+            0.04004,
+            0.040286575342465755
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            9.43689570931383e-16
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.000246575342465756
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.09000000000000094
+          ],
+          "repriced_q": [
+            0.04004,
+            0.040286575342465755
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            9.43689570931383e-16
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/365/common-down",
+      "epsilon": "1/365",
+      "name": "common-down",
+      "intended_q": [
+        {
+          "fraction": "999/25000",
+          "decimal": 0.03996
+        },
+        {
+          "fraction": "73377/1825000",
+          "decimal": 0.04020657534246575
+        }
+      ],
+      "native_q": [
+        0.03996,
+        0.04020657534246575
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "1109/450359962737049600000",
+          "decimal": 2.462474668618597e-18
+        },
+        {
+          "fraction": "-61843/32876277279804620800000",
+          "decimal": -1.881082808545029e-18
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "999/25000",
+          "decimal": 0.03996
+        },
+        {
+          "fraction": "9/100",
+          "decimal": 0.09
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.08999999999999841
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.08999999999999841
+          ],
+          "repriced_q": [
+            0.03996,
+            0.04020657534246575
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            -1.582067810090848e-15
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.0002465753424657491
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.08999999999999841
+          ],
+          "repriced_q": [
+            0.03996,
+            0.04020657534246575
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            -1.582067810090848e-15
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/365/steepen",
+      "epsilon": "1/365",
+      "name": "steepen",
+      "intended_q": [
+        {
+          "fraction": "999/25000",
+          "decimal": 0.03996
+        },
+        {
+          "fraction": "73523/1825000",
+          "decimal": 0.040286575342465755
+        }
+      ],
+      "native_q": [
+        0.03996,
+        0.040286575342465755
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "1109/450359962737049600000",
+          "decimal": 2.462474668618597e-18
+        },
+        {
+          "fraction": "29559/16438138639902310400000",
+          "decimal": 1.79819629506274e-18
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "999/25000",
+          "decimal": 0.03996
+        },
+        {
+          "fraction": "149/1250",
+          "decimal": 0.1192
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.11919999999999975
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.11919999999999975
+          ],
+          "repriced_q": [
+            0.03996,
+            0.040286575342465755
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            -2.498001805406602e-16
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.00032657534246575276
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.11919999999999975
+          ],
+          "repriced_q": [
+            0.03996,
+            0.040286575342465755
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            -2.498001805406602e-16
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/365/flatten",
+      "epsilon": "1/365",
+      "name": "flatten",
+      "intended_q": [
+        {
+          "fraction": "1001/25000",
+          "decimal": 0.04004
+        },
+        {
+          "fraction": "73377/1825000",
+          "decimal": 0.04020657534246575
+        }
+      ],
+      "native_q": [
+        0.04004,
+        0.04020657534246575
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "-359/450359962737049600000",
+          "decimal": -7.971401316808624e-19
+        },
+        {
+          "fraction": "-61843/32876277279804620800000",
+          "decimal": -1.881082808545029e-18
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "1001/25000",
+          "decimal": 0.04004
+        },
+        {
+          "fraction": "38/625",
+          "decimal": 0.0608
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.060799999999999604
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.060799999999999604
+          ],
+          "repriced_q": [
+            0.04004,
+            0.04020657534246575
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            -3.95516952522712e-16
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.00016657534246575234
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.060799999999999604
+          ],
+          "repriced_q": [
+            0.04004,
+            0.04020657534246575
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            -3.95516952522712e-16
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/3650/baseline",
+      "epsilon": "1/3650",
+      "name": "baseline",
+      "intended_q": [
+        {
+          "fraction": "1/25",
+          "decimal": 0.04
+        },
+        {
+          "fraction": "14609/365000",
+          "decimal": 0.040024657534246576
+        }
+      ],
+      "native_q": [
+        0.04,
+        0.040024657534246576
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "3/3602879701896396800",
+          "decimal": 8.326672684688674e-19
+        },
+        {
+          "fraction": "2619/6575255455960924160000",
+          "decimal": 3.983115207525048e-19
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "1/25",
+          "decimal": 0.04
+        },
+        {
+          "fraction": "9/100",
+          "decimal": 0.09
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.08999999999999843
+          ],
+          "physical_parameters": [
+            0.04,
+            0.08999999999999843
+          ],
+          "repriced_q": [
+            0.04,
+            0.040024657534246576
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            -1.5681900222830336e-15
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            2.4657534246574908e-05
+          ],
+          "physical_parameters": [
+            0.04,
+            0.08999999999999841
+          ],
+          "repriced_q": [
+            0.04,
+            0.040024657534246576
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            -1.582067810090848e-15
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/3650/common-up",
+      "epsilon": "1/3650",
+      "name": "common-up",
+      "intended_q": [
+        {
+          "fraction": "1001/25000",
+          "decimal": 0.04004
+        },
+        {
+          "fraction": "36559/912500",
+          "decimal": 0.040064657534246574
+        }
+      ],
+      "native_q": [
+        0.04004,
+        0.040064657534246574
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "-359/450359962737049600000",
+          "decimal": -7.971401316808624e-19
+        },
+        {
+          "fraction": "-40487/32876277279804620800000",
+          "decimal": -1.231495879397225e-18
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "1001/25000",
+          "decimal": 0.04004
+        },
+        {
+          "fraction": "9/100",
+          "decimal": 0.09
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            0.08999999999999843
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.08999999999999843
+          ],
+          "repriced_q": [
+            0.04004,
+            0.040064657534246574
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            -1.5681900222830336e-15
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            2.4657534246574908e-05
+          ],
+          "physical_parameters": [
+            0.04004,
+            0.08999999999999841
+          ],
+          "repriced_q": [
+            0.04004,
+            0.040064657534246574
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            -1.582067810090848e-15
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/3650/common-down",
+      "epsilon": "1/3650",
+      "name": "common-down",
+      "intended_q": [
+        {
+          "fraction": "999/25000",
+          "decimal": 0.03996
+        },
+        {
+          "fraction": "18243/456250",
+          "decimal": 0.03998465753424658
+        }
+      ],
+      "native_q": [
+        0.03996,
+        0.03998465753424658
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "1109/450359962737049600000",
+          "decimal": 2.462474668618597e-18
+        },
+        {
+          "fraction": "66677/32876277279804620800000",
+          "decimal": 2.0281189209022347e-18
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "999/25000",
+          "decimal": 0.03996
+        },
+        {
+          "fraction": "9/100",
+          "decimal": 0.09
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.08999999999999843
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.08999999999999843
+          ],
+          "repriced_q": [
+            0.03996,
+            0.03998465753424658
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            -1.5681900222830336e-15
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            2.4657534246574908e-05
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.08999999999999841
+          ],
+          "repriced_q": [
+            0.03996,
+            0.03998465753424658
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            -1.582067810090848e-15
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/3650/steepen",
+      "epsilon": "1/3650",
+      "name": "steepen",
+      "intended_q": [
+        {
+          "fraction": "999/25000",
+          "decimal": 0.03996
+        },
+        {
+          "fraction": "36559/912500",
+          "decimal": 0.040064657534246574
+        }
+      ],
+      "native_q": [
+        0.03996,
+        0.040064657534246574
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "1109/450359962737049600000",
+          "decimal": 2.462474668618597e-18
+        },
+        {
+          "fraction": "-40487/32876277279804620800000",
+          "decimal": -1.231495879397225e-18
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "999/25000",
+          "decimal": 0.03996
+        },
+        {
+          "fraction": "191/500",
+          "decimal": 0.382
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.3819999999999866
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.3819999999999866
+          ],
+          "repriced_q": [
+            0.03996,
+            0.040064657534246574
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            -1.3433698597964394e-14
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.03996,
+            0.00010465753424657165
+          ],
+          "physical_parameters": [
+            0.03996,
+            0.3819999999999865
+          ],
+          "repriced_q": [
+            0.03996,
+            0.040064657534246574
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            -1.3489209749195652e-14
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    },
+    {
+      "id": "1/3650/flatten",
+      "epsilon": "1/3650",
+      "name": "flatten",
+      "intended_q": [
+        {
+          "fraction": "1001/25000",
+          "decimal": 0.04004
+        },
+        {
+          "fraction": "18243/456250",
+          "decimal": 0.03998465753424658
+        }
+      ],
+      "native_q": [
+        0.04004,
+        0.03998465753424658
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "-359/450359962737049600000",
+          "decimal": -7.971401316808624e-19
+        },
+        {
+          "fraction": "66677/32876277279804620800000",
+          "decimal": 2.0281189209022347e-18
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "1001/25000",
+          "decimal": 0.04004
+        },
+        {
+          "fraction": "-101/500",
+          "decimal": -0.202
+        }
+      ],
+      "variance_admissible_exact": false,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            -0.20199999999998972
+          ],
+          "physical_parameters": [
+            0.04004,
+            -0.20199999999998972
+          ],
+          "repriced_q": [
+            0.04004,
+            0.03998465753424658
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            1.0297318553398327e-14
+          ],
+          "variance_admissible_native": false
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04004,
+            -5.534246575342183e-05
+          ],
+          "physical_parameters": [
+            0.04004,
+            -0.20199999999998972
+          ],
+          "repriced_q": [
+            0.04004,
+            0.03998465753424658
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            1.0297318553398327e-14
+          ],
+          "variance_admissible_native": false
+        }
+      ]
+    },
+    {
+      "id": "1/3650/admissible-boundary",
+      "epsilon": "1/3650",
+      "name": "admissible-boundary",
+      "intended_q": [
+        {
+          "fraction": "1/25",
+          "decimal": 0.04
+        },
+        {
+          "fraction": "1/25",
+          "decimal": 0.04
+        }
+      ],
+      "native_q": [
+        0.04,
+        0.04
+      ],
+      "input_representation_error": [
+        {
+          "fraction": "3/3602879701896396800",
+          "decimal": 8.326672684688674e-19
+        },
+        {
+          "fraction": "3/3602879701896396800",
+          "decimal": 8.326672684688674e-19
+        }
+      ],
+      "exact_physical": [
+        {
+          "fraction": "1/25",
+          "decimal": 0.04
+        },
+        {
+          "fraction": "0",
+          "decimal": 0.0
+        }
+      ],
+      "variance_admissible_exact": true,
+      "solves": [
+        {
+          "coordinates": "physical",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.0
+          ],
+          "physical_parameters": [
+            0.04,
+            0.0
+          ],
+          "repriced_q": [
+            0.04,
+            0.04
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        },
+        {
+          "coordinates": "integrated",
+          "status": "returned",
+          "native_solution": [
+            0.04,
+            0.0
+          ],
+          "physical_parameters": [
+            0.04,
+            0.0
+          ],
+          "repriced_q": [
+            0.04,
+            0.04
+          ],
+          "residual": [
+            0.0,
+            0.0
+          ],
+          "parameter_error": [
+            0.0,
+            0.0
+          ],
+          "variance_admissible_native": true
+        }
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "name": "environment",
+      "passed": true
+    },
+    {
+      "name": "1/physical/condition",
+      "passed": true
+    },
+    {
+      "name": "1/integrated/condition",
+      "passed": true
+    },
+    {
+      "name": "1/baseline/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/baseline/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/baseline/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/baseline/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/baseline/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/baseline/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/baseline/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/baseline/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/baseline/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/baseline/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/common-up/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/common-up/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/common-up/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/common-up/common-shift-b",
+      "passed": true
+    },
+    {
+      "name": "1/common-up/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/common-up/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/common-up/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/common-up/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/common-up/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/common-up/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/common-up/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/common-down/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/common-down/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/common-down/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/common-down/common-shift-b",
+      "passed": true
+    },
+    {
+      "name": "1/common-down/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/common-down/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/common-down/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/common-down/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/common-down/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/common-down/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/common-down/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/steepen/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/steepen/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/steepen/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/steepen/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/steepen/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/steepen/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/steepen/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/steepen/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/steepen/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/steepen/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/flatten/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/flatten/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/flatten/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/flatten/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/flatten/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/flatten/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/flatten/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/flatten/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/flatten/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/flatten/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/raw-extrema-witnesses",
+      "passed": true
+    },
+    {
+      "name": "1/admissible-extrema-witnesses",
+      "passed": true
+    },
+    {
+      "name": "1/12/physical/condition",
+      "passed": true
+    },
+    {
+      "name": "1/12/integrated/condition",
+      "passed": true
+    },
+    {
+      "name": "1/12/baseline/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/12/baseline/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/12/baseline/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/12/baseline/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/12/baseline/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/12/baseline/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/12/baseline/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/12/baseline/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/12/baseline/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/12/baseline/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-up/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-up/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-up/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-up/common-shift-b",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-up/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-up/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-up/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-up/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-up/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-up/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-up/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-down/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-down/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-down/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-down/common-shift-b",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-down/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-down/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-down/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-down/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-down/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-down/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/12/common-down/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/12/steepen/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/12/steepen/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/12/steepen/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/12/steepen/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/12/steepen/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/12/steepen/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/12/steepen/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/12/steepen/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/12/steepen/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/12/steepen/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/12/flatten/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/12/flatten/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/12/flatten/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/12/flatten/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/12/flatten/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/12/flatten/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/12/flatten/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/12/flatten/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/12/flatten/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/12/flatten/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/12/raw-extrema-witnesses",
+      "passed": true
+    },
+    {
+      "name": "1/12/admissible-extrema-witnesses",
+      "passed": true
+    },
+    {
+      "name": "1/365/physical/condition",
+      "passed": true
+    },
+    {
+      "name": "1/365/integrated/condition",
+      "passed": true
+    },
+    {
+      "name": "1/365/baseline/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/365/baseline/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/365/baseline/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/365/baseline/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/365/baseline/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/365/baseline/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/365/baseline/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/365/baseline/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/365/baseline/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/365/baseline/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-up/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-up/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-up/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-up/common-shift-b",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-up/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-up/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-up/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-up/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-up/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-up/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-up/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-down/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-down/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-down/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-down/common-shift-b",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-down/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-down/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-down/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-down/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-down/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-down/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/365/common-down/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/365/steepen/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/365/steepen/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/365/steepen/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/365/steepen/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/365/steepen/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/365/steepen/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/365/steepen/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/365/steepen/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/365/steepen/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/365/steepen/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/365/flatten/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/365/flatten/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/365/flatten/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/365/flatten/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/365/flatten/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/365/flatten/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/365/flatten/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/365/flatten/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/365/flatten/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/365/flatten/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/365/raw-extrema-witnesses",
+      "passed": true
+    },
+    {
+      "name": "1/365/admissible-extrema-witnesses",
+      "passed": true
+    },
+    {
+      "name": "1/3650/physical/condition",
+      "passed": true
+    },
+    {
+      "name": "1/3650/integrated/condition",
+      "passed": true
+    },
+    {
+      "name": "1/3650/baseline/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/3650/baseline/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/3650/baseline/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/3650/baseline/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/3650/baseline/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/3650/baseline/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/3650/baseline/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/3650/baseline/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/3650/baseline/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/3650/baseline/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-up/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-up/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-up/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-up/common-shift-b",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-up/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-up/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-up/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-up/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-up/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-up/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-up/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-down/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-down/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-down/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-down/common-shift-b",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-down/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-down/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-down/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-down/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-down/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-down/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/3650/common-down/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/3650/steepen/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/3650/steepen/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/3650/steepen/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/3650/steepen/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/3650/steepen/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/3650/steepen/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/3650/steepen/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/3650/steepen/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/3650/steepen/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/3650/steepen/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/3650/flatten/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/3650/flatten/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/3650/flatten/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/3650/flatten/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/3650/flatten/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/3650/flatten/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/3650/flatten/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/3650/flatten/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/3650/flatten/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/3650/flatten/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/3650/admissible-boundary/input-box",
+      "passed": true
+    },
+    {
+      "name": "1/3650/admissible-boundary/exact-reprice",
+      "passed": true
+    },
+    {
+      "name": "1/3650/admissible-boundary/exact-b-range",
+      "passed": true
+    },
+    {
+      "name": "1/3650/admissible-boundary/physical/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/3650/admissible-boundary/physical/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/3650/admissible-boundary/physical/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/3650/admissible-boundary/integrated/parameter",
+      "passed": true
+    },
+    {
+      "name": "1/3650/admissible-boundary/integrated/repricing",
+      "passed": true
+    },
+    {
+      "name": "1/3650/admissible-boundary/integrated/admissibility",
+      "passed": true
+    },
+    {
+      "name": "1/3650/admissible-boundary/coordinate-agreement",
+      "passed": true
+    },
+    {
+      "name": "1/3650/raw-extrema-witnesses",
+      "passed": true
+    },
+    {
+      "name": "1/3650/admissible-extrema-witnesses",
+      "passed": true
+    },
+    {
+      "name": "case-count",
+      "passed": true
+    },
+    {
+      "name": "solve-count",
+      "passed": true
+    },
+    {
+      "name": "condition-count",
+      "passed": true
+    },
+    {
+      "name": "inadmissible-count",
+      "passed": true
+    }
+  ],
+  "status": "complete",
+  "elapsed_seconds": 0.029486917017493397,
+  "counts": {
+    "cases": 21,
+    "solve_calls": 42,
+    "condition_calls": 8,
+    "controls": 239,
+    "passed": 239
+  }
+}

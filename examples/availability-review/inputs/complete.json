@@ -1,0 +1,1061 @@
+{
+  "subject": "AVAILABILITY-2026-10-06",
+  "case": "complete",
+  "source_sha256": "e22fd7d564bfcd56c6d9fe279b197407c779bc4d932218fcb000ebaa048d5a2f",
+  "scope": {
+    "timestamps": "UTC, second precision",
+    "eligibility_boundary": "publication and known local availability <= decision cutoff",
+    "identity": [
+      "entity",
+      "observation_date"
+    ],
+    "version_rule": "highest eligible revision; conflicting ties remain ambiguous",
+    "prediction_rule": "uniquely selected dimensionless feature value",
+    "expected_decisions": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10"
+    ],
+    "common_decisions": [
+      "D02",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D10"
+    ],
+    "outcomes": "synthetic; later than all decision cutoffs; corrected feature values deliberately equal outcomes",
+    "financial_operations": false
+  },
+  "features": [
+    {
+      "id": "R01",
+      "entity": "A",
+      "observation_date": "2025-12-31",
+      "revision": 1,
+      "published_at": "2026-01-02T09:00:00Z",
+      "available_at": "2026-01-02T09:05:00Z",
+      "value": 0.02
+    },
+    {
+      "id": "R02",
+      "entity": "A",
+      "observation_date": "2025-12-31",
+      "revision": 2,
+      "published_at": "2026-01-05T09:00:00Z",
+      "available_at": "2026-01-05T09:05:00Z",
+      "value": 0.08
+    },
+    {
+      "id": "R03",
+      "entity": "B",
+      "observation_date": "2025-12-31",
+      "revision": 1,
+      "published_at": "2026-01-02T09:00:00Z",
+      "available_at": "2026-01-02T10:00:00Z",
+      "value": -0.01
+    },
+    {
+      "id": "R04",
+      "entity": "B",
+      "observation_date": "2025-12-31",
+      "revision": 2,
+      "published_at": "2026-01-05T09:00:00Z",
+      "available_at": "2026-01-05T09:05:00Z",
+      "value": 0.04
+    },
+    {
+      "id": "R05",
+      "entity": "A",
+      "observation_date": "2026-01-02",
+      "revision": 1,
+      "published_at": "2026-01-03T09:00:00Z",
+      "available_at": "2026-01-03T09:05:00Z",
+      "value": 0.03
+    },
+    {
+      "id": "R06",
+      "entity": "A",
+      "observation_date": "2026-01-02",
+      "revision": 2,
+      "published_at": "2026-01-06T09:00:00Z",
+      "available_at": "2026-01-06T09:05:00Z",
+      "value": -0.02
+    },
+    {
+      "id": "R07",
+      "entity": "B",
+      "observation_date": "2026-01-02",
+      "revision": 1,
+      "published_at": "2026-01-03T09:00:00Z",
+      "available_at": "2026-01-03T09:10:00Z",
+      "value": 0.05
+    },
+    {
+      "id": "R08",
+      "entity": "B",
+      "observation_date": "2026-01-02",
+      "revision": 2,
+      "published_at": "2026-01-06T09:00:00Z",
+      "available_at": "2026-01-06T09:05:00Z",
+      "value": -0.04
+    },
+    {
+      "id": "R09",
+      "entity": "A",
+      "observation_date": "2025-11-30",
+      "revision": 1,
+      "published_at": "2026-01-03T09:20:00Z",
+      "available_at": "2026-01-03T09:25:00Z",
+      "value": 0.99
+    },
+    {
+      "id": "R10",
+      "entity": "C",
+      "observation_date": "2025-12-31",
+      "revision": 1,
+      "published_at": "2026-01-02T09:00:00Z",
+      "available_at": null,
+      "value": 0.06
+    },
+    {
+      "id": "R11",
+      "entity": "D",
+      "observation_date": "2025-12-31",
+      "revision": 1,
+      "published_at": "2026-01-02T09:00:00Z",
+      "available_at": "2026-01-02T09:05:00Z",
+      "value": 0.02
+    },
+    {
+      "id": "R12",
+      "entity": "D",
+      "observation_date": "2025-12-31",
+      "revision": 1,
+      "published_at": "2026-01-02T09:00:00Z",
+      "available_at": "2026-01-02T09:05:00Z",
+      "value": 0.07
+    },
+    {
+      "id": "R13",
+      "entity": "A",
+      "observation_date": "2025-12-31",
+      "revision": 1,
+      "published_at": "2026-01-02T09:00:00Z",
+      "available_at": "2026-01-06T09:30:00Z",
+      "value": 0.02
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D01",
+      "entity": "A",
+      "observation_date": "2025-12-31",
+      "cutoff": "2026-01-02T09:02:00Z",
+      "outcome": 0.08,
+      "outcome_published_at": "2026-01-10T10:00:00Z"
+    },
+    {
+      "id": "D02",
+      "entity": "A",
+      "observation_date": "2025-12-31",
+      "cutoff": "2026-01-02T09:05:00Z",
+      "outcome": 0.08,
+      "outcome_published_at": "2026-01-10T10:00:00Z"
+    },
+    {
+      "id": "D03",
+      "entity": "B",
+      "observation_date": "2025-12-31",
+      "cutoff": "2026-01-02T09:30:00Z",
+      "outcome": 0.04,
+      "outcome_published_at": "2026-01-10T10:00:00Z"
+    },
+    {
+      "id": "D04",
+      "entity": "B",
+      "observation_date": "2025-12-31",
+      "cutoff": "2026-01-02T10:00:00Z",
+      "outcome": 0.04,
+      "outcome_published_at": "2026-01-10T10:00:00Z"
+    },
+    {
+      "id": "D05",
+      "entity": "A",
+      "observation_date": "2026-01-02",
+      "cutoff": "2026-01-03T09:15:00Z",
+      "outcome": -0.02,
+      "outcome_published_at": "2026-01-10T10:00:00Z"
+    },
+    {
+      "id": "D06",
+      "entity": "B",
+      "observation_date": "2026-01-02",
+      "cutoff": "2026-01-03T09:15:00Z",
+      "outcome": -0.04,
+      "outcome_published_at": "2026-01-10T10:00:00Z"
+    },
+    {
+      "id": "D07",
+      "entity": "A",
+      "observation_date": "2026-01-02",
+      "cutoff": "2026-01-03T10:00:00Z",
+      "outcome": -0.02,
+      "outcome_published_at": "2026-01-10T10:00:00Z"
+    },
+    {
+      "id": "D08",
+      "entity": "C",
+      "observation_date": "2025-12-31",
+      "cutoff": "2026-01-02T10:00:00Z",
+      "outcome": 0.06,
+      "outcome_published_at": "2026-01-10T10:00:00Z"
+    },
+    {
+      "id": "D09",
+      "entity": "D",
+      "observation_date": "2025-12-31",
+      "cutoff": "2026-01-02T10:00:00Z",
+      "outcome": 0.07,
+      "outcome_published_at": "2026-01-10T10:00:00Z"
+    },
+    {
+      "id": "D10",
+      "entity": "A",
+      "observation_date": "2025-12-31",
+      "cutoff": "2026-01-06T10:00:00Z",
+      "outcome": 0.08,
+      "outcome_published_at": "2026-01-10T10:00:00Z"
+    }
+  ],
+  "selectors": [
+    {
+      "id": "point_in_time",
+      "rows": [
+        {
+          "decision_id": "D01",
+          "selected_record_ids": [],
+          "selection_state": "unavailable",
+          "prediction": null,
+          "outcome": 0.08,
+          "absolute_error": null
+        },
+        {
+          "decision_id": "D02",
+          "selected_record_ids": [
+            "R01"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.02,
+          "outcome": 0.08,
+          "absolute_error": 0.06
+        },
+        {
+          "decision_id": "D03",
+          "selected_record_ids": [],
+          "selection_state": "unavailable",
+          "prediction": null,
+          "outcome": 0.04,
+          "absolute_error": null
+        },
+        {
+          "decision_id": "D04",
+          "selected_record_ids": [
+            "R03"
+          ],
+          "selection_state": "selected",
+          "prediction": -0.01,
+          "outcome": 0.04,
+          "absolute_error": 0.05
+        },
+        {
+          "decision_id": "D05",
+          "selected_record_ids": [
+            "R05"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.03,
+          "outcome": -0.02,
+          "absolute_error": 0.05
+        },
+        {
+          "decision_id": "D06",
+          "selected_record_ids": [
+            "R07"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.05,
+          "outcome": -0.04,
+          "absolute_error": 0.09
+        },
+        {
+          "decision_id": "D07",
+          "selected_record_ids": [
+            "R05"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.03,
+          "outcome": -0.02,
+          "absolute_error": 0.05
+        },
+        {
+          "decision_id": "D08",
+          "selected_record_ids": [],
+          "selection_state": "unknown_availability",
+          "prediction": null,
+          "outcome": 0.06,
+          "absolute_error": null
+        },
+        {
+          "decision_id": "D09",
+          "selected_record_ids": [
+            "R11",
+            "R12"
+          ],
+          "selection_state": "ambiguous",
+          "prediction": null,
+          "outcome": 0.07,
+          "absolute_error": null
+        },
+        {
+          "decision_id": "D10",
+          "selected_record_ids": [
+            "R02"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.08,
+          "outcome": 0.08,
+          "absolute_error": 0.0
+        }
+      ],
+      "own_population": {
+        "expected_decisions": 10,
+        "evaluated_decisions": 6,
+        "decision_ids": [
+          "D02",
+          "D04",
+          "D05",
+          "D06",
+          "D07",
+          "D10"
+        ],
+        "unavailable_decision_ids": [
+          "D01",
+          "D03",
+          "D08",
+          "D09"
+        ],
+        "absolute_error_sum": 0.3,
+        "mean_absolute_error": 0.049999999999999996
+      },
+      "common_population": {
+        "expected_decisions": 6,
+        "evaluated_decisions": 6,
+        "decision_ids": [
+          "D02",
+          "D04",
+          "D05",
+          "D06",
+          "D07",
+          "D10"
+        ],
+        "unavailable_decision_ids": [],
+        "absolute_error_sum": 0.3,
+        "mean_absolute_error": 0.049999999999999996
+      }
+    },
+    {
+      "id": "latest_revision",
+      "rows": [
+        {
+          "decision_id": "D01",
+          "selected_record_ids": [
+            "R02"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.08,
+          "outcome": 0.08,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D02",
+          "selected_record_ids": [
+            "R02"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.08,
+          "outcome": 0.08,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D03",
+          "selected_record_ids": [
+            "R04"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.04,
+          "outcome": 0.04,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D04",
+          "selected_record_ids": [
+            "R04"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.04,
+          "outcome": 0.04,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D05",
+          "selected_record_ids": [
+            "R06"
+          ],
+          "selection_state": "selected",
+          "prediction": -0.02,
+          "outcome": -0.02,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D06",
+          "selected_record_ids": [
+            "R08"
+          ],
+          "selection_state": "selected",
+          "prediction": -0.04,
+          "outcome": -0.04,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D07",
+          "selected_record_ids": [
+            "R06"
+          ],
+          "selection_state": "selected",
+          "prediction": -0.02,
+          "outcome": -0.02,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D08",
+          "selected_record_ids": [
+            "R10"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.06,
+          "outcome": 0.06,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D09",
+          "selected_record_ids": [
+            "R12"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.07,
+          "outcome": 0.07,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D10",
+          "selected_record_ids": [
+            "R02"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.08,
+          "outcome": 0.08,
+          "absolute_error": 0.0
+        }
+      ],
+      "own_population": {
+        "expected_decisions": 10,
+        "evaluated_decisions": 10,
+        "decision_ids": [
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06",
+          "D07",
+          "D08",
+          "D09",
+          "D10"
+        ],
+        "unavailable_decision_ids": [],
+        "absolute_error_sum": 0.0,
+        "mean_absolute_error": 0.0
+      },
+      "common_population": {
+        "expected_decisions": 6,
+        "evaluated_decisions": 6,
+        "decision_ids": [
+          "D02",
+          "D04",
+          "D05",
+          "D06",
+          "D07",
+          "D10"
+        ],
+        "unavailable_decision_ids": [],
+        "absolute_error_sum": 0.0,
+        "mean_absolute_error": 0.0
+      }
+    },
+    {
+      "id": "published_only",
+      "rows": [
+        {
+          "decision_id": "D01",
+          "selected_record_ids": [
+            "R13"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.02,
+          "outcome": 0.08,
+          "absolute_error": 0.06
+        },
+        {
+          "decision_id": "D02",
+          "selected_record_ids": [
+            "R13"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.02,
+          "outcome": 0.08,
+          "absolute_error": 0.06
+        },
+        {
+          "decision_id": "D03",
+          "selected_record_ids": [
+            "R03"
+          ],
+          "selection_state": "selected",
+          "prediction": -0.01,
+          "outcome": 0.04,
+          "absolute_error": 0.05
+        },
+        {
+          "decision_id": "D04",
+          "selected_record_ids": [
+            "R03"
+          ],
+          "selection_state": "selected",
+          "prediction": -0.01,
+          "outcome": 0.04,
+          "absolute_error": 0.05
+        },
+        {
+          "decision_id": "D05",
+          "selected_record_ids": [
+            "R05"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.03,
+          "outcome": -0.02,
+          "absolute_error": 0.05
+        },
+        {
+          "decision_id": "D06",
+          "selected_record_ids": [
+            "R07"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.05,
+          "outcome": -0.04,
+          "absolute_error": 0.09
+        },
+        {
+          "decision_id": "D07",
+          "selected_record_ids": [
+            "R05"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.03,
+          "outcome": -0.02,
+          "absolute_error": 0.05
+        },
+        {
+          "decision_id": "D08",
+          "selected_record_ids": [
+            "R10"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.06,
+          "outcome": 0.06,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D09",
+          "selected_record_ids": [
+            "R12"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.07,
+          "outcome": 0.07,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D10",
+          "selected_record_ids": [
+            "R02"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.08,
+          "outcome": 0.08,
+          "absolute_error": 0.0
+        }
+      ],
+      "own_population": {
+        "expected_decisions": 10,
+        "evaluated_decisions": 10,
+        "decision_ids": [
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06",
+          "D07",
+          "D08",
+          "D09",
+          "D10"
+        ],
+        "unavailable_decision_ids": [],
+        "absolute_error_sum": 0.41000000000000003,
+        "mean_absolute_error": 0.041
+      },
+      "common_population": {
+        "expected_decisions": 6,
+        "evaluated_decisions": 6,
+        "decision_ids": [
+          "D02",
+          "D04",
+          "D05",
+          "D06",
+          "D07",
+          "D10"
+        ],
+        "unavailable_decision_ids": [],
+        "absolute_error_sum": 0.3,
+        "mean_absolute_error": 0.049999999999999996
+      }
+    },
+    {
+      "id": "latest_arrival",
+      "rows": [
+        {
+          "decision_id": "D01",
+          "selected_record_ids": [],
+          "selection_state": "unavailable",
+          "prediction": null,
+          "outcome": 0.08,
+          "absolute_error": null
+        },
+        {
+          "decision_id": "D02",
+          "selected_record_ids": [
+            "R01"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.02,
+          "outcome": 0.08,
+          "absolute_error": 0.06
+        },
+        {
+          "decision_id": "D03",
+          "selected_record_ids": [],
+          "selection_state": "unavailable",
+          "prediction": null,
+          "outcome": 0.04,
+          "absolute_error": null
+        },
+        {
+          "decision_id": "D04",
+          "selected_record_ids": [
+            "R03"
+          ],
+          "selection_state": "selected",
+          "prediction": -0.01,
+          "outcome": 0.04,
+          "absolute_error": 0.05
+        },
+        {
+          "decision_id": "D05",
+          "selected_record_ids": [
+            "R05"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.03,
+          "outcome": -0.02,
+          "absolute_error": 0.05
+        },
+        {
+          "decision_id": "D06",
+          "selected_record_ids": [
+            "R07"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.05,
+          "outcome": -0.04,
+          "absolute_error": 0.09
+        },
+        {
+          "decision_id": "D07",
+          "selected_record_ids": [
+            "R05"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.03,
+          "outcome": -0.02,
+          "absolute_error": 0.05
+        },
+        {
+          "decision_id": "D08",
+          "selected_record_ids": [],
+          "selection_state": "unknown_availability",
+          "prediction": null,
+          "outcome": 0.06,
+          "absolute_error": null
+        },
+        {
+          "decision_id": "D09",
+          "selected_record_ids": [
+            "R12"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.07,
+          "outcome": 0.07,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D10",
+          "selected_record_ids": [
+            "R13"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.02,
+          "outcome": 0.08,
+          "absolute_error": 0.06
+        }
+      ],
+      "own_population": {
+        "expected_decisions": 10,
+        "evaluated_decisions": 7,
+        "decision_ids": [
+          "D02",
+          "D04",
+          "D05",
+          "D06",
+          "D07",
+          "D09",
+          "D10"
+        ],
+        "unavailable_decision_ids": [
+          "D01",
+          "D03",
+          "D08"
+        ],
+        "absolute_error_sum": 0.36,
+        "mean_absolute_error": 0.05142857142857143
+      },
+      "common_population": {
+        "expected_decisions": 6,
+        "evaluated_decisions": 6,
+        "decision_ids": [
+          "D02",
+          "D04",
+          "D05",
+          "D06",
+          "D07",
+          "D10"
+        ],
+        "unavailable_decision_ids": [],
+        "absolute_error_sum": 0.36,
+        "mean_absolute_error": 0.06
+      }
+    },
+    {
+      "id": "unscoped_arrival",
+      "rows": [
+        {
+          "decision_id": "D01",
+          "selected_record_ids": [],
+          "selection_state": "unavailable",
+          "prediction": null,
+          "outcome": 0.08,
+          "absolute_error": null
+        },
+        {
+          "decision_id": "D02",
+          "selected_record_ids": [
+            "R01"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.02,
+          "outcome": 0.08,
+          "absolute_error": 0.06
+        },
+        {
+          "decision_id": "D03",
+          "selected_record_ids": [],
+          "selection_state": "unavailable",
+          "prediction": null,
+          "outcome": 0.04,
+          "absolute_error": null
+        },
+        {
+          "decision_id": "D04",
+          "selected_record_ids": [
+            "R03"
+          ],
+          "selection_state": "selected",
+          "prediction": -0.01,
+          "outcome": 0.04,
+          "absolute_error": 0.05
+        },
+        {
+          "decision_id": "D05",
+          "selected_record_ids": [
+            "R05"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.03,
+          "outcome": -0.02,
+          "absolute_error": 0.05
+        },
+        {
+          "decision_id": "D06",
+          "selected_record_ids": [
+            "R07"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.05,
+          "outcome": -0.04,
+          "absolute_error": 0.09
+        },
+        {
+          "decision_id": "D07",
+          "selected_record_ids": [
+            "R09"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.99,
+          "outcome": -0.02,
+          "absolute_error": 1.01
+        },
+        {
+          "decision_id": "D08",
+          "selected_record_ids": [],
+          "selection_state": "unknown_availability",
+          "prediction": null,
+          "outcome": 0.06,
+          "absolute_error": null
+        },
+        {
+          "decision_id": "D09",
+          "selected_record_ids": [
+            "R12"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.07,
+          "outcome": 0.07,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D10",
+          "selected_record_ids": [
+            "R13"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.02,
+          "outcome": 0.08,
+          "absolute_error": 0.06
+        }
+      ],
+      "own_population": {
+        "expected_decisions": 10,
+        "evaluated_decisions": 7,
+        "decision_ids": [
+          "D02",
+          "D04",
+          "D05",
+          "D06",
+          "D07",
+          "D09",
+          "D10"
+        ],
+        "unavailable_decision_ids": [
+          "D01",
+          "D03",
+          "D08"
+        ],
+        "absolute_error_sum": 1.32,
+        "mean_absolute_error": 0.18857142857142858
+      },
+      "common_population": {
+        "expected_decisions": 6,
+        "evaluated_decisions": 6,
+        "decision_ids": [
+          "D02",
+          "D04",
+          "D05",
+          "D06",
+          "D07",
+          "D10"
+        ],
+        "unavailable_decision_ids": [],
+        "absolute_error_sum": 1.32,
+        "mean_absolute_error": 0.22
+      }
+    },
+    {
+      "id": "observation_date_asof",
+      "rows": [
+        {
+          "decision_id": "D01",
+          "selected_record_ids": [
+            "R06"
+          ],
+          "selection_state": "selected",
+          "prediction": -0.02,
+          "outcome": 0.08,
+          "absolute_error": 0.1
+        },
+        {
+          "decision_id": "D02",
+          "selected_record_ids": [
+            "R06"
+          ],
+          "selection_state": "selected",
+          "prediction": -0.02,
+          "outcome": 0.08,
+          "absolute_error": 0.1
+        },
+        {
+          "decision_id": "D03",
+          "selected_record_ids": [
+            "R08"
+          ],
+          "selection_state": "selected",
+          "prediction": -0.04,
+          "outcome": 0.04,
+          "absolute_error": 0.08
+        },
+        {
+          "decision_id": "D04",
+          "selected_record_ids": [
+            "R08"
+          ],
+          "selection_state": "selected",
+          "prediction": -0.04,
+          "outcome": 0.04,
+          "absolute_error": 0.08
+        },
+        {
+          "decision_id": "D05",
+          "selected_record_ids": [
+            "R06"
+          ],
+          "selection_state": "selected",
+          "prediction": -0.02,
+          "outcome": -0.02,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D06",
+          "selected_record_ids": [
+            "R08"
+          ],
+          "selection_state": "selected",
+          "prediction": -0.04,
+          "outcome": -0.04,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D07",
+          "selected_record_ids": [
+            "R06"
+          ],
+          "selection_state": "selected",
+          "prediction": -0.02,
+          "outcome": -0.02,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D08",
+          "selected_record_ids": [
+            "R10"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.06,
+          "outcome": 0.06,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D09",
+          "selected_record_ids": [
+            "R12"
+          ],
+          "selection_state": "selected",
+          "prediction": 0.07,
+          "outcome": 0.07,
+          "absolute_error": 0.0
+        },
+        {
+          "decision_id": "D10",
+          "selected_record_ids": [
+            "R06"
+          ],
+          "selection_state": "selected",
+          "prediction": -0.02,
+          "outcome": 0.08,
+          "absolute_error": 0.1
+        }
+      ],
+      "own_population": {
+        "expected_decisions": 10,
+        "evaluated_decisions": 10,
+        "decision_ids": [
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06",
+          "D07",
+          "D08",
+          "D09",
+          "D10"
+        ],
+        "unavailable_decision_ids": [],
+        "absolute_error_sum": 0.46,
+        "mean_absolute_error": 0.046
+      },
+      "common_population": {
+        "expected_decisions": 6,
+        "evaluated_decisions": 6,
+        "decision_ids": [
+          "D02",
+          "D04",
+          "D05",
+          "D06",
+          "D07",
+          "D10"
+        ],
+        "unavailable_decision_ids": [],
+        "absolute_error_sum": 0.28,
+        "mean_absolute_error": 0.04666666666666667
+      }
+    }
+  ],
+  "producer_claims": []
+}

@@ -1,0 +1,729 @@
+{
+  "subject": "REVERSE-STRESS-2026-10-06",
+  "case": "complete",
+  "source_sha256": "74faea619d5d7227ee54f3d7995fb1a80115fb91433a054e4224d90e92e61ce4",
+  "specification": {
+    "factor_order": [
+      "normalized_rate_change",
+      "normalized_equity_return_change"
+    ],
+    "loss_expression": "x*x + 4*y*y - 2*x",
+    "loss_unit": "USD million",
+    "threshold": 3,
+    "selected_severity_squared": "x*x + y*y",
+    "domain": "all real x,y",
+    "rate_scale_basis_points": 25,
+    "equity_scale_percentage_points": 5,
+    "loss_feasibility_tolerance": 1e-08,
+    "selected_objective_tolerance": 1e-08,
+    "probability_model": null,
+    "horizon": "instantaneous",
+    "management_actions": null
+  },
+  "global_references": {
+    "selected": {
+      "weights": [
+        "1",
+        "1"
+      ],
+      "minimum": "2/3",
+      "minimum_float": 0.6666666666666666,
+      "lambda": "1/4",
+      "square_x_coefficient": "3/4",
+      "square_y_coefficient": "0",
+      "square_x_center": "-1/3",
+      "minimizer_y_squared": "5/9",
+      "polynomial_coefficients": [
+        "3/4",
+        "0",
+        "1/2",
+        "1/12"
+      ],
+      "minimizers": [
+        [
+          -0.3333333333333333,
+          0.7453559924999299
+        ],
+        [
+          -0.3333333333333333,
+          -0.7453559924999299
+        ]
+      ]
+    },
+    "raw-mixed-units": {
+      "weights": [
+        "1",
+        "1/25"
+      ],
+      "minimum": "74/2475",
+      "minimum_float": 0.0298989898989899,
+      "lambda": "1/100",
+      "square_x_coefficient": "99/100",
+      "square_y_coefficient": "0",
+      "square_x_center": "-1/99",
+      "minimizer_y_squared": "7301/9801",
+      "polynomial_coefficients": [
+        "99/100",
+        "0",
+        "1/50",
+        "1/9900"
+      ],
+      "minimizers": [
+        [
+          -0.010101010101010102,
+          0.8630897910114739
+        ],
+        [
+          -0.010101010101010102,
+          -0.8630897910114739
+        ]
+      ]
+    },
+    "raw-common-basis-points": {
+      "weights": [
+        "1",
+        "400"
+      ],
+      "minimum": "1",
+      "minimum_float": 1.0,
+      "lambda": "1/2",
+      "square_x_coefficient": "1/2",
+      "square_y_coefficient": "398",
+      "square_x_center": "-1",
+      "minimizer_y_squared": "0",
+      "polynomial_coefficients": [
+        "1/2",
+        "398",
+        "1",
+        "1/2"
+      ],
+      "minimizers": [
+        [
+          -1.0,
+          0.0
+        ]
+      ]
+    }
+  },
+  "solver_results": [
+    {
+      "id": "selected-negative-axis",
+      "metric": "selected",
+      "weights": [
+        "1",
+        "1"
+      ],
+      "start": [
+        -2.0,
+        0.0
+      ],
+      "method": "SLSQP",
+      "options": {
+        "ftol": 1e-12,
+        "maxiter": 200,
+        "disp": false
+      },
+      "native": {
+        "success": true,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 6,
+        "function_evaluations": 6,
+        "gradient_evaluations": 6,
+        "candidate": [
+          -0.9999999999999978,
+          0.0
+        ],
+        "objective": 0.9999999999999956,
+        "gradient": [
+          -1.9999999999999956,
+          0.0
+        ],
+        "qp_multipliers": [
+          0.49999999999999956
+        ]
+      },
+      "quantities": {
+        "loss_million_usd": 2.999999999999991,
+        "loss_usd": 2999999.999999991,
+        "threshold_margin_million_usd": -8.881784197001252e-15,
+        "metric_values": {
+          "selected": 0.9999999999999956,
+          "raw-mixed-units": 0.9999999999999956,
+          "raw-common-basis-points": 0.9999999999999956
+        },
+        "selected_severity": 0.9999999999999978,
+        "selected_objective_gap": 0.33333333333332893,
+        "physical_shocks": {
+          "rate_basis_points": -24.999999999999943,
+          "equity_return_percentage_points": 0.0,
+          "equity_return_basis_points": 0.0
+        }
+      },
+      "diagnostics": {
+        "candidate_gradient_multiplier": 0.49999999999999944,
+        "stationarity_max_residual": 0.0,
+        "tangent_lagrangian_curvature": -1.9999999999999956,
+        "meaning": "Analytic diagnostics at the observed candidate; neither a native QP multiplier nor a global certificate."
+      },
+      "implemented_metric_objective_gap": 0.33333333333332893
+    },
+    {
+      "id": "selected-positive-axis",
+      "metric": "selected",
+      "weights": [
+        "1",
+        "1"
+      ],
+      "start": [
+        4.0,
+        0.0
+      ],
+      "method": "SLSQP",
+      "options": {
+        "ftol": 1e-12,
+        "maxiter": 200,
+        "disp": false
+      },
+      "native": {
+        "success": false,
+        "status": 8,
+        "message": "Positive directional derivative for linesearch",
+        "iterations": 19,
+        "function_evaluations": 107,
+        "gradient_evaluations": 15,
+        "candidate": [
+          2.999999984614442,
+          0.0
+        ],
+        "objective": 8.999999907686652,
+        "gradient": [
+          5.999999969228884,
+          0.0
+        ],
+        "qp_multipliers": [
+          1.5000000076927822
+        ]
+      },
+      "quantities": {
+        "loss_million_usd": 2.9999999384577682,
+        "loss_usd": 2999999.9384577684,
+        "threshold_margin_million_usd": -6.154223175514062e-08,
+        "metric_values": {
+          "selected": 8.999999907686652,
+          "raw-mixed-units": 8.999999907686652,
+          "raw-common-basis-points": 8.999999907686652
+        },
+        "selected_severity": 2.999999984614442,
+        "selected_objective_gap": 8.333333241019986,
+        "physical_shocks": {
+          "rate_basis_points": 74.99999961536105,
+          "equity_return_percentage_points": 0.0,
+          "equity_return_basis_points": 0.0
+        }
+      },
+      "diagnostics": {
+        "candidate_gradient_multiplier": 1.5000000038463897,
+        "stationarity_max_residual": 0.0,
+        "tangent_lagrangian_curvature": -10.000000030771117,
+        "meaning": "Analytic diagnostics at the observed candidate; neither a native QP multiplier nor a global certificate."
+      },
+      "implemented_metric_objective_gap": 8.333333241019986
+    },
+    {
+      "id": "selected-upper",
+      "metric": "selected",
+      "weights": [
+        "1",
+        "1"
+      ],
+      "start": [
+        -0.2,
+        0.8
+      ],
+      "method": "SLSQP",
+      "options": {
+        "ftol": 1e-12,
+        "maxiter": 200,
+        "disp": false
+      },
+      "native": {
+        "success": true,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 6,
+        "function_evaluations": 7,
+        "gradient_evaluations": 6,
+        "candidate": [
+          -0.33333338259307266,
+          0.7453559704703899
+        ],
+        "objective": 0.6666666666667965,
+        "gradient": [
+          -0.6666667651861453,
+          1.4907119409407799
+        ],
+        "qp_multipliers": [
+          0.24999999999999695
+        ]
+      },
+      "quantities": {
+        "loss_million_usd": 3.000000000000512,
+        "loss_usd": 3000000.000000512,
+        "threshold_margin_million_usd": 5.120348589571222e-13,
+        "metric_values": {
+          "selected": 0.6666666666667965,
+          "raw-mixed-units": 0.13333336485957403,
+          "raw-common-basis-points": 222.33332023029365
+        },
+        "selected_severity": 0.8164965809278055,
+        "selected_objective_gap": 1.2989609388114332e-13,
+        "physical_shocks": {
+          "rate_basis_points": -8.333334564826817,
+          "equity_return_percentage_points": 3.7267798523519495,
+          "equity_return_basis_points": 372.67798523519497
+        }
+      },
+      "diagnostics": {
+        "candidate_gradient_multiplier": 0.2500000046181009,
+        "stationarity_max_residual": 6.157467280498707e-08,
+        "tangent_lagrangian_curvature": 1.24999995843714,
+        "meaning": "Analytic diagnostics at the observed candidate; neither a native QP multiplier nor a global certificate."
+      },
+      "implemented_metric_objective_gap": 1.2989609388114332e-13
+    },
+    {
+      "id": "selected-lower",
+      "metric": "selected",
+      "weights": [
+        "1",
+        "1"
+      ],
+      "start": [
+        -0.2,
+        -0.8
+      ],
+      "method": "SLSQP",
+      "options": {
+        "ftol": 1e-12,
+        "maxiter": 200,
+        "disp": false
+      },
+      "native": {
+        "success": true,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 6,
+        "function_evaluations": 7,
+        "gradient_evaluations": 6,
+        "candidate": [
+          -0.33333338259307266,
+          -0.7453559704703899
+        ],
+        "objective": 0.6666666666667965,
+        "gradient": [
+          -0.6666667651861453,
+          -1.4907119409407799
+        ],
+        "qp_multipliers": [
+          0.24999999999999695
+        ]
+      },
+      "quantities": {
+        "loss_million_usd": 3.000000000000512,
+        "loss_usd": 3000000.000000512,
+        "threshold_margin_million_usd": 5.120348589571222e-13,
+        "metric_values": {
+          "selected": 0.6666666666667965,
+          "raw-mixed-units": 0.13333336485957403,
+          "raw-common-basis-points": 222.33332023029365
+        },
+        "selected_severity": 0.8164965809278055,
+        "selected_objective_gap": 1.2989609388114332e-13,
+        "physical_shocks": {
+          "rate_basis_points": -8.333334564826817,
+          "equity_return_percentage_points": -3.7267798523519495,
+          "equity_return_basis_points": -372.67798523519497
+        }
+      },
+      "diagnostics": {
+        "candidate_gradient_multiplier": 0.2500000046181009,
+        "stationarity_max_residual": 6.157467280498707e-08,
+        "tangent_lagrangian_curvature": 1.24999995843714,
+        "meaning": "Analytic diagnostics at the observed candidate; neither a native QP multiplier nor a global certificate."
+      },
+      "implemented_metric_objective_gap": 1.2989609388114332e-13
+    },
+    {
+      "id": "selected-origin",
+      "metric": "selected",
+      "weights": [
+        "1",
+        "1"
+      ],
+      "start": [
+        0.0,
+        0.0
+      ],
+      "method": "SLSQP",
+      "options": {
+        "ftol": 1e-12,
+        "maxiter": 200,
+        "disp": false
+      },
+      "native": {
+        "success": true,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 6,
+        "function_evaluations": 7,
+        "gradient_evaluations": 6,
+        "candidate": [
+          -1.0000000000000018,
+          0.0
+        ],
+        "objective": 1.0000000000000036,
+        "gradient": [
+          -2.0000000000000036,
+          0.0
+        ],
+        "qp_multipliers": [
+          0.5000000000000011
+        ]
+      },
+      "quantities": {
+        "loss_million_usd": 3.000000000000007,
+        "loss_usd": 3000000.000000007,
+        "threshold_margin_million_usd": 7.105427357601002e-15,
+        "metric_values": {
+          "selected": 1.0000000000000036,
+          "raw-mixed-units": 1.0000000000000036,
+          "raw-common-basis-points": 1.0000000000000036
+        },
+        "selected_severity": 1.0000000000000018,
+        "selected_objective_gap": 0.3333333333333369,
+        "physical_shocks": {
+          "rate_basis_points": -25.000000000000043,
+          "equity_return_percentage_points": 0.0,
+          "equity_return_basis_points": 0.0
+        }
+      },
+      "diagnostics": {
+        "candidate_gradient_multiplier": 0.5000000000000004,
+        "stationarity_max_residual": 0.0,
+        "tangent_lagrangian_curvature": -2.0000000000000036,
+        "meaning": "Analytic diagnostics at the observed candidate; neither a native QP multiplier nor a global certificate."
+      },
+      "implemented_metric_objective_gap": 0.3333333333333369
+    },
+    {
+      "id": "selected-iteration-limit",
+      "metric": "selected",
+      "weights": [
+        "1",
+        "1"
+      ],
+      "start": [
+        4.0,
+        0.2
+      ],
+      "method": "SLSQP",
+      "options": {
+        "ftol": 1e-12,
+        "maxiter": 1,
+        "disp": false
+      },
+      "native": {
+        "success": false,
+        "status": 9,
+        "message": "Iteration limit reached",
+        "iterations": 1,
+        "function_evaluations": 2,
+        "gradient_evaluations": 2,
+        "candidate": [
+          2.7655601659752334,
+          1.6041493775933955
+        ],
+        "objective": 10.22161825726224,
+        "gradient": [
+          5.531120331950467,
+          3.208298755186791
+        ],
+        "qp_multipliers": [
+          1.1275933609958722
+        ]
+      },
+      "quantities": {
+        "loss_million_usd": 12.410383602211605,
+        "loss_usd": 12410383.602211604,
+        "threshold_margin_million_usd": 9.410383602211605,
+        "metric_values": {
+          "selected": 10.22161825726224,
+          "raw-mixed-units": 7.751254840654291,
+          "raw-common-basis-points": 1036.9664132849402
+        },
+        "selected_severity": 3.1971265625968326,
+        "selected_objective_gap": 9.554951590595573,
+        "physical_shocks": {
+          "rate_basis_points": 69.13900414938084,
+          "equity_return_percentage_points": 8.020746887966977,
+          "equity_return_basis_points": 802.0746887966977
+        }
+      },
+      "diagnostics": {
+        "candidate_gradient_multiplier": 0.34265001169859977,
+        "stationarity_max_residual": 4.321181908898476,
+        "tangent_lagrangian_curvature": 1.1700021235460698,
+        "meaning": "Analytic diagnostics at the observed candidate; neither a native QP multiplier nor a global certificate."
+      },
+      "implemented_metric_objective_gap": 9.554951590595573
+    },
+    {
+      "id": "raw-mixed-units",
+      "metric": "raw-mixed-units",
+      "weights": [
+        "1",
+        "1/25"
+      ],
+      "start": [
+        -0.2,
+        0.8
+      ],
+      "method": "SLSQP",
+      "options": {
+        "ftol": 1e-12,
+        "maxiter": 200,
+        "disp": false
+      },
+      "native": {
+        "success": true,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 7,
+        "function_evaluations": 7,
+        "gradient_evaluations": 7,
+        "candidate": [
+          -0.01010101010099196,
+          0.8630897910114795
+        ],
+        "objective": 0.029898989898989918,
+        "gradient": [
+          -0.02020202020198392,
+          0.06904718328091837
+        ],
+        "qp_multipliers": [
+          0.009999999999999969
+        ]
+      },
+      "quantities": {
+        "loss_million_usd": 3.0000000000000018,
+        "loss_usd": 3000000.000000002,
+        "threshold_margin_million_usd": 1.7763568394002505e-15,
+        "metric_values": {
+          "selected": 0.7450260177532997,
+          "raw-mixed-units": 0.02989898989898992,
+          "raw-common-basis-points": 297.9696969697008
+        },
+        "selected_severity": 0.8631488966298339,
+        "selected_objective_gap": 0.07835935108663306,
+        "physical_shocks": {
+          "rate_basis_points": -0.252525252524799,
+          "equity_return_percentage_points": 4.315448955057398,
+          "equity_return_basis_points": 431.54489550573976
+        }
+      },
+      "diagnostics": {
+        "candidate_gradient_multiplier": 0.009999999999998599,
+        "stationarity_max_residual": 3.308811558078162e-14,
+        "tangent_lagrangian_curvature": 1.8238682816048553,
+        "meaning": "Analytic diagnostics at the observed candidate; neither a native QP multiplier nor a global certificate."
+      },
+      "implemented_metric_objective_gap": 1.734723475976807e-17
+    },
+    {
+      "id": "raw-common-basis-points",
+      "metric": "raw-common-basis-points",
+      "weights": [
+        "1",
+        "400"
+      ],
+      "start": [
+        -2.0,
+        0.1
+      ],
+      "method": "SLSQP",
+      "options": {
+        "ftol": 1e-12,
+        "maxiter": 200,
+        "disp": false
+      },
+      "native": {
+        "success": true,
+        "status": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 7,
+        "function_evaluations": 10,
+        "gradient_evaluations": 7,
+        "candidate": [
+          -1.000000000000001,
+          2.2615231124974442e-11
+        ],
+        "objective": 1.0000000000000022,
+        "gradient": [
+          -2.000000000000002,
+          1.8092184899979554e-08
+        ],
+        "qp_multipliers": [
+          0.49999999999999967
+        ]
+      },
+      "quantities": {
+        "loss_million_usd": 3.0000000000000044,
+        "loss_usd": 3000000.0000000047,
+        "threshold_margin_million_usd": 4.440892098500626e-15,
+        "metric_values": {
+          "selected": 1.0000000000000022,
+          "raw-mixed-units": 1.0000000000000022,
+          "raw-common-basis-points": 1.0000000000000022
+        },
+        "selected_severity": 1.000000000000001,
+        "selected_objective_gap": 0.3333333333333356,
+        "physical_shocks": {
+          "rate_basis_points": -25.00000000000003,
+          "equity_return_percentage_points": 1.1307615562487221e-10,
+          "equity_return_basis_points": 1.1307615562487221e-08
+        }
+      },
+      "diagnostics": {
+        "candidate_gradient_multiplier": 0.5000000000000003,
+        "stationarity_max_residual": 1.8001723975479656e-08,
+        "tangent_lagrangian_curvature": 796.0,
+        "meaning": "Analytic diagnostics at the observed candidate; neither a native QP multiplier nor a global certificate."
+      },
+      "implemented_metric_objective_gap": 2.220446049250313e-15
+    }
+  ],
+  "catalog": [
+    {
+      "id": "C1",
+      "candidate": [
+        -1,
+        0
+      ],
+      "quantities": {
+        "loss_million_usd": 3.0,
+        "loss_usd": 3000000.0,
+        "threshold_margin_million_usd": 0.0,
+        "metric_values": {
+          "selected": 1.0,
+          "raw-mixed-units": 1.0,
+          "raw-common-basis-points": 1.0
+        },
+        "selected_severity": 1.0,
+        "selected_objective_gap": 0.33333333333333337,
+        "physical_shocks": {
+          "rate_basis_points": -25.0,
+          "equity_return_percentage_points": 0.0,
+          "equity_return_basis_points": 0.0
+        }
+      }
+    },
+    {
+      "id": "C2",
+      "candidate": [
+        3,
+        0
+      ],
+      "quantities": {
+        "loss_million_usd": 3.0,
+        "loss_usd": 3000000.0,
+        "threshold_margin_million_usd": 0.0,
+        "metric_values": {
+          "selected": 9.0,
+          "raw-mixed-units": 9.0,
+          "raw-common-basis-points": 9.0
+        },
+        "selected_severity": 3.0,
+        "selected_objective_gap": 8.333333333333334,
+        "physical_shocks": {
+          "rate_basis_points": 75.0,
+          "equity_return_percentage_points": 0.0,
+          "equity_return_basis_points": 0.0
+        }
+      }
+    },
+    {
+      "id": "C3",
+      "candidate": [
+        0,
+        1
+      ],
+      "quantities": {
+        "loss_million_usd": 4.0,
+        "loss_usd": 4000000.0,
+        "threshold_margin_million_usd": 1.0,
+        "metric_values": {
+          "selected": 1.0,
+          "raw-mixed-units": 0.04,
+          "raw-common-basis-points": 400.0
+        },
+        "selected_severity": 1.0,
+        "selected_objective_gap": 0.33333333333333337,
+        "physical_shocks": {
+          "rate_basis_points": 0.0,
+          "equity_return_percentage_points": 5.0,
+          "equity_return_basis_points": 500.0
+        }
+      }
+    },
+    {
+      "id": "C4",
+      "candidate": [
+        0,
+        -1
+      ],
+      "quantities": {
+        "loss_million_usd": 4.0,
+        "loss_usd": 4000000.0,
+        "threshold_margin_million_usd": 1.0,
+        "metric_values": {
+          "selected": 1.0,
+          "raw-mixed-units": 0.04,
+          "raw-common-basis-points": 400.0
+        },
+        "selected_severity": 1.0,
+        "selected_objective_gap": 0.33333333333333337,
+        "physical_shocks": {
+          "rate_basis_points": 0.0,
+          "equity_return_percentage_points": -5.0,
+          "equity_return_basis_points": -500.0
+        }
+      }
+    }
+  ],
+  "outside_catalog_witness": {
+    "id": "outside-catalog",
+    "candidate": [
+      0,
+      2
+    ],
+    "quantities": {
+      "loss_million_usd": 16.0,
+      "loss_usd": 16000000.0,
+      "threshold_margin_million_usd": 13.0,
+      "metric_values": {
+        "selected": 4.0,
+        "raw-mixed-units": 0.16,
+        "raw-common-basis-points": 1600.0
+      },
+      "selected_severity": 2.0,
+      "selected_objective_gap": 3.3333333333333335,
+      "physical_shocks": {
+        "rate_basis_points": 0.0,
+        "equity_return_percentage_points": 10.0,
+        "equity_return_basis_points": 1000.0
+      }
+    }
+  },
+  "producer_claims": []
+}

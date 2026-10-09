@@ -1,0 +1,44 @@
+{
+  "provenance": "Owned synthetic calculation retained from one prespecified development process; copied unchanged here. This public example does not claim a new reproduction or agent run.",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "float": "binary64",
+    "linalg_binary_sha256": "dbaefc13a7379c877dee2618ea6f96d69560743d3ad392d57f3a866f1378728d"
+  },
+  "calculation_counts": {
+    "cases": 21,
+    "solve_calls": 42,
+    "condition_calls": 8,
+    "controls": 239,
+    "passed": 239
+  },
+  "files": [
+    {
+      "path": "model/PLAN.md",
+      "sha256": "6dce30b3bcb47321f28443011dae1a53bb819850123872cf67fd3a8a8037c851"
+    },
+    {
+      "path": "model/measure.py",
+      "sha256": "334ae2876ef3ed632e14a854aa2f84b09b7e531bcd63baf82ec4171a0817f2a3"
+    },
+    {
+      "path": "model/observations.json",
+      "sha256": "d3cf4fd7ea0cc4c126de812c8efc050d3cc3d409db5568f0c834c618d6367e33"
+    },
+    {
+      "path": "inputs/complete.json",
+      "sha256": "1a027f529918810777f85e1f23d43521ead8fc820c54742c9900622984de2901"
+    },
+    {
+      "path": "inputs/missing-perturbations.json",
+      "sha256": "c6494b3e0a7f2631d6ad39c8cbf3d4d973f69e26a722f3021848d08ee6ac00d7"
+    },
+    {
+      "path": "inputs/contradictory.json",
+      "sha256": "6fbfee31e86c60fd5306f278dae006bdbc06e847b64bef59d44992a235f5e319"
+    }
+  ],
+  "projection": "Packets retain native condition records, case identities, floating inputs and native solves. Exact analytical answers, admissibility labels, parameter-reference errors and observer controls are omitted. Missing-perturbations retains only four baseline cases; contradictory adds six producer claims. Receipt process counts are aggregate provenance, not substitutes for withheld per-case results."
+}

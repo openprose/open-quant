@@ -1,0 +1,272 @@
+{
+  "synthetic": true,
+  "reporting_period": "2026-09",
+  "review_date": "2026-10-05",
+  "deployments": [
+    {
+      "id": "D1",
+      "model": "RATE-CURVE",
+      "revision": "r3",
+      "use": "pricing",
+      "environment": "production",
+      "owner": "Rates Analytics"
+    },
+    {
+      "id": "D2",
+      "model": "RATE-CURVE",
+      "revision": "r3",
+      "use": "stress",
+      "environment": "production",
+      "owner": "Market Risk"
+    },
+    {
+      "id": "D3",
+      "model": "CREDIT-PD",
+      "revision": "r2",
+      "use": "origination",
+      "environment": "production",
+      "owner": "Credit Analytics"
+    },
+    {
+      "id": "D4",
+      "model": "CREDIT-PD",
+      "revision": "r3",
+      "use": "pilot",
+      "environment": "sandbox",
+      "owner": "Research"
+    }
+  ],
+  "register": [
+    {
+      "id": "R1",
+      "deployment": "D1",
+      "model": "RATE-CURVE",
+      "revision": "r3",
+      "use": "pricing",
+      "owner": "Rates Analytics",
+      "lifecycle": "production"
+    },
+    {
+      "id": "R2",
+      "deployment": "D2",
+      "model": "RATE-CURVE",
+      "revision": "r3",
+      "use": "pricing",
+      "owner": "Market Risk",
+      "lifecycle": "production"
+    },
+    {
+      "id": "R3",
+      "deployment": "D3",
+      "model": "CREDIT-PD",
+      "revision": "r1",
+      "use": "origination",
+      "owner": "Credit Analytics",
+      "lifecycle": "production"
+    },
+    {
+      "id": "R4",
+      "deployment": "D5",
+      "model": "RATE-CURVE",
+      "revision": "r1",
+      "use": "pricing",
+      "owner": "Rates Analytics",
+      "lifecycle": "production"
+    },
+    {
+      "id": "R5",
+      "deployment": "D1",
+      "model": "RATE-CURVE",
+      "revision": "r2",
+      "use": "pricing",
+      "owner": "Rates Analytics",
+      "lifecycle": "production"
+    }
+  ],
+  "lifecycle_events": [
+    {
+      "id": "L1",
+      "deployment": "D5",
+      "event": "retired",
+      "effective": "2026-09-01"
+    }
+  ],
+  "expected_observations": [
+    {
+      "id": "E1",
+      "deployment": "D1",
+      "model": "RATE-CURVE",
+      "revision": "r3",
+      "use": "pricing",
+      "metric": "repricing_error",
+      "period": "2026-09",
+      "unit": "bp",
+      "upper_limit": 1
+    },
+    {
+      "id": "E2",
+      "deployment": "D2",
+      "model": "RATE-CURVE",
+      "revision": "r3",
+      "use": "stress",
+      "metric": "stress_reference_difference",
+      "period": "2026-09",
+      "unit": "USD million",
+      "upper_limit": 5
+    },
+    {
+      "id": "E3",
+      "deployment": "D3",
+      "model": "CREDIT-PD",
+      "revision": "r2",
+      "use": "origination",
+      "metric": "max_calibration_error",
+      "period": "2026-09",
+      "unit": "probability",
+      "upper_limit": 0.02
+    }
+  ],
+  "observations": [
+    {
+      "id": "O1",
+      "deployment": "D1",
+      "model": "RATE-CURVE",
+      "revision": "r3",
+      "use": "pricing",
+      "metric": "repricing_error",
+      "period": "2026-09",
+      "date": "2026-09-30",
+      "unit": "bp",
+      "value": 0.8,
+      "producer_status": "within limit"
+    },
+    {
+      "id": "O2",
+      "deployment": "D2",
+      "model": "RATE-CURVE",
+      "revision": "r3",
+      "use": "pricing",
+      "metric": "stress_reference_difference",
+      "period": "2026-09",
+      "date": "2026-09-30",
+      "unit": "USD million",
+      "value": 4,
+      "producer_status": "within limit"
+    },
+    {
+      "id": "O3",
+      "deployment": "D3",
+      "model": "CREDIT-PD",
+      "revision": "r2",
+      "use": "origination",
+      "metric": "max_calibration_error",
+      "period": "2026-09",
+      "date": "2026-09-30",
+      "unit": "probability",
+      "value": 0.03,
+      "producer_status": "breach"
+    }
+  ],
+  "issues": [
+    {
+      "id": "I1",
+      "deployment": "D2",
+      "model": "RATE-CURVE",
+      "revision": "r3",
+      "use": "stress",
+      "metric": "stress_reference_difference",
+      "owner": "Market Risk",
+      "opened": "2026-09-20",
+      "due": "2026-09-30",
+      "producer_status": "closed",
+      "action": "Review scenario mapping",
+      "action_complete": "2026-09-29",
+      "closure_observation": "O2",
+      "review_record": "V1"
+    },
+    {
+      "id": "I2",
+      "deployment": "D3",
+      "model": "CREDIT-PD",
+      "revision": "r2",
+      "use": "origination",
+      "metric": "max_calibration_error",
+      "owner": "Credit Analytics",
+      "opened": "2026-09-30",
+      "due": "2026-10-10",
+      "producer_status": "open",
+      "action": "Investigate calibration residual",
+      "action_complete": null,
+      "closure_observation": null,
+      "review_record": null
+    }
+  ],
+  "review_records": [
+    {
+      "id": "V1",
+      "deployment": "D2",
+      "model": "RATE-CURVE",
+      "revision": "r3",
+      "use": "pricing",
+      "metric": "stress_reference_difference",
+      "observation": "O2",
+      "accepted": true,
+      "date": "2026-10-01"
+    }
+  ],
+  "changes": [
+    {
+      "id": "H1",
+      "deployment": "D2",
+      "before": {
+        "model": "RATE-CURVE",
+        "revision": "r3",
+        "use": "pricing"
+      },
+      "after": {
+        "model": "RATE-CURVE",
+        "revision": "r3",
+        "use": "stress"
+      },
+      "effective": "2026-09-01"
+    },
+    {
+      "id": "H2",
+      "deployment": "D3",
+      "before": {
+        "model": "CREDIT-PD",
+        "revision": "r1",
+        "use": "origination"
+      },
+      "after": {
+        "model": "CREDIT-PD",
+        "revision": "r2",
+        "use": "origination"
+      },
+      "effective": "2026-09-01"
+    }
+  ],
+  "producer_statements": [
+    {
+      "id": "P1",
+      "statement": "All production deployments have unambiguous, current register records."
+    },
+    {
+      "id": "P2",
+      "statement": "Every expected monitoring observation is within limit."
+    },
+    {
+      "id": "P3",
+      "statement": "H1 needs no further review because its code revision did not change."
+    },
+    {
+      "id": "P4",
+      "statement": "I1 is resolved because the observation and review record both exist."
+    },
+    {
+      "id": "P5",
+      "statement": "An adverse monitoring finding prevents a complete periodic-review report."
+    }
+  ],
+  "case": "contradictory"
+}

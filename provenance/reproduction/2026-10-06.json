@@ -1,0 +1,57 @@
+{
+  "sourceRevision": "27e5594bb03751bdfe9272cfd58e4923e72d9d64",
+  "started": "2026-10-06T02:42:03.198Z",
+  "finished": "2026-10-06T02:42:21.360Z",
+  "elapsedSeconds": 18.161307249999997,
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "sourcesUnchanged": true,
+  "providerCalls": 0,
+  "command": "python scripts/reproduce_sofr.py --output <fresh-directory-outside-checkout>",
+  "inputsAndScripts": {
+    "examples/sofr-curve/inputs/results.json": "1b42c6b824fae587d31b9d4c17de8867690e4e1f4eda6b3c31ce82ef96730494",
+    "examples/sofr-curve/inputs/quotes.csv": "df36b297eebf0a20600bdbdab60d615ff30713435aaa297afc521106eafae81d",
+    "examples/sofr-curve/inputs/sofr-fixing.json": "0f554854fdbd9944a1caf795d4bc24e8cf5297dec04f5b30c2188214edd8570e",
+    "examples/sofr-curve/model/bootstrap.py": "d897203d1b145f81b60248df422ef79411362a212098e0408a05fb757f3e56b2",
+    "examples/sofr-curve/model/hagan_west.py": "f4433cbd42322ea27c95463ad48cdd128f3c16f49b2b39ff5fab2bd1790f36e5",
+    "scripts/reproduce_sofr.py": "8d398af66ad7ed785dbd4c247472320c14d31c248c410f90a99102623aea1235"
+  },
+  "comparison": {
+    "versions": {
+      "python": "3.12.14",
+      "QuantLib": "1.43",
+      "scipy": "1.18.1",
+      "numpy": "2.5.3",
+      "matplotlib": "3.11.2"
+    },
+    "relative_tolerance": 1e-10,
+    "absolute_tolerance": 1e-12,
+    "differences": [],
+    "matches": true
+  },
+  "generatedFiles": {
+    "bootstrap.log": "a02a95456eddfb9db8222fa2f384e1db4d23ae9c8d4c8babc8f94b9e042832f1",
+    "bootstrap.py": "d897203d1b145f81b60248df422ef79411362a212098e0408a05fb757f3e56b2",
+    "comparison.json": "9930f91414f9936c8b324fd1c421b915a7d76c0b1a5f029c8fee290f4ca3df70",
+    "hagan_west.py": "f4433cbd42322ea27c95463ad48cdd128f3c16f49b2b39ff5fab2bd1790f36e5",
+    "out/bump_5y_forward_change.csv": "82631ce3e9aff354f01c85c0540ee7cde01fc62e24b1840c69701b98cefec3a6",
+    "out/delta_ladder_4p5y.csv": "7477ed5000db2275ae8395b3d58be42616ecf7ff927707ee2bce90abcebf3a33",
+    "out/df_grid_monthly.csv": "345a40cdd9afc160c4f338a4f617111baab1ab3a2922ea6cca71aea5aee1798e",
+    "out/fig_bump_5y.png": "4ddbc761a4b8345dc23af3ffe774e7fe2ded88fce079d89a20c31ab51e938c8a",
+    "out/fig_delta_ladder.png": "338447c00027d61cac32da9ae61cae48a5a571e0f540ed2056f7bd74d260bebb",
+    "out/fig_discount_factors.png": "25479261e6d8a12aa06936b8df47b7d4a6fa827d62ab948fbb4a144340709013",
+    "out/fig_forwards.png": "618e106048b281bba00661225174bd3d87696804c7fcf5b3a17432e29467c56b",
+    "out/fig_zero_rates.png": "92806cdb9600ac3dd62aaca26d70c67361b3943cb7282b72b66390f035631ffe",
+    "out/forward_daily.csv": "65d8542678194b1643a49ccd1517b0ba97fdd660d1c4b24581f62c171738d505",
+    "out/nodes.csv": "b690933539145702a661202b8715f953c69c086a691de040a7c953a5b248f9d6",
+    "out/quotes.csv": "df36b297eebf0a20600bdbdab60d615ff30713435aaa297afc521106eafae81d",
+    "out/repricing.csv": "70d1e851114cc2326121fd615dd4da158bd505e12cf29afdb5adf9f791a63f5e",
+    "out/results.json": "1b42c6b824fae587d31b9d4c17de8867690e4e1f4eda6b3c31ce82ef96730494",
+    "out/results.md": "77233b07d3bffc38d4918feffe03a6292d7d39853758a8b416aa37c4212606e5",
+    "out/run_info.json": "a9a6c5b5eba6dc3665180d25a8e2be83c497aee49991af03e3af3bedc6c50cf3",
+    "out/sofr_fixing.json": "0f554854fdbd9944a1caf795d4bc24e8cf5297dec04f5b30c2188214edd8570e"
+  },
+  "scope": "Reproduces the retained curve comparison conditional on committed derived quote/fixing inputs. No raw trade filtering, quote derivation, market-data fetch, agent execution or independent financial validation occurred.",
+  "runInfoCaveat": "Generated run_info.json lists derive_quotes.py, but this invocation executed only reproduce_sofr.py and its copied bootstrap.py/hagan_west.py. Preserve the original generated metadata without treating the listed script as an executed step."
+}

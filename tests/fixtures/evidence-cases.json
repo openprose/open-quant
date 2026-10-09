@@ -1,0 +1,72 @@
+[
+  {
+    "name": "supported rounded method A daily jump",
+    "source_sha256": "1b42c6b824fae587d31b9d4c17de8867690e4e1f4eda6b3c31ce82ef96730494",
+    "field": "forward_smoothness.A.max_jump_bp",
+    "unit": "bp",
+    "source_unit": "bp",
+    "value": 59.71,
+    "rounding_tolerance": 0.005,
+    "expected": "met"
+  },
+  {
+    "name": "supported rounded method B daily jump",
+    "source_sha256": "1b42c6b824fae587d31b9d4c17de8867690e4e1f4eda6b3c31ce82ef96730494",
+    "field": "forward_smoothness.B.max_jump_bp",
+    "unit": "bp",
+    "source_unit": "bp",
+    "value": 1.68,
+    "rounding_tolerance": 0.005,
+    "expected": "met"
+  },
+  {
+    "name": "missing field",
+    "source_sha256": "1b42c6b824fae587d31b9d4c17de8867690e4e1f4eda6b3c31ce82ef96730494",
+    "field": "forward_smoothness.A.unreported",
+    "unit": "bp",
+    "source_unit": "bp",
+    "value": 59.71,
+    "rounding_tolerance": 0.005,
+    "expected": "unresolved: missing field"
+  },
+  {
+    "name": "conflicting value",
+    "source_sha256": "1b42c6b824fae587d31b9d4c17de8867690e4e1f4eda6b3c31ce82ef96730494",
+    "field": "forward_smoothness.A.max_jump_bp",
+    "unit": "bp",
+    "source_unit": "bp",
+    "value": 7.2,
+    "rounding_tolerance": 0.005,
+    "expected": "not met: value mismatch"
+  },
+  {
+    "name": "method A number attributed to method B",
+    "source_sha256": "1b42c6b824fae587d31b9d4c17de8867690e4e1f4eda6b3c31ce82ef96730494",
+    "field": "forward_smoothness.B.max_jump_bp",
+    "unit": "bp",
+    "source_unit": "bp",
+    "value": 59.71,
+    "rounding_tolerance": 0.005,
+    "expected": "not met: value mismatch"
+  },
+  {
+    "name": "wrong unit",
+    "source_sha256": "1b42c6b824fae587d31b9d4c17de8867690e4e1f4eda6b3c31ce82ef96730494",
+    "field": "forward_smoothness.A.max_jump_bp",
+    "unit": "percent",
+    "source_unit": "bp",
+    "value": 59.71,
+    "rounding_tolerance": 0.005,
+    "expected": "not met: unit mismatch"
+  },
+  {
+    "name": "stale source identity",
+    "source_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "field": "forward_smoothness.A.max_jump_bp",
+    "unit": "bp",
+    "source_unit": "bp",
+    "value": 59.71,
+    "rounding_tolerance": 0.005,
+    "expected": "unresolved: source identity"
+  }
+]

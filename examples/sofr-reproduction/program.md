@@ -1,0 +1,13 @@
+# Reproduce the retained SOFR calculation
+
+**For agents.** Execute under the caller's selected OpenProse kernel. The source repository is two directories above this program. Adopt [model reproduction](../../contracts/model-reproduction.md), including its adopted definitions.
+
+The caller supplies an absolute, nonexistent result-directory path outside this checkout. Ask for an absent, ambiguous or occupied path. The permitted result comprises `report.md`, `result.md` and the helper's `calculation/` directory under that path; earlier results and source files must remain intact.
+
+The selected calculation is [reproduce_sofr.py](../../scripts/reproduce_sofr.py) with the unchanged SOFR [bootstrap](../sofr-curve/model/bootstrap.py), [interpolator](../sofr-curve/model/hagan_west.py), derived [quotes](../sofr-curve/inputs/quotes.csv) and [fixing](../sofr-curve/inputs/sofr-fixing.json). Compare with the retained [results](../sofr-curve/inputs/results.json), preserving all keys, list lengths and nonnumeric values and using relative tolerance 1e-10 and absolute tolerance 1e-12 per numeric leaf. These criteria are fixed for this invocation.
+
+Use the environment and scope in [the reproduction guide](../sofr-curve/model/README.md). Permission covers at most one helper invocation with output `<result-directory>/calculation` and `--timeout-seconds 120`, one concurrent calculation, no retry, and up to five seconds for termination observation after the calculation limit. Ordinary file inspection, hashing and comparison arithmetic are permitted. If the required environment is unavailable, retain that finding and do not install or substitute dependencies. No provider call, market retrieval, raw quote derivation, source repair or institutional action is included.
+
+Report actual execution and comparison findings in under 600 words, excluding locators. Distinguish preparation failure, unsuccessful or unsettled execution, unavailable comparison, numerical mismatch and supported reproduction. Identify the original comparison scope and what remains untested. Existing receipts may provide context but cannot establish that this invocation ran.
+
+In `result.md`, identify the selected program, definitions, source/input/helper identities, available runtime identity, actual artifact paths, attempted actions, evidence, remaining work and fulfillment. Preserve captured errors, logs and partial outputs. A faithful account of failure does not fulfill this reproduction obligation. No agent run or complete requirement assessment is established merely by the helper's comparison result. Reading restrictions and resource requirements are instructions; the helper supplies only its documented process controls.

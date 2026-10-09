@@ -1,0 +1,13 @@
+# Illustrative derivative-review policy
+
+This is caller-authored policy for synthetic observations, not an institutional risk limit. Preserve the subject, three cases, fixed terms, six bumps and two representations in the brief. Account for 36 views, with delta and gamma findings separate. Do not choose a favorable bump to summarize the entire population as passing.
+
+For observed price/reference and analytic derivative/reference comparisons, use absolute 1e-10 in the corresponding units. For observed cent rounding, use absolute USD0.005 plus 1e-12 floating allowance. Review these implementation comparisons separately from finite-difference accuracy. A common underlying model remains a shared assumption.
+
+The finite-difference criterion is absolute error at most 1e-4 against the supplied analytic reference, separately in each derivative's units; equality meets the criterion. Report met, not met or unresolved for each required view/metric, using a compact table or equally clear coverage. Small price error does not substitute for derivative accuracy. Zero change in rounded prices does not establish zero derivative of the unrounded model.
+
+Quantization-only envelopes use epsilon/h for delta and 4*epsilon/h² for gamma, epsilon=USD0.005. The recorded floating allowance is 1e-7*max(1,bound). A bound is not the observed error and does not include truncation, model or calibration error. Staying inside a loose bound cannot establish the derivative criterion. Forward delta is a derivative, not a dollar premium movement without a specified shock and approximation scope.
+
+In `missing-unrounded`, unrounded price observations and their reference values, rounding errors, unrounded derivative views and observed rounding-only differences are withheld. The analytic derivative references, observed analytic QuantLib derivatives, rounded prices/views and envelope formulas remain supplied. Assess rounded derivative errors where supported; leave unavailable unrounded results and actual rounding errors unresolved. Known inputs or rounded displays do not establish the omitted observations. The envelope is conditional on its per-price error assumption, whose observed satisfaction is unavailable in this packet.
+
+In `contradictory`, producer assertions do not change the underlying observations. Assess them against the numerical evidence and units. An accurately supported report can fulfill its reporting requirements while finding poor estimates or unavailable evidence; report fulfillment does not require every underlying derivative to meet tolerance. No optimal-step policy or hedge is requested.

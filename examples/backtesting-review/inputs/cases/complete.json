@@ -1,0 +1,70 @@
+{
+  "synthetic": true,
+  "observations": [
+    {
+      "id": "B1",
+      "date": "2026-09-21",
+      "model": "TOY-VAR",
+      "revision": "r1",
+      "portfolio": "DEMO-BOOK",
+      "currency": "USD",
+      "forecast_time": "2026-09-21T08:00:00Z",
+      "var": 100,
+      "apl": -100,
+      "hpl": -99
+    },
+    {
+      "id": "B2",
+      "date": "2026-09-22",
+      "model": "TOY-VAR",
+      "revision": "r1",
+      "portfolio": "DEMO-BOOK",
+      "currency": "USD",
+      "forecast_time": "2026-09-22T08:00:00Z",
+      "var": 100,
+      "apl": -120,
+      "hpl": -80
+    },
+    {
+      "id": "B3",
+      "date": "2026-09-23",
+      "model": "TOY-VAR",
+      "revision": "r1",
+      "portfolio": "DEMO-BOOK",
+      "currency": "USD",
+      "forecast_time": "2026-09-23T08:00:00Z",
+      "var": 100,
+      "apl": -50,
+      "hpl": -130
+    },
+    {
+      "id": "B4",
+      "date": "2026-09-24",
+      "model": "TOY-VAR",
+      "revision": "r1",
+      "portfolio": "DEMO-BOOK",
+      "currency": "USD",
+      "forecast_time": "2026-09-24T08:00:00Z",
+      "var": 100,
+      "apl": 20,
+      "hpl": 10
+    },
+    {
+      "id": "B5",
+      "date": "2026-09-25",
+      "model": "TOY-VAR",
+      "revision": "r1",
+      "portfolio": "DEMO-BOOK",
+      "currency": "USD",
+      "forecast_time": "2026-09-25T08:00:00Z",
+      "var": 100,
+      "apl": -90,
+      "hpl": -95
+    }
+  ],
+  "producer_summary": {
+    "apl_exceptions": 1,
+    "hpl_exceptions": 1,
+    "combined": 1
+  }
+}

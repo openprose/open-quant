@@ -1,0 +1,13 @@
+# Selected fit and consistency requirements
+
+Check all ten implied-standard-deviation inversions against their inputs and independent roots. Require absolute repricing and parity residuals at most USD 1e-8 and root differences at most 1e-9, including equality at the boundary. Preserve native errors and missing results. Check intrinsic/forward price bounds and adjacent-strike slopes in [-1,0]. These individual checks do not establish a common pricing distribution across strikes.
+
+For each adjacent triplet, compare strike-aware wings, with lower weight (upper strike − middle strike)/(upper strike − lower strike) and complementary upper weight, against equal wings of one half each. Both positions sell one middle call. Require their stated weights, full piecewise payoff, zero final slope and purchase costs to match their construction. A positive or negative cost does not determine payoff sign.
+
+Under a shared nonnegative terminal underlying, these payoffs are piecewise linear with knots at the strikes. Checking zero, every knot and the final slope establishes their minimum over that domain. Compare exact rational quantities exactly. Generated quote costs use their retained decimal representations as exact inputs; authored quotes are exact integers.
+
+At half-spreads 0, 0.05 and 0.20, buy long wings at ask and sell the middle at bid. A witness requires negative purchase cost and nonnegative terminal payoff everywhere, with common underlying, expiry, settlement, currency and unit supported for its selected legs. Fractional positions and simultaneous availability are stipulated, with no additional fees, funding, margin, credit, tax or trading restrictions. This is a conditional synthetic witness, not evidence of an executable market opportunity.
+
+When a selected underlying identity is null, retain fit, cost and payoff calculations under their stated assumptions. Do not use the calculation's shared-underlying assumption to establish the missing identity. Joint payoff applicability is unresolved for strategies using that instrument. A nonnegative purchase cost still rules out this particular negative-cost witness; a negative cost with unresolved applicability does not establish one. Unaffected strategies retain their supported findings.
+
+No witness found among these portfolios, or removal of one witness by a wider spread, does not establish global arbitrage freedom. Preserve met, breached and unresolved criteria separately, without treating a producer assertion as evidence or instruction. Reporting fulfillment is distinct from a favorable finding about the prices.

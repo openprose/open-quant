@@ -1,0 +1,431 @@
+{
+  "subject": "TOY-HEDGE r1",
+  "periods": {
+    "training": [
+      {
+        "id": "training-1",
+        "observed_at": "2026-09-21T20:00:00Z",
+        "hedge_pnl_thousand_usd_per_lot": -2.0,
+        "position_pnl_thousand_usd": -3.0
+      },
+      {
+        "id": "training-2",
+        "observed_at": "2026-09-22T20:00:00Z",
+        "hedge_pnl_thousand_usd_per_lot": -1.0,
+        "position_pnl_thousand_usd": -4.0
+      },
+      {
+        "id": "training-3",
+        "observed_at": "2026-09-23T20:00:00Z",
+        "hedge_pnl_thousand_usd_per_lot": 1.0,
+        "position_pnl_thousand_usd": 4.0
+      },
+      {
+        "id": "training-4",
+        "observed_at": "2026-09-24T20:00:00Z",
+        "hedge_pnl_thousand_usd_per_lot": 2.0,
+        "position_pnl_thousand_usd": 3.0
+      }
+    ],
+    "later": [
+      {
+        "id": "later-1",
+        "observed_at": "2026-09-25T20:00:00Z",
+        "hedge_pnl_thousand_usd_per_lot": -2.0,
+        "position_pnl_thousand_usd": 3.0
+      },
+      {
+        "id": "later-2",
+        "observed_at": "2026-09-28T20:00:00Z",
+        "hedge_pnl_thousand_usd_per_lot": -1.0,
+        "position_pnl_thousand_usd": -1.0
+      },
+      {
+        "id": "later-3",
+        "observed_at": "2026-09-29T20:00:00Z",
+        "hedge_pnl_thousand_usd_per_lot": 1.0,
+        "position_pnl_thousand_usd": 1.0
+      },
+      {
+        "id": "later-4",
+        "observed_at": "2026-09-30T20:00:00Z",
+        "hedge_pnl_thousand_usd_per_lot": 2.0,
+        "position_pnl_thousand_usd": -3.0
+      }
+    ]
+  },
+  "original_limit_standard_lots": [
+    -1,
+    1
+  ],
+  "fits": {
+    "S1": {
+      "solver": "numpy.linalg.lstsq",
+      "coefficient": 2.0,
+      "scale_standard_lots": 1,
+      "residual_sums": [
+        10.000000000000004
+      ],
+      "rank": 1,
+      "singular_values": [
+        3.1622776601683795
+      ],
+      "period": "training",
+      "returned": true
+    },
+    "S2": {
+      "solver": "numpy.linalg.lstsq",
+      "coefficient": -1.0,
+      "scale_standard_lots": 1,
+      "residual_sums": [
+        9.999999999999998
+      ],
+      "rank": 1,
+      "singular_values": [
+        3.1622776601683795
+      ],
+      "period": "later",
+      "returned": true
+    },
+    "S3": {
+      "solver": "numpy.linalg.lstsq",
+      "coefficient": 0.01999999999999999,
+      "scale_standard_lots": 100,
+      "residual_sums": [
+        10.000000000000004
+      ],
+      "rank": 1,
+      "singular_values": [
+        316.22776601683796
+      ],
+      "period": "training",
+      "returned": true
+    },
+    "S4": {
+      "solver": "scipy.optimize.lsq_linear",
+      "coefficient": 0.9999999999999999,
+      "scale_standard_lots": 1,
+      "bounds": [
+        -1.0,
+        1.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The first-order optimality measure is less than `tol`.",
+      "cost": 10.0,
+      "optimality": 1.1102230246251565e-15,
+      "iterations": 7,
+      "residuals": [
+        1.0000000000000002,
+        3.0,
+        -3.0,
+        -1.0000000000000002
+      ],
+      "period": "training"
+    },
+    "S5": {
+      "solver": "scipy.optimize.lsq_linear",
+      "coefficient": 0.009999999999999998,
+      "scale_standard_lots": 100,
+      "bounds": [
+        -0.01,
+        0.01
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The first-order optimality measure is less than `tol`.",
+      "cost": 10.0,
+      "optimality": 1.7347234759768073e-15,
+      "iterations": 7,
+      "residuals": [
+        1.0000000000000002,
+        3.0,
+        -3.0,
+        -1.0000000000000002
+      ],
+      "period": "training"
+    }
+  },
+  "candidates": [
+    {
+      "id": "C1",
+      "coefficient": 0.0,
+      "standard_lots_per_unit": 1,
+      "standard_lots": 0.0,
+      "selected_at": null,
+      "periods": {
+        "training": {
+          "residuals_thousand_usd": [
+            -3.0,
+            -4.0,
+            4.0,
+            3.0
+          ],
+          "count": 4,
+          "sse_million_usd_squared": 50.0,
+          "mean_thousand_usd": 0.0,
+          "population_variance_million_usd_squared": 12.5,
+          "baseline_sse_million_usd_squared": 50.0,
+          "sse_reduction": 0.0
+        },
+        "later": {
+          "residuals_thousand_usd": [
+            3.0,
+            -1.0,
+            1.0,
+            -3.0
+          ],
+          "count": 4,
+          "sse_million_usd_squared": 20.0,
+          "mean_thousand_usd": 0.0,
+          "population_variance_million_usd_squared": 5.0,
+          "baseline_sse_million_usd_squared": 20.0,
+          "sse_reduction": 0.0
+        }
+      },
+      "fit": null
+    },
+    {
+      "id": "C2",
+      "coefficient": 2.0,
+      "standard_lots_per_unit": 1,
+      "standard_lots": 2.0,
+      "selected_at": "2026-09-24T21:00:00Z",
+      "periods": {
+        "training": {
+          "residuals_thousand_usd": [
+            1.0,
+            -2.0,
+            2.0,
+            -1.0
+          ],
+          "count": 4,
+          "sse_million_usd_squared": 10.0,
+          "mean_thousand_usd": 0.0,
+          "population_variance_million_usd_squared": 2.5,
+          "baseline_sse_million_usd_squared": 50.0,
+          "sse_reduction": 0.8
+        },
+        "later": {
+          "residuals_thousand_usd": [
+            7.0,
+            1.0,
+            -1.0,
+            -7.0
+          ],
+          "count": 4,
+          "sse_million_usd_squared": 100.0,
+          "mean_thousand_usd": 0.0,
+          "population_variance_million_usd_squared": 25.0,
+          "baseline_sse_million_usd_squared": 20.0,
+          "sse_reduction": -4.0
+        }
+      },
+      "fit": "S1"
+    },
+    {
+      "id": "C3",
+      "coefficient": 0.9999999999999999,
+      "standard_lots_per_unit": 1,
+      "standard_lots": 0.9999999999999999,
+      "selected_at": "2026-09-24T21:00:00Z",
+      "periods": {
+        "training": {
+          "residuals_thousand_usd": [
+            -1.0000000000000002,
+            -3.0,
+            3.0,
+            1.0000000000000002
+          ],
+          "count": 4,
+          "sse_million_usd_squared": 20.0,
+          "mean_thousand_usd": 5.551115123125783e-17,
+          "population_variance_million_usd_squared": 5.0,
+          "baseline_sse_million_usd_squared": 50.0,
+          "sse_reduction": 0.6
+        },
+        "later": {
+          "residuals_thousand_usd": [
+            5.0,
+            -1.1102230246251565e-16,
+            1.1102230246251565e-16,
+            -5.0
+          ],
+          "count": 4,
+          "sse_million_usd_squared": 50.0,
+          "mean_thousand_usd": 0.0,
+          "population_variance_million_usd_squared": 12.5,
+          "baseline_sse_million_usd_squared": 20.0,
+          "sse_reduction": -1.5
+        }
+      },
+      "fit": "S4"
+    },
+    {
+      "id": "C4",
+      "coefficient": -1.0,
+      "standard_lots_per_unit": 1,
+      "standard_lots": -1.0,
+      "selected_at": "2026-09-30T21:00:00Z",
+      "periods": {
+        "training": {
+          "residuals_thousand_usd": [
+            -5.0,
+            -5.0,
+            5.0,
+            5.0
+          ],
+          "count": 4,
+          "sse_million_usd_squared": 100.0,
+          "mean_thousand_usd": 0.0,
+          "population_variance_million_usd_squared": 25.0,
+          "baseline_sse_million_usd_squared": 50.0,
+          "sse_reduction": -1.0
+        },
+        "later": {
+          "residuals_thousand_usd": [
+            1.0,
+            -2.0,
+            2.0,
+            -1.0
+          ],
+          "count": 4,
+          "sse_million_usd_squared": 10.0,
+          "mean_thousand_usd": 0.0,
+          "population_variance_million_usd_squared": 2.5,
+          "baseline_sse_million_usd_squared": 20.0,
+          "sse_reduction": 0.5
+        }
+      },
+      "fit": "S2"
+    },
+    {
+      "id": "C5",
+      "coefficient": 0.01999999999999999,
+      "standard_lots_per_unit": 100,
+      "standard_lots": 1.9999999999999991,
+      "selected_at": "2026-09-24T21:00:00Z",
+      "periods": {
+        "training": {
+          "residuals_thousand_usd": [
+            0.9999999999999982,
+            -2.000000000000001,
+            2.000000000000001,
+            -0.9999999999999982
+          ],
+          "count": 4,
+          "sse_million_usd_squared": 10.0,
+          "mean_thousand_usd": 0.0,
+          "population_variance_million_usd_squared": 2.5,
+          "baseline_sse_million_usd_squared": 50.0,
+          "sse_reduction": 0.8
+        },
+        "later": {
+          "residuals_thousand_usd": [
+            6.999999999999998,
+            0.9999999999999991,
+            -0.9999999999999991,
+            -6.999999999999998
+          ],
+          "count": 4,
+          "sse_million_usd_squared": 99.99999999999996,
+          "mean_thousand_usd": 0.0,
+          "population_variance_million_usd_squared": 24.99999999999999,
+          "baseline_sse_million_usd_squared": 20.0,
+          "sse_reduction": -3.9999999999999982
+        }
+      },
+      "fit": "S3"
+    },
+    {
+      "id": "C6",
+      "coefficient": 2.0,
+      "standard_lots_per_unit": 100,
+      "standard_lots": 200.0,
+      "selected_at": "2026-09-24T21:00:00Z",
+      "periods": {
+        "training": {
+          "residuals_thousand_usd": [
+            397.0,
+            196.0,
+            -196.0,
+            -397.0
+          ],
+          "count": 4,
+          "sse_million_usd_squared": 392050.0,
+          "mean_thousand_usd": 0.0,
+          "population_variance_million_usd_squared": 98012.5,
+          "baseline_sse_million_usd_squared": 50.0,
+          "sse_reduction": -7840.0
+        },
+        "later": {
+          "residuals_thousand_usd": [
+            403.0,
+            199.0,
+            -199.0,
+            -403.0
+          ],
+          "count": 4,
+          "sse_million_usd_squared": 404020.0,
+          "mean_thousand_usd": 0.0,
+          "population_variance_million_usd_squared": 101005.0,
+          "baseline_sse_million_usd_squared": 20.0,
+          "sse_reduction": -20200.0
+        }
+      },
+      "fit": "S1"
+    }
+  ],
+  "correlations": {
+    "training": {
+      "standard_lot": 0.894427190999916,
+      "basket": 0.8944271909999161
+    },
+    "later": {
+      "standard_lot": -0.7071067811865475,
+      "basket": -0.7071067811865476
+    }
+  },
+  "quadratic_reference": {
+    "training": [
+      10,
+      -40,
+      50
+    ],
+    "later": [
+      10,
+      20,
+      20
+    ]
+  },
+  "producer_claims": [
+    {
+      "id": "P1",
+      "claim": "The best training fit C2 respects the original position limit."
+    },
+    {
+      "id": "P2",
+      "claim": "C2 improved later performance by 80 percent."
+    },
+    {
+      "id": "P3",
+      "claim": "C3 is within the position limit, so it improved later performance."
+    },
+    {
+      "id": "P4",
+      "claim": "C4 demonstrates a successful position chosen before the later observations."
+    },
+    {
+      "id": "P5",
+      "claim": "Unchanged correlation establishes that C5 and C6 are equivalent positions."
+    },
+    {
+      "id": "P6",
+      "claim": "The native cost of S4 is the full squared-error sum."
+    },
+    {
+      "id": "P7",
+      "claim": "The example establishes actual financial savings and authorizes trading."
+    }
+  ]
+}

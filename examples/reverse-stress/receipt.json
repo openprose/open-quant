@@ -1,0 +1,30 @@
+{
+  "source_path": "model/measure.py",
+  "source_commit": "22c314d7fb9ff0f871f04b2c23b6ea6a1e9fa613",
+  "source_sha256": "74faea619d5d7227ee54f3d7995fb1a80115fb91433a054e4224d90e92e61ce4",
+  "plan_path": "model/README.md",
+  "plan_sha256": "ef434c0a95ebbd5c83d3666357cf8f7a8c6d9524f8eb5d6761d92f7051a10e15",
+  "observation_sha256": "0fa54e75a7081ee290d96144342ad6192daff1adb273722f48dd195dcc781d66",
+  "recorded_at": "2026-10-06T07:43:12.605392+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "calculation_seconds": 0.003865291946567595,
+  "qualification": "One observed synthetic numerical reproduction; reporting and assessment remain agent-unqualified.",
+  "packets": {
+    "complete": {
+      "path": "inputs/complete.json",
+      "sha256": "955b8e88e75921f67001227dcaeacf7843203d2f77494ce7d4464c92d4f1b186"
+    },
+    "missing-candidate": {
+      "path": "inputs/missing-candidate.json",
+      "sha256": "f2a325072c7f2f4a01bbb5d0121c007262b41805861afa9548b9c1e65a30448d"
+    },
+    "contradictory": {
+      "path": "inputs/contradictory.json",
+      "sha256": "823a0a565589b73b219266bb75330749df87dcd23d461fd519f2a861e898e0d8"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# Distinguishing cases for selection-history review
+
+These are authored interpretations of the [outcomes/data composition](../../examples/selection-review/README.md), not decisions made by a model. The three supplied cases use replicate 0 of a synthetic all-null score experiment. No actual investment-return observation or strategy approval is present.
+
+- **Complete:** M34 is chosen on the selection sample. Its raw tail is approximately 0.0153, but its independent-family tail is approximately 0.6279. Its independent evaluation score has raw tail approximately 0.6049. Reselecting on evaluation chooses M24 with raw tail approximately 0.00603 and family tail approximately 0.3210. None exceeds the applicable threshold under the selected policy. Preserve candidate and sample identities; a lower raw tail after reselection is not independent confirmation of M34.
+- **Missing evaluation:** selection scores and the M34 selection result remain available. The expected frozen candidate is still M34, but its evaluation observation and the evaluation-selected result are absent. Both comparisons remain unresolved, not zero, failed or unperformed. Do not reconstruct them from another case or the all-case reproduction source.
+- **Contradictory:** unchanged records conflict with three claims: that a one-candidate threshold controls the entire search at 5%, that reselection independently confirms the original candidate, and that a raw tail is the probability the candidate has no effect. An accurate report must explain those conflicts without replacing observations or inventing a statistical adjustment.
+
+The supplied family probability assumes independent all-null Gaussian scores and the specified 64-candidate family. If those assumptions or the relevant search history were unavailable in a different invocation, this example would not justify inventing an effective trial count or correction. Calling a dataset evaluation does not make every use of it evaluation; its role in the choice determines the supported interpretation.
+
+The fixture checker verifies numerical identities, fixed policy boundaries and selected mutations. It does not evaluate these paragraphs or certify a generated report. A reporting contract can be fulfilled by explaining these non-exceedances and limitations; an unresolved requested substantive claim remains unresolved.

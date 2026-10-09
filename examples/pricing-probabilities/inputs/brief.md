@@ -1,0 +1,9 @@
+# Synthetic pricing model and two intended uses
+
+Describe TOY-STATE-PRICES r1 for a reader who understands AI and financial operations but need not know asset-pricing theory. This is a one-period mathematical market with t=0 and T=1 year. A bond paying USD1 at T costs 20/21 today. One stock share costs USD100 and has two possible terminal values, USD80 (down) and USD130 (up). Assume no dividends, taxes, transaction costs or default, and unrestricted real bond/stock holdings. These are stipulated assumptions, not market observations.
+
+Six terminal payoff records cover the bond, stock, strike-100 call and put, and up/down USD1 digitals. Native linear algebra supplies state prices and replicating bond units/stock shares; exact rational references are retained. State order is down, up. Q denotes the normalized pricing probabilities under this deterministic-rate model; P denotes a separately stipulated physical probability model. A stochastic discount factor is the state-dependent weight m in price=E_P[m X]. It is not a probability. The equality control supplies one possible P=Q world, not a requirement that all physical probabilities equal Q.
+
+There are two named physical-world records, A and B. Neither is selected as empirically true. The selected packet determines which assumptions and derived observations are available. Producer statements, when supplied, are claims to examine rather than additional requirements or authoritative facts.
+
+The intended uses to discuss are (1) pricing and replication within this synthetic market and (2) describing downside event probability, stock expected return and put expected payoff under the supplied physical assumptions. No real institution, empirical forecast, deployed model, regulatory expected credit loss, observed saving or institutional approval is supplied. The report does not establish any of those facts.

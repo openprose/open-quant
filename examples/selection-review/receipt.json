@@ -1,0 +1,40 @@
+{
+  "observed_at": "2026-10-06T04:40:42.947616+00:00",
+  "source_commit": "be1bfac4014df1e3af17f28162415b109aa8bd82",
+  "source_path": "model/measure.py",
+  "source_sha256": "013e344906a821b960149782cd74d656382837e4d38024429c9e5e02d4f89729",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.6.1-arm64-arm-64bit"
+  },
+  "timeout_seconds": 120,
+  "wall_seconds": 0.25225033302558586,
+  "exit_code": 0,
+  "provider_calls": 0,
+  "command": [
+    "python",
+    "examples/selection-review/model/measure.py",
+    "observations.json"
+  ],
+  "raw_output_sha256": "267c700c588bc9a4b9a9864590f2fc402dfa62ba6756e7ae8fcedc59785bdad4",
+  "projection": {
+    "selection": "Replicate 0 and candidate prefix K=64, selected by index before inspecting its outcomes for this example. Score vectors, chosen identities, theoretical thresholds and observations copied unchanged; subject/case names, omissions and producer claims authored. No other replicate supplied to the report.",
+    "missing_evaluation": "Evaluation score vector/hash, both evaluation views and candidate-switch observation withheld; selection vector and selection-winner observation unchanged.",
+    "packets": {
+      "complete": {
+        "path": "inputs/complete.json",
+        "sha256": "c182e77dacb979b13ce691964b38e8353f09a163d6451b6e519223594df478ea"
+      },
+      "missing-evaluation": {
+        "path": "inputs/missing-evaluation.json",
+        "sha256": "9a97187b21b2e5ffb9a92037d7604b0e1412cd7356576c6d94e25bdc9de37851"
+      },
+      "contradictory": {
+        "path": "inputs/contradictory.json",
+        "sha256": "396c406681aaf8ecd07e4f15059a2603a1735eee38a71a1dd205e9732421b9ee"
+      }
+    }
+  },
+  "scope": "One selected synthetic score replicate, not observed investment performance, an agent result or a probability-of-backtest-overfitting estimate."
+}
