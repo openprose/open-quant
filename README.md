@@ -1,5 +1,11 @@
 # Open Quant
 
+The reusable contracts from this repository are now maintained in **OpenProse Quant**. Start with the [public package entry for 0.3.0-rc.2](https://pkg.prose.md/releases/0.3.0-rc.2/quant/README.md). The canonical source is [packages/quant in the private application repository](https://github.com/openprose/openprose-libraries/tree/main/packages/quant).
+
+This repository remains available with its original source, examples and history. Existing pins retain their original selections; migration does not retarget them. The guide below preserves the earlier source-checkout and qualification context, including historical candidate, branch and publication status statements.
+
+## Historical source guide
+
 **Open contracts for quantitative model documentation and operating work, built with OpenProse.**
 
 Contract authoring is expressing intent by composing requirements. Open Quant provides reusable requirements for documenting a model, supporting its claims and assessing the resulting documentation. You supply the model evidence and your organization's house requirements.
